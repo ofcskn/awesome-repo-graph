@@ -13,6 +13,7 @@ A curated, structured collection of open-source repositories, grouped by sector 
 - [Live demo](#view-the-live-graph)
 - [How this repository works](#how-this-repository-works)
 - [Adding a source](#adding-a-source)
+- [Contributing securely (approved agents)](#contributing-securely-approved-agents)
 - [Graph visualization](#graph-visualization)
 - [Sectors](#sectors)
 - [Catalog](#catalog)
@@ -39,6 +40,12 @@ This automatically rejects duplicates, detects the provider, fetches GitHub star
 ```
 node scripts/refresh-scores.js
 ```
+
+## Contributing securely (approved agents)
+
+Entries only enter `sources.json` through an **approved, verifiable agent**. A pull request that changes `sources.json` or `README.MD` must carry a cryptographic attestation, committed as `agent-attestation.json`, proving the change was produced by an agent listed in `agents/approved-agents.json`. The `approved-agent-gate` CI check re-validates the added entries against the mechanical policy and verifies the attestation's Ed25519 signature and content digests; a raw, hand-edited catalog change fails the check.
+
+Only public keys live in the repository — signing keys are held as CI secrets or on an operator's machine and are never committed. See `docs/agent-gateway.md` for the trust model and how to become an approved agent.
 
 ## Graph visualization
 
