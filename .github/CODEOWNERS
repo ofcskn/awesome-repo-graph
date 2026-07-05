@@ -1,0 +1,15 @@
+# Code owners for trust-sensitive paths. Changes to these require review from
+# a maintainer, so the approved-agent gate and its registry cannot be quietly
+# rewritten in the same change that would benefit from the rewrite.
+#
+# Syntax: <path>  <owner>. Later matches take precedence.
+
+# Approved-agent registry and offline policy — the trust root.
+/agents/                          @ofcskn
+
+# CI workflows, including the gate itself.
+/.github/                         @ofcskn
+
+# The verifier and its cryptographic core.
+/scripts/verify-attestation.js    @ofcskn
+/scripts/lib/attestation.js       @ofcskn
