@@ -1,0 +1,352 @@
+import { z } from "zod";
+import { ALL_PROVIDER_NAMES, readBooleanEnv, RUNTIME_ENV_VARS } from "./env.js";
+import type { ProviderName } from "./env.js";
+
+const providerNameSchema = z.enum(["openai", "deepseek", "gemini", "vertexGemini"]);
+
+const consensusStrategySchema = z.enum([
+  "primary-with-fallback",
+  "independent-reviewers",
+  "weighted-consensus",
+  "disagreement-triggered-review",
+  "high-risk-review",
+  "taxonomy-only-secondary",
+]);
+
+const commitModeSchema = z.enum(["report-only", "commit", "pull-request"]);
+
+// DeepSeek has no embeddings endpoint (confirmed against api-docs.deepseek.com,
+// July 2026 — chat/completions/models only), so it's intentionally excluded here.
+const embeddingProviderNameSchema = z.enum(["openai", "gemini", "vertexGemini"]);
+
+const configSchema = z
+  .object({
+    automation: z.object({
+      /** 1. Automation enabled state. */
+      enabled: z.boolean(),
+      /** 2. Dry-run mode (config-level default; CLI/env can force it on). */
+      dryRun: z.boolean(),
+    }),
+    providers: z.object({
+      /** 3. Active AI providers. */
+      enabled: z.array(providerNameSchema).min(1),
+      /** 4. Primary provider. */
+      primary: providerNameSchema,
+      /** 5. Fallback provider order. */
+      fallbackOrder: z.array(providerNameSchema),
+      /** 6. Model names. */
+      models: z.record(providerNameSchema, z.string().min(1)),
+      /** 7. Provider weights (consensus voting). */
+      weights: z.record(providerNameSchema, z.number().min(0)),
+      /** 8. Provider request limits (per run). */
+      requestLimitPerRun: z.record(providerNameSchema, z.number().int().positive()),
+      /** 9. Provider timeout values (ms). */
+      timeoutMs: z.record(providerNameSchema, z.number().int().positive()),
+      /** 10. Maximum retry counts. */
+      maxRetries: z.number().int().min(0).max(10),
+      /** Multi-model review strategy (spec section MULTI-MODEL REVIEW). */
+      consensusStrategy: consensusStrategySchema,
+      /** Bounded concurrent provider requests in-flight at once. */
+      maxConcurrentRequests: z.number().int().positive(),
+    }),
+    discovery: z.object({
+      /** 11. Daily candidate limit. */
+      dailyCandidateLimit: z.number().int().positive(),
+      /** 21. Search queries. */
+      searchQueries: z.array(z.string().min(1)).min(1),
+      /** 22. GitHub topics. */
+      githubTopics: z.array(z.string().min(1)),
+      /** 23. Preferred programming languages. */
+      preferredLanguages: z.array(z.string().min(1)),
+      /** 19. Target sectors (top-level taxonomy reuse hints). */
+      sectors: z.array(z.string().min(1)),
+      /** 20. Target categories. */
+      categories: z.array(z.string().min(1)),
+    }),
+    quality: z.object({
+      /** 12. Maximum accepted sources per run. */
+      maxAcceptedPerRun: z.number().int().positive(),
+      /** 13. Minimum star count. */
+      minStars: z.number().int().min(0),
+      /** 14. Minimum repository age (days). */
+      minRepoAgeDays: z.number().int().min(0),
+      /** 15. Maximum inactivity period (days since last push). */
+      maxInactivityDays: z.number().int().positive(),
+      /** 16. Whether forks are allowed. */
+      allowForks: z.boolean(),
+      /** 17. Whether archived repositories are allowed. */
+      allowArchived: z.boolean(),
+      /** 18. License allowlist and denylist (SPDX ids; empty allowlist = any not denied). */
+      licenseAllowlist: z.array(z.string()),
+      licenseDenylist: z.array(z.string()),
+      /** 24. Excluded owners. */
+      excludedOwners: z.array(z.string()),
+      /** 25. Excluded repositories ("owner/repo"). */
+      excludedRepos: z.array(z.string()),
+      /** 26. Excluded keywords. */
+      excludedKeywords: z.array(z.string()),
+      /** 27. Minimum classification confidence (0-1). */
+      minClassificationConfidence: z.number().min(0).max(1),
+      /** 28. Minimum quality score (0-100). */
+      minQualityScore: z.number().min(0).max(100),
+      /** 29. Consensus threshold (0-1 fraction of weighted agreement required). */
+      consensusThreshold: z.number().min(0).max(1),
+    }),
+    taxonomy: z.object({
+      /** 30. Maximum number of new taxonomy paths per run. */
+      maxNewPathsPerRun: z.number().int().min(0),
+      /** 31. Tag normalization limits. */
+      maxNewTagsPerRun: z.number().int().min(0),
+      maxTagsPerSource: z.number().int().positive(),
+    }),
+    /**
+     * REJECTED-CANDIDATE MEMORY windows. These were previously hardcoded
+     * literals inside run.ts; they're config now so operators can tune how
+     * aggressively the curator avoids re-fetching/re-classifying the same
+     * candidates without touching code.
+     */
+    memory: z.object({
+      /** How long a mechanically-rejected/duplicate candidate is skipped without re-checking, if nothing about it changed. */
+      recentEvaluationWindowDays: z.number().int().positive(),
+      /** How long an AI-rejected candidate is skipped before automatic reconsideration (independent of metadata change). */
+      aiRejectionReconsiderationDays: z.number().int().positive(),
+    }),
+    /**
+     * Vector-embedding memory (curator/state/embeddings.json). Lets
+     * classification prompts stay small and roughly constant-size as
+     * sources.json grows — instead of dumping the full tag/taxonomy list
+     * every call, we retrieve only the `topK` most semantically similar
+     * existing sources per candidate. Also powers real semantic
+     * near-duplicate detection in validation/dedupe.ts.
+     */
+    embeddings: z.object({
+      enabled: z.boolean(),
+      /** Preferred embedding provider; falls back to any other configured one that supports embeddings. */
+      provider: embeddingProviderNameSchema,
+      models: z.record(embeddingProviderNameSchema, z.string().min(1)),
+      /** Output vector size (MRL-truncated by the provider) — smaller keeps curator/state/embeddings.json compact. */
+      dimensions: z.number().int().positive(),
+      /** How many nearest existing sources to surface per candidate, replacing the full tag/taxonomy dump. */
+      topK: z.number().int().positive(),
+      /** Cosine-similarity floor above which two sources are flagged as likely semantic near-duplicates. */
+      duplicateSimilarityThreshold: z.number().min(0).max(1),
+    }),
+    scheduling: z.object({
+      /** 32. Scheduling timezone (IANA name). */
+      timezone: z.string().min(1),
+      /** 33. Configured local execution hour(s) (0-23, in `timezone`). Supports multiple runs per day. */
+      executionHours: z.array(z.number().int().min(0).max(23)).min(1),
+      /** 34. Minimum interval between successful runs (hours) — prevents double-firing within the same hour. */
+      minIntervalHoursBetweenRuns: z.number().int().positive(),
+    }),
+    output: z.object({
+      /** 35. Branch name prefix. */
+      branchPrefix: z.string().min(1),
+      /** 36 & 37. Commit mode / pull-request mode, unified: one output mode. */
+      commitMode: commitModeSchema,
+      /** 38. Report output directory. */
+      reportDir: z.string().min(1),
+      /** 39. Whether reports are committed. */
+      commitReports: z.boolean(),
+    }),
+    maintenance: z.object({
+      /** 40. Whether star scores are refreshed. */
+      refreshScores: z.boolean(),
+      /** 41. Whether the web application is built. */
+      buildWebApp: z.boolean(),
+      /** 42. Whether browser smoke tests are executed. */
+      runSmokeTests: z.boolean(),
+    }),
+  })
+  .strict();
+
+export type CuratorConfig = z.infer<typeof configSchema>;
+
+/**
+ * Single source of truth for all non-secret operational behavior.
+ * Secrets (API keys) live only in environment variables — see env.ts.
+ */
+const defaultConfig: CuratorConfig = {
+  automation: {
+    enabled: true,
+    dryRun: false,
+  },
+  providers: {
+    enabled: ["openai", "gemini", "deepseek", "vertexGemini"],
+    primary: "openai",
+    fallbackOrder: ["gemini", "deepseek", "vertexGemini"],
+    models: {
+      openai: "gpt-5.5",
+      deepseek: "deepseek-v4-pro",
+      gemini: "gemini-2.5-flash",
+      vertexGemini: "gemini-2.5-flash",
+    },
+    weights: {
+      openai: 1,
+      gemini: 1,
+      deepseek: 0.75,
+      vertexGemini: 1,
+    },
+    requestLimitPerRun: {
+      openai: 60,
+      gemini: 60,
+      deepseek: 60,
+      vertexGemini: 60,
+    },
+    timeoutMs: {
+      openai: 30_000,
+      gemini: 30_000,
+      deepseek: 30_000,
+      vertexGemini: 30_000,
+    },
+    maxRetries: 3,
+    consensusStrategy: "primary-with-fallback",
+    maxConcurrentRequests: 3,
+  },
+  discovery: {
+    // Scaled for 4 runs/day (scheduling.executionHours below): 10/run x 4
+    // runs = 40/day total, matching the original single-run-per-day budget
+    // so moving to 4x/day doesn't silently 4x discovery + AI classification cost.
+    dailyCandidateLimit: 10,
+    searchQueries: [
+      "topic:ai-agent stars:>200",
+      "topic:mcp-server stars:>100",
+      "topic:llm-agent-framework stars:>200",
+      "topic:developer-tooling stars:>500",
+    ],
+    githubTopics: [
+      "ai-agent",
+      "mcp-server",
+      "llm-agent-framework",
+      "agent-orchestration",
+      "developer-tooling",
+    ],
+    preferredLanguages: ["TypeScript", "Python", "Go", "Rust"],
+    sectors: ["AI Agent Tooling", "Frontend Engineering", "DevOps & Infrastructure"],
+    categories: [],
+  },
+  quality: {
+    // Same 4-runs/day scaling as discovery.dailyCandidateLimit: 2/run x 4 = 8/day.
+    maxAcceptedPerRun: 2,
+    minStars: 50,
+    minRepoAgeDays: 30,
+    maxInactivityDays: 365,
+    allowForks: false,
+    allowArchived: false,
+    licenseAllowlist: [],
+    licenseDenylist: ["NOASSERTION"],
+    excludedOwners: [],
+    excludedRepos: [],
+    excludedKeywords: ["tutorial-only", "coursework", "homework"],
+    minClassificationConfidence: 0.7,
+    minQualityScore: 60,
+    consensusThreshold: 0.66,
+  },
+  taxonomy: {
+    maxNewPathsPerRun: 2,
+    maxNewTagsPerRun: 6,
+    maxTagsPerSource: 6,
+  },
+  memory: {
+    recentEvaluationWindowDays: 7,
+    aiRejectionReconsiderationDays: 14,
+  },
+  embeddings: {
+    enabled: true,
+    provider: "vertexGemini",
+    models: {
+      openai: "text-embedding-3-small",
+      gemini: "gemini-embedding-001",
+      vertexGemini: "gemini-embedding-001",
+    },
+    // 256 dims keeps curator/state/embeddings.json compact at scale while
+    // retaining ~97%+ of full-precision retrieval quality (both OpenAI and
+    // Gemini support server-side MRL truncation via this exact param name/value).
+    dimensions: 256,
+    topK: 8,
+    duplicateSimilarityThreshold: 0.93,
+  },
+  scheduling: {
+    timezone: "UTC",
+    // 4 runs/day, evenly spaced. The GitHub Actions cron fires hourly;
+    // scheduling.ts only lets a run proceed when the current UTC hour is
+    // in this list (or --force is passed).
+    executionHours: [0, 6, 12, 18],
+    // Must be comfortably less than the spacing between executionHours (6h)
+    // so each scheduled hour actually fires, but long enough to absorb a
+    // cron tick landing a few minutes late/early without double-running.
+    minIntervalHoursBetweenRuns: 5,
+  },
+  output: {
+    branchPrefix: "curator/auto",
+    commitMode: "pull-request",
+    reportDir: "curator/reports",
+    commitReports: true,
+  },
+  maintenance: {
+    refreshScores: true,
+    buildWebApp: true,
+    runSmokeTests: false,
+  },
+};
+
+export interface LoadConfigOverrides {
+  dryRun?: boolean;
+  force?: boolean;
+}
+
+export interface LoadedConfig {
+  config: CuratorConfig;
+  /** Effective dry-run, after CLI flag / env var overrides are applied. */
+  dryRun: boolean;
+  /** Effective force flag — bypasses the daily scheduling gate. Never persisted. */
+  force: boolean;
+  /** Stable hash of the config used for the audit report's "configuration fingerprint". */
+  fingerprint: string;
+}
+
+function computeFingerprint(config: CuratorConfig): string {
+  // Deterministic, order-independent-enough for our nested-object shape (JSON.stringify
+  // preserves key insertion order, which is stable because defaultConfig's key order
+  // never changes at runtime).
+  const json = JSON.stringify(config);
+  let hash = 0;
+  for (let i = 0; i < json.length; i += 1) {
+    hash = (hash * 31 + json.charCodeAt(i)) | 0;
+  }
+  return `cfg_${(hash >>> 0).toString(16)}`;
+}
+
+/**
+ * Loads and validates the static config, applying only the two runtime
+ * overrides the spec permits from outside config.ts (CLI flags / CI inputs):
+ * dry-run and force. Throws on schema violations so bad config fails fast.
+ */
+export function loadConfig(overrides: LoadConfigOverrides = {}): LoadedConfig {
+  const config = configSchema.parse(defaultConfig);
+
+  for (const provider of config.providers.enabled) {
+    if (!ALL_PROVIDER_NAMES.includes(provider as ProviderName)) {
+      throw new Error(`config.ts: unknown provider "${provider}" in providers.enabled`);
+    }
+  }
+  if (!config.providers.enabled.includes(config.providers.primary)) {
+    throw new Error("config.ts: providers.primary must be included in providers.enabled");
+  }
+
+  const envDryRun = readBooleanEnv(RUNTIME_ENV_VARS.dryRun);
+  const envForce = readBooleanEnv(RUNTIME_ENV_VARS.force);
+
+  const dryRun = overrides.dryRun ?? envDryRun ?? config.automation.dryRun;
+  const force = overrides.force ?? envForce ?? false;
+
+  return {
+    config,
+    dryRun,
+    force,
+    fingerprint: computeFingerprint(config),
+  };
+}
+
+export { configSchema };
+export type { ProviderName };

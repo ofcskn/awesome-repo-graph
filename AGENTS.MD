@@ -65,3 +65,12 @@ tags or taxonomy path with the given source, ranked by overlap.
 
 All GitHub API calls in these scripts are unauthenticated (public REST
 API, no token). Do not add credentials or tokens to any script or commit.
+
+## Autonomous curator
+
+`curator/` is an automated daily pipeline that discovers, validates,
+classifies (via AI providers), and adds sources on its own schedule. It
+follows every rule above — it only ever adds sources through
+`scripts/add-source.js`, never edits `sources.json`/`README.MD` directly,
+and reuses existing taxonomy/tags before introducing new ones. See
+`docs/curator.md` for setup, configuration, and operational details.

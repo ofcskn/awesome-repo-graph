@@ -49,6 +49,23 @@ function avatarUrlForOwner(owner: string | null): string | null {
   return owner ? `https://github.com/${owner}.png?size=80` : null;
 }
 
+function isGithubProvider(provider: string): boolean {
+  return provider === "github.com";
+}
+
+// Non-GitHub sources are identified by their own domain, not a repo owner,
+// so their node icon comes from the site's favicon rather than a GitHub avatar.
+function faviconUrlForProvider(provider: string): string {
+  return `https://www.google.com/s2/favicons?sz=64&domain=${provider}`;
+}
+
+function iconUrlForNode(node: LayoutNode): string {
+  if (isGithubProvider(node.provider)) {
+    return avatarUrlForOwner(node.owner) ?? faviconUrlForProvider(node.provider);
+  }
+  return faviconUrlForProvider(node.provider);
+}
+
 const MIN_ZOOM = 0.15;
 const MAX_ZOOM = 4;
 
@@ -56,6 +73,11 @@ const MAX_ZOOM = 4;
 // is a GitHub repo" at a glance instead of relying on flat sector color.
 const GITHUB_MARK_PATH =
   "M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z";
+
+// Generic globe glyph, used as the fallback for non-GitHub sources whose
+// favicon fails to load, so they never get mistaken for a GitHub repo.
+const GLOBE_MARK_PATH =
+  "M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0Zm5.94 7H11.2c-.08-1.6-.4-3.07-.9-4.17A6.53 6.53 0 0 1 13.94 7ZM8 1.5c.6 0 1.42 1.53 1.68 4H6.32c.26-2.47 1.08-4 1.68-4ZM6.32 8.5h3.36c-.26 2.47-1.08 4-1.68 4-.6 0-1.42-1.53-1.68-4ZM5.7 2.83c-.5 1.1-.82 2.57-.9 4.17H2.06a6.53 6.53 0 0 1 3.64-4.17ZM2.06 9h2.74c.08 1.6.4 3.07.9 4.17A6.53 6.53 0 0 1 2.06 9Zm7.34 4.17c.5-1.1.82-2.57.9-4.17h2.74a6.53 6.53 0 0 1-3.64 4.17Z";
 
 export default function GraphCanvas({
   nodes,
@@ -248,6 +270,9 @@ export default function GraphCanvas({
           <symbol id="gh-mark" viewBox="0 0 16 16">
             <path d={GITHUB_MARK_PATH} />
           </symbol>
+          <symbol id="site-mark" viewBox="0 0 16 16">
+            <path d={GLOBE_MARK_PATH} />
+          </symbol>
           <clipPath id="node-icon-clip" clipPathUnits="objectBoundingBox">
             <circle cx={0.5} cy={0.5} r={0.5} />
           </clipPath>
@@ -305,8 +330,9 @@ export default function GraphCanvas({
             {nodes.map((node) => {
               const dimmed = isFiltering && !matchesFilter(node);
               const iconSize = Math.max(node.radius * 1.3, 10);
-              const avatarUrl = avatarUrlForOwner(node.owner);
-              const useAvatar = Boolean(avatarUrl) && !failedIcons.has(node.id);
+              const iconUrl = iconUrlForNode(node);
+              const useIcon = !failedIcons.has(node.id);
+              const fallbackMark = isGithubProvider(node.provider) ? "#gh-mark" : "#site-mark";
               const nodeColor = colorForNode(node);
               return (
                 <g
@@ -327,9 +353,9 @@ export default function GraphCanvas({
                     stroke={selected?.id === node.id ? "#f8fafc" : nodeColor}
                     strokeWidth={selected?.id === node.id ? 2 : 1.5}
                   />
-                  {useAvatar ? (
+                  {useIcon ? (
                     <image
-                      href={avatarUrl!}
+                      href={iconUrl}
                       x={node.x - node.radius}
                       y={node.y - node.radius}
                       width={node.radius * 2}
@@ -340,7 +366,7 @@ export default function GraphCanvas({
                     />
                   ) : (
                     <use
-                      href="#gh-mark"
+                      href={fallbackMark}
                       x={node.x - iconSize / 2}
                       y={node.y - iconSize / 2}
                       width={iconSize}
@@ -497,7 +523,7 @@ export default function GraphCanvas({
             rel="noopener noreferrer"
             className="mt-3 inline-block text-xs text-sky-400 hover:underline"
           >
-            Open repository ↗
+            {isGithubProvider(activeNode.provider) ? "Open repository ↗" : "Visit website ↗"}
           </a>
         </div>
       )}

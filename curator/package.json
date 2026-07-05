@@ -1,0 +1,33 @@
+{
+  "name": "@awesome-repo-graph/curator",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Autonomous daily curation pipeline for sources.json",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "curate": "tsx src/cli.ts run",
+    "curate:dry-run": "tsx src/cli.ts run --dry-run",
+    "validate-env": "tsx src/cli.ts validate-env",
+    "embeddings:sync": "tsx src/cli.ts embeddings-sync",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src test",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "dependencies": {
+    "@google/genai": "^1.4.0",
+    "openai": "^4.104.0",
+    "zod": "^3.24.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "eslint": "^9.17.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.19.0",
+    "vitest": "^2.1.8"
+  }
+}

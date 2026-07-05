@@ -9,6 +9,7 @@ export type LayoutNode = {
   path: string[];
   tags: string[];
   owner: string | null;
+  provider: string;
   stars: number;
   radius: number;
   x: number;
@@ -175,6 +176,7 @@ export function computeLayout(
         path: source.path,
         tags: source.tags || [],
         owner: source.owner,
+        provider: source.provider,
         stars: source.score?.stars ?? 0,
         radius: p.radius,
         x: cx + p.x,

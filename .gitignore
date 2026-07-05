@@ -1,3 +1,6 @@
 node_modules/
 .playwright-mcp/
 *.log
+.env
+curator/dist/
+curator/reports/
