@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-42-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-1788097-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-45-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-2192896-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -77,7 +77,7 @@ npm run capture:demo
 ## Sectors
 
 - **Frontend Engineering** — 12 sources
-- **AI Agent Tooling** — 28 sources
+- **AI Agent Tooling** — 31 sources
 - **DevOps & Infrastructure** — 1 source
 - **Game Development** — 1 source
 
@@ -116,7 +116,7 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>AI Agent Tooling</strong> — 28 sources</summary>
+<summary><strong>AI Agent Tooling</strong> — 31 sources</summary>
 
 ### Security & Pentesting
 - **[strix](https://github.com/usestrix/strix)** — Open-source AI-powered penetration testing agent that autonomously finds and fixes application vulnerabilities.  
@@ -163,12 +163,16 @@ npm run capture:demo
 ### Agent Apps
 - **[career-ops](https://github.com/santifer/career-ops)** — Go-based AI-powered job search system built on Claude Code with a dashboard and 14 skill modes.  
   ★ 58,603 · MIT · `job-search` `dashboard` `go` `ai-agent`
+- **[lenserfight](https://github.com/conectlens/lenserfight)** — Platform for parameterized prompts, AI-agent workflows, a community forum, and prompt battles.  
+  ★ 12 · MIT · `ai-agent` `prompt-engineering` `workflow-automation` `automation`
 
 ### Agent Frameworks
 - **[openclaw](https://github.com/openclaw/openclaw)**  
   ★ 381,795 · NOASSERTION · `ai-agent` `agent-framework`
 - **[superpowers](https://github.com/obra/superpowers)** — Agentic skill framework and software development methodology.  
   ★ 246,514 · MIT · `agent-framework` `skills` `software-development-methodology`
+- **[hermes-agent](https://github.com/NousResearch/hermes-agent)** — Extensible AI agent with persistent memory designed to adapt to its user over time.  
+  ★ 209,516 · MIT · `ai-agent` `agent-framework` `llm` `memory`
 - **[hermes-agent](https://github.com/nousresearch/hermes-agent)**  
   ★ 209,402 · MIT · `ai-agent` `agent-framework` `llm`
 - **[agency-agents](https://github.com/msitarzewski/agency-agents)** — End-to-end AI agency framework composed of specialized expert agents (frontend, community management, etc.).  
@@ -205,6 +209,10 @@ npm run capture:demo
 ### Multi-Agent Research
 - **[awesome-multi-agent-papers](https://github.com/kyegomez/awesome-multi-agent-papers)** — A curated list of notable research papers on multi-agent LLM systems, maintained by kyegomez.  
   ★ 1,595 · NOASSERTION · `multi-agent` `llm` `ai-agent`
+
+### Workflow Automation
+- **[n8n](https://github.com/n8n-io/n8n)** — Fair-code workflow automation platform with native AI capabilities, 400+ integrations, and self-hosting.  
+  ★ 195,271 · NOASSERTION · `workflow-automation` `automation` `low-code` `self-hosted`
 
 </details>
 
