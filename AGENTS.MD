@@ -1,4 +1,4 @@
-# Agent Ruleset — MyGithubLinks
+# Agent Ruleset — awesome-repo-graph
 
 This repository catalogs curated open-source repository links in
 `sources.json`. `README.MD` is **generated** from `sources.json` — never

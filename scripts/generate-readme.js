@@ -69,7 +69,7 @@ function generateReadme(data) {
   const sectorCounts = countBySector(data.sources);
 
   const lines = [
-    "# MyGithubLinks",
+    "# awesome-repo-graph",
     "",
     `![Sources](https://img.shields.io/badge/sources-${data.sources.length}-blue)` +
       ` ![Stars Tracked](https://img.shields.io/badge/stars_tracked-${totalStars}-yellow)` +

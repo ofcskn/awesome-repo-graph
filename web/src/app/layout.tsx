@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MyGithubLinks — Source Graph",
+  title: "awesome-repo-graph — Source Graph",
   description:
     "An interactive graph of curated open-source repositories, grouped by sector and linked by shared tags.",
 };

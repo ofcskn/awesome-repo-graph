@@ -1,4 +1,4 @@
-# MyGithubLinks
+# awesome-repo-graph
 
 ![Sources](https://img.shields.io/badge/sources-2-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-1214-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 

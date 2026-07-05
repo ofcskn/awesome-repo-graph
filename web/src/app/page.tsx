@@ -15,7 +15,7 @@ export default function Home() {
     <div className="flex h-screen w-screen flex-col bg-slate-950 font-sans text-slate-100">
       <header className="flex flex-wrap items-baseline justify-between gap-2 border-b border-slate-800 px-6 py-4">
         <div>
-          <h1 className="text-xl font-semibold tracking-tight">MyGithubLinks</h1>
+          <h1 className="text-xl font-semibold tracking-tight">awesome-repo-graph</h1>
           <p className="text-sm text-slate-400">
             Node size = stars · edges = shared tags · clusters = sector
           </p>
