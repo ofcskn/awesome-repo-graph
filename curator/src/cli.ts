@@ -1,16 +1,46 @@
 #!/usr/bin/env node
 import { loadConfig } from "./config.js";
-import { getAllCredentialStatuses, validateProviderEnv } from "./env.js";
+import { ALL_PROVIDER_NAMES, getAllCredentialStatuses, validateProviderEnv } from "./env.js";
+import type { ProviderName } from "./env.js";
 import { runPipeline } from "./run.js";
 import { resolveEmbeddingProvider } from "./embeddings/providers.js";
 import { loadEmbeddingStore, syncEmbeddings } from "./memory/embedding-store.js";
 import { loadSources } from "./store-bridge.js";
 
+/** Reads `--provider <name>` from the argument list, if present. */
+function readProviderFlag(argv: string[]): string | undefined {
+  const idx = argv.indexOf("--provider");
+  if (idx < 0) return undefined;
+  return argv[idx + 1];
+}
+
 function parseFlags(argv: string[]) {
+  const local = argv.includes("--local");
+  const providerRaw = readProviderFlag(argv);
+
+  // The local trigger forces a primary provider (default `ollama`) and drafts
+  // a PR. `--provider <name>` alone does the same for any provider.
+  let primaryProvider: ProviderName | undefined;
+  if (providerRaw !== undefined) {
+    if (!ALL_PROVIDER_NAMES.includes(providerRaw as ProviderName)) {
+      throw new Error(
+        `Unknown --provider "${providerRaw}". Valid values: ${ALL_PROVIDER_NAMES.join(", ")}`,
+      );
+    }
+    primaryProvider = providerRaw as ProviderName;
+  } else if (local) {
+    primaryProvider = "ollama";
+  }
+
+  const isLocalRun = local || providerRaw !== undefined;
+
   return {
     dryRun: argv.includes("--dry-run"),
     force: argv.includes("--force"),
     scheduled: argv.includes("--scheduled"),
+    primaryProvider,
+    // A local run drafts a PR by default; --dry-run still skips all git activity.
+    commitMode: isLocalRun ? ("pull-request" as const) : undefined,
   };
 }
 
@@ -45,6 +75,8 @@ async function runCommand(flags: ReturnType<typeof parseFlags>): Promise<void> {
     dryRun: flags.dryRun ? true : undefined,
     force: flags.force ? true : undefined,
     respectSchedule: flags.scheduled,
+    primaryProvider: flags.primaryProvider,
+    commitMode: flags.commitMode,
   });
 
   console.log(`Run ${report.runId} — status=${report.status}`);
@@ -113,7 +145,9 @@ async function main(): Promise<void> {
     return;
   }
 
-  console.error("Usage: cli.ts <run|validate-env|embeddings-sync> [--dry-run] [--force] [--scheduled]");
+  console.error(
+    "Usage: cli.ts <run|validate-env|embeddings-sync> [--dry-run] [--force] [--scheduled] [--local] [--provider <name>]",
+  );
   process.exitCode = 1;
 }
 

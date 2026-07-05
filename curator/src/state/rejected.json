@@ -1,0 +1,84 @@
+{
+  "rejections": [
+    {
+      "canonicalUrl": "https://github.com/CherryHQ/cherry-studio",
+      "githubId": 805155266,
+      "evaluatedAt": "2026-07-05T15:06:44.135Z",
+      "reasonCode": "provider-error",
+      "metadataFingerprint": "fp_f40e3824",
+      "reconsiderAt": "2026-07-19T15:06:44.135Z"
+    },
+    {
+      "canonicalUrl": "https://github.com/HKUDS/nanobot",
+      "githubId": 1147094660,
+      "evaluatedAt": "2026-07-05T15:06:45.426Z",
+      "reasonCode": "provider-error",
+      "metadataFingerprint": "fp_217b0bab",
+      "reconsiderAt": "2026-07-19T15:06:45.426Z"
+    },
+    {
+      "canonicalUrl": "https://github.com/NousResearch/hermes-agent",
+      "githubId": 1024554267,
+      "evaluatedAt": "2026-07-05T15:06:41.522Z",
+      "reasonCode": "renamed-duplicate",
+      "metadataFingerprint": "fp_3cbc9481",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://github.com/Panniantong/Agent-Reach",
+      "githubId": 1165277268,
+      "evaluatedAt": "2026-07-05T15:06:43.470Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_bfc867fa",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://github.com/santifer/career-ops",
+      "githubId": 1201476594,
+      "evaluatedAt": "2026-07-05T15:06:42.849Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_29c793ff",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://github.com/shareAI-lab/learn-claude-code",
+      "githubId": 1010681419,
+      "evaluatedAt": "2026-07-05T15:06:42.849Z",
+      "reasonCode": "provider-error",
+      "metadataFingerprint": "fp_569c7950",
+      "reconsiderAt": "2026-07-19T15:06:42.849Z"
+    },
+    {
+      "canonicalUrl": "https://github.com/siyuan-note/siyuan",
+      "githubId": 291438522,
+      "evaluatedAt": "2026-07-05T15:06:45.946Z",
+      "reasonCode": "provider-error",
+      "metadataFingerprint": "fp_fc212abc",
+      "reconsiderAt": "2026-07-19T15:06:45.946Z"
+    },
+    {
+      "canonicalUrl": "https://github.com/thedaviddias/Front-End-Checklist",
+      "githubId": 107111421,
+      "evaluatedAt": "2026-07-05T15:06:42.260Z",
+      "reasonCode": "provider-error",
+      "metadataFingerprint": "fp_fce21742",
+      "reconsiderAt": "2026-07-19T15:06:42.260Z"
+    },
+    {
+      "canonicalUrl": "https://github.com/zhayujie/CowAgent",
+      "githubId": 522158088,
+      "evaluatedAt": "2026-07-05T15:06:44.778Z",
+      "reasonCode": "provider-error",
+      "metadataFingerprint": "fp_31af779b",
+      "reconsiderAt": "2026-07-19T15:06:44.778Z"
+    },
+    {
+      "canonicalUrl": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "githubId": 1131513930,
+      "evaluatedAt": "2026-07-05T15:06:43.470Z",
+      "reasonCode": "provider-error",
+      "metadataFingerprint": "fp_25a19df2",
+      "reconsiderAt": "2026-07-19T15:06:43.470Z"
+    }
+  ]
+}

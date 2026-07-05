@@ -10,6 +10,7 @@
   "scripts": {
     "curate": "tsx src/cli.ts run",
     "curate:dry-run": "tsx src/cli.ts run --dry-run",
+    "curate:local": "tsx src/cli.ts run --local",
     "validate-env": "tsx src/cli.ts validate-env",
     "embeddings:sync": "tsx src/cli.ts embeddings-sync",
     "typecheck": "tsc --noEmit",

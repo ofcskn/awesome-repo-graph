@@ -54,7 +54,7 @@ cp ../.env.example ../.env   # then fill in at least one provider key
 
 Copy `.env.example` (repo root) to `.env` and fill in the providers you
 want active. You only need the keys for the providers listed in
-`curator/src/config.ts`'s `providers.enabled` array — not all four.
+`curator/src/config.ts`'s `providers.enabled` array — not every provider.
 
 | Provider | Env var |
 |---|---|
@@ -62,6 +62,11 @@ want active. You only need the keys for the providers listed in
 | Gemini Developer API | `GEMINI_API_KEY` |
 | DeepSeek | `DEEPSEEK_API_KEY` |
 | Vertex Gemini (Express Mode) | `GEMINI_VERTEX_API_KEY` |
+| Anthropic Claude | `ANTHROPIC_API_KEY` |
+| Ollama / local OpenAI-compatible server | `OLLAMA_API_KEY` (optional) + `OLLAMA_BASE_URL` |
+
+See "Local & self-hosted models" below for running the pipeline against a
+local or self-hosted model.
 
 Note: DeepSeek can classify candidates but cannot generate embeddings (no
 embeddings endpoint) — see "Vector-embedding memory" below. Configure at
@@ -74,18 +79,21 @@ settings.
 ## GitHub secret setup
 
 For the scheduled workflow (`.github/workflows/curate.yml`) to run, add the
-same four variables as **repository secrets** (Settings → Secrets and
-variables → Actions): `OPENAI_API_KEY`, `GEMINI_API_KEY`,
-`DEEPSEEK_API_KEY`, `GEMINI_VERTEX_API_KEY`. Only the ones you intend to use
+variables for the providers in `providers.enabled` as **repository secrets**
+(Settings → Secrets and variables → Actions): by default `OPENAI_API_KEY`,
+`GEMINI_API_KEY`, `DEEPSEEK_API_KEY`, `GEMINI_VERTEX_API_KEY` (add
+`ANTHROPIC_API_KEY` if you enable Anthropic). Only the ones you intend to use
 need real values — an unset one simply disables that provider with a
-sanitized warning in the run report, not a crash.
+sanitized warning in the run report, not a crash. The Ollama / local-server
+provider is for local runs (see "Local & self-hosted models"), not the
+scheduled CI workflow.
 
 ## Provider configuration
 
 `config.ts`'s `providers` block controls which providers are active, which
 is primary, fallback order, model names, per-provider weights (used by
 multi-model consensus), request/timeout/retry limits, and the consensus
-strategy. All four providers share one structured-output contract
+strategy. All providers share one structured-output contract
 (`classification/schema.ts`) validated at runtime with zod — a provider
 that returns malformed JSON is treated as a failure and the run falls back
 to the next provider, never trusted as-is.
@@ -125,6 +133,77 @@ npm run embeddings:sync        # manual full embedding backfill/repair (see "Vec
 A manual `run` (no `--scheduled`) always executes immediately — the daily
 scheduling gate only applies to the `--scheduled` entry point used by the
 GitHub Actions workflow.
+
+## Local & self-hosted models
+
+The pipeline can be triggered locally against a model you control — a local
+model served by Ollama, any OpenAI-protocol local server, or hosted Anthropic
+Claude — and will draft a new-sources pull request from the result.
+
+```bash
+cd curator
+npm run curate:local                 # local run: Ollama primary, drafts a PR
+npx tsx src/cli.ts run --provider anthropic   # force Anthropic Claude as primary
+npx tsx src/cli.ts run --local --dry-run      # local run, but touch nothing (no git)
+```
+
+The local trigger (`--local`, or `--provider <name>`) forces the chosen
+provider as the primary classifier and defaults `output.commitMode` to
+`pull-request`, so a successful run produces a drafted `curator/auto/<date>`
+branch and PR (via the same `git/` PR path the scheduled workflow uses).
+`--dry-run` still skips all git activity, and a manual local run executes
+immediately — the scheduling gate only applies to `--scheduled`. Other
+enabled providers remain available as fallbacks if the primary fails on a
+candidate.
+
+### Ollama (local)
+
+Ollama exposes an OpenAI-compatible endpoint at `http://localhost:11434/v1`.
+Pull a model and start the server, then run the local trigger:
+
+```bash
+ollama pull hermes3          # or any tag you want to classify with
+ollama serve                 # if not already running
+cd curator && npm run curate:local
+```
+
+- The model tag is `config.providers.models.ollama` (default `hermes3`) —
+  change it there to use a different local model.
+- No API key is required. Ollama is a "keyless" provider: it reports as
+  usable without a secret, and an unreachable server surfaces as a normal
+  per-candidate provider failure (falling back to the next provider), not a
+  hard startup error. Set `OLLAMA_API_KEY` only if your server enforces one.
+
+### Other OpenAI-compatible local servers (Hermes, "OpenClaw", …)
+
+Any server that speaks the OpenAI chat-completions protocol (llama.cpp,
+vLLM, LM Studio, text-generation-webui, …) works through the same `ollama`
+adapter by configuration alone — no new code:
+
+1. Set `OLLAMA_BASE_URL` to that server's `/v1` endpoint (e.g.
+   `http://localhost:8000/v1`).
+2. Set `config.providers.models.ollama` to that server's model tag (the
+   Hermes or "OpenClaw" name it serves).
+3. Run `npm run curate:local` (or `--provider ollama`).
+
+If a model is only reachable over a *non*-OpenAI protocol, it would need its
+own adapter — see "Adding another AI provider" below. This project does not
+ship one, and does not invent an API for a transport it can't verify.
+
+### Anthropic Claude (hosted)
+
+Set `ANTHROPIC_API_KEY` in `.env`, then force Anthropic as primary:
+
+```bash
+cd curator
+npx tsx src/cli.ts run --provider anthropic
+```
+
+- The model is `config.providers.models.anthropic` (default
+  `claude-opus-4-8`).
+- `ANTHROPIC_BASE_URL` can point the adapter at a hosted gateway/proxy.
+- The adapter reports token usage (`input + output`) so cost accounting can
+  consume it.
 
 ## Scheduler behavior
 
