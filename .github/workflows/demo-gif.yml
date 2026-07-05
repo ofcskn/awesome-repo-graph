@@ -1,0 +1,81 @@
+name: Refresh demo GIF
+
+# Regenerates assets/demo.gif from the current graph and commits it back so the
+# README demo always reflects the deployed site. Runs in parallel with, and
+# independently of, the Pages deploy (deploy-pages.yml).
+#
+# Anti-loop, three independent layers (any one suffices — defense in depth):
+#   1. The commit message carries [skip ci], so GitHub Actions skips every
+#      workflow for that push.
+#   2. paths-ignore below means a commit that only touches assets/demo.gif does
+#      not re-trigger this workflow.
+#   3. The commit is pushed with the default GITHUB_TOKEN, and pushes made with
+#      GITHUB_TOKEN do not trigger further `on: push` workflow runs.
+# The commit is also made only when the GIF actually changed, avoiding churn.
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "assets/demo.gif"
+  workflow_dispatch:
+
+# Serialize refreshes; never cancel a run mid-capture/commit.
+concurrency:
+  group: demo-gif
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-demo:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: web/package-lock.json
+
+      - name: Install web dependencies
+        working-directory: web
+        run: npm ci
+
+      # Build WITHOUT GITHUB_PAGES so the export serves from "/", matching how
+      # the capture tool serves it locally (keeps local and CI identical).
+      - name: Build static export
+        working-directory: web
+        run: npm run build
+
+      - name: Install ffmpeg
+        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+
+      - name: Install capture tool
+        working-directory: tools/demo-capture
+        run: npm ci
+
+      - name: Install Chromium
+        working-directory: tools/demo-capture
+        run: npx playwright install --with-deps chromium
+
+      - name: Capture demo GIF
+        working-directory: tools/demo-capture
+        run: npm run capture:demo
+
+      - name: Commit refreshed GIF
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- assets/demo.gif; then
+            echo "demo.gif unchanged; nothing to commit."
+            exit 0
+          fi
+          git add assets/demo.gif
+          git commit -m "Refresh demo GIF [skip ci]"
+          git push

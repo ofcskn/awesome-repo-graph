@@ -130,6 +130,7 @@ function generateReadme(data) {
     "- [How this repository works](#how-this-repository-works)",
     "- [Adding a source](#adding-a-source)",
     "- [Graph visualization](#graph-visualization)",
+    "- [Demo GIF](#demo-gif)",
     "- [Sectors](#sectors)",
     "- [Catalog](#catalog)",
     "- [License](#license)",
@@ -174,6 +175,27 @@ function generateReadme(data) {
     "",
     "Renders an interactive, GSAP-animated graph of every source at `localhost:3000` " +
       "— circle size reflects star count, edges connect sources sharing tags.",
+    "",
+    "## Demo GIF",
+    "",
+    "The animated demo above (`assets/demo.gif`) is generated, not hand-made. On " +
+      "every push to `main`, a workflow builds the graph, drives it through a " +
+      "scripted scene (initial render → tag filter → zoom → inspect a node → " +
+      "settle) with a headless browser, and assembles the frames into an " +
+      "optimized looping GIF that is committed back — so the demo always reflects " +
+      "the current site.",
+    "",
+    "To regenerate it locally:",
+    "",
+    "```",
+    "cd web && npm ci && npm run build",
+    "cd ../tools/demo-capture && npm install && npx playwright install --with-deps chromium",
+    "npm run capture:demo",
+    "```",
+    "",
+    "`ffmpeg` must be on your `PATH`. The scene and all tunables (frame rate, " +
+      "size, per-beat frame counts) live in `tools/demo-capture/scene.mjs`; see " +
+      "`docs/demo-capture.md` for details.",
     "",
     "## Sectors",
     "",
