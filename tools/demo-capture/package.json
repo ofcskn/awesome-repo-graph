@@ -1,0 +1,13 @@
+{
+  "name": "demo-capture",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Captures the interactive graph as an animated demo GIF for the README.",
+  "scripts": {
+    "capture:demo": "node capture.mjs"
+  },
+  "dependencies": {
+    "playwright": "^1.49.0"
+  }
+}
