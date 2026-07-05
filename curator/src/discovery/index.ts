@@ -18,6 +18,15 @@ export interface DiscoveryResult {
  * and stops once config.discovery.dailyCandidateLimit is reached. Spaces
  * requests out to stay under GitHub's unauthenticated search rate limit
  * (10 requests/minute).
+ *
+ * Each query only requests its fair share of the *remaining* budget
+ * (remaining candidates / remaining queries, recomputed every iteration) —
+ * without this, a single popular query early in the list (e.g. an
+ * established topic with thousands of matches) would fill the entire
+ * dailyCandidateLimit by itself and starve every query listed after it,
+ * which defeats the point of configuring a diverse query list. A query
+ * that returns fewer than its share simply leaves the surplus for the
+ * next one.
  */
 export async function discoverCandidates(config: CuratorConfig): Promise<DiscoveryResult> {
   const queries = Array.from(
@@ -32,12 +41,15 @@ export async function discoverCandidates(config: CuratorConfig): Promise<Discove
   const rateLimitedQueries: string[] = [];
 
   for (let i = 0; i < queries.length; i += 1) {
-    if (seen.size >= config.discovery.dailyCandidateLimit) break;
+    const remainingBudget = config.discovery.dailyCandidateLimit - seen.size;
+    if (remainingBudget <= 0) break;
+    const remainingQueries = queries.length - i;
+    const perQueryShare = Math.ceil(remainingBudget / remainingQueries);
     const query = queries[i]!;
 
     const { candidates, rateLimited } = await searchGitHubRepositories({
       query,
-      perPage: Math.min(30, config.discovery.dailyCandidateLimit),
+      perPage: Math.min(30, perQueryShare),
       discoveryMethod: `github-search:${query}`,
     });
     queriesRun.push(query);
