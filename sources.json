@@ -1,0 +1,52 @@
+{
+  "sources": [
+    {
+      "id": "adrianhajdin-jsm-gta-vi-landing",
+      "url": "https://github.com/adrianhajdin/jsm_gta_vi_landing",
+      "provider": "github.com",
+      "owner": "adrianhajdin",
+      "repo": "jsm_gta_vi_landing",
+      "title": "jsm_gta_vi_landing",
+      "description": "",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page"
+      ],
+      "license": null,
+      "score": {
+        "stars": 196,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "adrianhajdin-award-winning-website",
+      "url": "https://github.com/adrianhajdin/award-winning-website",
+      "provider": "github.com",
+      "owner": "adrianhajdin",
+      "repo": "award-winning-website",
+      "title": "award-winning-website",
+      "description": "",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page"
+      ],
+      "license": null,
+      "score": {
+        "stars": 1018,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    }
+  ]
+}
