@@ -33,6 +33,7 @@ curator/
     rejected.json            rejection memory (committed, so it survives CI runners)
     last-run.json             last successful run timestamp (committed)
     embeddings.json            vector-embedding memory (committed) — see "Vector-embedding memory" below
+    token-ledger.json           append-only per-run token/cost ledger (committed) — see "Run logging & token accounting" below
   reports/                    one JSON report per calendar day (see "Report format")
   test/                       vitest suite, all network/providers mocked
 ```
@@ -318,7 +319,80 @@ status, counts at every pipeline stage, accepted URLs, taxonomy/tag
 changes, rejection reason counts, duplicate matches, provider
 disagreements/failures/retries, files changed, commands executed,
 score-refresh/validation/build results, and the commit/PR outcome). It
-never includes API keys or raw provider payloads.
+never includes API keys or raw provider payloads. It also carries the
+`agent` and `tokenUsage` blocks described in "Run logging & token
+accounting" below.
+
+## Run logging & token accounting
+
+Every run records **when the agent worked, which agent/model did it, and how
+many tokens (and roughly how much money) it cost** — logged securely, never
+exposing secrets, PII, or raw prompts/completions.
+
+### Where it comes from
+
+Each provider classification call already returns an approximate token count
+(`ClassifyOutcome.totalTokens`, populated by the OpenAI-/Gemini-compatible
+adapters from the SDK's reported usage). The pipeline threads those per-call
+counts up through `consensus.ts` and aggregates them in `run.ts` via a
+`TokenAccumulator` (`curator/src/reporting/token-accounting.ts`) into
+per-run totals, broken down by **provider** and **pipeline stage**
+(`classification` and `embeddings`).
+
+### In the report
+
+Each `curator/reports/run-<date>.json` gains two blocks:
+
+- `agent` — the curator's own package `name` and `version` (read from
+  `curator/package.json`; never author or git identity) plus
+  `primaryModels`, the distinct models actually used that run.
+- `tokenUsage` — grand-total tokens and estimated USD cost, a `byStage`
+  breakdown, and a `byProvider` array (each row: provider, stage, model,
+  call count, `callsWithoutUsage`, `totalTokens`, `estimatedCostUsd`).
+  `estimateBasis` marks the cost as an estimate.
+
+### The ledger
+
+`curator/state/token-ledger.json` is a committed, **append-only** log with
+one sanitized row per run: run id, ISO timestamps, status, agent
+name/version, primary model(s), accepted-source count, per-provider token
+totals, and estimated cost. It is the "log of when the agent worked and what
+it cost" artifact, and it survives ephemeral CI runners because it is
+committed.
+
+- **Ordering / idempotency**: rows are keyed by exact `startedAt` and sorted
+  ascending, so re-running replaces a row instead of duplicating it and
+  diffs are clean append-at-the-end changes. Multiple runs per UTC day are
+  supported (distinct timestamps).
+- **Bounded growth**: capped to the most recent `MAX_LEDGER_ENTRIES` (500)
+  rows — about 125 days at the default 4-runs/day cadence — with the oldest
+  rows dropped on write.
+- **Commit timing**: written every non-dry run and staged alongside any
+  accepted-source commit. This preserves the "no git activity on zero
+  accepts" invariant, so a zero-accept CI run's ledger row is ephemeral
+  unless a later commit in the same checkout includes it.
+
+### Estimated cost
+
+`curator/src/pricing.ts` holds a small, editable price table keyed by model
+name (a blended USD rate per 1,000,000 tokens, since providers report a
+single `total_tokens` figure). Cost is `tokens × rate` and is always an
+**estimate**. A provider that reports no usage yields `totalTokens: null`
+and `estimatedCostUsd: null` — never `0` — and an unpriced model yields a
+`null` cost rather than a fabricated one. The embeddings stage appears with
+its provider/model but `null` tokens today, because the embedding adapters
+do not surface SDK usage; the schema already supports real embedding totals
+if that changes.
+
+### Security guarantees
+
+The report and ledger carry only integers (token counts), floats (cost),
+public model-name strings, enums, and the package name/version — never API
+keys, raw request/response bodies, prompts, completions, or owner identity.
+Nothing in this subsystem reads provider secrets. `token-logging-security.test.ts`
+enforces this: it serializes a populated report and ledger while fake
+`sk-…`-shaped keys sit in the environment and asserts the output contains no
+secret-shaped strings, no auth field names, and none of the planted values.
 
 ## Cost-control guidance
 

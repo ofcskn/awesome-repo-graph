@@ -44,16 +44,18 @@ async function runSingleStrategy(
   const ordered = orderProvidersForFallback(config, providers);
   const fallback = await classifyWithFallback(request, ordered);
 
-  const perProvider: ProviderClassification[] = fallback.attempts.map((attempt) => ({
-    provider: attempt.provider,
-    classification:
-      attempt.succeeded && fallback.provider === attempt.provider && fallback.outcome
-        ? fallback.outcome.classification
-        : null,
-    error: attempt.error,
-    attempts: 1,
-    latencyMs: fallback.outcome && fallback.provider === attempt.provider ? fallback.outcome.latencyMs : 0,
-  }));
+  const perProvider: ProviderClassification[] = fallback.attempts.map((attempt) => {
+    const isWinner = fallback.provider === attempt.provider && fallback.outcome !== null;
+    return {
+      provider: attempt.provider,
+      classification: attempt.succeeded && isWinner ? fallback.outcome!.classification : null,
+      error: attempt.error,
+      attempts: 1,
+      latencyMs: isWinner ? fallback.outcome!.latencyMs : 0,
+      // Only the winning provider actually produced tokens; failed attempts threw before usage.
+      totalTokens: isWinner ? fallback.outcome!.totalTokens : null,
+    };
+  });
 
   if (!fallback.outcome) {
     return {
@@ -99,6 +101,7 @@ async function runMultiReviewerStrategy(
         error: null,
         attempts: result.value.outcome.attempts,
         latencyMs: result.value.outcome.latencyMs,
+        totalTokens: result.value.outcome.totalTokens,
       };
     }
     return {
@@ -107,6 +110,7 @@ async function runMultiReviewerStrategy(
       error: result.reason instanceof Error ? result.reason.message : String(result.reason),
       attempts: 1,
       latencyMs: 0,
+      totalTokens: null,
     };
   });
 
