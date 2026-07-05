@@ -12,7 +12,10 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  # Never cancel an in-progress production deployment: cancelling actions/
+  # deploy-pages mid-flight can leave the Pages backend unable to finalize the
+  # next one, surfacing as "Deployment failed, try again later". Queue instead.
+  cancel-in-progress: false
 
 jobs:
   build:
