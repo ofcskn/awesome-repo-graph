@@ -3,6 +3,7 @@ import path from "node:path";
 import type { ProviderName } from "../env.js";
 import type { ScoreRefreshResult } from "../insertion/score-refresh.js";
 import type { PullRequestResult, CommitResult, DispatchWorkflowResult } from "../git/branch.js";
+import type { TokenAccountingSummary } from "./token-accounting.js";
 
 export interface RunReport {
   runId: string;
@@ -10,6 +11,22 @@ export interface RunReport {
   completedAt: string;
   status: "success" | "partial" | "failed" | "skipped";
   configFingerprint: string;
+  /**
+   * Sanitized agent identity for this run: the curator's own package
+   * name/version (never author or PII) plus the distinct models it used.
+   */
+  agent: {
+    name: string;
+    version: string;
+    primaryModels: string[];
+  };
+  /**
+   * Per-run token totals (by provider and pipeline stage) and estimated USD
+   * cost. Aggregated from the per-call token counts the provider layer
+   * reports. Contains only numbers + public model names — never secrets or
+   * provider payloads. Cost is an estimate (see tokenUsage.estimateBasis).
+   */
+  tokenUsage: TokenAccountingSummary;
   activeProviders: ProviderName[];
   disabledProviders: { provider: ProviderName; envVar: string; reason: string }[];
   searchQueries: string[];
@@ -57,6 +74,13 @@ export function createRunId(startedAt: Date): string {
 export function finalizeReportForWrite(report: RunReport): RunReport {
   return {
     ...report,
+    agent: { ...report.agent, primaryModels: [...report.agent.primaryModels].sort() },
+    tokenUsage: {
+      ...report.tokenUsage,
+      byProvider: [...report.tokenUsage.byProvider].sort(
+        (a, b) => a.stage.localeCompare(b.stage) || a.provider.localeCompare(b.provider),
+      ),
+    },
     acceptedSourceUrls: [...report.acceptedSourceUrls].sort(),
     finalTags: [...report.finalTags].sort(),
     filesChanged: [...report.filesChanged].sort(),

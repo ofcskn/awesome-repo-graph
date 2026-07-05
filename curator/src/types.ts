@@ -112,6 +112,8 @@ export interface ProviderClassification {
   error: string | null;
   attempts: number;
   latencyMs: number;
+  /** Approximate tokens the provider reported for this call; null when unreported (cost accounting only). */
+  totalTokens: number | null;
 }
 
 export interface ConsensusResult {

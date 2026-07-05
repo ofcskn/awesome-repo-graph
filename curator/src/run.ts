@@ -23,6 +23,9 @@ import {
 import { evaluateSchedulingGate, saveLastRunState } from "./scheduling.js";
 import { loadSources, type StoredSource } from "./store-bridge.js";
 import { createRunId, writeReport, type RunReport } from "./reporting/report.js";
+import { TokenAccumulator, emptyTokenSummary } from "./reporting/token-accounting.js";
+import { readAgentMetadata } from "./reporting/agent.js";
+import { recordRunInLedger, TOKEN_LEDGER_PATH } from "./reporting/ledger.js";
 import {
   checkoutBranch,
   createOrUpdatePullRequest,
@@ -87,12 +90,20 @@ export async function runPipeline(options: RunOptions): Promise<RunReport> {
   const { config, dryRun, force, fingerprint } = loaded;
   const runId = createRunId(startedAt);
 
+  // Aggregates the per-call token counts the provider layer already reports
+  // into per-run, per-stage, per-provider totals. Holds only numbers and
+  // public model names — never secrets, prompts, or provider payloads.
+  const tokens = new TokenAccumulator();
+  const agentMeta = readAgentMetadata();
+
   const report: RunReport = {
     runId,
     startedAt: startedAt.toISOString(),
     completedAt: "",
     status: "failed",
     configFingerprint: fingerprint,
+    agent: { name: agentMeta.name, version: agentMeta.version, primaryModels: [] },
+    tokenUsage: emptyTokenSummary(),
     activeProviders: [],
     disabledProviders: [],
     searchQueries: config.discovery.searchQueries,
@@ -189,6 +200,10 @@ export async function runPipeline(options: RunOptions): Promise<RunReport> {
   let embeddingRecords: EmbeddingRecord[] = [];
   if (embeddingProvider) {
     const embeddingModel = config.embeddings.models[embeddingProvider.name]!;
+    // Register the embeddings stage so it appears in the token report with
+    // its provider + model. The embedding adapters do not surface SDK usage
+    // today, so tokens are recorded as null (unknown), never zero.
+    tokens.record("embeddings", embeddingProvider.name, embeddingModel, null);
     const sync = await syncEmbeddings(
       existingData.sources,
       loadEmbeddingStore(),
@@ -317,6 +332,12 @@ export async function runPipeline(options: RunOptions): Promise<RunReport> {
         });
       }
       report.retryCounts[attempt.provider] = (report.retryCounts[attempt.provider] ?? 0) + attempt.attempts;
+      tokens.record(
+        "classification",
+        attempt.provider,
+        config.providers.models[attempt.provider] ?? null,
+        attempt.totalTokens,
+      );
     }
     if (consensus.disagreements.length > 0) {
       report.providerDisagreements.push({
@@ -420,6 +441,22 @@ export async function runPipeline(options: RunOptions): Promise<RunReport> {
     if (!smoke.succeeded) report.notes.push(`Smoke tests failed: ${smoke.error ?? "see checks"}`);
   }
 
+  // Finalize token accounting + sanitized agent metadata before the git
+  // step, so the ledger can be staged alongside any accepted-source commit.
+  report.tokenUsage = tokens.summarize();
+  report.agent.primaryModels = tokens.modelsUsed();
+  report.status = report.counts.accepted > 0 || report.counts.discovered === 0 ? "success" : "partial";
+  report.completedAt = new Date().toISOString();
+
+  if (!dryRun) {
+    // Append one sanitized row to the committed run/token ledger. It's
+    // written every run but only *committed* when the run also commits
+    // sources (the git step below only runs on accepted > 0), preserving the
+    // "no git activity on zero accepts" invariant.
+    recordRunInLedger(report, report.agent, report.tokenUsage);
+    filesChanged.add(path.relative(repoRoot, TOKEN_LEDGER_PATH));
+  }
+
   const hasChanges = report.counts.accepted > 0 && !dryRun;
   if (hasChanges && config.output.commitMode !== "report-only") {
     const dateStr = startedAt.toISOString().slice(0, 10);
@@ -476,8 +513,6 @@ export async function runPipeline(options: RunOptions): Promise<RunReport> {
   }
 
   report.filesChanged = Array.from(filesChanged).filter(Boolean);
-  report.status = report.counts.accepted > 0 || report.counts.discovered === 0 ? "success" : "partial";
-  report.completedAt = new Date().toISOString();
 
   if (!dryRun) {
     saveLastRunState({ lastSuccessAt: report.completedAt });
