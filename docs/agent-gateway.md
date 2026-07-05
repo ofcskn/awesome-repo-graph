@@ -96,13 +96,21 @@ Then stage `agent-attestation.json` together with `sources.json` and
 
 ### Curator integration
 
-The curator already shells out to `scripts/add-source.js`
-(`curator/src/insertion/insert.ts`). To attach an attestation it runs
-`scripts/attest.js` once per change — after all insertions and score refresh,
-before the git commit — and adds `agent-attestation.json` to the set of staged
-paths in its commit step. In CI the private key is provided by mapping a
-repository secret (e.g. `CURATOR_SIGNING_KEY`) to the `AGENT_SIGNING_KEY`
-environment variable for that step. No other curator change is required.
+This is wired into the pipeline. After all insertions and the score refresh,
+before the git commit, `runPipeline` calls `generateAttestation`
+(`curator/src/git/attest.ts`), which runs `scripts/attest.js` once and stages
+`agent-attestation.json` alongside `sources.json`/`README.MD` in the same
+commit. It is controlled by `config.output.attestation`
+(`enabled` / `agentId` / `keyId`; defaults match this registry's
+`awesome-repo-graph-curator` / `curator-2026`).
+
+The signing key is supplied only through the `AGENT_SIGNING_KEY` environment
+variable — in CI by mapping the `CURATOR_SIGNING_KEY` repository secret to it
+(see `.github/workflows/curate.yml`), and for a sanctioned local run by
+exporting `AGENT_SIGNING_KEY` (the PEM contents) before `npm run curate:local`.
+The step is **fail-open**: if no key is present the run still completes and the
+attestation is skipped with a note in the report — the resulting change simply
+won't pass the gate until it is re-signed by an approved agent.
 
 ## Becoming an approved agent
 

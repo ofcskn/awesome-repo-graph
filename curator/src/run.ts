@@ -36,6 +36,7 @@ import {
   pushBranch,
   stageAndCommit,
 } from "./git/branch.js";
+import { generateAttestation } from "./git/attest.js";
 import { resolveEmbeddingProvider } from "./embeddings/providers.js";
 import { findNearest } from "./embeddings/similarity.js";
 import {
@@ -463,6 +464,25 @@ export async function runPipeline(options: RunOptions): Promise<RunReport> {
     const branch = `${config.output.branchPrefix}/${dateStr}`;
     const commitMessage = `Add ${report.counts.accepted} curated source(s) (${dateStr})`;
     const filesList = Array.from(filesChanged).filter(Boolean);
+
+    // Sign the change so the resulting PR passes the approved-agent gate.
+    // Runs after all insertions (sources.json/README.MD are already on disk)
+    // and before staging, so the attestation lands in the same commit.
+    // Fail-open: with no signing key present it's skipped, not failed.
+    if (config.output.attestation.enabled) {
+      const attestation = await generateAttestation({
+        agentId: config.output.attestation.agentId,
+        keyId: config.output.attestation.keyId,
+      });
+      if (attestation.created && attestation.path) {
+        filesList.push(attestation.path);
+        filesChanged.add(attestation.path);
+      } else if (attestation.skipped) {
+        report.notes.push("Attestation skipped: no signing key (AGENT_SIGNING_KEY) present.");
+      } else if (attestation.error) {
+        report.notes.push(`Attestation failed: ${attestation.error}`);
+      }
+    }
 
     try {
       if (config.output.commitMode === "pull-request") {

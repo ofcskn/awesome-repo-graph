@@ -155,6 +155,20 @@ const configSchema = z
       reportDir: z.string().min(1),
       /** 39. Whether reports are committed. */
       commitReports: z.boolean(),
+      /**
+       * Approved-agent attestation. When a change is committed, the curator
+       * signs it (scripts/attest.js) so the approved-agent gate
+       * (.github/workflows/verify-agent.yml) accepts the resulting PR. The
+       * signing key is supplied only via the AGENT_SIGNING_KEY env var
+       * (mapped from the CURATOR_SIGNING_KEY CI secret) — never from config.
+       * If `enabled` is true but no key material is present at runtime, the
+       * step is skipped with a note rather than failing the run.
+       */
+      attestation: z.object({
+        enabled: z.boolean(),
+        agentId: z.string().min(1),
+        keyId: z.string().min(1),
+      }),
     }),
     maintenance: z.object({
       /** 40. Whether star scores are refreshed. */
@@ -301,6 +315,11 @@ const defaultConfig: CuratorConfig = {
     commitMode: "pull-request",
     reportDir: "curator/reports",
     commitReports: true,
+    attestation: {
+      enabled: true,
+      agentId: "awesome-repo-graph-curator",
+      keyId: "curator-2026",
+    },
   },
   maintenance: {
     refreshScores: true,
