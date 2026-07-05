@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-45-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-2192896-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-47-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-2381344-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -77,9 +77,10 @@ npm run capture:demo
 ## Sectors
 
 - **Frontend Engineering** — 12 sources
-- **AI Agent Tooling** — 31 sources
+- **AI Agent Tooling** — 32 sources
 - **DevOps & Infrastructure** — 1 source
 - **Game Development** — 1 source
+- **Backend Engineering & APIs** — 1 source
 
 ## Catalog
 
@@ -116,95 +117,97 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>AI Agent Tooling</strong> — 31 sources</summary>
+<summary><strong>AI Agent Tooling</strong> — 32 sources</summary>
 
 ### Security & Pentesting
 - **[strix](https://github.com/usestrix/strix)** — Open-source AI-powered penetration testing agent that autonomously finds and fixes application vulnerabilities.  
-  ★ 36,485 · Apache-2.0 · `ai-agent` `penetration-testing` `security` `python`
+  ★ 36,801 · Apache-2.0 · `ai-agent` `penetration-testing` `security` `python`
 
 ### Browser & GUI Agents
 - **[chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)** — Official Chrome DevTools MCP server letting coding agents control and debug the browser directly.  
-  ★ 45,898 · Apache-2.0 · `mcp-server` `chrome-devtools` `debugging` `typescript`
+  ★ 45,935 · Apache-2.0 · `mcp-server` `chrome-devtools` `debugging` `typescript`
 - **[page-agent](https://github.com/alibaba/page-agent)** — In-browser GUI agent from Alibaba that controls web interfaces via natural language.  
-  ★ 23,437 · MIT · `ai-agent` `browser-automation` `gui-agent` `javascript`
+  ★ 23,620 · MIT · `ai-agent` `browser-automation` `gui-agent` `javascript`
 
 ### Terminal & CLI Agents
+- **[gemini-cli](https://github.com/google-gemini/gemini-cli)** — An open-source AI agent that integrates Google Gemini capabilities into the command-line interface.  
+  ★ 105,760 · Apache-2.0 · `ai-agent` `cli` `terminal` `mcp-server` `typescript` `gemini`
 - **[herdr](https://github.com/ogulcancelik/herdr)** — High-performance Rust-based terminal multiplexer for running multiple AI agents at once.  
-  ★ 11,683 · NOASSERTION · `terminal-multiplexer` `ai-agent` `rust`
+  ★ 11,845 · NOASSERTION · `terminal-multiplexer` `ai-agent` `rust`
 - **[agents-cli](https://github.com/google/agents-cli)** — Official Google CLI and skill pack specializing any coding assistant in building, evaluating, and deploying AI agents on Google Cloud.  
-  ★ 4,737 · Apache-2.0 · `google-cloud` `agent-development-kit` `cli`
+  ★ 4,742 · Apache-2.0 · `google-cloud` `agent-development-kit` `cli`
 
 ### MCP Servers
 - **[unity-mcp](https://github.com/CoplayDev/unity-mcp)** — Bridges AI assistants with the Unity Editor to automate scene control and asset management.  
-  ★ 11,761 · MIT · `mcp-server` `unity` `game-development`
+  ★ 11,838 · MIT · `mcp-server` `unity` `game-development`
 
 ### Local AI Tools
 - **[terax-ai](https://github.com/crynta/terax-ai)** — A 7MB terminal-first local AI development workspace.  
-  ★ 8,157 · Apache-2.0 · `local-ai` `terminal` `lightweight`
+  ★ 8,204 · Apache-2.0 · `local-ai` `terminal` `lightweight`
 
 ### Claude Code Skills
 - **[caveman](https://github.com/JuliusBrussee/caveman)** — Claude Code skill that reduces token usage by up to 65% via compressed, cavemen-style context.  
-  ★ 84,363 · MIT · `claude-code` `skill` `token-optimization` `javascript`
+  ★ 84,610 · MIT · `claude-code` `skill` `token-optimization` `javascript`
 
 ### Claude Code Plugins
 - **[codex-plugin-cc](https://github.com/openai/codex-plugin-cc)** — Plugin that runs OpenAI Codex from within Claude Code, bridging two agent systems for delegation and review.  
-  ★ 25,024 · Apache-2.0 · `claude-code` `codex` `plugin` `agent-delegation`
+  ★ 25,230 · Apache-2.0 · `claude-code` `codex` `plugin` `agent-delegation`
 - **[harness](https://github.com/revfactory/harness)** — Meta-skill plugin for Claude Code that designs domain-specific agent teams by architecture pattern and generates the skills they use.  
-  ★ 8,196 · Apache-2.0 · `claude-code` `agent-teams` `skills` `meta-skill`
+  ★ 8,204 · Apache-2.0 · `claude-code` `agent-teams` `skills` `meta-skill`
 
 ### Agent Harness
 - **[ECC](https://github.com/affaan-m/ECC)** — Agent performance optimization system for Claude Code, Codex, and Cursor providing skills, instincts, and memory management.  
-  ★ 226,167 · MIT · `agent-harness` `skills` `memory` `claude-code` `codex` `cursor`
+  ★ 226,238 · MIT · `agent-harness` `skills` `memory` `claude-code` `codex` `cursor`
 
 ### Video
 - **[video-use](https://github.com/browser-use/video-use)** — Automates video editing workflows using browser-use-powered coding agents.  
-  ★ 14,850 · MIT · `video-editing` `browser-use` `automation`
+  ★ 14,947 · MIT · `video-editing` `browser-use` `automation`
 
 ### Agent Apps
 - **[career-ops](https://github.com/santifer/career-ops)** — Go-based AI-powered job search system built on Claude Code with a dashboard and 14 skill modes.  
-  ★ 58,603 · MIT · `job-search` `dashboard` `go` `ai-agent`
+  ★ 58,639 · MIT · `job-search` `dashboard` `go` `ai-agent`
 - **[lenserfight](https://github.com/conectlens/lenserfight)** — Platform for parameterized prompts, AI-agent workflows, a community forum, and prompt battles.  
   ★ 12 · MIT · `ai-agent` `prompt-engineering` `workflow-automation` `automation`
 
 ### Agent Frameworks
 - **[openclaw](https://github.com/openclaw/openclaw)**  
-  ★ 381,795 · NOASSERTION · `ai-agent` `agent-framework`
+  ★ 381,811 · NOASSERTION · `ai-agent` `agent-framework`
 - **[superpowers](https://github.com/obra/superpowers)** — Agentic skill framework and software development methodology.  
-  ★ 246,514 · MIT · `agent-framework` `skills` `software-development-methodology`
-- **[hermes-agent](https://github.com/NousResearch/hermes-agent)** — Extensible AI agent with persistent memory designed to adapt to its user over time.  
-  ★ 209,516 · MIT · `ai-agent` `agent-framework` `llm` `memory`
+  ★ 246,705 · MIT · `agent-framework` `skills` `software-development-methodology`
 - **[hermes-agent](https://github.com/nousresearch/hermes-agent)**  
-  ★ 209,402 · MIT · `ai-agent` `agent-framework` `llm`
+  ★ 209,535 · MIT · `ai-agent` `agent-framework` `llm`
+- **[hermes-agent](https://github.com/NousResearch/hermes-agent)** — Extensible AI agent with persistent memory designed to adapt to its user over time.  
+  ★ 209,535 · MIT · `ai-agent` `agent-framework` `llm` `memory`
 - **[agency-agents](https://github.com/msitarzewski/agency-agents)** — End-to-end AI agency framework composed of specialized expert agents (frontend, community management, etc.).  
-  ★ 127,221 · MIT · `agent-framework` `multi-agent` `frontend` `community-management`
+  ★ 127,384 · MIT · `agent-framework` `multi-agent` `frontend` `community-management`
 - **[ai-berkshire](https://github.com/xbtlin/ai-berkshire)** — Value-investing research framework for Claude Code and Codex combining multiple investor methodologies via a multi-agent architecture.  
-  ★ 9,882 · MIT · `claude-code` `codex` `value-investing` `multi-agent`
+  ★ 10,151 · MIT · `claude-code` `codex` `value-investing` `multi-agent`
 
 ### Agent Infrastructure
 - **[OmniRoute](https://github.com/diegosouzapw/OmniRoute)** — Free AI gateway for coding assistants routing 200+ LLM providers through one endpoint, with token compression and MCP/A2A support.  
-  ★ 11,454 · MIT · `llm-gateway` `mcp` `a2a` `token-compression`
+  ★ 11,636 · MIT · `llm-gateway` `mcp` `a2a` `token-compression`
 - **[CubeSandbox](https://github.com/TencentCloud/CubeSandbox)** — Tencent Cloud's open-source sandbox for running AI agents in concurrent, secure, isolated environments.  
-  ★ 7,309 · NOASSERTION · `sandbox` `agent-infrastructure` `tencent-cloud` `rust`
+  ★ 7,317 · NOASSERTION · `sandbox` `agent-infrastructure` `tencent-cloud` `rust`
 - **[agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws)** — Officially supported MCP servers and plugin pack for AI coding agents to interact with AWS services.  
-  ★ 1,761 · Apache-2.0 · `aws` `mcp` `agent-toolkit`
+  ★ 1,763 · Apache-2.0 · `aws` `mcp` `agent-toolkit`
 
 ### Data Access & Research
 - **[Agent-Reach](https://github.com/Panniantong/Agent-Reach)** — Capability layer giving AI agents zero-fee read/search access to Twitter, Reddit, YouTube, GitHub, and more.  
-  ★ 50,904 · MIT · `ai-agent` `web-search` `social-media` `cli`
+  ★ 51,112 · MIT · `ai-agent` `web-search` `social-media` `cli`
 - **[hiring-agent](https://github.com/interviewstreet/hiring-agent)** — AI agent that autonomously reads, evaluates, and scores resumes for hiring workflows.  
-  ★ 4,748 · MIT · `hiring` `resume-parsing` `ai-agent`
+  ★ 4,773 · MIT · `hiring` `resume-parsing` `ai-agent`
 
 ### Design & UI Generation
 - **[ai-website-cloner-template](https://github.com/JCodesMore/ai-website-cloner-template)** — Template that uses AI coding agents to analyze and clone a website's design into a modern Next.js/Tailwind project.  
-  ★ 25,678 · MIT · `nextjs` `tailwind` `website-cloning` `coding-agent`
+  ★ 25,764 · MIT · `nextjs` `tailwind` `website-cloning` `coding-agent`
 - **[design.md](https://github.com/google-labs-code/design.md)** — Google Labs format for conveying design systems and visual identity to coding agents via combined YAML/Markdown files.  
-  ★ 24,928 · Apache-2.0 · `design-system` `yaml` `coding-agent` `ui-generation`
+  ★ 24,984 · Apache-2.0 · `design-system` `yaml` `coding-agent` `ui-generation`
 - **[openpencil](https://github.com/ZSeven-W/openpencil)** — Open-source AI vector design tool turning natural-language prompts into UI designs, with code output for React, Tailwind, Flutter, and SwiftUI.  
-  ★ 3,923 · MIT · `design-as-code` `vector-design` `ui-generation` `multi-agent`
+  ★ 3,927 · MIT · `design-as-code` `vector-design` `ui-generation` `multi-agent`
 
 ### Data & Document Processing
 - **[MinerU](https://github.com/opendatalab/MinerU)** — Document parsing engine converting PDF/DOCX/PPTX into Markdown/JSON for RAG and agent workflows, with VLM/OCR support.  
-  ★ 73,451 · NOASSERTION · `document-parsing` `rag` `ocr` `pdf`
+  ★ 73,484 · NOASSERTION · `document-parsing` `rag` `ocr` `pdf`
 
 ### Multi-Agent Research
 - **[awesome-multi-agent-papers](https://github.com/kyegomez/awesome-multi-agent-papers)** — A curated list of notable research papers on multi-agent LLM systems, maintained by kyegomez.  
@@ -212,7 +215,7 @@ npm run capture:demo
 
 ### Workflow Automation
 - **[n8n](https://github.com/n8n-io/n8n)** — Fair-code workflow automation platform with native AI capabilities, 400+ integrations, and self-hosting.  
-  ★ 195,271 · NOASSERTION · `workflow-automation` `automation` `low-code` `self-hosted`
+  ★ 195,278 · NOASSERTION · `workflow-automation` `automation` `low-code` `self-hosted`
 
 </details>
 
@@ -221,7 +224,7 @@ npm run capture:demo
 
 ### Containers
 - **[container](https://github.com/apple/container)** — Apple's official open-source tool for creating and running Linux containers as lightweight VMs on macOS, optimized for Apple Silicon.  
-  ★ 46,517 · Apache-2.0 · `containers` `macos` `apple-silicon` `swift` `oci`
+  ★ 46,575 · Apache-2.0 · `containers` `macos` `apple-silicon` `swift` `oci`
 
 </details>
 
@@ -231,6 +234,15 @@ npm run capture:demo
 ### Free Asset Libraries
 - **[Kenney](https://www.kenney.nl/)** — Free game asset packs (sprites, 3D models, UI kits, audio) and starter tools for game developers.  
   `game-development` `game-assets`
+
+</details>
+
+<details>
+<summary><strong>Backend Engineering & APIs</strong> — 1 source</summary>
+
+### API Clients & Testing
+- **[hoppscotch](https://github.com/hoppscotch/hoppscotch)** — Hoppscotch is an open-source API development ecosystem providing tools for testing and developing APIs across web, desktop, and CLI environments. It serves as an alternative to proprietary API clients like Postman and Insomnia.  
+  ★ 79,736 · MIT · `cli` `typescript` `api` `api-client` `api-testing` `developer-tool`
 
 </details>
 

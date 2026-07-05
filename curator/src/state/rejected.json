@@ -17,11 +17,19 @@
       "reconsiderAt": "2026-07-19T15:06:45.426Z"
     },
     {
+      "canonicalUrl": "https://github.com/n8n-io/n8n",
+      "githubId": 193215554,
+      "evaluatedAt": "2026-07-05T16:10:31.181Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_aff30294",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://github.com/NousResearch/hermes-agent",
       "githubId": 1024554267,
-      "evaluatedAt": "2026-07-05T15:06:41.522Z",
-      "reasonCode": "renamed-duplicate",
-      "metadataFingerprint": "fp_3cbc9481",
+      "evaluatedAt": "2026-07-05T16:10:30.850Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_a9483e8f",
       "reconsiderAt": null
     },
     {
@@ -59,10 +67,10 @@
     {
       "canonicalUrl": "https://github.com/thedaviddias/Front-End-Checklist",
       "githubId": 107111421,
-      "evaluatedAt": "2026-07-05T15:06:42.260Z",
-      "reasonCode": "provider-error",
-      "metadataFingerprint": "fp_fce21742",
-      "reconsiderAt": "2026-07-19T15:06:42.260Z"
+      "evaluatedAt": "2026-07-05T16:10:31.024Z",
+      "reasonCode": "recently-evaluated",
+      "metadataFingerprint": "fp_daede7f7",
+      "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/zhayujie/CowAgent",
