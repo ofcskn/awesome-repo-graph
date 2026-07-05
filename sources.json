@@ -692,6 +692,355 @@
         "fetchedAt": "2026-07-05"
       },
       "addedAt": "2026-07-05"
+    },
+    {
+      "id": "openclaw-openclaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "provider": "github.com",
+      "owner": "openclaw",
+      "repo": "openclaw",
+      "title": "openclaw",
+      "description": "",
+      "path": [
+        "AI Agent Tooling",
+        "Agent Frameworks"
+      ],
+      "tags": [
+        "ai-agent",
+        "agent-framework"
+      ],
+      "license": "NOASSERTION",
+      "score": {
+        "stars": 381795,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "nousresearch-hermes-agent",
+      "url": "https://github.com/nousresearch/hermes-agent",
+      "provider": "github.com",
+      "owner": "nousresearch",
+      "repo": "hermes-agent",
+      "title": "hermes-agent",
+      "description": "",
+      "path": [
+        "AI Agent Tooling",
+        "Agent Frameworks"
+      ],
+      "tags": [
+        "ai-agent",
+        "agent-framework",
+        "llm"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 209402,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "www-kenney-nl",
+      "url": "https://www.kenney.nl/",
+      "provider": "www.kenney.nl",
+      "owner": null,
+      "repo": null,
+      "title": "Kenney",
+      "description": "Free game asset packs (sprites, 3D models, UI kits, audio) and starter tools for game developers.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "kyegomez-awesome-multi-agent-papers",
+      "url": "https://github.com/kyegomez/awesome-multi-agent-papers",
+      "provider": "github.com",
+      "owner": "kyegomez",
+      "repo": "awesome-multi-agent-papers",
+      "title": "awesome-multi-agent-papers",
+      "description": "A curated list of notable research papers on multi-agent LLM systems, maintained by kyegomez.",
+      "path": [
+        "AI Agent Tooling",
+        "Multi-Agent Research"
+      ],
+      "tags": [
+        "multi-agent",
+        "llm",
+        "ai-agent"
+      ],
+      "license": "NOASSERTION",
+      "score": {
+        "stars": 1595,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "vijita-u-magma-landing-page-clone",
+      "url": "https://github.com/vijita-u/Magma_Landing-Page_Clone",
+      "provider": "github.com",
+      "owner": "vijita-u",
+      "repo": "Magma_Landing-Page_Clone",
+      "title": "Magma_Landing-Page_Clone",
+      "description": "GSAP, ScrollTrigger, Locomotive Scroll, and HTML Canvas clone with scroll-driven canvas frame changes, zoom, and scene transitions.",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page",
+        "scrolltrigger",
+        "canvas"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 2,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "manish-850-gentlerain-ai",
+      "url": "https://github.com/manish-850/gentlerain.ai",
+      "provider": "github.com",
+      "owner": "manish-850",
+      "repo": "gentlerain.ai",
+      "title": "gentlerain.ai",
+      "description": "Clone of the Gentlerain.ai Awwwards site built with GSAP, Three.js, and Lenis, showing WebGL and GSAP used together.",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page",
+        "threejs",
+        "webgl"
+      ],
+      "license": null,
+      "score": {
+        "stars": 32,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "thakuma07-jeskojets-scrollanimation",
+      "url": "https://github.com/Thakuma07/JeskoJets-ScrollAnimation",
+      "provider": "github.com",
+      "owner": "Thakuma07",
+      "repo": "JeskoJets-ScrollAnimation",
+      "title": "JeskoJets-ScrollAnimation",
+      "description": "Scroll animation that zooms into the hero area instead of sliding past it, for perspective and 3D transition effects.",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page",
+        "scrolltrigger"
+      ],
+      "license": null,
+      "score": {
+        "stars": 18,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "thakuma07-truus-co-awwward-website",
+      "url": "https://github.com/Thakuma07/Truus.co-Awwward-Website",
+      "provider": "github.com",
+      "owner": "Thakuma07",
+      "repo": "Truus.co-Awwward-Website",
+      "title": "Truus.co-Awwward-Website",
+      "description": "Vanilla HTML/CSS/JS site built with GSAP, ScrollTrigger, and Lenis featuring experimental layout, cursor interaction, and dense motion design.",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page",
+        "scrolltrigger"
+      ],
+      "license": null,
+      "score": {
+        "stars": 112,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "codebucks27-3d-landing-page-for-apple-iphone",
+      "url": "https://github.com/codebucks27/3D-Landing-page-for-Apple-iPhone",
+      "provider": "github.com",
+      "owner": "codebucks27",
+      "repo": "3D-Landing-page-for-Apple-iPhone",
+      "title": "3D-Landing-page-for-Apple-iPhone",
+      "description": "3D iPhone product landing page using Three.js for rendering and GSAP/ScrollTrigger for scroll-controlled camera and product animation.",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page",
+        "threejs",
+        "scrolltrigger"
+      ],
+      "license": null,
+      "score": {
+        "stars": 108,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "showravkormokar-capsule",
+      "url": "https://github.com/ShowravKormokar/capsule",
+      "provider": "github.com",
+      "owner": "ShowravKormokar",
+      "repo": "capsule",
+      "title": "capsule",
+      "description": "React, Vite, Tailwind, and GSAP recreation of the Awwwards-winning Capsule site's complex animations.",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page",
+        "tailwind"
+      ],
+      "license": null,
+      "score": {
+        "stars": 69,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "showravkormokar-spyltmilk-clone",
+      "url": "https://github.com/ShowravKormokar/SpyltMilk-clone",
+      "provider": "github.com",
+      "owner": "ShowravKormokar",
+      "repo": "SpyltMilk-clone",
+      "title": "SpyltMilk-clone",
+      "description": "Single-product Awwwards clone with bold, colorful motion design built with React, Tailwind, and GSAP.",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page",
+        "tailwind"
+      ],
+      "license": null,
+      "score": {
+        "stars": 37,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "yusufceng1z-svelte-gsap-template",
+      "url": "https://github.com/YusufCeng1z/svelte-gsap-template",
+      "provider": "github.com",
+      "owner": "YusufCeng1z",
+      "repo": "svelte-gsap-template",
+      "title": "svelte-gsap-template",
+      "description": "Production-oriented, MIT-licensed creative agency landing page template built with Svelte 5, GSAP 3, and Tailwind CSS 4, featuring spatial typography and hardware-accelerated motion.",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page",
+        "svelte",
+        "tailwind"
+      ],
+      "license": null,
+      "score": {
+        "stars": 35,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "rr3s1-cocktails-gsap",
+      "url": "https://github.com/rr3s1/cocktails-gsap",
+      "provider": "github.com",
+      "owner": "rr3s1",
+      "repo": "cocktails-gsap",
+      "title": "cocktails-gsap",
+      "description": "Scroll-driven landing page built with React, Tailwind, and GSAP, with a clean folder structure for studying advanced GSAP animations.",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page",
+        "tailwind"
+      ],
+      "license": null,
+      "score": {
+        "stars": 13,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "tranhuudat2004-threejs-gsap-scroller",
+      "url": "https://github.com/TranHuuDat2004/threejs-gsap-scroller",
+      "provider": "github.com",
+      "owner": "TranHuuDat2004",
+      "repo": "threejs-gsap-scroller",
+      "title": "threejs-gsap-scroller",
+      "description": "Isolated example binding a Three.js 3D object to a ScrollTrigger timeline for scroll-controlled camera movement and 3D scenes.",
+      "path": [
+        "Frontend Engineering",
+        "GSAP",
+        "GSAP Website Examples"
+      ],
+      "tags": [
+        "gsap",
+        "landing-page",
+        "threejs",
+        "scrolltrigger"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 14,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
     }
   ]
 }

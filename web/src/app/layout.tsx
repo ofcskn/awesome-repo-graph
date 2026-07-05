@@ -12,10 +12,39 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const SITE_URL = "https://ofcskn.github.io/awesome-repo-graph";
+const SITE_TITLE = "awesome-repo-graph — Curated Open-Source Repository Graph";
+const SITE_DESCRIPTION =
+  "An interactive, explorable graph of curated open-source repositories — grouped by sector, sized by star count, and linked by shared tags. Browse AI agent tooling, developer frameworks, and infrastructure projects.";
+
 export const metadata: Metadata = {
-  title: "awesome-repo-graph — Source Graph",
-  description:
-    "An interactive graph of curated open-source repositories, grouped by sector and linked by shared tags.",
+  metadataBase: new URL(SITE_URL),
+  title: SITE_TITLE,
+  description: SITE_DESCRIPTION,
+  keywords: [
+    "awesome list",
+    "open source",
+    "GitHub repositories",
+    "AI agent tooling",
+    "developer tools",
+    "repository graph",
+    "curated software catalog",
+  ],
+  authors: [{ name: "ofcskn", url: "https://github.com/ofcskn" }],
+  alternates: { canonical: SITE_URL },
+  robots: { index: true, follow: true },
+  openGraph: {
+    type: "website",
+    url: SITE_URL,
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+    siteName: "awesome-repo-graph",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SITE_TITLE,
+    description: SITE_DESCRIPTION,
+  },
 };
 
 export default function RootLayout({

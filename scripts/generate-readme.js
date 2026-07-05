@@ -5,6 +5,7 @@ const { loadSources } = require("./lib/store");
 
 const README_PATH = path.join(__dirname, "..", "README.MD");
 const LIVE_DEMO_URL = "https://ofcskn.github.io/awesome-repo-graph/";
+const MAX_ITEMS_PER_LEAF = 20;
 
 function buildTree(sources) {
   const root = {};
@@ -21,6 +22,16 @@ function buildTree(sources) {
   return root;
 }
 
+function countItems(node) {
+  let total = (node.items || []).length;
+  if (node.children) {
+    for (const key of Object.keys(node.children)) {
+      total += countItems(node.children[key]);
+    }
+  }
+  return total;
+}
+
 function formatEntry(source) {
   const stars = source.score && typeof source.score.stars === "number"
     ? `★ ${source.score.stars.toLocaleString()}`
@@ -34,13 +45,29 @@ function formatEntry(source) {
   return `- **[${source.title}](${source.url})**${description}${meta ? `  \n  ${meta}` : ""}`;
 }
 
+// Sectors (depth 0->1) are rendered as collapsed <details> blocks so the
+// README stays a short, browsable index no matter how many sources get
+// added — GitHub renders <details> natively, and readers expand only the
+// sectors they care about instead of scrolling a wall of text.
 function renderNode(node, depth, lines) {
   if (node.children) {
-    const headingLevel = Math.min(depth + 1, 6);
-    const hashes = "#".repeat(headingLevel);
     for (const key of Object.keys(node.children)) {
-      lines.push(`${hashes} ${key}`);
-      renderNode(node.children[key], depth + 1, lines);
+      const child = node.children[key];
+      const total = countItems(child);
+      if (depth === 0) {
+        lines.push(
+          "<details>",
+          `<summary><strong>${key}</strong> — ${total} source${total === 1 ? "" : "s"}</summary>`,
+          ""
+        );
+        renderNode(child, depth + 1, lines);
+        lines.push("</details>", "");
+      } else {
+        const headingLevel = Math.min(depth + 2, 6);
+        const hashes = "#".repeat(headingLevel);
+        lines.push(`${hashes} ${key}`);
+        renderNode(child, depth + 1, lines);
+      }
     }
   }
   if (node.items) {
@@ -50,8 +77,15 @@ function renderNode(node, depth, lines) {
       if (starsB !== starsA) return starsB - starsA;
       return a.title.localeCompare(b.title);
     });
-    for (const source of sorted) {
+    const shown = sorted.slice(0, MAX_ITEMS_PER_LEAF);
+    for (const source of shown) {
       lines.push(formatEntry(source));
+    }
+    if (sorted.length > MAX_ITEMS_PER_LEAF) {
+      const remaining = sorted.length - MAX_ITEMS_PER_LEAF;
+      lines.push(
+        `- _+${remaining} more in this category — see the [live graph](${LIVE_DEMO_URL}) or \`sources.json\`._`
+      );
     }
     lines.push("");
   }
@@ -87,6 +121,8 @@ function generateReadme(data) {
       "generated from it.",
     "",
     `**[View the live graph →](${LIVE_DEMO_URL})**`,
+    "",
+    "![Demo of the interactive graph: filtering by tag, inspecting a node, and zooming into a cluster](assets/demo.gif)",
     "",
     "## Contents",
     "",
@@ -148,7 +184,7 @@ function generateReadme(data) {
     "## Catalog",
     "",
   ];
-  renderNode(tree, 2, lines);
+  renderNode(tree, 0, lines);
   lines.push(
     "## License",
     "",
