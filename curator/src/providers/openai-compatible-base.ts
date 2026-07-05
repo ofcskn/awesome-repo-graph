@@ -78,6 +78,7 @@ export function createOpenAICompatibleProvider(options: OpenAICompatibleOptions)
         request.existingTaxonomyPaths,
         request.existingTags,
         request.existingSources,
+        request.config.discovery.categories,
       );
 
       const { result, attempts, latencyMs } = await runLimited(() =>

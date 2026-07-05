@@ -240,23 +240,60 @@ const defaultConfig: CuratorConfig = {
     // Scaled for 4 runs/day (scheduling.executionHours below): 10/run x 4
     // runs = 40/day total, matching the original single-run-per-day budget
     // so moving to 4x/day doesn't silently 4x discovery + AI classification cost.
-    dailyCandidateLimit: 10,
+    // Raised from 10: the discovery loop (discovery/index.ts) scans
+    // searchQueries/githubTopics in array order and stops once this many
+    // candidates are collected, so a low limit combined with the interleaved
+    // topics below would let the first query or two exhaust the budget
+    // before the new-category topics ever ran.
+    dailyCandidateLimit: 24,
     searchQueries: [
       "topic:ai-agent stars:>200",
       "topic:mcp-server stars:>100",
       "topic:llm-agent-framework stars:>200",
       "topic:developer-tooling stars:>500",
     ],
+    // Interleaved (not appended) with the original 5 topics above so a run
+    // samples across domains instead of exhausting dailyCandidateLimit on
+    // the first one or two queries. Each new-category topic corresponds
+    // 1:1 with an entry in `categories` below.
     githubTopics: [
       "ai-agent",
+      "rest-api",
       "mcp-server",
+      "machine-learning",
       "llm-agent-framework",
+      "vector-database",
       "agent-orchestration",
+      "appsec",
       "developer-tooling",
+      "flutter",
+      "serverless",
+      "static-analysis",
+      "observability",
+      "cli",
+      "blockchain",
     ],
     preferredLanguages: ["TypeScript", "Python", "Go", "Rust"],
     sectors: ["AI Agent Tooling", "Frontend Engineering", "DevOps & Infrastructure"],
-    categories: [],
+    // Target sectors this run is actively trying to seed (see
+    // providers/prompt.ts's "Target categories" prompt section) — new
+    // top-level taxonomy paths the classifier should prefer over
+    // force-fitting a genuinely-matching candidate into an unrelated
+    // existing sector. Bounded by taxonomy.maxNewPathsPerRun /
+    // quality.maxAcceptedPerRun, so these seed in gradually across runs
+    // rather than all landing in the first one.
+    categories: [
+      "Backend Engineering & APIs",
+      "Machine Learning & Data Science",
+      "Databases & Data Engineering",
+      "Cybersecurity & Privacy",
+      "Mobile App Development",
+      "Cloud Platforms & Serverless",
+      "Testing & Code Quality",
+      "Observability & Reliability",
+      "Developer Productivity & CLI Tools",
+      "Web3 & Distributed Systems",
+    ],
   },
   quality: {
     // Same 4-runs/day scaling as discovery.dailyCandidateLimit: 2/run x 4 = 8/day.
