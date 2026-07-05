@@ -7,7 +7,13 @@
  * usable?") plus sanitized diagnostics.
  */
 
-export type ProviderName = "openai" | "deepseek" | "gemini" | "vertexGemini";
+export type ProviderName =
+  | "openai"
+  | "deepseek"
+  | "gemini"
+  | "vertexGemini"
+  | "ollama"
+  | "anthropic";
 
 /** Exact env-var name each provider adapter reads its secret from. */
 export const PROVIDER_ENV_VARS: Record<ProviderName, string> = {
@@ -15,11 +21,45 @@ export const PROVIDER_ENV_VARS: Record<ProviderName, string> = {
   deepseek: "DEEPSEEK_API_KEY",
   openai: "OPENAI_API_KEY",
   gemini: "GEMINI_API_KEY",
+  // Local Ollama / OpenAI-compatible servers usually need no key; this var is
+  // optional and only used when the server enforces one (see KEYLESS_PROVIDERS).
+  ollama: "OLLAMA_API_KEY",
+  anthropic: "ANTHROPIC_API_KEY",
 };
+
+/**
+ * Providers that are usable without a secret (local/self-hosted servers).
+ * They report as credential-present even when their env var is unset — a
+ * server that is unreachable surfaces as a normal per-candidate provider
+ * failure and falls back, rather than being disabled up front.
+ */
+export const KEYLESS_PROVIDERS: ProviderName[] = ["ollama"];
+
+/** Env var + default for the Ollama / OpenAI-compatible local server base URL. */
+export const OLLAMA_BASE_URL_ENV_VAR = "OLLAMA_BASE_URL";
+const DEFAULT_OLLAMA_BASE_URL = "http://localhost:11434/v1";
+
+/** Env var override for the Anthropic API base URL (hosted proxies/gateways). */
+export const ANTHROPIC_BASE_URL_ENV_VAR = "ANTHROPIC_BASE_URL";
+const DEFAULT_ANTHROPIC_BASE_URL = "https://api.anthropic.com";
 
 export const ALL_PROVIDER_NAMES = Object.keys(
   PROVIDER_ENV_VARS,
 ) as ProviderName[];
+
+function providerRequiresSecret(provider: ProviderName): boolean {
+  return !KEYLESS_PROVIDERS.includes(provider);
+}
+
+/** Resolves the Ollama / OpenAI-compatible local base URL (env-driven). */
+export function getOllamaBaseURL(): string {
+  return readEnv(OLLAMA_BASE_URL_ENV_VAR) ?? DEFAULT_OLLAMA_BASE_URL;
+}
+
+/** Resolves the Anthropic Messages API base URL (env-overridable). */
+export function getAnthropicBaseURL(): string {
+  return readEnv(ANTHROPIC_BASE_URL_ENV_VAR) ?? DEFAULT_ANTHROPIC_BASE_URL;
+}
 
 /** Non-secret CI-tunable overrides. Everything else lives in config.ts. */
 export const RUNTIME_ENV_VARS = {
@@ -49,7 +89,8 @@ export function getProviderCredentialStatus(
   return {
     provider,
     envVar: PROVIDER_ENV_VARS[provider],
-    present: getProviderSecret(provider) !== undefined,
+    // Keyless providers (local servers) are usable without a secret.
+    present: !providerRequiresSecret(provider) || getProviderSecret(provider) !== undefined,
   };
 }
 

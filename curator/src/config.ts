@@ -2,7 +2,14 @@ import { z } from "zod";
 import { ALL_PROVIDER_NAMES, readBooleanEnv, RUNTIME_ENV_VARS } from "./env.js";
 import type { ProviderName } from "./env.js";
 
-const providerNameSchema = z.enum(["openai", "deepseek", "gemini", "vertexGemini"]);
+const providerNameSchema = z.enum([
+  "openai",
+  "deepseek",
+  "gemini",
+  "vertexGemini",
+  "ollama",
+  "anthropic",
+]);
 
 const consensusStrategySchema = z.enum([
   "primary-with-fallback",
@@ -180,24 +187,36 @@ const defaultConfig: CuratorConfig = {
       deepseek: "deepseek-v4-pro",
       gemini: "gemini-2.5-flash",
       vertexGemini: "gemini-2.5-flash",
+      // Local/self-hosted default: an Ollama model tag. Point OLLAMA_BASE_URL
+      // at any OpenAI-compatible server and set this to that server's tag to
+      // run Hermes, "OpenClaw", or another local model — no code change.
+      ollama: "hermes3",
+      anthropic: "claude-opus-4-8",
     },
     weights: {
       openai: 1,
       gemini: 1,
       deepseek: 0.75,
       vertexGemini: 1,
+      ollama: 0.6,
+      anthropic: 1,
     },
     requestLimitPerRun: {
       openai: 60,
       gemini: 60,
       deepseek: 60,
       vertexGemini: 60,
+      ollama: 60,
+      anthropic: 60,
     },
     timeoutMs: {
       openai: 30_000,
       gemini: 30_000,
       deepseek: 30_000,
       vertexGemini: 30_000,
+      // Local inference can be slower than a hosted API; give it more headroom.
+      ollama: 120_000,
+      anthropic: 60_000,
     },
     maxRetries: 3,
     consensusStrategy: "primary-with-fallback",
@@ -293,6 +312,15 @@ const defaultConfig: CuratorConfig = {
 export interface LoadConfigOverrides {
   dryRun?: boolean;
   force?: boolean;
+  /**
+   * Forces a provider to be primary for this run (used by the local trigger,
+   * e.g. `--provider ollama`). The provider is added to `providers.enabled`
+   * if it isn't already, so a local-only provider can drive a run without
+   * editing config.ts. Never persisted.
+   */
+  primaryProvider?: ProviderName;
+  /** Overrides `output.commitMode` for this run (the local trigger defaults to "pull-request"). Never persisted. */
+  commitMode?: CuratorConfig["output"]["commitMode"];
 }
 
 export interface LoadedConfig {
@@ -324,6 +352,20 @@ function computeFingerprint(config: CuratorConfig): string {
  */
 export function loadConfig(overrides: LoadConfigOverrides = {}): LoadedConfig {
   const config = configSchema.parse(defaultConfig);
+
+  // Local-trigger overrides (force a primary provider / output mode) are
+  // applied before the invariant checks below, so a forced provider is a
+  // valid primary and the fingerprint reflects the effective config.
+  if (overrides.primaryProvider) {
+    const forced = overrides.primaryProvider;
+    if (!config.providers.enabled.includes(forced)) {
+      config.providers.enabled = [...config.providers.enabled, forced];
+    }
+    config.providers.primary = forced;
+  }
+  if (overrides.commitMode) {
+    config.output.commitMode = overrides.commitMode;
+  }
 
   for (const provider of config.providers.enabled) {
     if (!ALL_PROVIDER_NAMES.includes(provider as ProviderName)) {

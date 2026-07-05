@@ -5,6 +5,8 @@ import { createOpenAIProvider } from "./openai.js";
 import { createDeepSeekProvider } from "./deepseek.js";
 import { createGeminiProvider } from "./gemini.js";
 import { createVertexGeminiProvider } from "./vertex-gemini.js";
+import { createOllamaProvider } from "./ollama.js";
+import { createAnthropicProvider } from "./anthropic.js";
 import type { AIProvider, ClassifyOutcome, ClassifyRequest } from "./types.js";
 import { sanitizeProviderError } from "./types.js";
 
@@ -13,6 +15,8 @@ const FACTORIES: Record<ProviderName, () => AIProvider> = {
   deepseek: createDeepSeekProvider,
   gemini: createGeminiProvider,
   vertexGemini: createVertexGeminiProvider,
+  ollama: createOllamaProvider,
+  anthropic: createAnthropicProvider,
 };
 
 export function createProviderRegistry(): Record<ProviderName, AIProvider> {

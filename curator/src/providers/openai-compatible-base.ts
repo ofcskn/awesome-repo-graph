@@ -13,11 +13,25 @@ export interface OpenAICompatibleOptions {
   /** Override base URL for OpenAI-compatible third-party APIs (e.g. DeepSeek). */
   baseURL?: string;
   /**
+   * Resolves the base URL at call time (wins over `baseURL`). Lets a local
+   * server's endpoint be env-driven, e.g. Ollama's `OLLAMA_BASE_URL`, so any
+   * OpenAI-protocol server (Hermes, "OpenClaw", …) works by configuration.
+   */
+  resolveBaseURL?: () => string;
+  /**
    * OpenAI supports strict `json_schema` response_format; some
    * OpenAI-compatible providers (DeepSeek) only support `json_object`
    * mode, so the schema is enforced by us via zod after the fact.
    */
   supportsJsonSchema: boolean;
+  /**
+   * When true, the provider is usable without a real API key (local servers
+   * like Ollama). It reports as configured, and a placeholder key is sent to
+   * satisfy the OpenAI SDK's required-key check.
+   */
+  apiKeyOptional?: boolean;
+  /** Placeholder key sent when `apiKeyOptional` and no real key is set (default "ollama"). */
+  placeholderApiKey?: string;
 }
 
 /**
@@ -40,13 +54,17 @@ export function createOpenAICompatibleProvider(options: OpenAICompatibleOptions)
   return {
     name: options.name,
     isConfigured(): boolean {
+      if (options.apiKeyOptional) return true;
       return getProviderSecret(options.name) !== undefined;
     },
     async classify(request: ClassifyRequest): Promise<ClassifyOutcome> {
-      const apiKey = getProviderSecret(options.name);
+      const apiKey =
+        getProviderSecret(options.name) ??
+        (options.apiKeyOptional ? options.placeholderApiKey ?? "ollama" : undefined);
       if (!apiKey) {
         throw new ProviderConfigurationError(options.name, "missing API key");
       }
+      const baseURL = options.resolveBaseURL ? options.resolveBaseURL() : options.baseURL;
 
       const model = request.config.providers.models[options.name]!;
       const timeoutMs = request.config.providers.timeoutMs[options.name]!;
@@ -54,7 +72,7 @@ export function createOpenAICompatibleProvider(options: OpenAICompatibleOptions)
       const concurrency = request.config.providers.maxConcurrentRequests;
       const runLimited = ensureLimiter(concurrency);
 
-      const client = new OpenAI({ apiKey, baseURL: options.baseURL, timeout: timeoutMs, maxRetries: 0 });
+      const client = new OpenAI({ apiKey, baseURL, timeout: timeoutMs, maxRetries: 0 });
       const { system, user } = buildClassificationPrompt(
         request.candidate,
         request.existingTaxonomyPaths,
