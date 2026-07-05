@@ -4,6 +4,7 @@ const path = require("path");
 const { loadSources } = require("./lib/store");
 
 const README_PATH = path.join(__dirname, "..", "README.MD");
+const LIVE_DEMO_URL = "https://ofcskn.github.io/awesome-repo-graph/";
 
 function buildTree(sources) {
   const root = {};
@@ -22,10 +23,15 @@ function buildTree(sources) {
 
 function formatEntry(source) {
   const stars = source.score && typeof source.score.stars === "number"
-    ? ` (★ ${source.score.stars})`
-    : "";
-  const license = source.license ? ` [${source.license}]` : "";
-  return `- [${source.title}](${source.url})${stars}${license}`;
+    ? `★ ${source.score.stars.toLocaleString()}`
+    : null;
+  const license = source.license ? source.license : null;
+  const tags = source.tags && source.tags.length ? source.tags.map((t) => `\`${t}\``).join(" ") : null;
+
+  const meta = [stars, license, tags].filter(Boolean).join(" · ");
+  const description = source.description ? ` — ${source.description}` : "";
+
+  return `- **[${source.title}](${source.url})**${description}${meta ? `  \n  ${meta}` : ""}`;
 }
 
 function renderNode(node, depth, lines) {
@@ -80,8 +86,11 @@ function generateReadme(data) {
       "single source of truth; this file and the graph visualization are both " +
       "generated from it.",
     "",
+    `**[View the live graph →](${LIVE_DEMO_URL})**`,
+    "",
     "## Contents",
     "",
+    "- [Live demo](#view-the-live-graph)",
     "- [How this repository works](#how-this-repository-works)",
     "- [Adding a source](#adding-a-source)",
     "- [Graph visualization](#graph-visualization)",
@@ -119,11 +128,15 @@ function generateReadme(data) {
     "",
     "## Graph visualization",
     "",
+    `The live version is deployed via GitHub Pages: **[${LIVE_DEMO_URL}](${LIVE_DEMO_URL})**.`,
+    "",
+    "To run it locally instead:",
+    "",
     "```",
     "cd web && npm install && npm run dev",
     "```",
     "",
-    "Opens an interactive, GSAP-animated graph of every source at `localhost:3000` " +
+    "Renders an interactive, GSAP-animated graph of every source at `localhost:3000` " +
       "— circle size reflects star count, edges connect sources sharing tags.",
     "",
     "## Sectors",

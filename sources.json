@@ -47,6 +47,651 @@
         "fetchedAt": "2026-07-05"
       },
       "addedAt": "2026-07-05"
+    },
+    {
+      "id": "usestrix-strix",
+      "url": "https://github.com/usestrix/strix",
+      "provider": "github.com",
+      "owner": "usestrix",
+      "repo": "strix",
+      "title": "strix",
+      "description": "Open-source AI-powered penetration testing agent that autonomously finds and fixes application vulnerabilities.",
+      "path": [
+        "AI Agent Tooling",
+        "Security & Pentesting"
+      ],
+      "tags": [
+        "ai-agent",
+        "penetration-testing",
+        "security",
+        "python"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 36485,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "alibaba-page-agent",
+      "url": "https://github.com/alibaba/page-agent",
+      "provider": "github.com",
+      "owner": "alibaba",
+      "repo": "page-agent",
+      "title": "page-agent",
+      "description": "In-browser GUI agent from Alibaba that controls web interfaces via natural language.",
+      "path": [
+        "AI Agent Tooling",
+        "Browser & GUI Agents"
+      ],
+      "tags": [
+        "ai-agent",
+        "browser-automation",
+        "gui-agent",
+        "javascript"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 23437,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "chromedevtools-chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "provider": "github.com",
+      "owner": "ChromeDevTools",
+      "repo": "chrome-devtools-mcp",
+      "title": "chrome-devtools-mcp",
+      "description": "Official Chrome DevTools MCP server letting coding agents control and debug the browser directly.",
+      "path": [
+        "AI Agent Tooling",
+        "Browser & GUI Agents"
+      ],
+      "tags": [
+        "mcp-server",
+        "chrome-devtools",
+        "debugging",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 45898,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "ogulcancelik-herdr",
+      "url": "https://github.com/ogulcancelik/herdr",
+      "provider": "github.com",
+      "owner": "ogulcancelik",
+      "repo": "herdr",
+      "title": "herdr",
+      "description": "High-performance Rust-based terminal multiplexer for running multiple AI agents at once.",
+      "path": [
+        "AI Agent Tooling",
+        "Terminal & CLI Agents"
+      ],
+      "tags": [
+        "terminal-multiplexer",
+        "ai-agent",
+        "rust"
+      ],
+      "license": "NOASSERTION",
+      "score": {
+        "stars": 11683,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "coplaydev-unity-mcp",
+      "url": "https://github.com/CoplayDev/unity-mcp",
+      "provider": "github.com",
+      "owner": "CoplayDev",
+      "repo": "unity-mcp",
+      "title": "unity-mcp",
+      "description": "Bridges AI assistants with the Unity Editor to automate scene control and asset management.",
+      "path": [
+        "AI Agent Tooling",
+        "MCP Servers"
+      ],
+      "tags": [
+        "mcp-server",
+        "unity",
+        "game-development"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 11761,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "crynta-terax-ai",
+      "url": "https://github.com/crynta/terax-ai",
+      "provider": "github.com",
+      "owner": "crynta",
+      "repo": "terax-ai",
+      "title": "terax-ai",
+      "description": "A 7MB terminal-first local AI development workspace.",
+      "path": [
+        "AI Agent Tooling",
+        "Local AI Tools"
+      ],
+      "tags": [
+        "local-ai",
+        "terminal",
+        "lightweight"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 8157,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "juliusbrussee-caveman",
+      "url": "https://github.com/JuliusBrussee/caveman",
+      "provider": "github.com",
+      "owner": "JuliusBrussee",
+      "repo": "caveman",
+      "title": "caveman",
+      "description": "Claude Code skill that reduces token usage by up to 65% via compressed, cavemen-style context.",
+      "path": [
+        "AI Agent Tooling",
+        "Claude Code Skills"
+      ],
+      "tags": [
+        "claude-code",
+        "skill",
+        "token-optimization",
+        "javascript"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 84363,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "openai-codex-plugin-cc",
+      "url": "https://github.com/openai/codex-plugin-cc",
+      "provider": "github.com",
+      "owner": "openai",
+      "repo": "codex-plugin-cc",
+      "title": "codex-plugin-cc",
+      "description": "Plugin that runs OpenAI Codex from within Claude Code, bridging two agent systems for delegation and review.",
+      "path": [
+        "AI Agent Tooling",
+        "Claude Code Plugins"
+      ],
+      "tags": [
+        "claude-code",
+        "codex",
+        "plugin",
+        "agent-delegation"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 25024,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "affaan-m-ecc",
+      "url": "https://github.com/affaan-m/ECC",
+      "provider": "github.com",
+      "owner": "affaan-m",
+      "repo": "ECC",
+      "title": "ECC",
+      "description": "Agent performance optimization system for Claude Code, Codex, and Cursor providing skills, instincts, and memory management.",
+      "path": [
+        "AI Agent Tooling",
+        "Agent Harness"
+      ],
+      "tags": [
+        "agent-harness",
+        "skills",
+        "memory",
+        "claude-code",
+        "codex",
+        "cursor"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 226167,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "browser-use-video-use",
+      "url": "https://github.com/browser-use/video-use",
+      "provider": "github.com",
+      "owner": "browser-use",
+      "repo": "video-use",
+      "title": "video-use",
+      "description": "Automates video editing workflows using browser-use-powered coding agents.",
+      "path": [
+        "AI Agent Tooling",
+        "Video"
+      ],
+      "tags": [
+        "video-editing",
+        "browser-use",
+        "automation"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 14850,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "santifer-career-ops",
+      "url": "https://github.com/santifer/career-ops",
+      "provider": "github.com",
+      "owner": "santifer",
+      "repo": "career-ops",
+      "title": "career-ops",
+      "description": "Go-based AI-powered job search system built on Claude Code with a dashboard and 14 skill modes.",
+      "path": [
+        "AI Agent Tooling",
+        "Agent Apps"
+      ],
+      "tags": [
+        "job-search",
+        "dashboard",
+        "go",
+        "ai-agent"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 58603,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "msitarzewski-agency-agents",
+      "url": "https://github.com/msitarzewski/agency-agents",
+      "provider": "github.com",
+      "owner": "msitarzewski",
+      "repo": "agency-agents",
+      "title": "agency-agents",
+      "description": "End-to-end AI agency framework composed of specialized expert agents (frontend, community management, etc.).",
+      "path": [
+        "AI Agent Tooling",
+        "Agent Frameworks"
+      ],
+      "tags": [
+        "agent-framework",
+        "multi-agent",
+        "frontend",
+        "community-management"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 127221,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "obra-superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "provider": "github.com",
+      "owner": "obra",
+      "repo": "superpowers",
+      "title": "superpowers",
+      "description": "Agentic skill framework and software development methodology.",
+      "path": [
+        "AI Agent Tooling",
+        "Agent Frameworks"
+      ],
+      "tags": [
+        "agent-framework",
+        "skills",
+        "software-development-methodology"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 246514,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "diegosouzapw-omniroute",
+      "url": "https://github.com/diegosouzapw/OmniRoute",
+      "provider": "github.com",
+      "owner": "diegosouzapw",
+      "repo": "OmniRoute",
+      "title": "OmniRoute",
+      "description": "Free AI gateway for coding assistants routing 200+ LLM providers through one endpoint, with token compression and MCP/A2A support.",
+      "path": [
+        "AI Agent Tooling",
+        "Agent Infrastructure"
+      ],
+      "tags": [
+        "llm-gateway",
+        "mcp",
+        "a2a",
+        "token-compression"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 11454,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "tencentcloud-cubesandbox",
+      "url": "https://github.com/TencentCloud/CubeSandbox",
+      "provider": "github.com",
+      "owner": "TencentCloud",
+      "repo": "CubeSandbox",
+      "title": "CubeSandbox",
+      "description": "Tencent Cloud's open-source sandbox for running AI agents in concurrent, secure, isolated environments.",
+      "path": [
+        "AI Agent Tooling",
+        "Agent Infrastructure"
+      ],
+      "tags": [
+        "sandbox",
+        "agent-infrastructure",
+        "tencent-cloud",
+        "rust"
+      ],
+      "license": "NOASSERTION",
+      "score": {
+        "stars": 7309,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "google-agents-cli",
+      "url": "https://github.com/google/agents-cli",
+      "provider": "github.com",
+      "owner": "google",
+      "repo": "agents-cli",
+      "title": "agents-cli",
+      "description": "Official Google CLI and skill pack specializing any coding assistant in building, evaluating, and deploying AI agents on Google Cloud.",
+      "path": [
+        "AI Agent Tooling",
+        "Terminal & CLI Agents"
+      ],
+      "tags": [
+        "google-cloud",
+        "agent-development-kit",
+        "cli"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 4737,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "xbtlin-ai-berkshire",
+      "url": "https://github.com/xbtlin/ai-berkshire",
+      "provider": "github.com",
+      "owner": "xbtlin",
+      "repo": "ai-berkshire",
+      "title": "ai-berkshire",
+      "description": "Value-investing research framework for Claude Code and Codex combining multiple investor methodologies via a multi-agent architecture.",
+      "path": [
+        "AI Agent Tooling",
+        "Agent Frameworks"
+      ],
+      "tags": [
+        "claude-code",
+        "codex",
+        "value-investing",
+        "multi-agent"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 9882,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "panniantong-agent-reach",
+      "url": "https://github.com/Panniantong/Agent-Reach",
+      "provider": "github.com",
+      "owner": "Panniantong",
+      "repo": "Agent-Reach",
+      "title": "Agent-Reach",
+      "description": "Capability layer giving AI agents zero-fee read/search access to Twitter, Reddit, YouTube, GitHub, and more.",
+      "path": [
+        "AI Agent Tooling",
+        "Data Access & Research"
+      ],
+      "tags": [
+        "ai-agent",
+        "web-search",
+        "social-media",
+        "cli"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 50904,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "google-labs-code-design-md",
+      "url": "https://github.com/google-labs-code/design.md",
+      "provider": "github.com",
+      "owner": "google-labs-code",
+      "repo": "design.md",
+      "title": "design.md",
+      "description": "Google Labs format for conveying design systems and visual identity to coding agents via combined YAML/Markdown files.",
+      "path": [
+        "AI Agent Tooling",
+        "Design & UI Generation"
+      ],
+      "tags": [
+        "design-system",
+        "yaml",
+        "coding-agent",
+        "ui-generation"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 24928,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "aws-agent-toolkit-for-aws",
+      "url": "https://github.com/aws/agent-toolkit-for-aws",
+      "provider": "github.com",
+      "owner": "aws",
+      "repo": "agent-toolkit-for-aws",
+      "title": "agent-toolkit-for-aws",
+      "description": "Officially supported MCP servers and plugin pack for AI coding agents to interact with AWS services.",
+      "path": [
+        "AI Agent Tooling",
+        "Agent Infrastructure"
+      ],
+      "tags": [
+        "aws",
+        "mcp",
+        "agent-toolkit"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 1761,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "opendatalab-mineru",
+      "url": "https://github.com/opendatalab/MinerU",
+      "provider": "github.com",
+      "owner": "opendatalab",
+      "repo": "MinerU",
+      "title": "MinerU",
+      "description": "Document parsing engine converting PDF/DOCX/PPTX into Markdown/JSON for RAG and agent workflows, with VLM/OCR support.",
+      "path": [
+        "AI Agent Tooling",
+        "Data & Document Processing"
+      ],
+      "tags": [
+        "document-parsing",
+        "rag",
+        "ocr",
+        "pdf"
+      ],
+      "license": "NOASSERTION",
+      "score": {
+        "stars": 73451,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "interviewstreet-hiring-agent",
+      "url": "https://github.com/interviewstreet/hiring-agent",
+      "provider": "github.com",
+      "owner": "interviewstreet",
+      "repo": "hiring-agent",
+      "title": "hiring-agent",
+      "description": "AI agent that autonomously reads, evaluates, and scores resumes for hiring workflows.",
+      "path": [
+        "AI Agent Tooling",
+        "Data Access & Research"
+      ],
+      "tags": [
+        "hiring",
+        "resume-parsing",
+        "ai-agent"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 4748,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "revfactory-harness",
+      "url": "https://github.com/revfactory/harness",
+      "provider": "github.com",
+      "owner": "revfactory",
+      "repo": "harness",
+      "title": "harness",
+      "description": "Meta-skill plugin for Claude Code that designs domain-specific agent teams by architecture pattern and generates the skills they use.",
+      "path": [
+        "AI Agent Tooling",
+        "Claude Code Plugins"
+      ],
+      "tags": [
+        "claude-code",
+        "agent-teams",
+        "skills",
+        "meta-skill"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 8196,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "jcodesmore-ai-website-cloner-template",
+      "url": "https://github.com/JCodesMore/ai-website-cloner-template",
+      "provider": "github.com",
+      "owner": "JCodesMore",
+      "repo": "ai-website-cloner-template",
+      "title": "ai-website-cloner-template",
+      "description": "Template that uses AI coding agents to analyze and clone a website's design into a modern Next.js/Tailwind project.",
+      "path": [
+        "AI Agent Tooling",
+        "Design & UI Generation"
+      ],
+      "tags": [
+        "nextjs",
+        "tailwind",
+        "website-cloning",
+        "coding-agent"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 25678,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "apple-container",
+      "url": "https://github.com/apple/container",
+      "provider": "github.com",
+      "owner": "apple",
+      "repo": "container",
+      "title": "container",
+      "description": "Apple's official open-source tool for creating and running Linux containers as lightweight VMs on macOS, optimized for Apple Silicon.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Containers"
+      ],
+      "tags": [
+        "containers",
+        "macos",
+        "apple-silicon",
+        "swift",
+        "oci"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 46517,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
+    },
+    {
+      "id": "zseven-w-openpencil",
+      "url": "https://github.com/ZSeven-W/openpencil",
+      "provider": "github.com",
+      "owner": "ZSeven-W",
+      "repo": "openpencil",
+      "title": "openpencil",
+      "description": "Open-source AI vector design tool turning natural-language prompts into UI designs, with code output for React, Tailwind, Flutter, and SwiftUI.",
+      "path": [
+        "AI Agent Tooling",
+        "Design & UI Generation"
+      ],
+      "tags": [
+        "design-as-code",
+        "vector-design",
+        "ui-generation",
+        "multi-agent"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 3923,
+        "fetchedAt": "2026-07-05"
+      },
+      "addedAt": "2026-07-05"
     }
   ]
 }
