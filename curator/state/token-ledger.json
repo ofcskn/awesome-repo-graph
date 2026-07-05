@@ -1,0 +1,33 @@
+{
+  "entries": [
+    {
+      "runId": "2026-07-05",
+      "startedAt": "2026-07-05T16:08:16.331Z",
+      "completedAt": "2026-07-05T16:11:31.615Z",
+      "status": "success",
+      "agentName": "@awesome-repo-graph/curator",
+      "agentVersion": "1.0.0",
+      "primaryModels": [
+        "gemini-2.5-flash",
+        "gemini-embedding-001"
+      ],
+      "acceptedCount": 2,
+      "totalTokens": 6901,
+      "estimatedCostUsd": 0.0041405999999999995,
+      "byProvider": [
+        {
+          "provider": "vertexGemini",
+          "stage": "classification",
+          "totalTokens": 6901,
+          "estimatedCostUsd": 0.0041405999999999995
+        },
+        {
+          "provider": "vertexGemini",
+          "stage": "embeddings",
+          "totalTokens": null,
+          "estimatedCostUsd": null
+        }
+      ]
+    }
+  ]
+}
