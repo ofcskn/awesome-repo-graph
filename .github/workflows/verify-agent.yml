@@ -1,0 +1,46 @@
+name: Approved-agent gate
+
+# Enforces that any pull request changing the catalog (sources.json or the
+# generated README.MD) carries a valid attestation from an approved agent AND
+# that the added entries pass the mechanical policy re-check. This is the trust
+# backbone described in docs/agent-gateway.md.
+#
+# Mark the `approved-agent-gate` job a REQUIRED status check in branch
+# protection. The workflow runs on every PR (no paths filter) so the required
+# check never gets stuck "pending"; the verifier itself exits 0 immediately
+# when the PR does not touch the catalog.
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: approved-agent-gate-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  approved-agent-gate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Checkout PR head
+        uses: actions/checkout@v4
+        with:
+          # Full history so the verifier can diff the PR head against its base
+          # and read the base version of sources.json.
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Verify approved-agent attestation and mechanical policy
+        env:
+          BASE_REF: ${{ github.base_ref }}
+        run: node scripts/verify-attestation.js --base-ref "origin/${BASE_REF}"
+
+      - name: Run attestation unit tests
+        run: node --test scripts/test/*.test.js

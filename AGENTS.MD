@@ -61,10 +61,39 @@ Example: `["Frontend Engineering", "GSAP", "GSAP Website Examples"]`
 `node scripts/related.js --id <source-id>` lists other sources that share
 tags or taxonomy path with the given source, ranked by overlap.
 
+## Approved-agent contribution gate
+
+Changes to `sources.json` (and the generated `README.MD`) are only accepted
+from an **approved, verifiable agent**. A pull request touching either file
+must carry a signed attestation, committed as `agent-attestation.json`, from
+an agent listed in `agents/approved-agents.json`. The `approved-agent-gate`
+CI check (`.github/workflows/verify-agent.yml`) is a required status check: it
+re-runs the mechanical policy validation on the added entries **and** verifies
+the attestation's Ed25519 signature and content digests, so a raw hand-edited
+catalog change — even a well-formed one — cannot merge.
+
+An approved agent produces the attestation after running `add-source.js`:
+
+```
+node scripts/attest.js \
+  --agent-id awesome-repo-graph-curator \
+  --key-id curator-2026 \
+  --key-file /path/to/private-key.pem   # or set AGENT_SIGNING_KEY
+```
+
+then stages `agent-attestation.json` alongside `sources.json`/`README.MD`.
+The curator does this as one extra step after insertion and before its
+commit. Only **public** keys ever live in the repository; signing keys stay in
+CI secrets or on the operator's machine and are referenced by name. See
+`docs/agent-gateway.md` for the trust model, the attestation format, and how a
+new agent is approved.
+
 ## Secrets
 
 All GitHub API calls in these scripts are unauthenticated (public REST
 API, no token). Do not add credentials or tokens to any script or commit.
+The approved-agent gate never requires a secret in the repo either — only
+public verification keys are committed.
 
 ## Autonomous curator
 

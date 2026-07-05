@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "_comment": "CI mirror of the offline-checkable subset of curator/src/config.ts's `quality` block. The approved-agent gate re-validates newly-added sources.json entries against these thresholds without any network call, so a change that skipped the curator's mechanical validation cannot pass on a valid signature alone. Keep these in sync with the curator config; drift is visible as a diff to this file.",
+  "minStars": 0,
+  "licenseAllowlist": [],
+  "licenseDenylist": [],
+  "excludedOwners": [],
+  "excludedRepos": [],
+  "excludedKeywords": []
+}

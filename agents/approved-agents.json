@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "_comment": "Registry of agents approved to contribute catalog changes. ONLY public Ed25519 (SPKI PEM) keys belong here — never a private key. See docs/agent-gateway.md for how the gate uses this file and how to add an agent. Changes to this file must be human-reviewed (protected path).",
+  "agents": [
+    {
+      "id": "awesome-repo-graph-curator",
+      "name": "Autonomous Source Curator",
+      "description": "The curator/ pipeline that discovers, validates, classifies, and adds sources. Signs with a key whose private half is held only as the CURATOR_SIGNING_KEY CI secret (or an operator key file for sanctioned local runs).",
+      "status": "active",
+      "keys": [
+        {
+          "keyId": "curator-2026",
+          "algorithm": "ed25519",
+          "status": "active",
+          "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAeK+H5SknnEPA5fH8iLmeONapGfEDGOdfJsCo8z/vnZY=\n-----END PUBLIC KEY-----",
+          "addedAt": "2026-07-05"
+        }
+      ]
+    }
+  ]
+}
