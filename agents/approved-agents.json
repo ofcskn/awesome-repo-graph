@@ -14,6 +14,13 @@
           "status": "active",
           "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAagBA+ZeMcgUkAVsqpb49KG65n1CD4nniQDSBIhh1FAE=\n-----END PUBLIC KEY-----",
           "addedAt": "2026-07-05"
+        },
+        {
+          "keyId": "curator-2026-local",
+          "algorithm": "ed25519",
+          "status": "active",
+          "publicKey": "-----BEGIN PUBLIC KEY-----\nMCowBQYDK2VwAyEAWr4/JTswMzj6Oh9aU70yc6V/d/05holhL1p5sj9SFxg=\n-----END PUBLIC KEY-----",
+          "addedAt": "2026-07-06"
         }
       ]
     }
