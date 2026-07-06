@@ -5,6 +5,7 @@ const {
   parseGithubOwnerRepo,
   slugify,
   findDuplicate,
+  findDuplicateId,
 } = require("./lib/store");
 const { generateReadme } = require("./generate-readme");
 
@@ -82,6 +83,18 @@ async function main() {
   } else {
     id = slugify(`${provider}-${url.pathname}`);
     defaultTitle = args.title || url.pathname;
+  }
+
+  // Independent from the URL-based findDuplicate check above: a different
+  // URL (e.g. a renamed repo, or the same slug on a different host path)
+  // can still collide on the generated id, which would silently overwrite
+  // one entry's identity with another's in every id-keyed lookup (related.js,
+  // the web graph, attestation digests). Refuse rather than risk that.
+  const idCollision = findDuplicateId(data.sources, id);
+  if (idCollision) {
+    console.error(`Duplicate: id "${id}" already used by "${idCollision.url}"`);
+    process.exitCode = 1;
+    return;
   }
 
   const entry = {

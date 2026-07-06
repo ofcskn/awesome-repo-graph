@@ -1,6 +1,13 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { discoverCandidates } from "../src/discovery/index.js";
 import { loadConfig } from "../src/config.js";
+import type { CuratorConfig } from "../src/config.js";
+
+const disabledPlatforms: CuratorConfig["discovery"]["platforms"] = {
+  gitlab: { enabled: false, searchQueries: [] },
+  huggingface: { enabled: false, searchQueries: [] },
+  npm: { enabled: false, searchQueries: [] },
+};
 
 describe("discovery", () => {
   afterEach(() => {
@@ -20,6 +27,7 @@ describe("discovery", () => {
         searchQueries: ["topic:nonexistent-xyz"],
         githubTopics: [],
         dailyCandidateLimit: 5,
+        platforms: disabledPlatforms,
       },
     };
     const result = await discoverCandidates(smallConfig);
@@ -53,7 +61,13 @@ describe("discovery", () => {
     const { config } = loadConfig({});
     const smallConfig = {
       ...config,
-      discovery: { ...config.discovery, searchQueries: ["topic:ai-agent"], githubTopics: [], dailyCandidateLimit: 5 },
+      discovery: {
+        ...config.discovery,
+        searchQueries: ["topic:ai-agent"],
+        githubTopics: [],
+        dailyCandidateLimit: 5,
+        platforms: disabledPlatforms,
+      },
     };
     const result = await discoverCandidates(smallConfig);
     expect(result.candidates).toHaveLength(1);
@@ -99,6 +113,7 @@ describe("discovery", () => {
         searchQueries: ["topic:a", "topic:b", "topic:c"],
         githubTopics: [],
         dailyCandidateLimit: 3,
+        platforms: disabledPlatforms,
       },
     };
     const resultPromise = discoverCandidates(smallConfig);
@@ -106,7 +121,7 @@ describe("discovery", () => {
     const result = await resultPromise;
     vi.useRealTimers();
 
-    expect(result.queriesRun).toEqual(["topic:a", "topic:b", "topic:c"]);
+    expect(result.queriesRun).toEqual(["github:topic:a", "github:topic:b", "github:topic:c"]);
     expect(result.candidates).toHaveLength(3);
   });
 
@@ -118,10 +133,56 @@ describe("discovery", () => {
     const { config } = loadConfig({});
     const smallConfig = {
       ...config,
-      discovery: { ...config.discovery, searchQueries: ["topic:x"], githubTopics: [], dailyCandidateLimit: 5 },
+      discovery: {
+        ...config.discovery,
+        searchQueries: ["topic:x"],
+        githubTopics: [],
+        dailyCandidateLimit: 5,
+        platforms: disabledPlatforms,
+      },
     };
     const result = await discoverCandidates(smallConfig);
-    expect(result.rateLimitedQueries).toEqual(["topic:x"]);
+    expect(result.rateLimitedQueries).toEqual(["github:topic:x"]);
     expect(result.candidates).toEqual([]);
+  });
+
+  it("fans discovery out across every enabled platform, not just GitHub", async () => {
+    vi.useFakeTimers();
+    vi.stubGlobal(
+      "fetch",
+      vi.fn(async (url: string) => {
+        if (url.includes("gitlab.com")) {
+          return new Response(JSON.stringify([]), { status: 200 });
+        }
+        if (url.includes("huggingface.co")) {
+          return new Response(JSON.stringify([]), { status: 200 });
+        }
+        if (url.includes("registry.npmjs.org")) {
+          return new Response(JSON.stringify({ objects: [] }), { status: 200 });
+        }
+        return new Response(JSON.stringify({ items: [] }), { status: 200 });
+      }),
+    );
+    const { config } = loadConfig({});
+    const smallConfig = {
+      ...config,
+      discovery: {
+        ...config.discovery,
+        searchQueries: ["topic:a"],
+        githubTopics: [],
+        dailyCandidateLimit: 20,
+        platforms: {
+          gitlab: { enabled: true, searchQueries: ["a"] },
+          huggingface: { enabled: true, searchQueries: ["a"] },
+          npm: { enabled: true, searchQueries: ["a"] },
+        },
+      },
+    };
+    const resultPromise = discoverCandidates(smallConfig);
+    await vi.runAllTimersAsync();
+    const result = await resultPromise;
+    vi.useRealTimers();
+    const platforms = new Set(result.queriesRun.map((label) => label.split(":")[0]));
+    expect(platforms).toEqual(new Set(["github", "gitlab", "huggingface", "npm"]));
   });
 });

@@ -73,6 +73,7 @@ export interface DuplicateMatch {
   existingSourceId: string;
   matchType:
     | "exact-url"
+    | "duplicate-id"
     | "owner-repo"
     | "redirect-canonical"
     | "github-id"

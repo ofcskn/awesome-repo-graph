@@ -68,6 +68,33 @@ describe("deduplication", () => {
     expect(matches).toHaveLength(0);
   });
 
+  it("flags an owner/repo-less candidate whose slug collides with an existing npm-style entry", async () => {
+    const npmExisting: StoredSource = {
+      id: "npmjs-com-package-some-tool",
+      url: "https://www.npmjs.com/package/some-tool",
+      provider: "npmjs.com",
+      owner: null,
+      repo: null,
+      title: "some-tool",
+      description: "",
+      path: ["Developer Productivity & CLI Tools"],
+      tags: ["cli"],
+      license: "MIT",
+      score: { stars: 0, fetchedAt: "2026-07-01" },
+      addedAt: "2026-01-01",
+    };
+    const candidate = makeCandidate({
+      // Underscore vs. hyphen: normalizeUrl leaves them distinct (so no
+      // exact-url match), but slugify collapses both to the same id.
+      canonicalUrl: "https://www.npmjs.com/package/some_tool",
+      provider: "npmjs.com",
+      owner: null,
+      repo: null,
+    });
+    const matches = await findDuplicates(candidate, [...existingSources, npmExisting], [], false);
+    expect(matches.some((m) => m.matchType === "duplicate-id")).toBe(true);
+  });
+
   it("flags near-identical titles as a likely duplicate", async () => {
     const candidate = makeCandidate({
       canonicalUrl: "https://github.com/mirrorowner/existingrepo-mirror",
