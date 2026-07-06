@@ -20,7 +20,7 @@
       "license": null,
       "score": {
         "stars": 196,
-        "fetchedAt": "2026-07-05"
+        "fetchedAt": "2026-07-06"
       },
       "addedAt": "2026-07-05"
     },
@@ -43,8 +43,8 @@
       ],
       "license": null,
       "score": {
-        "stars": 1018,
-        "fetchedAt": "2026-07-05"
+        "stars": 1019,
+        "fetchedAt": "2026-07-06"
       },
       "addedAt": "2026-07-05"
     },
@@ -68,8 +68,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 36801,
-        "fetchedAt": "2026-07-05"
+        "stars": 37435,
+        "fetchedAt": "2026-07-06"
       },
       "addedAt": "2026-07-05"
     },
@@ -93,8 +93,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 23620,
-        "fetchedAt": "2026-07-05"
+        "stars": 24195,
+        "fetchedAt": "2026-07-06"
       },
       "addedAt": "2026-07-05"
     },
@@ -1170,6 +1170,60 @@
         "fetchedAt": "2026-07-05"
       },
       "addedAt": "2026-07-05"
+    },
+    {
+      "id": "tensorflow-tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "provider": "github.com",
+      "owner": "tensorflow",
+      "repo": "tensorflow",
+      "title": "tensorflow",
+      "description": "TensorFlow is an open-source machine learning framework designed for everyone, supporting deep learning and neural networks. It provides tools for building and deploying machine learning models, including capabilities for distributed computing.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Machine Learning Frameworks"
+      ],
+      "tags": [
+        "python",
+        "machine-learning",
+        "deep-learning",
+        "neural-network",
+        "framework",
+        "distributed-computing"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 196091,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "avadsa25-codec",
+      "url": "https://github.com/AVADSA25/codec",
+      "provider": "github.com",
+      "owner": "AVADSA25",
+      "repo": "codec",
+      "title": "codec",
+      "description": "An open-source intelligent command layer and framework for building and running local AI agents, supporting voice interaction and self-hosted deployments.",
+      "path": [
+        "AI Agent Tooling",
+        "Agent Frameworks"
+      ],
+      "tags": [
+        "ai-agent",
+        "agent-framework",
+        "local-ai",
+        "self-hosted",
+        "macos",
+        "python"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 99,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
     }
   ]
 }
