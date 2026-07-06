@@ -20,7 +20,7 @@ import {
   saveRejectionHistory,
   upsertRejection,
 } from "./memory/rejection-store.js";
-import { evaluateSchedulingGate, saveLastRunState } from "./scheduling.js";
+import { evaluateSchedulingGate, saveLastRunState, LAST_RUN_STATE_PATH } from "./scheduling.js";
 import { loadSources, type StoredSource } from "./store-bridge.js";
 import { createRunId, writeReport, type RunReport } from "./reporting/report.js";
 import { TokenAccumulator, emptyTokenSummary } from "./reporting/token-accounting.js";
@@ -457,6 +457,13 @@ export async function runPipeline(options: RunOptions): Promise<RunReport> {
   report.completedAt = new Date().toISOString();
 
   if (!dryRun) {
+    // Persisted (and staged below) on every run, not just ones that accept
+    // sources, so the next run's scheduling gate can actually see when this
+    // one finished. Previously this was only written to disk here and never
+    // staged, so the gate's lastSuccessAt read was permanently null.
+    saveLastRunState({ lastSuccessAt: report.completedAt });
+    filesChanged.add(path.relative(repoRoot, LAST_RUN_STATE_PATH));
+
     // Append one sanitized row to the committed run/token ledger. It's
     // written every run but only *committed* when the run also commits
     // sources (the git step below only runs on accepted > 0), preserving the
@@ -465,18 +472,29 @@ export async function runPipeline(options: RunOptions): Promise<RunReport> {
     filesChanged.add(path.relative(repoRoot, TOKEN_LEDGER_PATH));
   }
 
-  const hasChanges = report.counts.accepted > 0 && !dryRun;
-  if (hasChanges && config.output.commitMode !== "report-only") {
+  const hasAcceptedSources = report.counts.accepted > 0 && !dryRun;
+  // In "commit" mode there's no PR/reviewer to carry state-only bookkeeping
+  // (like the scheduling gate's last-run timestamp) forward, so it commits
+  // whenever anything changed. "pull-request" mode still only opens a PR
+  // when real sources were accepted, to avoid opening PRs for bookkeeping.
+  const shouldCommit =
+    config.output.commitMode === "commit"
+      ? !dryRun && filesChanged.size > 0
+      : hasAcceptedSources;
+
+  if (shouldCommit && config.output.commitMode !== "report-only") {
     const dateStr = startedAt.toISOString().slice(0, 10);
     const branch = `${config.output.branchPrefix}/${dateStr}`;
-    const commitMessage = `Add ${report.counts.accepted} curated source(s) (${dateStr})`;
+    const commitMessage = hasAcceptedSources
+      ? `Add ${report.counts.accepted} curated source(s) (${dateStr})`
+      : `Update curator run state (${dateStr})`;
     const filesList = Array.from(filesChanged).filter(Boolean);
 
     // Sign the change so the resulting PR passes the approved-agent gate.
     // Runs after all insertions (sources.json/README.MD are already on disk)
     // and before staging, so the attestation lands in the same commit.
     // Fail-open: with no signing key present it's skipped, not failed.
-    if (config.output.attestation.enabled) {
+    if (hasAcceptedSources && config.output.attestation.enabled) {
       const attestation = await generateAttestation({
         agentId: config.output.attestation.agentId,
         keyId: config.output.attestation.keyId,
@@ -540,10 +558,6 @@ export async function runPipeline(options: RunOptions): Promise<RunReport> {
   }
 
   report.filesChanged = Array.from(filesChanged).filter(Boolean);
-
-  if (!dryRun) {
-    saveLastRunState({ lastSuccessAt: report.completedAt });
-  }
 
   writeReport(report, config.output.reportDir, repoRoot);
   return report;

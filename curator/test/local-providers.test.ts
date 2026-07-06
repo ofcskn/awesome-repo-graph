@@ -207,7 +207,7 @@ describe("config + registry accept the local/hosted providers", () => {
 
   it("commitMode override changes the output mode", () => {
     const base = loadConfig({}).config;
-    expect(base.output.commitMode).toBe("pull-request");
+    expect(base.output.commitMode).toBe("commit");
     const forced = loadConfig({ primaryProvider: "anthropic", commitMode: "report-only" }).config;
     expect(forced.output.commitMode).toBe("report-only");
     expect(forced.providers.primary).toBe("anthropic");
