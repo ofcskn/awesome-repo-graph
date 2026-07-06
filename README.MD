@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-47-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-2381344-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-49-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-2578744-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -77,10 +77,11 @@ npm run capture:demo
 ## Sectors
 
 - **Frontend Engineering** — 12 sources
-- **AI Agent Tooling** — 32 sources
+- **AI Agent Tooling** — 33 sources
 - **DevOps & Infrastructure** — 1 source
 - **Game Development** — 1 source
 - **Backend Engineering & APIs** — 1 source
+- **Machine Learning & Data Science** — 1 source
 
 ## Catalog
 
@@ -90,7 +91,7 @@ npm run capture:demo
 ### GSAP
 #### GSAP Website Examples
 - **[award-winning-website](https://github.com/adrianhajdin/award-winning-website)**  
-  ★ 1,018 · `gsap` `landing-page`
+  ★ 1,019 · `gsap` `landing-page`
 - **[jsm_gta_vi_landing](https://github.com/adrianhajdin/jsm_gta_vi_landing)**  
   ★ 196 · `gsap` `landing-page`
 - **[Truus.co-Awwward-Website](https://github.com/Thakuma07/Truus.co-Awwward-Website)** — Vanilla HTML/CSS/JS site built with GSAP, ScrollTrigger, and Lenis featuring experimental layout, cursor interaction, and dense motion design.  
@@ -117,17 +118,17 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>AI Agent Tooling</strong> — 32 sources</summary>
+<summary><strong>AI Agent Tooling</strong> — 33 sources</summary>
 
 ### Security & Pentesting
 - **[strix](https://github.com/usestrix/strix)** — Open-source AI-powered penetration testing agent that autonomously finds and fixes application vulnerabilities.  
-  ★ 36,801 · Apache-2.0 · `ai-agent` `penetration-testing` `security` `python`
+  ★ 37,435 · Apache-2.0 · `ai-agent` `penetration-testing` `security` `python`
 
 ### Browser & GUI Agents
 - **[chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)** — Official Chrome DevTools MCP server letting coding agents control and debug the browser directly.  
   ★ 45,935 · Apache-2.0 · `mcp-server` `chrome-devtools` `debugging` `typescript`
 - **[page-agent](https://github.com/alibaba/page-agent)** — In-browser GUI agent from Alibaba that controls web interfaces via natural language.  
-  ★ 23,620 · MIT · `ai-agent` `browser-automation` `gui-agent` `javascript`
+  ★ 24,195 · MIT · `ai-agent` `browser-automation` `gui-agent` `javascript`
 
 ### Terminal & CLI Agents
 - **[gemini-cli](https://github.com/google-gemini/gemini-cli)** — An open-source AI agent that integrates Google Gemini capabilities into the command-line interface.  
@@ -182,6 +183,8 @@ npm run capture:demo
   ★ 127,384 · MIT · `agent-framework` `multi-agent` `frontend` `community-management`
 - **[ai-berkshire](https://github.com/xbtlin/ai-berkshire)** — Value-investing research framework for Claude Code and Codex combining multiple investor methodologies via a multi-agent architecture.  
   ★ 10,151 · MIT · `claude-code` `codex` `value-investing` `multi-agent`
+- **[codec](https://github.com/AVADSA25/codec)** — An open-source intelligent command layer and framework for building and running local AI agents, supporting voice interaction and self-hosted deployments.  
+  ★ 99 · MIT · `ai-agent` `agent-framework` `local-ai` `self-hosted` `macos` `python`
 
 ### Agent Infrastructure
 - **[OmniRoute](https://github.com/diegosouzapw/OmniRoute)** — Free AI gateway for coding assistants routing 200+ LLM providers through one endpoint, with token compression and MCP/A2A support.  
@@ -243,6 +246,15 @@ npm run capture:demo
 ### API Clients & Testing
 - **[hoppscotch](https://github.com/hoppscotch/hoppscotch)** — Hoppscotch is an open-source API development ecosystem providing tools for testing and developing APIs across web, desktop, and CLI environments. It serves as an alternative to proprietary API clients like Postman and Insomnia.  
   ★ 79,736 · MIT · `cli` `typescript` `api` `api-client` `api-testing` `developer-tool`
+
+</details>
+
+<details>
+<summary><strong>Machine Learning & Data Science</strong> — 1 source</summary>
+
+### Machine Learning Frameworks
+- **[tensorflow](https://github.com/tensorflow/tensorflow)** — TensorFlow is an open-source machine learning framework designed for everyone, supporting deep learning and neural networks. It provides tools for building and deploying machine learning models, including capabilities for distributed computing.  
+  ★ 196,091 · Apache-2.0 · `python` `machine-learning` `deep-learning` `neural-network` `framework` `distributed-computing`
 
 </details>
 

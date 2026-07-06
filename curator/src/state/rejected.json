@@ -9,6 +9,22 @@
       "reconsiderAt": "2026-07-19T15:06:44.135Z"
     },
     {
+      "canonicalUrl": "https://github.com/f/prompts.chat",
+      "githubId": 574523116,
+      "evaluatedAt": "2026-07-06T06:55:53.993Z",
+      "reasonCode": "license-denied",
+      "metadataFingerprint": "fp_5d728218",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://github.com/google-gemini/gemini-cli",
+      "githubId": 968197216,
+      "evaluatedAt": "2026-07-06T06:55:45.311Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_65219236",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://github.com/HKUDS/nanobot",
       "githubId": 1147094660,
       "evaluatedAt": "2026-07-05T15:06:45.426Z",
@@ -17,19 +33,35 @@
       "reconsiderAt": "2026-07-19T15:06:45.426Z"
     },
     {
+      "canonicalUrl": "https://github.com/hoppscotch/hoppscotch",
+      "githubId": 203587744,
+      "evaluatedAt": "2026-07-06T06:55:45.466Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_fbc6e3",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://github.com/n8n-io/n8n",
       "githubId": 193215554,
-      "evaluatedAt": "2026-07-05T16:10:31.181Z",
+      "evaluatedAt": "2026-07-06T06:55:45.172Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_aff30294",
+      "metadataFingerprint": "fp_29ccc59",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://github.com/nocodb/nocodb",
+      "githubId": 108761645,
+      "evaluatedAt": "2026-07-06T06:55:46.041Z",
+      "reasonCode": "license-denied",
+      "metadataFingerprint": "fp_9f386e50",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/NousResearch/hermes-agent",
       "githubId": 1024554267,
-      "evaluatedAt": "2026-07-05T16:10:30.850Z",
+      "evaluatedAt": "2026-07-06T06:55:44.849Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_a9483e8f",
+      "metadataFingerprint": "fp_14dc6bd7",
       "reconsiderAt": null
     },
     {
@@ -67,9 +99,9 @@
     {
       "canonicalUrl": "https://github.com/thedaviddias/Front-End-Checklist",
       "githubId": 107111421,
-      "evaluatedAt": "2026-07-05T16:10:31.024Z",
+      "evaluatedAt": "2026-07-06T06:55:45.011Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_daede7f7",
+      "metadataFingerprint": "fp_ebb9fd7c",
       "reconsiderAt": null
     },
     {
