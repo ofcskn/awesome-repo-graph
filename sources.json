@@ -3036,7 +3036,7 @@
       "tags": [
         "proxy",
         "service-mesh",
-        "c++",
+        "cpp",
         "load-balancer"
       ],
       "license": "Apache-2.0",
@@ -3213,7 +3213,7 @@
         "gradient-boosting",
         "machine-learning",
         "classical-ml",
-        "c++"
+        "cpp"
       ],
       "license": "Apache-2.0",
       "score": {
@@ -3288,7 +3288,7 @@
         "gradient-boosting",
         "machine-learning",
         "classical-ml",
-        "c++"
+        "cpp"
       ],
       "license": "MIT",
       "score": {

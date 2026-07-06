@@ -342,7 +342,7 @@ npm run capture:demo
 - **[Kong](https://github.com/Kong/kong)** — Cloud-native API gateway and AI gateway built on top of NGINX for managing microservices traffic.  
   ★ 43,743 · Apache-2.0 · `api-gateway` `microservices` `proxy` `openresty`
 - **[Envoy](https://github.com/envoyproxy/envoy)** — Cloud-native high-performance edge and service proxy designed for large microservice architectures.  
-  ★ 28,526 · Apache-2.0 · `proxy` `service-mesh` `c++` `load-balancer`
+  ★ 28,526 · Apache-2.0 · `proxy` `service-mesh` `cpp` `load-balancer`
 - **[Apache APISIX](https://github.com/apache/apisix)** — Dynamic, real-time, high-performance cloud-native API gateway built on top of Nginx and etcd.  
   ★ 16,814 · Apache-2.0 · `api-gateway` `microservices` `proxy` `lua`
 
@@ -397,9 +397,9 @@ npm run capture:demo
 - **[scikit-learn](https://github.com/scikit-learn/scikit-learn)** — A Python library providing simple and efficient tools for classical machine learning, including classification, regression, and clustering.  
   ★ 66,622 · BSD-3-Clause · `python` `machine-learning` `classical-ml` `data-science`
 - **[XGBoost](https://github.com/dmlc/xgboost)** — A scalable, distributed gradient boosting library used for classification, regression, and ranking problems.  
-  ★ 28,535 · Apache-2.0 · `gradient-boosting` `machine-learning` `classical-ml` `c++`
+  ★ 28,535 · Apache-2.0 · `gradient-boosting` `machine-learning` `classical-ml` `cpp`
 - **[LightGBM](https://github.com/lightgbm-org/LightGBM)** — A fast, distributed, high-performance gradient boosting framework based on decision tree algorithms.  
-  ★ 18,535 · MIT · `gradient-boosting` `machine-learning` `classical-ml` `c++`
+  ★ 18,535 · MIT · `gradient-boosting` `machine-learning` `classical-ml` `cpp`
 - **[CatBoost](https://github.com/catboost/catboost)** — A high-performance gradient boosting library with built-in support for categorical features.  
   ★ 9,020 · Apache-2.0 · `gradient-boosting` `machine-learning` `classical-ml` `categorical-features`
 
