@@ -37,6 +37,9 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Reject duplicate sources
+        run: node scripts/check-duplicates.js
+
       - name: Verify approved-agent attestation and mechanical policy
         env:
           BASE_REF: ${{ github.base_ref }}

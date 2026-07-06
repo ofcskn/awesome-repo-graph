@@ -18,7 +18,11 @@ function normalizeUrl(rawUrl) {
   const u = new URL(rawUrl);
   u.hash = "";
   u.search = "";
-  let pathname = u.pathname.replace(/\/+$/, "");
+  // Path is lowercased too: every provider we track (GitHub, GitLab, npm,
+  // Hugging Face) treats owner/repo/package slugs case-insensitively, so
+  // "owner/repo" and "Owner/Repo" must normalize identically or the same
+  // project can be added twice under different casing.
+  let pathname = u.pathname.replace(/\/+$/, "").toLowerCase();
   return `${u.hostname.toLowerCase()}${pathname}`;
 }
 
@@ -42,6 +46,16 @@ function findDuplicate(sources, rawUrl) {
   return sources.find((s) => normalizeUrl(s.url) === normalized);
 }
 
+/**
+ * Second, independent duplicate gate: two distinct URLs can still slugify to
+ * the same id (e.g. a homepage-style URL vs. an owner/repo URL for the same
+ * project), so findDuplicate's URL comparison alone isn't sufficient. Any
+ * insertion path must check both.
+ */
+function findDuplicateId(sources, id) {
+  return sources.find((s) => s.id === id);
+}
+
 module.exports = {
   SOURCES_PATH,
   loadSources,
@@ -50,4 +64,5 @@ module.exports = {
   parseGithubOwnerRepo,
   slugify,
   findDuplicate,
+  findDuplicateId,
 };

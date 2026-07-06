@@ -21,6 +21,7 @@ interface StoreModule {
   parseGithubOwnerRepo(url: string): { owner: string; repo: string } | null;
   slugify(text: string): string;
   findDuplicate(sources: StoredSource[], url: string): StoredSource | undefined;
+  findDuplicateId(sources: StoredSource[], id: string): StoredSource | undefined;
 }
 
 interface GraphModule {
@@ -74,6 +75,13 @@ export function findDuplicateSource(
   url: string,
 ): StoredSource | undefined {
   return store.findDuplicate(sources, url);
+}
+
+export function findDuplicateSourceId(
+  sources: StoredSource[],
+  id: string,
+): StoredSource | undefined {
+  return store.findDuplicateId(sources, id);
 }
 
 export function sharedTagCount(a: { tags?: string[] }, b: { tags?: string[] }): number {

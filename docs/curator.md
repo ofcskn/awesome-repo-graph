@@ -18,7 +18,7 @@ curator/
     store-bridge.ts        CJS bridge to scripts/lib/store.js and scripts/lib/graph.js
     scheduling.ts           daily execution-window gate + last-run state
     maintenance.ts          web app build + a minimal static-export smoke check
-    discovery/              GitHub search -> normalized Candidate records
+    discovery/              GitHub, GitLab, Hugging Face, npm search -> normalized Candidate records
     validation/              mechanical.ts (policy gates), dedupe.ts (10 dedup layers)
     classification/          schema.ts (zod), taxonomy.ts, tags.ts, consensus.ts
     providers/                one adapter per AI provider + fallback/registry
@@ -107,6 +107,28 @@ maps 1:1 to an item in the original spec (see the inline comments next to
 each zod field in `curator/src/config.ts` for the exact item number). It is
 validated with zod at load time (`loadConfig()`), so a malformed edit fails
 fast with a clear error instead of silently misbehaving.
+
+### Multi-platform discovery
+
+`discovery.searchQueries`/`githubTopics` drive GitHub search, and
+`discovery.platforms.{gitlab,huggingface,npm}` drive the three other
+backends (each with its own `enabled` flag and `searchQueries` list).
+`discovery/index.ts` interleaves jobs across every enabled platform
+(round-robin, not platform-by-platform) so `dailyCandidateLimit` — now a
+budget shared across all four platforms — never lets GitHub's larger result
+set crowd out GitLab/Hugging Face/npm candidates. Star counts on non-GitHub
+platforms are documented proxies, not literal GitHub stars (GitLab's
+`star_count` is real; Hugging Face uses `likes`; npm uses a scaled
+`score.detail.popularity`).
+
+### Querying `sources.json` without loading it
+
+Both the curator and any agent operating on this repo should reach for
+`node scripts/filter-sources.js` (`--stats`, `--tag`, `--path`, `--provider`,
+`--query`, `--id`) instead of reading `sources.json` in full — see AGENTS.MD's
+"Inspecting sources without loading the whole file" section. The embedding
+memory (below) already keeps AI classification prompts small; this does the
+same for anyone inspecting the catalog by hand or via tooling.
 
 ## Dry-run usage
 

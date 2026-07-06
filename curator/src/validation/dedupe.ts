@@ -1,5 +1,11 @@
 import { fetchForkParentUrl } from "../discovery/github-search.js";
-import { findDuplicateSource, normalizeSourceUrl, type StoredSource } from "../store-bridge.js";
+import {
+  findDuplicateSource,
+  findDuplicateSourceId,
+  normalizeSourceUrl,
+  slugify,
+  type StoredSource,
+} from "../store-bridge.js";
 import { cosineSimilarity } from "../embeddings/similarity.js";
 import type { Candidate, DuplicateMatch, RejectionRecord } from "../types.js";
 
@@ -72,6 +78,29 @@ export async function findDuplicates(
         candidateUrl: candidate.canonicalUrl,
         existingSourceId: renamed.id,
         matchType: "owner-repo",
+        confidence: 1,
+      });
+    }
+  } else {
+    // 3b. Id-collision fallback for providers with no owner/repo concept
+    // (npm packages, generic URLs): scripts/add-source.js slugifies
+    // provider+pathname into the entry's id, so two different-looking URLs
+    // for the same non-GitHub resource can still collide on id even though
+    // layers 1-3 above never fire for them.
+    const candidatePathname = (() => {
+      try {
+        return new URL(candidate.canonicalUrl).pathname;
+      } catch {
+        return "";
+      }
+    })();
+    const candidateId = slugify(`${candidate.provider}-${candidatePathname}`);
+    const idMatch = findDuplicateSourceId(existingSources, candidateId);
+    if (idMatch) {
+      matches.push({
+        candidateUrl: candidate.canonicalUrl,
+        existingSourceId: idMatch.id,
+        matchType: "duplicate-id",
         confidence: 1,
       });
     }

@@ -69,6 +69,27 @@ const configSchema = z
       sectors: z.array(z.string().min(1)),
       /** 20. Target categories. */
       categories: z.array(z.string().min(1)),
+      /**
+       * Non-GitHub discovery backends. Each platform contributes its own
+       * search queries against its own public API (see discovery/*-search.ts)
+       * so trending-source discovery isn't limited to GitHub's search index —
+       * GitLab covers self-hosted-friendly OSS, Hugging Face covers ML
+       * models/spaces, and npm covers the JS/TS package ecosystem.
+       */
+      platforms: z.object({
+        gitlab: z.object({
+          enabled: z.boolean(),
+          searchQueries: z.array(z.string().min(1)),
+        }),
+        huggingface: z.object({
+          enabled: z.boolean(),
+          searchQueries: z.array(z.string().min(1)),
+        }),
+        npm: z.object({
+          enabled: z.boolean(),
+          searchQueries: z.array(z.string().min(1)),
+        }),
+      }),
     }),
     quality: z.object({
       /** 12. Maximum accepted sources per run. */
@@ -245,7 +266,13 @@ const defaultConfig: CuratorConfig = {
     // candidates are collected, so a low limit combined with the interleaved
     // topics below would let the first query or two exhaust the budget
     // before the new-category topics ever ran.
-    dailyCandidateLimit: 24,
+    // Raised from 24 to 32 when discovery grew from GitHub-only to four
+    // platforms (GitHub + GitLab + Hugging Face + npm): the same
+    // remaining-budget/remaining-queries split in discovery/index.ts now
+    // divides across ~31 query slots instead of ~19, so keeping the old
+    // limit would have silently starved the three new platforms down to a
+    // handful of candidates each.
+    dailyCandidateLimit: 32,
     searchQueries: [
       "topic:ai-agent stars:>200",
       "topic:mcp-server stars:>100",
@@ -294,6 +321,35 @@ const defaultConfig: CuratorConfig = {
       "Developer Productivity & CLI Tools",
       "Web3 & Distributed Systems",
     ],
+    platforms: {
+      gitlab: {
+        enabled: true,
+        searchQueries: [
+          "ai agent",
+          "mcp server",
+          "developer tooling",
+          "observability",
+        ],
+      },
+      huggingface: {
+        enabled: true,
+        searchQueries: [
+          "agent",
+          "rag",
+          "mcp",
+          "text-generation",
+        ],
+      },
+      npm: {
+        enabled: true,
+        searchQueries: [
+          "ai-agent",
+          "mcp-server",
+          "llm-tooling",
+          "cli-framework",
+        ],
+      },
+    },
   },
   quality: {
     // Same 4-runs/day scaling as discovery.dailyCandidateLimit: 2/run x 4 = 8/day.

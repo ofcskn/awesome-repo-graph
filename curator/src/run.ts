@@ -69,6 +69,7 @@ function toExistingSourceSummary(source: StoredSource): ExistingSourceSummary {
 
 const DUPLICATE_MATCH_TO_REASON: Record<string, RejectionReasonCode> = {
   "exact-url": "duplicate-of-existing",
+  "duplicate-id": "duplicate-of-existing",
   "owner-repo": "renamed-duplicate",
   "redirect-canonical": "duplicate-of-existing",
   "github-id": "duplicate-of-existing",
@@ -181,7 +182,13 @@ export async function runPipeline(options: RunOptions): Promise<RunReport> {
   report.counts.discovered = discovery.candidates.length;
   report.discoveryMethods = discovery.queriesRun;
   if (discovery.rateLimitedQueries.length > 0) {
-    report.notes.push(`Rate-limited GitHub search queries: ${discovery.rateLimitedQueries.join(", ")}`);
+    report.notes.push(`Rate-limited search queries: ${discovery.rateLimitedQueries.join(", ")}`);
+  }
+  const platformSummary = Object.entries(discovery.platformCounts)
+    .map(([platform, count]) => `${platform}=${count}`)
+    .join(", ");
+  if (platformSummary) {
+    report.notes.push(`Candidates by platform: ${platformSummary}`);
   }
 
   let rejectionHistory = loadRejectionHistory();
