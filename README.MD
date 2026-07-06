@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-94-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-2369966-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-157-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-4247514-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -79,9 +79,9 @@ npm run capture:demo
 - **Frontend Engineering** — 12 sources
 - **AI Agent Tooling** — 32 sources
 - **DevOps & Infrastructure** — 1 source
-- **Game Development** — 1 source
-- **Backend Engineering & APIs** — 1 source
-- **Machine Learning & Data Science** — 1 source
+- **Game Development** — 21 sources
+- **Backend Engineering & APIs** — 24 sources
+- **Machine Learning & Data Science** — 21 sources
 - **Blockchain & Decentralized AI** — 46 sources
 
 ## Catalog
@@ -231,29 +231,203 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>Game Development</strong> — 1 source</summary>
+<summary><strong>Game Development</strong> — 21 sources</summary>
 
 ### Free Asset Libraries
 - **[Kenney](https://www.kenney.nl/)** — Free game asset packs (sprites, 3D models, UI kits, audio) and starter tools for game developers.  
   `game-development` `game-assets`
 
+### Game Engines
+- **[Godot](https://github.com/godotengine/godot)** — Full-featured cross-platform game engine supporting 2D and 3D development with its own scripting language and editor.  
+  ★ 113,678 · MIT · `game-engine` `2d` `3d` `open-source`
+- **[Bevy](https://github.com/bevyengine/bevy)** — Data-driven game engine written in Rust built around a built-in entity component system.  
+  ★ 47,032 · Apache-2.0 · `game-engine` `rust` `ecs`
+
+### 2D Frameworks
+- **[Phaser](https://github.com/phaserjs/phaser)** — Fast, free HTML5 game framework for building 2D games that run in desktop and mobile browsers.  
+  ★ 39,905 · MIT · `2d` `javascript` `html5` `webgl`
+- **[raylib](https://github.com/raysan5/raylib)** — Simple and easy-to-use C library for programming games, with 2D and 3D rendering support.  
+  ★ 33,746 · Zlib · `c` `simple` `2d` `3d`
+- **[libGDX](https://github.com/libgdx/libgdx)** — Cross-platform Java game development framework for desktop, Android, iOS, and web.  
+  ★ 25,201 · Apache-2.0 · `java` `cross-platform` `2d`
+- **[Flame](https://github.com/flame-engine/flame)** — Modular 2D game engine built on top of Flutter for building cross-platform games in Dart.  
+  ★ 10,662 · MIT · `flutter` `dart` `2d`
+- **[Excalibur.js](https://github.com/excaliburjs/Excalibur)** — Free and open-source 2D game engine written in TypeScript for making browser and mobile games.  
+  ★ 2,307 · BSD-2-Clause · `typescript` `2d` `html5`
+
+### 3D Frameworks
+- **[Babylon.js](https://github.com/BabylonJS/Babylon.js)** — Powerful, real-time 3D rendering engine for the web using WebGL, WebGPU, and WebXR.  
+  ★ 25,746 · Apache-2.0 · `3d` `webgl` `javascript` `typescript`
+
+### Physics Engines
+- **[Jolt Physics](https://github.com/jrouwe/JoltPhysics)** — Multi-core friendly 3D rigid-body physics and collision detection library used in AAA games.  
+  ★ 10,650 · MIT · `physics` `3d` `cpp`
+- **[Box2D](https://github.com/erincatto/box2d)** — Widely used 2D rigid-body physics engine used in many commercial and indie games.  
+  ★ 10,017 · MIT · `physics` `2d` `c`
+- **[Rapier](https://github.com/dimforge/rapier)** — Cross-platform 2D and 3D physics engine written in Rust for games and simulations.  
+  ★ 5,496 · Apache-2.0 · `physics` `rust` `2d` `3d`
+
+### ECS Libraries
+- **[EnTT](https://github.com/skypjack/entt)** — Fast and reliable entity-component-system (ECS) library written in modern C++.  
+  ★ 12,877 · MIT · `ecs` `cpp` `header-only`
+
+### Open Source Games
+- **[osu!](https://github.com/ppy/osu)** — Free-to-win rhythm game client and editor supporting multiple gameplay modes.  
+  ★ 18,628 · MIT · `rhythm-game` `csharp` `open-source-game`
+- **[OpenRA](https://github.com/OpenRA/OpenRA)** — Open-source game engine reimplementing classic Command & Conquer, Red Alert, and Dune 2000 era RTS games.  
+  ★ 17,048 · GPL-3.0 · `rts` `open-source-game` `mono`
+- **[OpenRCT2](https://github.com/OpenRCT2/OpenRCT2)** — Open-source reimplementation of RollerCoaster Tycoon 2 with extended functionality and modding support.  
+  ★ 15,923 · GPL-3.0 · `simulation` `open-source-game`
+- **[Unciv](https://github.com/yairm210/Unciv)** — Open-source recreation of Civilization V as a turn-based strategy game for desktop and mobile.  
+  ★ 10,924 · MPL-2.0 · `strategy` `open-source-game` `kotlin`
+- **[Veloren](https://github.com/veloren/veloren)** — Open-world multiplayer voxel RPG written in Rust, inspired by Cube World and Dwarf Fortress.  
+  ★ 7,388 · GPL-3.0 · `rpg` `voxel` `rust` `open-source-game`
+
+### Netcode & Multiplayer
+- **[GameNetworkingSockets](https://github.com/ValveSoftware/GameNetworkingSockets)** — Reliable and unreliable UDP-based networking library from Valve for peer-to-peer and client-server games.  
+  ★ 9,760 · BSD-3-Clause · `netcode` `multiplayer` `udp` `cpp`
+- **[Mirror Networking](https://github.com/MirrorNetworking/Mirror)** — High-level networking library for the Unity game engine used to build multiplayer games.  
+  ★ 6,241 · MIT · `unity` `netcode` `multiplayer`
+
+### Game Tooling
+- **[Recast & Detour](https://github.com/recastnavigation/recastnavigation)** — Navigation mesh generation and pathfinding toolkit widely used for game AI movement.  
+  ★ 7,793 · Zlib · `navmesh` `pathfinding` `cpp`
+
 </details>
 
 <details>
-<summary><strong>Backend Engineering & APIs</strong> — 1 source</summary>
+<summary><strong>Backend Engineering & APIs</strong> — 24 sources</summary>
 
 ### API Clients & Testing
 - **[hoppscotch](https://github.com/hoppscotch/hoppscotch)** — Hoppscotch is an open-source API development ecosystem providing tools for testing and developing APIs across web, desktop, and CLI environments. It serves as an alternative to proprietary API clients like Postman and Insomnia.  
   ★ 79,736 · MIT · `cli` `typescript` `api` `api-client` `api-testing` `developer-tool`
 
+### Web Frameworks
+- **[NestJS](https://github.com/nestjs/nest)** — Progressive Node.js framework for building efficient, scalable server-side applications with TypeScript.  
+  ★ 76,038 · MIT · `typescript` `node` `web-framework` `dependency-injection`
+- **[Fiber](https://github.com/gofiber/fiber)** — Go web framework inspired by Express, built on top of fasthttp for high performance.  
+  ★ 39,930 · MIT · `go` `web-framework` `http` `fasthttp`
+- **[Encore](https://github.com/encoredev/encore)** — Backend development platform for building type-safe distributed systems with built-in infrastructure provisioning.  
+  ★ 12,113 · MPL-2.0 · `go` `typescript` `backend-framework` `infrastructure-as-code`
+
+### Databases
+- **[etcd](https://github.com/etcd-io/etcd)** — Distributed, reliable key-value store used for shared configuration and service discovery.  
+  ★ 51,954 · Apache-2.0 · `database` `distributed` `key-value-store` `consensus` `raft`
+- **[ClickHouse](https://github.com/ClickHouse/ClickHouse)** — Column-oriented database management system for real-time analytics with SQL support.  
+  ★ 48,477 · Apache-2.0 · `database` `olap` `columnar` `analytics` `sql`
+- **[Dgraph](https://github.com/dgraph-io/dgraph)** — Distributed graph database with native GraphQL query support built for horizontal scalability.  
+  ★ 21,725 · Apache-2.0 · `database` `graph-database` `distributed` `graphql`
+- **[QuestDB](https://github.com/questdb/questdb)** — High-performance time-series database with SQL support optimized for fast ingestion and analytics.  
+  ★ 17,164 · Apache-2.0 · `database` `time-series` `sql` `analytics`
+- **[TiKV](https://github.com/tikv/tikv)** — Distributed transactional key-value database written in Rust, originally created to complement TiDB.  
+  ★ 16,758 · Apache-2.0 · `database` `distributed` `key-value-store` `rust`
+
+### ORMs & Query Builders
+- **[Prisma](https://github.com/prisma/prisma)** — Next-generation TypeScript ORM with auto-generated type-safe query client and migration tooling.  
+  ★ 46,354 · Apache-2.0 · `orm` `typescript` `database` `query-builder`
+- **[GORM](https://github.com/go-gorm/gorm)** — Feature-rich ORM library for Go supporting associations, migrations, and multiple database backends.  
+  ★ 39,842 · MIT · `orm` `go` `database` `sql`
+- **[Drizzle ORM](https://github.com/drizzle-team/drizzle-orm)** — Lightweight TypeScript ORM with a SQL-like query builder and zero runtime overhead.  
+  ★ 35,051 · Apache-2.0 · `orm` `typescript` `sql` `query-builder`
+
+### Message Queues & Streaming
+- **[Apache Kafka](https://github.com/apache/kafka)** — Distributed event streaming platform for high-throughput publish-subscribe messaging and log storage.  
+  ★ 33,122 · Apache-2.0 · `message-queue` `event-streaming` `distributed` `java`
+- **[NATS Server](https://github.com/nats-io/nats-server)** — High-performance messaging system for cloud-native, pub-sub, and request-reply communication patterns.  
+  ★ 20,154 · Apache-2.0 · `message-queue` `pub-sub` `go` `cloud-native`
+- **[Apache Pulsar](https://github.com/apache/pulsar)** — Cloud-native distributed messaging and streaming platform with multi-tenancy and geo-replication.  
+  ★ 15,291 · Apache-2.0 · `message-queue` `event-streaming` `distributed` `java`
+
+### API Gateways & Reverse Proxies
+- **[Kong](https://github.com/Kong/kong)** — Cloud-native API gateway and AI gateway built on top of NGINX for managing microservices traffic.  
+  ★ 43,743 · Apache-2.0 · `api-gateway` `microservices` `proxy` `openresty`
+- **[Envoy](https://github.com/envoyproxy/envoy)** — Cloud-native high-performance edge and service proxy designed for large microservice architectures.  
+  ★ 28,526 · Apache-2.0 · `proxy` `service-mesh` `cpp` `load-balancer`
+- **[Apache APISIX](https://github.com/apache/apisix)** — Dynamic, real-time, high-performance cloud-native API gateway built on top of Nginx and etcd.  
+  ★ 16,814 · Apache-2.0 · `api-gateway` `microservices` `proxy` `lua`
+
+### Background Jobs & Task Queues
+- **[Asynq](https://github.com/hibiken/asynq)** — Go library for distributed task queues backed by Redis with retries, scheduling, and web UI monitoring.  
+  ★ 13,487 · MIT · `task-queue` `background-jobs` `go` `redis`
+- **[BullMQ](https://github.com/taskforcesh/bullmq)** — Node.js and TypeScript queue library backed by Redis for reliable background job and message processing.  
+  ★ 9,075 · MIT · `task-queue` `background-jobs` `node` `redis` `typescript`
+
+### Microservices & Service Mesh
+- **[Dapr](https://github.com/dapr/dapr)** — Portable, event-driven runtime that provides building blocks for resilient distributed microservice applications.  
+  ★ 25,912 · Apache-2.0 · `microservices` `distributed-systems` `sidecar` `cloud-native`
+- **[Temporal](https://github.com/temporalio/temporal)** — Durable execution platform for orchestrating reliable, long-running microservice workflows.  
+  ★ 21,445 · MIT · `workflow-engine` `microservices` `distributed-systems` `orchestration`
+
+### GraphQL & RPC
+- **[tRPC](https://github.com/trpc/trpc)** — Framework for building end-to-end type-safe APIs in TypeScript without schemas or code generation.  
+  ★ 40,406 · MIT · `rpc` `typescript` `api` `type-safety`
+- **[Hasura GraphQL Engine](https://github.com/hasura/graphql-engine)** — Instant realtime GraphQL API layer generated over new or existing databases with fine-grained access control.  
+  ★ 32,078 · Apache-2.0 · `graphql` `api` `database` `realtime`
+
 </details>
 
 <details>
-<summary><strong>Machine Learning & Data Science</strong> — 1 source</summary>
+<summary><strong>Machine Learning & Data Science</strong> — 21 sources</summary>
 
 ### Machine Learning Frameworks
 - **[tensorflow](https://github.com/tensorflow/tensorflow)** — TensorFlow is an open-source machine learning framework designed for everyone, supporting deep learning and neural networks. It provides tools for building and deploying machine learning models, including capabilities for distributed computing.  
   ★ 196,091 · Apache-2.0 · `python` `machine-learning` `deep-learning` `neural-network` `framework` `distributed-computing`
+
+### Deep Learning Frameworks
+- **[Transformers](https://github.com/huggingface/transformers)** — A library of pretrained deep learning models and utilities for natural language processing, computer vision, and audio tasks.  
+  ★ 162,299 · Apache-2.0 · `python` `deep-learning` `nlp` `pretrained-models` `pytorch`
+- **[Keras](https://github.com/keras-team/keras)** — A high-level deep learning API for Python that runs on top of TensorFlow, JAX, or PyTorch backends.  
+  ★ 64,152 · Apache-2.0 · `python` `deep-learning` `neural-network` `tensorflow` `jax`
+
+### Data Processing
+- **[pandas](https://github.com/pandas-dev/pandas)** — A fast, powerful, and flexible data analysis and manipulation library for Python built around the DataFrame.  
+  ★ 49,144 · BSD-3-Clause · `python` `dataframe` `data-analysis` `data-processing`
+- **[Polars](https://github.com/pola-rs/polars)** — A fast multi-threaded DataFrame library for Rust and Python built on an Apache Arrow columnar format.  
+  ★ 38,934 · MIT · `rust` `dataframe` `data-processing` `performance`
+- **[Apache Arrow](https://github.com/apache/arrow)** — A cross-language development platform for in-memory columnar data with libraries for efficient analytics and data interchange.  
+  ★ 16,909 · Apache-2.0 · `columnar` `data-format` `data-processing` `interoperability`
+
+### Data Visualization
+- **[Bokeh](https://github.com/bokeh/bokeh)** — An interactive data visualization library for Python that targets modern web browsers for presentation.  
+  ★ 20,409 · BSD-3-Clause · `python` `data-visualization` `interactive` `web`
+- **[Plotly.py](https://github.com/plotly/plotly.py)** — An interactive, open-source graphing library for Python supporting a wide range of statistical, scientific, and financial chart types.  
+  ★ 18,663 · MIT · `python` `data-visualization` `charts` `interactive`
+
+### Classical ML Libraries
+- **[scikit-learn](https://github.com/scikit-learn/scikit-learn)** — A Python library providing simple and efficient tools for classical machine learning, including classification, regression, and clustering.  
+  ★ 66,622 · BSD-3-Clause · `python` `machine-learning` `classical-ml` `data-science`
+- **[XGBoost](https://github.com/dmlc/xgboost)** — A scalable, distributed gradient boosting library used for classification, regression, and ranking problems.  
+  ★ 28,535 · Apache-2.0 · `gradient-boosting` `machine-learning` `classical-ml` `cpp`
+- **[LightGBM](https://github.com/lightgbm-org/LightGBM)** — A fast, distributed, high-performance gradient boosting framework based on decision tree algorithms.  
+  ★ 18,535 · MIT · `gradient-boosting` `machine-learning` `classical-ml` `cpp`
+- **[CatBoost](https://github.com/catboost/catboost)** — A high-performance gradient boosting library with built-in support for categorical features.  
+  ★ 9,020 · Apache-2.0 · `gradient-boosting` `machine-learning` `classical-ml` `categorical-features`
+
+### MLOps & Experiment Tracking
+- **[MLflow](https://github.com/mlflow/mlflow)** — An open-source platform for managing the end-to-end machine learning lifecycle, including experiment tracking, model packaging, and deployment.  
+  ★ 26,895 · Apache-2.0 · `mlops` `experiment-tracking` `model-registry` `deployment`
+- **[DVC](https://github.com/treeverse/dvc)** — A version control system for machine learning projects that tracks datasets, models, and experiment pipelines alongside code.  
+  ★ 15,723 · Apache-2.0 · `data-versioning` `mlops` `experiment-tracking` `reproducibility`
+- **[Weights & Biases](https://github.com/wandb/wandb)** — A tool for tracking machine learning experiments, visualizing metrics, and managing model artifacts and datasets.  
+  ★ 11,164 · MIT · `experiment-tracking` `mlops` `visualization` `collaboration`
+
+### Model Training & Fine-Tuning
+- **[Unsloth](https://github.com/unslothai/unsloth)** — A library for faster, memory-efficient fine-tuning of large language models.  
+  ★ 67,851 · Apache-2.0 · `fine-tuning` `llm` `lora` `training-speedup`
+- **[DeepSpeed](https://github.com/deepspeedai/DeepSpeed)** — A deep learning optimization library that makes distributed training and inference easy, efficient, and effective at scale.  
+  ★ 42,665 · Apache-2.0 · `distributed-training` `deep-learning` `optimization` `large-models`
+- **[PEFT](https://github.com/huggingface/peft)** — A library of parameter-efficient fine-tuning methods for adapting large pretrained models without retraining all their parameters.  
+  ★ 21,371 · Apache-2.0 · `fine-tuning` `lora` `parameter-efficient` `transformers`
+
+### Notebooks & Interactive Computing
+- **[JupyterLab](https://github.com/jupyterlab/jupyterlab)** — The next-generation web-based user interface for Project Jupyter, providing a flexible IDE-like environment for notebooks, code, and data.  
+  ★ 15,224 · BSD-3-Clause · `jupyter` `jupyterlab` `interactive-computing` `ide`
+- **[Jupyter Notebook](https://github.com/jupyter/notebook)** — A web-based interactive computing environment for creating and sharing documents that combine live code, equations, visualizations, and text.  
+  ★ 13,233 · BSD-3-Clause · `jupyter` `notebook` `interactive-computing` `python`
+
+### Natural Language Processing
+- **[spaCy](https://github.com/explosion/spaCy)** — An industrial-strength natural language processing library for Python featuring tokenization, tagging, parsing, and named entity recognition.  
+  ★ 33,719 · MIT · `nlp` `python` `text-processing` `linguistics`
 
 </details>
 

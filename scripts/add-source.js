@@ -22,9 +22,10 @@ function parseArgs(argv) {
 }
 
 async function fetchGithubMeta(owner, repo) {
-  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`, {
-    headers: { Accept: "application/vnd.github+json" },
-  });
+  const headers = { Accept: "application/vnd.github+json" };
+  const token = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
+  if (token) headers.Authorization = `Bearer ${token}`;
+  const res = await fetch(`https://api.github.com/repos/${owner}/${repo}`, { headers });
   if (!res.ok) return { stars: null, license: null };
   const data = await res.json();
   return {

@@ -2297,6 +2297,1572 @@
         "fetchedAt": null
       },
       "addedAt": "2026-07-06"
+    },
+    {
+      "id": "gofiber-fiber",
+      "url": "https://github.com/gofiber/fiber",
+      "provider": "github.com",
+      "owner": "gofiber",
+      "repo": "fiber",
+      "title": "Fiber",
+      "description": "Go web framework inspired by Express, built on top of fasthttp for high performance.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Web Frameworks"
+      ],
+      "tags": [
+        "go",
+        "web-framework",
+        "http",
+        "fasthttp"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 39930,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "nestjs-nest",
+      "url": "https://github.com/nestjs/nest",
+      "provider": "github.com",
+      "owner": "nestjs",
+      "repo": "nest",
+      "title": "NestJS",
+      "description": "Progressive Node.js framework for building efficient, scalable server-side applications with TypeScript.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Web Frameworks"
+      ],
+      "tags": [
+        "typescript",
+        "node",
+        "web-framework",
+        "dependency-injection"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 76038,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "encoredev-encore",
+      "url": "https://github.com/encoredev/encore",
+      "provider": "github.com",
+      "owner": "encoredev",
+      "repo": "encore",
+      "title": "Encore",
+      "description": "Backend development platform for building type-safe distributed systems with built-in infrastructure provisioning.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Web Frameworks"
+      ],
+      "tags": [
+        "go",
+        "typescript",
+        "backend-framework",
+        "infrastructure-as-code"
+      ],
+      "license": "MPL-2.0",
+      "score": {
+        "stars": 12113,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "clickhouse-clickhouse",
+      "url": "https://github.com/ClickHouse/ClickHouse",
+      "provider": "github.com",
+      "owner": "ClickHouse",
+      "repo": "ClickHouse",
+      "title": "ClickHouse",
+      "description": "Column-oriented database management system for real-time analytics with SQL support.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Databases"
+      ],
+      "tags": [
+        "database",
+        "olap",
+        "columnar",
+        "analytics",
+        "sql"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 48477,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "godotengine-godot",
+      "url": "https://github.com/godotengine/godot",
+      "provider": "github.com",
+      "owner": "godotengine",
+      "repo": "godot",
+      "title": "Godot",
+      "description": "Full-featured cross-platform game engine supporting 2D and 3D development with its own scripting language and editor.",
+      "path": [
+        "Game Development",
+        "Game Engines"
+      ],
+      "tags": [
+        "game-engine",
+        "2d",
+        "3d",
+        "open-source"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 113678,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "etcd-io-etcd",
+      "url": "https://github.com/etcd-io/etcd",
+      "provider": "github.com",
+      "owner": "etcd-io",
+      "repo": "etcd",
+      "title": "etcd",
+      "description": "Distributed, reliable key-value store used for shared configuration and service discovery.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Databases"
+      ],
+      "tags": [
+        "database",
+        "distributed",
+        "key-value-store",
+        "consensus",
+        "raft"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 51954,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "bevyengine-bevy",
+      "url": "https://github.com/bevyengine/bevy",
+      "provider": "github.com",
+      "owner": "bevyengine",
+      "repo": "bevy",
+      "title": "Bevy",
+      "description": "Data-driven game engine written in Rust built around a built-in entity component system.",
+      "path": [
+        "Game Development",
+        "Game Engines"
+      ],
+      "tags": [
+        "game-engine",
+        "rust",
+        "ecs"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 47032,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "dgraph-io-dgraph",
+      "url": "https://github.com/dgraph-io/dgraph",
+      "provider": "github.com",
+      "owner": "dgraph-io",
+      "repo": "dgraph",
+      "title": "Dgraph",
+      "description": "Distributed graph database with native GraphQL query support built for horizontal scalability.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Databases"
+      ],
+      "tags": [
+        "database",
+        "graph-database",
+        "distributed",
+        "graphql"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 21725,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "phaserjs-phaser",
+      "url": "https://github.com/phaserjs/phaser",
+      "provider": "github.com",
+      "owner": "phaserjs",
+      "repo": "phaser",
+      "title": "Phaser",
+      "description": "Fast, free HTML5 game framework for building 2D games that run in desktop and mobile browsers.",
+      "path": [
+        "Game Development",
+        "2D Frameworks"
+      ],
+      "tags": [
+        "2d",
+        "javascript",
+        "html5",
+        "webgl"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 39905,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "prisma-prisma",
+      "url": "https://github.com/prisma/prisma",
+      "provider": "github.com",
+      "owner": "prisma",
+      "repo": "prisma",
+      "title": "Prisma",
+      "description": "Next-generation TypeScript ORM with auto-generated type-safe query client and migration tooling.",
+      "path": [
+        "Backend Engineering & APIs",
+        "ORMs & Query Builders"
+      ],
+      "tags": [
+        "orm",
+        "typescript",
+        "database",
+        "query-builder"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 46354,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "libgdx-libgdx",
+      "url": "https://github.com/libgdx/libgdx",
+      "provider": "github.com",
+      "owner": "libgdx",
+      "repo": "libgdx",
+      "title": "libGDX",
+      "description": "Cross-platform Java game development framework for desktop, Android, iOS, and web.",
+      "path": [
+        "Game Development",
+        "2D Frameworks"
+      ],
+      "tags": [
+        "java",
+        "cross-platform",
+        "2d"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 25201,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "drizzle-team-drizzle-orm",
+      "url": "https://github.com/drizzle-team/drizzle-orm",
+      "provider": "github.com",
+      "owner": "drizzle-team",
+      "repo": "drizzle-orm",
+      "title": "Drizzle ORM",
+      "description": "Lightweight TypeScript ORM with a SQL-like query builder and zero runtime overhead.",
+      "path": [
+        "Backend Engineering & APIs",
+        "ORMs & Query Builders"
+      ],
+      "tags": [
+        "orm",
+        "typescript",
+        "sql",
+        "query-builder"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 35051,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "raysan5-raylib",
+      "url": "https://github.com/raysan5/raylib",
+      "provider": "github.com",
+      "owner": "raysan5",
+      "repo": "raylib",
+      "title": "raylib",
+      "description": "Simple and easy-to-use C library for programming games, with 2D and 3D rendering support.",
+      "path": [
+        "Game Development",
+        "2D Frameworks"
+      ],
+      "tags": [
+        "c",
+        "simple",
+        "2d",
+        "3d"
+      ],
+      "license": "Zlib",
+      "score": {
+        "stars": 33746,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "keras-team-keras",
+      "url": "https://github.com/keras-team/keras",
+      "provider": "github.com",
+      "owner": "keras-team",
+      "repo": "keras",
+      "title": "Keras",
+      "description": "A high-level deep learning API for Python that runs on top of TensorFlow, JAX, or PyTorch backends.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Deep Learning Frameworks"
+      ],
+      "tags": [
+        "python",
+        "deep-learning",
+        "neural-network",
+        "tensorflow",
+        "jax"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 64152,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "flame-engine-flame",
+      "url": "https://github.com/flame-engine/flame",
+      "provider": "github.com",
+      "owner": "flame-engine",
+      "repo": "flame",
+      "title": "Flame",
+      "description": "Modular 2D game engine built on top of Flutter for building cross-platform games in Dart.",
+      "path": [
+        "Game Development",
+        "2D Frameworks"
+      ],
+      "tags": [
+        "flutter",
+        "dart",
+        "2d"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 10662,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "go-gorm-gorm",
+      "url": "https://github.com/go-gorm/gorm",
+      "provider": "github.com",
+      "owner": "go-gorm",
+      "repo": "gorm",
+      "title": "GORM",
+      "description": "Feature-rich ORM library for Go supporting associations, migrations, and multiple database backends.",
+      "path": [
+        "Backend Engineering & APIs",
+        "ORMs & Query Builders"
+      ],
+      "tags": [
+        "orm",
+        "go",
+        "database",
+        "sql"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 39842,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "excaliburjs-excalibur",
+      "url": "https://github.com/excaliburjs/Excalibur",
+      "provider": "github.com",
+      "owner": "excaliburjs",
+      "repo": "Excalibur",
+      "title": "Excalibur.js",
+      "description": "Free and open-source 2D game engine written in TypeScript for making browser and mobile games.",
+      "path": [
+        "Game Development",
+        "2D Frameworks"
+      ],
+      "tags": [
+        "typescript",
+        "2d",
+        "html5"
+      ],
+      "license": "BSD-2-Clause",
+      "score": {
+        "stars": 2307,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "huggingface-transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "provider": "github.com",
+      "owner": "huggingface",
+      "repo": "transformers",
+      "title": "Transformers",
+      "description": "A library of pretrained deep learning models and utilities for natural language processing, computer vision, and audio tasks.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Deep Learning Frameworks"
+      ],
+      "tags": [
+        "python",
+        "deep-learning",
+        "nlp",
+        "pretrained-models",
+        "pytorch"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 162299,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "apache-kafka",
+      "url": "https://github.com/apache/kafka",
+      "provider": "github.com",
+      "owner": "apache",
+      "repo": "kafka",
+      "title": "Apache Kafka",
+      "description": "Distributed event streaming platform for high-throughput publish-subscribe messaging and log storage.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Message Queues & Streaming"
+      ],
+      "tags": [
+        "message-queue",
+        "event-streaming",
+        "distributed",
+        "java"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 33122,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "babylonjs-babylon-js",
+      "url": "https://github.com/BabylonJS/Babylon.js",
+      "provider": "github.com",
+      "owner": "BabylonJS",
+      "repo": "Babylon.js",
+      "title": "Babylon.js",
+      "description": "Powerful, real-time 3D rendering engine for the web using WebGL, WebGPU, and WebXR.",
+      "path": [
+        "Game Development",
+        "3D Frameworks"
+      ],
+      "tags": [
+        "3d",
+        "webgl",
+        "javascript",
+        "typescript"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 25746,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "pandas-dev-pandas",
+      "url": "https://github.com/pandas-dev/pandas",
+      "provider": "github.com",
+      "owner": "pandas-dev",
+      "repo": "pandas",
+      "title": "pandas",
+      "description": "A fast, powerful, and flexible data analysis and manipulation library for Python built around the DataFrame.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Data Processing"
+      ],
+      "tags": [
+        "python",
+        "dataframe",
+        "data-analysis",
+        "data-processing"
+      ],
+      "license": "BSD-3-Clause",
+      "score": {
+        "stars": 49144,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "erincatto-box2d",
+      "url": "https://github.com/erincatto/box2d",
+      "provider": "github.com",
+      "owner": "erincatto",
+      "repo": "box2d",
+      "title": "Box2D",
+      "description": "Widely used 2D rigid-body physics engine used in many commercial and indie games.",
+      "path": [
+        "Game Development",
+        "Physics Engines"
+      ],
+      "tags": [
+        "physics",
+        "2d",
+        "c"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 10017,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "nats-io-nats-server",
+      "url": "https://github.com/nats-io/nats-server",
+      "provider": "github.com",
+      "owner": "nats-io",
+      "repo": "nats-server",
+      "title": "NATS Server",
+      "description": "High-performance messaging system for cloud-native, pub-sub, and request-reply communication patterns.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Message Queues & Streaming"
+      ],
+      "tags": [
+        "message-queue",
+        "pub-sub",
+        "go",
+        "cloud-native"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 20154,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "jrouwe-joltphysics",
+      "url": "https://github.com/jrouwe/JoltPhysics",
+      "provider": "github.com",
+      "owner": "jrouwe",
+      "repo": "JoltPhysics",
+      "title": "Jolt Physics",
+      "description": "Multi-core friendly 3D rigid-body physics and collision detection library used in AAA games.",
+      "path": [
+        "Game Development",
+        "Physics Engines"
+      ],
+      "tags": [
+        "physics",
+        "3d",
+        "cpp"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 10650,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "apache-arrow",
+      "url": "https://github.com/apache/arrow",
+      "provider": "github.com",
+      "owner": "apache",
+      "repo": "arrow",
+      "title": "Apache Arrow",
+      "description": "A cross-language development platform for in-memory columnar data with libraries for efficient analytics and data interchange.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Data Processing"
+      ],
+      "tags": [
+        "columnar",
+        "data-format",
+        "data-processing",
+        "interoperability"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 16909,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "apache-pulsar",
+      "url": "https://github.com/apache/pulsar",
+      "provider": "github.com",
+      "owner": "apache",
+      "repo": "pulsar",
+      "title": "Apache Pulsar",
+      "description": "Cloud-native distributed messaging and streaming platform with multi-tenancy and geo-replication.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Message Queues & Streaming"
+      ],
+      "tags": [
+        "message-queue",
+        "event-streaming",
+        "distributed",
+        "java"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 15291,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "dimforge-rapier",
+      "url": "https://github.com/dimforge/rapier",
+      "provider": "github.com",
+      "owner": "dimforge",
+      "repo": "rapier",
+      "title": "Rapier",
+      "description": "Cross-platform 2D and 3D physics engine written in Rust for games and simulations.",
+      "path": [
+        "Game Development",
+        "Physics Engines"
+      ],
+      "tags": [
+        "physics",
+        "rust",
+        "2d",
+        "3d"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 5496,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "kong-kong",
+      "url": "https://github.com/Kong/kong",
+      "provider": "github.com",
+      "owner": "Kong",
+      "repo": "kong",
+      "title": "Kong",
+      "description": "Cloud-native API gateway and AI gateway built on top of NGINX for managing microservices traffic.",
+      "path": [
+        "Backend Engineering & APIs",
+        "API Gateways & Reverse Proxies"
+      ],
+      "tags": [
+        "api-gateway",
+        "microservices",
+        "proxy",
+        "openresty"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 43743,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "pola-rs-polars",
+      "url": "https://github.com/pola-rs/polars",
+      "provider": "github.com",
+      "owner": "pola-rs",
+      "repo": "polars",
+      "title": "Polars",
+      "description": "A fast multi-threaded DataFrame library for Rust and Python built on an Apache Arrow columnar format.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Data Processing"
+      ],
+      "tags": [
+        "rust",
+        "dataframe",
+        "data-processing",
+        "performance"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 38934,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "envoyproxy-envoy",
+      "url": "https://github.com/envoyproxy/envoy",
+      "provider": "github.com",
+      "owner": "envoyproxy",
+      "repo": "envoy",
+      "title": "Envoy",
+      "description": "Cloud-native high-performance edge and service proxy designed for large microservice architectures.",
+      "path": [
+        "Backend Engineering & APIs",
+        "API Gateways & Reverse Proxies"
+      ],
+      "tags": [
+        "proxy",
+        "service-mesh",
+        "cpp",
+        "load-balancer"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 28526,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "plotly-plotly-py",
+      "url": "https://github.com/plotly/plotly.py",
+      "provider": "github.com",
+      "owner": "plotly",
+      "repo": "plotly.py",
+      "title": "Plotly.py",
+      "description": "An interactive, open-source graphing library for Python supporting a wide range of statistical, scientific, and financial chart types.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Data Visualization"
+      ],
+      "tags": [
+        "python",
+        "data-visualization",
+        "charts",
+        "interactive"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 18663,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "hibiken-asynq",
+      "url": "https://github.com/hibiken/asynq",
+      "provider": "github.com",
+      "owner": "hibiken",
+      "repo": "asynq",
+      "title": "Asynq",
+      "description": "Go library for distributed task queues backed by Redis with retries, scheduling, and web UI monitoring.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Background Jobs & Task Queues"
+      ],
+      "tags": [
+        "task-queue",
+        "background-jobs",
+        "go",
+        "redis"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 13487,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "bokeh-bokeh",
+      "url": "https://github.com/bokeh/bokeh",
+      "provider": "github.com",
+      "owner": "bokeh",
+      "repo": "bokeh",
+      "title": "Bokeh",
+      "description": "An interactive data visualization library for Python that targets modern web browsers for presentation.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Data Visualization"
+      ],
+      "tags": [
+        "python",
+        "data-visualization",
+        "interactive",
+        "web"
+      ],
+      "license": "BSD-3-Clause",
+      "score": {
+        "stars": 20409,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "taskforcesh-bullmq",
+      "url": "https://github.com/taskforcesh/bullmq",
+      "provider": "github.com",
+      "owner": "taskforcesh",
+      "repo": "bullmq",
+      "title": "BullMQ",
+      "description": "Node.js and TypeScript queue library backed by Redis for reliable background job and message processing.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Background Jobs & Task Queues"
+      ],
+      "tags": [
+        "task-queue",
+        "background-jobs",
+        "node",
+        "redis",
+        "typescript"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 9075,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "scikit-learn-scikit-learn",
+      "url": "https://github.com/scikit-learn/scikit-learn",
+      "provider": "github.com",
+      "owner": "scikit-learn",
+      "repo": "scikit-learn",
+      "title": "scikit-learn",
+      "description": "A Python library providing simple and efficient tools for classical machine learning, including classification, regression, and clustering.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Classical ML Libraries"
+      ],
+      "tags": [
+        "python",
+        "machine-learning",
+        "classical-ml",
+        "data-science"
+      ],
+      "license": "BSD-3-Clause",
+      "score": {
+        "stars": 66622,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "dapr-dapr",
+      "url": "https://github.com/dapr/dapr",
+      "provider": "github.com",
+      "owner": "dapr",
+      "repo": "dapr",
+      "title": "Dapr",
+      "description": "Portable, event-driven runtime that provides building blocks for resilient distributed microservice applications.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Microservices & Service Mesh"
+      ],
+      "tags": [
+        "microservices",
+        "distributed-systems",
+        "sidecar",
+        "cloud-native"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 25912,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "dmlc-xgboost",
+      "url": "https://github.com/dmlc/xgboost",
+      "provider": "github.com",
+      "owner": "dmlc",
+      "repo": "xgboost",
+      "title": "XGBoost",
+      "description": "A scalable, distributed gradient boosting library used for classification, regression, and ranking problems.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Classical ML Libraries"
+      ],
+      "tags": [
+        "gradient-boosting",
+        "machine-learning",
+        "classical-ml",
+        "cpp"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 28535,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "temporalio-temporal",
+      "url": "https://github.com/temporalio/temporal",
+      "provider": "github.com",
+      "owner": "temporalio",
+      "repo": "temporal",
+      "title": "Temporal",
+      "description": "Durable execution platform for orchestrating reliable, long-running microservice workflows.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Microservices & Service Mesh"
+      ],
+      "tags": [
+        "workflow-engine",
+        "microservices",
+        "distributed-systems",
+        "orchestration"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 21445,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "hasura-graphql-engine",
+      "url": "https://github.com/hasura/graphql-engine",
+      "provider": "github.com",
+      "owner": "hasura",
+      "repo": "graphql-engine",
+      "title": "Hasura GraphQL Engine",
+      "description": "Instant realtime GraphQL API layer generated over new or existing databases with fine-grained access control.",
+      "path": [
+        "Backend Engineering & APIs",
+        "GraphQL & RPC"
+      ],
+      "tags": [
+        "graphql",
+        "api",
+        "database",
+        "realtime"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 32078,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "lightgbm-org-lightgbm",
+      "url": "https://github.com/lightgbm-org/LightGBM",
+      "provider": "github.com",
+      "owner": "lightgbm-org",
+      "repo": "LightGBM",
+      "title": "LightGBM",
+      "description": "A fast, distributed, high-performance gradient boosting framework based on decision tree algorithms.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Classical ML Libraries"
+      ],
+      "tags": [
+        "gradient-boosting",
+        "machine-learning",
+        "classical-ml",
+        "cpp"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 18535,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "trpc-trpc",
+      "url": "https://github.com/trpc/trpc",
+      "provider": "github.com",
+      "owner": "trpc",
+      "repo": "trpc",
+      "title": "tRPC",
+      "description": "Framework for building end-to-end type-safe APIs in TypeScript without schemas or code generation.",
+      "path": [
+        "Backend Engineering & APIs",
+        "GraphQL & RPC"
+      ],
+      "tags": [
+        "rpc",
+        "typescript",
+        "api",
+        "type-safety"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 40406,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "catboost-catboost",
+      "url": "https://github.com/catboost/catboost",
+      "provider": "github.com",
+      "owner": "catboost",
+      "repo": "catboost",
+      "title": "CatBoost",
+      "description": "A high-performance gradient boosting library with built-in support for categorical features.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Classical ML Libraries"
+      ],
+      "tags": [
+        "gradient-boosting",
+        "machine-learning",
+        "classical-ml",
+        "categorical-features"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 9020,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "questdb-questdb",
+      "url": "https://github.com/questdb/questdb",
+      "provider": "github.com",
+      "owner": "questdb",
+      "repo": "questdb",
+      "title": "QuestDB",
+      "description": "High-performance time-series database with SQL support optimized for fast ingestion and analytics.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Databases"
+      ],
+      "tags": [
+        "database",
+        "time-series",
+        "sql",
+        "analytics"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 17164,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "tikv-tikv",
+      "url": "https://github.com/tikv/tikv",
+      "provider": "github.com",
+      "owner": "tikv",
+      "repo": "tikv",
+      "title": "TiKV",
+      "description": "Distributed transactional key-value database written in Rust, originally created to complement TiDB.",
+      "path": [
+        "Backend Engineering & APIs",
+        "Databases"
+      ],
+      "tags": [
+        "database",
+        "distributed",
+        "key-value-store",
+        "rust"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 16758,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "mlflow-mlflow",
+      "url": "https://github.com/mlflow/mlflow",
+      "provider": "github.com",
+      "owner": "mlflow",
+      "repo": "mlflow",
+      "title": "MLflow",
+      "description": "An open-source platform for managing the end-to-end machine learning lifecycle, including experiment tracking, model packaging, and deployment.",
+      "path": [
+        "Machine Learning & Data Science",
+        "MLOps & Experiment Tracking"
+      ],
+      "tags": [
+        "mlops",
+        "experiment-tracking",
+        "model-registry",
+        "deployment"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 26895,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "wandb-wandb",
+      "url": "https://github.com/wandb/wandb",
+      "provider": "github.com",
+      "owner": "wandb",
+      "repo": "wandb",
+      "title": "Weights & Biases",
+      "description": "A tool for tracking machine learning experiments, visualizing metrics, and managing model artifacts and datasets.",
+      "path": [
+        "Machine Learning & Data Science",
+        "MLOps & Experiment Tracking"
+      ],
+      "tags": [
+        "experiment-tracking",
+        "mlops",
+        "visualization",
+        "collaboration"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 11164,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "skypjack-entt",
+      "url": "https://github.com/skypjack/entt",
+      "provider": "github.com",
+      "owner": "skypjack",
+      "repo": "entt",
+      "title": "EnTT",
+      "description": "Fast and reliable entity-component-system (ECS) library written in modern C++.",
+      "path": [
+        "Game Development",
+        "ECS Libraries"
+      ],
+      "tags": [
+        "ecs",
+        "cpp",
+        "header-only"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 12877,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "apache-apisix",
+      "url": "https://github.com/apache/apisix",
+      "provider": "github.com",
+      "owner": "apache",
+      "repo": "apisix",
+      "title": "Apache APISIX",
+      "description": "Dynamic, real-time, high-performance cloud-native API gateway built on top of Nginx and etcd.",
+      "path": [
+        "Backend Engineering & APIs",
+        "API Gateways & Reverse Proxies"
+      ],
+      "tags": [
+        "api-gateway",
+        "microservices",
+        "proxy",
+        "lua"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 16814,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "treeverse-dvc",
+      "url": "https://github.com/treeverse/dvc",
+      "provider": "github.com",
+      "owner": "treeverse",
+      "repo": "dvc",
+      "title": "DVC",
+      "description": "A version control system for machine learning projects that tracks datasets, models, and experiment pipelines alongside code.",
+      "path": [
+        "Machine Learning & Data Science",
+        "MLOps & Experiment Tracking"
+      ],
+      "tags": [
+        "data-versioning",
+        "mlops",
+        "experiment-tracking",
+        "reproducibility"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 15723,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "huggingface-peft",
+      "url": "https://github.com/huggingface/peft",
+      "provider": "github.com",
+      "owner": "huggingface",
+      "repo": "peft",
+      "title": "PEFT",
+      "description": "A library of parameter-efficient fine-tuning methods for adapting large pretrained models without retraining all their parameters.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Model Training & Fine-Tuning"
+      ],
+      "tags": [
+        "fine-tuning",
+        "lora",
+        "parameter-efficient",
+        "transformers"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 21371,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "openra-openra",
+      "url": "https://github.com/OpenRA/OpenRA",
+      "provider": "github.com",
+      "owner": "OpenRA",
+      "repo": "OpenRA",
+      "title": "OpenRA",
+      "description": "Open-source game engine reimplementing classic Command & Conquer, Red Alert, and Dune 2000 era RTS games.",
+      "path": [
+        "Game Development",
+        "Open Source Games"
+      ],
+      "tags": [
+        "rts",
+        "open-source-game",
+        "mono"
+      ],
+      "license": "GPL-3.0",
+      "score": {
+        "stars": 17048,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "deepspeedai-deepspeed",
+      "url": "https://github.com/deepspeedai/DeepSpeed",
+      "provider": "github.com",
+      "owner": "deepspeedai",
+      "repo": "DeepSpeed",
+      "title": "DeepSpeed",
+      "description": "A deep learning optimization library that makes distributed training and inference easy, efficient, and effective at scale.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Model Training & Fine-Tuning"
+      ],
+      "tags": [
+        "distributed-training",
+        "deep-learning",
+        "optimization",
+        "large-models"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 42665,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "openrct2-openrct2",
+      "url": "https://github.com/OpenRCT2/OpenRCT2",
+      "provider": "github.com",
+      "owner": "OpenRCT2",
+      "repo": "OpenRCT2",
+      "title": "OpenRCT2",
+      "description": "Open-source reimplementation of RollerCoaster Tycoon 2 with extended functionality and modding support.",
+      "path": [
+        "Game Development",
+        "Open Source Games"
+      ],
+      "tags": [
+        "simulation",
+        "open-source-game"
+      ],
+      "license": "GPL-3.0",
+      "score": {
+        "stars": 15923,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "unslothai-unsloth",
+      "url": "https://github.com/unslothai/unsloth",
+      "provider": "github.com",
+      "owner": "unslothai",
+      "repo": "unsloth",
+      "title": "Unsloth",
+      "description": "A library for faster, memory-efficient fine-tuning of large language models.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Model Training & Fine-Tuning"
+      ],
+      "tags": [
+        "fine-tuning",
+        "llm",
+        "lora",
+        "training-speedup"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 67851,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "yairm210-unciv",
+      "url": "https://github.com/yairm210/Unciv",
+      "provider": "github.com",
+      "owner": "yairm210",
+      "repo": "Unciv",
+      "title": "Unciv",
+      "description": "Open-source recreation of Civilization V as a turn-based strategy game for desktop and mobile.",
+      "path": [
+        "Game Development",
+        "Open Source Games"
+      ],
+      "tags": [
+        "strategy",
+        "open-source-game",
+        "kotlin"
+      ],
+      "license": "MPL-2.0",
+      "score": {
+        "stars": 10924,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "jupyter-notebook",
+      "url": "https://github.com/jupyter/notebook",
+      "provider": "github.com",
+      "owner": "jupyter",
+      "repo": "notebook",
+      "title": "Jupyter Notebook",
+      "description": "A web-based interactive computing environment for creating and sharing documents that combine live code, equations, visualizations, and text.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Notebooks & Interactive Computing"
+      ],
+      "tags": [
+        "jupyter",
+        "notebook",
+        "interactive-computing",
+        "python"
+      ],
+      "license": "BSD-3-Clause",
+      "score": {
+        "stars": 13233,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "veloren-veloren",
+      "url": "https://github.com/veloren/veloren",
+      "provider": "github.com",
+      "owner": "veloren",
+      "repo": "veloren",
+      "title": "Veloren",
+      "description": "Open-world multiplayer voxel RPG written in Rust, inspired by Cube World and Dwarf Fortress.",
+      "path": [
+        "Game Development",
+        "Open Source Games"
+      ],
+      "tags": [
+        "rpg",
+        "voxel",
+        "rust",
+        "open-source-game"
+      ],
+      "license": "GPL-3.0",
+      "score": {
+        "stars": 7388,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "jupyterlab-jupyterlab",
+      "url": "https://github.com/jupyterlab/jupyterlab",
+      "provider": "github.com",
+      "owner": "jupyterlab",
+      "repo": "jupyterlab",
+      "title": "JupyterLab",
+      "description": "The next-generation web-based user interface for Project Jupyter, providing a flexible IDE-like environment for notebooks, code, and data.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Notebooks & Interactive Computing"
+      ],
+      "tags": [
+        "jupyter",
+        "jupyterlab",
+        "interactive-computing",
+        "ide"
+      ],
+      "license": "BSD-3-Clause",
+      "score": {
+        "stars": 15224,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "ppy-osu",
+      "url": "https://github.com/ppy/osu",
+      "provider": "github.com",
+      "owner": "ppy",
+      "repo": "osu",
+      "title": "osu!",
+      "description": "Free-to-win rhythm game client and editor supporting multiple gameplay modes.",
+      "path": [
+        "Game Development",
+        "Open Source Games"
+      ],
+      "tags": [
+        "rhythm-game",
+        "csharp",
+        "open-source-game"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 18628,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "explosion-spacy",
+      "url": "https://github.com/explosion/spaCy",
+      "provider": "github.com",
+      "owner": "explosion",
+      "repo": "spaCy",
+      "title": "spaCy",
+      "description": "An industrial-strength natural language processing library for Python featuring tokenization, tagging, parsing, and named entity recognition.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Natural Language Processing"
+      ],
+      "tags": [
+        "nlp",
+        "python",
+        "text-processing",
+        "linguistics"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 33719,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "mirrornetworking-mirror",
+      "url": "https://github.com/MirrorNetworking/Mirror",
+      "provider": "github.com",
+      "owner": "MirrorNetworking",
+      "repo": "Mirror",
+      "title": "Mirror Networking",
+      "description": "High-level networking library for the Unity game engine used to build multiplayer games.",
+      "path": [
+        "Game Development",
+        "Netcode & Multiplayer"
+      ],
+      "tags": [
+        "unity",
+        "netcode",
+        "multiplayer"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 6241,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "valvesoftware-gamenetworkingsockets",
+      "url": "https://github.com/ValveSoftware/GameNetworkingSockets",
+      "provider": "github.com",
+      "owner": "ValveSoftware",
+      "repo": "GameNetworkingSockets",
+      "title": "GameNetworkingSockets",
+      "description": "Reliable and unreliable UDP-based networking library from Valve for peer-to-peer and client-server games.",
+      "path": [
+        "Game Development",
+        "Netcode & Multiplayer"
+      ],
+      "tags": [
+        "netcode",
+        "multiplayer",
+        "udp",
+        "cpp"
+      ],
+      "license": "BSD-3-Clause",
+      "score": {
+        "stars": 9760,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "recastnavigation-recastnavigation",
+      "url": "https://github.com/recastnavigation/recastnavigation",
+      "provider": "github.com",
+      "owner": "recastnavigation",
+      "repo": "recastnavigation",
+      "title": "Recast & Detour",
+      "description": "Navigation mesh generation and pathfinding toolkit widely used for game AI movement.",
+      "path": [
+        "Game Development",
+        "Game Tooling"
+      ],
+      "tags": [
+        "navmesh",
+        "pathfinding",
+        "cpp"
+      ],
+      "license": "Zlib",
+      "score": {
+        "stars": 7793,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
     }
   ]
 }
