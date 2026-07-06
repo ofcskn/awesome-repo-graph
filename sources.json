@@ -717,30 +717,6 @@
       "addedAt": "2026-07-05"
     },
     {
-      "id": "nousresearch-hermes-agent",
-      "url": "https://github.com/nousresearch/hermes-agent",
-      "provider": "github.com",
-      "owner": "nousresearch",
-      "repo": "hermes-agent",
-      "title": "hermes-agent",
-      "description": "",
-      "path": [
-        "AI Agent Tooling",
-        "Agent Frameworks"
-      ],
-      "tags": [
-        "ai-agent",
-        "agent-framework",
-        "llm"
-      ],
-      "license": "MIT",
-      "score": {
-        "stars": 209535,
-        "fetchedAt": "2026-07-05"
-      },
-      "addedAt": "2026-07-05"
-    },
-    {
       "id": "www-kenney-nl",
       "url": "https://www.kenney.nl/",
       "provider": "www.kenney.nl",
@@ -1222,6 +1198,1103 @@
       "score": {
         "stars": 99,
         "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "en-wikipedia-org-wiki-blockchain",
+      "url": "https://en.wikipedia.org/wiki/Blockchain",
+      "provider": "en.wikipedia.org",
+      "owner": null,
+      "repo": null,
+      "title": "Blockchain",
+      "description": "A growing list of records, called blocks, that are linked using cryptography.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Reference Reading",
+        "Wikipedia Primers"
+      ],
+      "tags": [
+        "wikipedia",
+        "blockchain",
+        "reference"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "en-wikipedia-org-wiki-artificial-intelligence",
+      "url": "https://en.wikipedia.org/wiki/Artificial_intelligence",
+      "provider": "en.wikipedia.org",
+      "owner": null,
+      "repo": null,
+      "title": "Artificial Intelligence",
+      "description": "Overview of intelligence demonstrated by machines, in contrast to natural intelligence displayed by humans and animals.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Reference Reading",
+        "Wikipedia Primers"
+      ],
+      "tags": [
+        "wikipedia",
+        "artificial-intelligence",
+        "reference"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "en-wikipedia-org-wiki-machine-learning",
+      "url": "https://en.wikipedia.org/wiki/Machine_learning",
+      "provider": "en.wikipedia.org",
+      "owner": null,
+      "repo": null,
+      "title": "Machine Learning",
+      "description": "The scientific study of algorithms and statistical models that computer systems use to perform tasks without explicit instructions.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Reference Reading",
+        "Wikipedia Primers"
+      ],
+      "tags": [
+        "wikipedia",
+        "machine-learning",
+        "reference"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "www-linkedin-com-pulse-decentralizing-ai-dreamers-vs-pragmatists-jesus-rodriguez",
+      "url": "https://www.linkedin.com/pulse/decentralizing-ai-dreamers-vs-pragmatists-jesus-rodriguez",
+      "provider": "www.linkedin.com",
+      "owner": null,
+      "repo": null,
+      "title": "Decentralizing AI: Dreamers vs. Pragmatists",
+      "description": "Jesus Rodriguez, May 23, 2019 — commentary on the practical challenges of decentralizing AI.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Reference Reading",
+        "Commentary & Analysis"
+      ],
+      "tags": [
+        "commentary",
+        "decentralized-ai"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "www-nytimes-com-2018-10-20-technology-how-the-blockchain-could-break-big-techs-hold-on-ai-html",
+      "url": "https://www.nytimes.com/2018/10/20/technology/how-the-blockchain-could-break-big-techs-hold-on-ai.html",
+      "provider": "www.nytimes.com",
+      "owner": null,
+      "repo": null,
+      "title": "How the Blockchain Could Break Big Tech's Hold on A.I.",
+      "description": "New York Times, October 20, 2018 — how blockchain-based data/model sharing could challenge Big Tech's AI dominance.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Reference Reading",
+        "Commentary & Analysis"
+      ],
+      "tags": [
+        "commentary",
+        "decentralized-ai"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "hackernoon-com-how-to-actually-combine-ai-and-blockchain-in-one-platform-ef937e919ec2",
+      "url": "https://hackernoon.com/how-to-actually-combine-ai-and-blockchain-in-one-platform-ef937e919ec2",
+      "provider": "hackernoon.com",
+      "owner": null,
+      "repo": null,
+      "title": "How to Actually Combine AI and Blockchain in One Platform",
+      "description": "Hacker Noon, June 7, 2018 — practical approaches to combining AI and blockchain in a single platform.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Reference Reading",
+        "Commentary & Analysis"
+      ],
+      "tags": [
+        "commentary",
+        "decentralized-ai"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "medium-com-fehrsam-blockchain-based-machine-learning-marketplaces-cb2d4dae2c17",
+      "url": "https://medium.com/@FEhrsam/blockchain-based-machine-learning-marketplaces-cb2d4dae2c17",
+      "provider": "medium.com",
+      "owner": null,
+      "repo": null,
+      "title": "Blockchain-based Machine Learning Marketplaces",
+      "description": "Fred Ehrsam, March 13, 2018 — on marketplaces for machine learning models built on blockchain.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Reference Reading",
+        "Commentary & Analysis"
+      ],
+      "tags": [
+        "commentary",
+        "ml-marketplace"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "medium-com-francesco-ai-the-convergence-of-ai-and-blockchain-whats-the-deal-60c618e3accc",
+      "url": "https://medium.com/@Francesco_AI/the-convergence-of-ai-and-blockchain-whats-the-deal-60c618e3accc",
+      "provider": "medium.com",
+      "owner": null,
+      "repo": null,
+      "title": "The convergence of AI and Blockchain: what's the deal?",
+      "description": "Francesco Corea, December 1, 2017 — an early look at where AI and blockchain intersect.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Reference Reading",
+        "Commentary & Analysis"
+      ],
+      "tags": [
+        "commentary",
+        "decentralized-ai"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "singularitynet-io",
+      "url": "https://singularitynet.io/",
+      "provider": "singularitynet.io",
+      "owner": null,
+      "repo": null,
+      "title": "SingularityNET",
+      "description": "A distributed AI platform on the Ethereum blockchain, with each blockchain node backing up an AI algorithm.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "ethereum",
+        "ai-marketplace"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "intuitionfabric-com",
+      "url": "https://intuitionfabric.com",
+      "provider": "intuitionfabric.com",
+      "owner": null,
+      "repo": null,
+      "title": "Intuition Fabric",
+      "description": "Aims to democratize access to AI through a network of deep learning models stored on IPFS and accessed through the Ethereum blockchain.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "ethereum",
+        "ipfs"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "openmined-org",
+      "url": "https://openmined.org/",
+      "provider": "openmined.org",
+      "owner": null,
+      "repo": null,
+      "title": "OpenMined",
+      "description": "A community building open-source technology for the decentralized ownership of data and intelligence, enabling AI to train on data it never accesses directly.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "privacy",
+        "federated-learning"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "www-ravenprotocol-com",
+      "url": "https://www.ravenprotocol.com/",
+      "provider": "www.ravenprotocol.com",
+      "owner": null,
+      "repo": null,
+      "title": "Raven Protocol",
+      "description": "A decentralized and distributed deep-learning training protocol.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "deep-learning"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "thought-live",
+      "url": "https://thought.live/",
+      "provider": "thought.live",
+      "owner": null,
+      "repo": null,
+      "title": "Thought Network",
+      "description": "A blockchain-enabled fabric that embeds artificial intelligence into data, making it agile, actionable, and inherently secure.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "data-fabric"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "www-matrix-io",
+      "url": "https://www.matrix.io/",
+      "provider": "www.matrix.io",
+      "owner": null,
+      "repo": null,
+      "title": "MATRIX AI",
+      "description": "A public chain combining AI technology with blockchain to solve challenges stifling blockchain adoption, using a blockchain-powered decentralized computing platform.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "public-chain"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "www-cortexlabs-ai",
+      "url": "https://www.cortexlabs.ai/",
+      "provider": "www.cortexlabs.ai",
+      "owner": null,
+      "repo": null,
+      "title": "Cortex Labs",
+      "description": "A decentralized AI platform with a virtual machine that allows executing AI programs on-chain.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "on-chain-inference"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "fetch-ai",
+      "url": "https://fetch.ai/",
+      "provider": "fetch.ai",
+      "owner": null,
+      "repo": null,
+      "title": "Fetch.ai",
+      "description": "A decentralized machine learning platform based on a distributed ledger, enabling secure sharing, connection, and transactions based on data globally.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "distributed-ledger",
+        "ai-agent"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "orai-io",
+      "url": "https://orai.io/",
+      "provider": "orai.io",
+      "owner": null,
+      "repo": null,
+      "title": "Oraichain",
+      "description": "An intelligent and secure solution for emerging Web3, scalable dApps, and decentralized AI.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "web3",
+        "oracle"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "bittensor-com",
+      "url": "https://bittensor.com/",
+      "provider": "bittensor.com",
+      "owner": null,
+      "repo": null,
+      "title": "Bittensor",
+      "description": "An open-source protocol powering a decentralized, blockchain-based machine learning network.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "machine-learning",
+        "protocol"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "alethea-ai",
+      "url": "https://alethea.ai/",
+      "provider": "alethea.ai",
+      "owner": null,
+      "repo": null,
+      "title": "Alethea AI",
+      "description": "A research and development studio building at the intersection of Generative AI and Blockchain.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "generative-ai"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "www-vannalabs-ai",
+      "url": "https://www.vannalabs.ai/",
+      "provider": "www.vannalabs.ai",
+      "owner": null,
+      "repo": null,
+      "title": "Vanna Labs",
+      "description": "An Ethereum L2 rollup that supports native, seamless, and trustless AI/ML inferences on-chain to empower decentralized applications.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Platforms"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "ethereum",
+        "layer-2",
+        "on-chain-inference"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "algorithmiaio-danku",
+      "url": "https://github.com/algorithmiaio/danku",
+      "provider": "github.com",
+      "owner": "algorithmiaio",
+      "repo": "danku",
+      "title": "Danku",
+      "description": "A blockchain-based protocol for evaluating and purchasing ML models on a public blockchain such as Ethereum.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Projects"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "ethereum",
+        "smart-contract"
+      ],
+      "license": null,
+      "score": {
+        "stars": 147,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "microsoft-0xdeca10b",
+      "url": "https://github.com/microsoft/0xDeCA10B",
+      "provider": "github.com",
+      "owner": "microsoft",
+      "repo": "0xDeCA10B",
+      "title": "Decentralized & Collaborative AI on Blockchain",
+      "description": "A framework to host and train publicly available machine learning models in smart contracts with incentive mechanisms encouraging good-quality training data.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "AI Algorithm Projects"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "smart-contract",
+        "collaborative-ml"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 607,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "oceanprotocol-com",
+      "url": "https://oceanprotocol.com/",
+      "provider": "oceanprotocol.com",
+      "owner": null,
+      "repo": null,
+      "title": "Ocean Protocol",
+      "description": "A decentralized data exchange protocol that lets people share and monetize data while guaranteeing control, auditability, transparency, and compliance.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Data Marketplaces"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "data-marketplace"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "truebit-io",
+      "url": "https://truebit.io/",
+      "provider": "truebit.io",
+      "owner": null,
+      "repo": null,
+      "title": "TrueBit",
+      "description": "Gives Ethereum smart contracts a computational boost.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Decentralized Compute"
+      ],
+      "tags": [
+        "decentralized-compute",
+        "ethereum"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "www-deepbrainchain-org",
+      "url": "https://www.deepbrainchain.org/",
+      "provider": "www.deepbrainchain.org",
+      "owner": null,
+      "repo": null,
+      "title": "DeepBrain Chain",
+      "description": "A decentralized AI computing platform that supplies processing power to companies developing AI technologies.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Decentralized Compute"
+      ],
+      "tags": [
+        "decentralized-compute",
+        "decentralized-ai"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "www-nunet-io",
+      "url": "https://www.nunet.io/",
+      "provider": "www.nunet.io",
+      "owner": null,
+      "repo": null,
+      "title": "Nunet",
+      "description": "A globally decentralized computing framework combining latent computing power of independently owned devices into a dynamic marketplace of compute resources.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Decentralized Compute"
+      ],
+      "tags": [
+        "decentralized-compute",
+        "compute-marketplace"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "phala-network",
+      "url": "https://phala.network/",
+      "provider": "phala.network",
+      "owner": null,
+      "repo": null,
+      "title": "Phala Network",
+      "description": "A decentralized off-chain compute infrastructure for Web3 development.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Decentralized Compute"
+      ],
+      "tags": [
+        "decentralized-compute",
+        "web3"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "numer-ai",
+      "url": "https://numer.ai/",
+      "provider": "numer.ai",
+      "owner": null,
+      "repo": null,
+      "title": "Numerai",
+      "description": "A hedge fund powered by a network of anonymous data scientists who build machine learning models on encrypted data and stake cryptocurrency to express confidence in their models.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Finance & Trading"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "finance",
+        "machine-learning"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "cindicator-com",
+      "url": "https://cindicator.com/",
+      "provider": "cindicator.com",
+      "owner": null,
+      "repo": null,
+      "title": "Cindicator",
+      "description": "A crowd-sourced prediction engine for financial and crypto indicators.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Finance & Trading"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "finance",
+        "prediction-market"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "erasure-xxx",
+      "url": "https://erasure.xxx/",
+      "provider": "erasure.xxx",
+      "owner": null,
+      "repo": null,
+      "title": "Erasure",
+      "description": "A decentralized protocol and data marketplace for financial predictions.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Finance & Trading"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "finance",
+        "data-marketplace"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "doc-ai-about",
+      "url": "https://doc.ai/about",
+      "provider": "doc.ai",
+      "owner": null,
+      "repo": null,
+      "title": "doc.ai",
+      "description": "Aims to decentralize precision medicine on the blockchain using AI.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Healthcare & Medicine"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "healthcare"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "www-burstiq-com",
+      "url": "https://www.burstiq.com/",
+      "provider": "www.burstiq.com",
+      "owner": null,
+      "repo": null,
+      "title": "BurstIQ",
+      "description": "A healthcare data marketplace with granular ownership and consent of data; on-chain storage on a custom blockchain supports HIPAA, GDPR, and other regulations.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Healthcare & Medicine"
+      ],
+      "tags": [
+        "decentralized-ai",
+        "healthcare",
+        "hipaa",
+        "gdpr"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "hol-org",
+      "url": "https://hol.org/",
+      "provider": "hol.org",
+      "owner": null,
+      "repo": null,
+      "title": "Hashgraph Online (HOL)",
+      "description": "Universal agentic registry built on Hedera Hashgraph, providing blockchain-based identity for AI agents via the ERC-8004 standard and HCS-14 Universal Agent IDs, enabling discovery, verification, and autonomous commerce via x402.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Autonomous Agents"
+      ],
+      "tags": [
+        "ai-agent",
+        "hashgraph",
+        "agent-identity",
+        "x402"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "riobot-grind-agentfund",
+      "url": "https://github.com/RioBot-Grind/agentfund",
+      "provider": "github.com",
+      "owner": "RioBot-Grind",
+      "repo": "agentfund",
+      "title": "AgentFund",
+      "description": "A decentralized crowdfunding infrastructure for autonomous AI agents on Base blockchain, enabling milestone-based escrow funding for AI projects and collaborations.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Autonomous Agents"
+      ],
+      "tags": [
+        "ai-agent",
+        "crowdfunding",
+        "base",
+        "escrow"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 3,
+        "fetchedAt": "2026-07-06"
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "doi-org-10-3390-e21080723",
+      "url": "https://doi.org/10.3390/e21080723",
+      "provider": "doi.org",
+      "owner": null,
+      "repo": null,
+      "title": "Coin.AI: A Proof-of-Useful-Work Scheme for Blockchain-based Distributed Deep Learning",
+      "description": "Baldominos, A., & Saez, Y. (2019). Entropy, 21(8), 723.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "proof-of-useful-work",
+        "deep-learning"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "doi-org-10-1109-dappcon-2019-00023",
+      "url": "https://doi.org/10.1109/DAPPCON.2019.00023",
+      "provider": "doi.org",
+      "owner": null,
+      "repo": null,
+      "title": "WekaCoin: Proof-of-learning, a Blockchain Consensus Mechanism Based on Machine Learning Competitions",
+      "description": "Bravo-Marquez, F., Reeves, S., & Ugarte, M. (2019). IEEE DAPPCON 2019, pp. 119-124.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "proof-of-learning",
+        "consensus"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "arxiv-org-abs-1904-07349",
+      "url": "https://arxiv.org/abs/1904.07349",
+      "provider": "arxiv.org",
+      "owner": null,
+      "repo": null,
+      "title": "DLBC: A Deep Learning-Based Consensus in Blockchains for Deep Learning Services",
+      "description": "Li, B., Chenli, C., Xu, X., Shi, Y., & Jung, T. (2019). arXiv:1904.07349.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "consensus",
+        "deep-learning"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "doi-org-10-1109-bloc-2019-8751419",
+      "url": "https://doi.org/10.1109/BLOC.2019.8751419",
+      "provider": "doi.org",
+      "owner": null,
+      "repo": null,
+      "title": "Energy-recycling Blockchain with Proof-of-Deep-Learning",
+      "description": "Chenli, C., Li, B., Shi, Y., & Jung, T. (2019). IEEE ICBC 2019, pp. 19-23.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "proof-of-deep-learning",
+        "consensus"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "doi-org-10-1145-3366624-3368156",
+      "url": "https://doi.org/10.1145/3366624.3368156",
+      "provider": "doi.org",
+      "owner": null,
+      "repo": null,
+      "title": "BlockML: A Useful Proof of Work System Based on Machine Learning Tasks",
+      "description": "Merlina, A. (2019). Proceedings of the 20th International Middleware Conference Doctoral Symposium, pp. 6-8.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "proof-of-useful-work"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "doi-org-10-1109-access-2020-2981447",
+      "url": "https://doi.org/10.1109/ACCESS.2020.2981447",
+      "provider": "doi.org",
+      "owner": null,
+      "repo": null,
+      "title": "On the Convergence of Artificial Intelligence and Distributed Ledger Technology: A Scoping Review and Future Research Agenda",
+      "description": "Pandl, K. D., Thiebes, S., Schmidt-Kraepelin, M., & Sunyaev, A. (2020). IEEE Access, 8, 57075-57095.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "scoping-review",
+        "distributed-ledger"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "arxiv-org-abs-2007-15145",
+      "url": "https://arxiv.org/abs/2007.15145",
+      "provider": "arxiv.org",
+      "owner": null,
+      "repo": null,
+      "title": "Proof of Learning (PoLe): Empowering Machine Learning with Consensus Building on Blockchains",
+      "description": "Lan, Y., Liu, Y., & Li, B. (2020). arXiv:2007.15145.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "proof-of-learning",
+        "consensus"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "doi-org-10-1109-blockchain-2019-00057",
+      "url": "https://doi.org/10.1109/Blockchain.2019.00057",
+      "provider": "doi.org",
+      "owner": null,
+      "repo": null,
+      "title": "Decentralized and Collaborative AI on Blockchain",
+      "description": "Harris, J. D., & Waggoner, B. (2019). IEEE Blockchain 2019, pp. 368-375.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "collaborative-ml"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "doi-org-10-1007-978-3-030-59638-5-10",
+      "url": "https://doi.org/10.1007/978-3-030-59638-5_10",
+      "provider": "doi.org",
+      "owner": null,
+      "repo": null,
+      "title": "Analysis of Models for Decentralized and Collaborative AI on Blockchain",
+      "description": "Harris, J. D. (2020). International Conference on Blockchain, pp. 142-153. Springer, Cham.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "collaborative-ml"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "doi-org-10-3389-fbloc-2020-00023",
+      "url": "https://doi.org/10.3389/fbloc.2020.00023",
+      "provider": "doi.org",
+      "owner": null,
+      "repo": null,
+      "title": "Hyperparameter Optimization Using Sustainable Proof of Work in Blockchain",
+      "description": "Mittal, A., & Aggarwal, S. (2020). Frontiers in Blockchain, 3, 23.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "hyperparameter-optimization",
+        "proof-of-work"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "doi-org-10-1109-tpds-2021-3056773",
+      "url": "https://doi.org/10.1109/TPDS.2021.3056773",
+      "provider": "doi.org",
+      "owner": null,
+      "repo": null,
+      "title": "Proof of Federated Learning: A Novel Energy-Recycling Consensus Algorithm",
+      "description": "Qu, X., Wang, S., Hu, Q., & Cheng, X. (2021). IEEE Transactions on Parallel and Distributed Systems, 32(8), 2074-2085.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "federated-learning",
+        "consensus"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-06"
+    },
+    {
+      "id": "doi-org-10-1109-icbc51069-2021-9461067",
+      "url": "https://doi.org/10.1109/ICBC51069.2021.9461067",
+      "provider": "doi.org",
+      "owner": null,
+      "repo": null,
+      "title": "A Mining Pool Solution for Novel Proof-of-Neural-Architecture Consensus",
+      "description": "Li, B., Lu, Q., Jiang, W., Jung, T., & Shi, Y. (2021). IEEE ICBC 2021, pp. 1-3.",
+      "path": [
+        "Blockchain & Decentralized AI",
+        "Academic Research"
+      ],
+      "tags": [
+        "academic-paper",
+        "proof-of-neural-architecture",
+        "consensus"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
       },
       "addedAt": "2026-07-06"
     }

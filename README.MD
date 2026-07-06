@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-49-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-2578744-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-94-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-2369966-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -77,11 +77,12 @@ npm run capture:demo
 ## Sectors
 
 - **Frontend Engineering** — 12 sources
-- **AI Agent Tooling** — 33 sources
+- **AI Agent Tooling** — 32 sources
 - **DevOps & Infrastructure** — 1 source
 - **Game Development** — 1 source
 - **Backend Engineering & APIs** — 1 source
 - **Machine Learning & Data Science** — 1 source
+- **Blockchain & Decentralized AI** — 46 sources
 
 ## Catalog
 
@@ -118,7 +119,7 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>AI Agent Tooling</strong> — 33 sources</summary>
+<summary><strong>AI Agent Tooling</strong> — 32 sources</summary>
 
 ### Security & Pentesting
 - **[strix](https://github.com/usestrix/strix)** — Open-source AI-powered penetration testing agent that autonomously finds and fixes application vulnerabilities.  
@@ -175,8 +176,6 @@ npm run capture:demo
   ★ 381,811 · NOASSERTION · `ai-agent` `agent-framework`
 - **[superpowers](https://github.com/obra/superpowers)** — Agentic skill framework and software development methodology.  
   ★ 246,705 · MIT · `agent-framework` `skills` `software-development-methodology`
-- **[hermes-agent](https://github.com/nousresearch/hermes-agent)**  
-  ★ 209,535 · MIT · `ai-agent` `agent-framework` `llm`
 - **[hermes-agent](https://github.com/NousResearch/hermes-agent)** — Extensible AI agent with persistent memory designed to adapt to its user over time.  
   ★ 209,535 · MIT · `ai-agent` `agent-framework` `llm` `memory`
 - **[agency-agents](https://github.com/msitarzewski/agency-agents)** — End-to-end AI agency framework composed of specialized expert agents (frontend, community management, etc.).  
@@ -255,6 +254,124 @@ npm run capture:demo
 ### Machine Learning Frameworks
 - **[tensorflow](https://github.com/tensorflow/tensorflow)** — TensorFlow is an open-source machine learning framework designed for everyone, supporting deep learning and neural networks. It provides tools for building and deploying machine learning models, including capabilities for distributed computing.  
   ★ 196,091 · Apache-2.0 · `python` `machine-learning` `deep-learning` `neural-network` `framework` `distributed-computing`
+
+</details>
+
+<details>
+<summary><strong>Blockchain & Decentralized AI</strong> — 46 sources</summary>
+
+### Reference Reading
+#### Wikipedia Primers
+- **[Artificial Intelligence](https://en.wikipedia.org/wiki/Artificial_intelligence)** — Overview of intelligence demonstrated by machines, in contrast to natural intelligence displayed by humans and animals.  
+  `wikipedia` `artificial-intelligence` `reference`
+- **[Blockchain](https://en.wikipedia.org/wiki/Blockchain)** — A growing list of records, called blocks, that are linked using cryptography.  
+  `wikipedia` `blockchain` `reference`
+- **[Machine Learning](https://en.wikipedia.org/wiki/Machine_learning)** — The scientific study of algorithms and statistical models that computer systems use to perform tasks without explicit instructions.  
+  `wikipedia` `machine-learning` `reference`
+
+#### Commentary & Analysis
+- **[Blockchain-based Machine Learning Marketplaces](https://medium.com/@FEhrsam/blockchain-based-machine-learning-marketplaces-cb2d4dae2c17)** — Fred Ehrsam, March 13, 2018 — on marketplaces for machine learning models built on blockchain.  
+  `commentary` `ml-marketplace`
+- **[Decentralizing AI: Dreamers vs. Pragmatists](https://www.linkedin.com/pulse/decentralizing-ai-dreamers-vs-pragmatists-jesus-rodriguez)** — Jesus Rodriguez, May 23, 2019 — commentary on the practical challenges of decentralizing AI.  
+  `commentary` `decentralized-ai`
+- **[How the Blockchain Could Break Big Tech's Hold on A.I.](https://www.nytimes.com/2018/10/20/technology/how-the-blockchain-could-break-big-techs-hold-on-ai.html)** — New York Times, October 20, 2018 — how blockchain-based data/model sharing could challenge Big Tech's AI dominance.  
+  `commentary` `decentralized-ai`
+- **[How to Actually Combine AI and Blockchain in One Platform](https://hackernoon.com/how-to-actually-combine-ai-and-blockchain-in-one-platform-ef937e919ec2)** — Hacker Noon, June 7, 2018 — practical approaches to combining AI and blockchain in a single platform.  
+  `commentary` `decentralized-ai`
+- **[The convergence of AI and Blockchain: what's the deal?](https://medium.com/@Francesco_AI/the-convergence-of-ai-and-blockchain-whats-the-deal-60c618e3accc)** — Francesco Corea, December 1, 2017 — an early look at where AI and blockchain intersect.  
+  `commentary` `decentralized-ai`
+
+### AI Algorithm Platforms
+- **[Alethea AI](https://alethea.ai/)** — A research and development studio building at the intersection of Generative AI and Blockchain.  
+  `decentralized-ai` `generative-ai`
+- **[Bittensor](https://bittensor.com/)** — An open-source protocol powering a decentralized, blockchain-based machine learning network.  
+  `decentralized-ai` `machine-learning` `protocol`
+- **[Cortex Labs](https://www.cortexlabs.ai/)** — A decentralized AI platform with a virtual machine that allows executing AI programs on-chain.  
+  `decentralized-ai` `on-chain-inference`
+- **[Fetch.ai](https://fetch.ai/)** — A decentralized machine learning platform based on a distributed ledger, enabling secure sharing, connection, and transactions based on data globally.  
+  `decentralized-ai` `distributed-ledger` `ai-agent`
+- **[Intuition Fabric](https://intuitionfabric.com)** — Aims to democratize access to AI through a network of deep learning models stored on IPFS and accessed through the Ethereum blockchain.  
+  `decentralized-ai` `ethereum` `ipfs`
+- **[MATRIX AI](https://www.matrix.io/)** — A public chain combining AI technology with blockchain to solve challenges stifling blockchain adoption, using a blockchain-powered decentralized computing platform.  
+  `decentralized-ai` `public-chain`
+- **[OpenMined](https://openmined.org/)** — A community building open-source technology for the decentralized ownership of data and intelligence, enabling AI to train on data it never accesses directly.  
+  `decentralized-ai` `privacy` `federated-learning`
+- **[Oraichain](https://orai.io/)** — An intelligent and secure solution for emerging Web3, scalable dApps, and decentralized AI.  
+  `decentralized-ai` `web3` `oracle`
+- **[Raven Protocol](https://www.ravenprotocol.com/)** — A decentralized and distributed deep-learning training protocol.  
+  `decentralized-ai` `deep-learning`
+- **[SingularityNET](https://singularitynet.io/)** — A distributed AI platform on the Ethereum blockchain, with each blockchain node backing up an AI algorithm.  
+  `decentralized-ai` `ethereum` `ai-marketplace`
+- **[Thought Network](https://thought.live/)** — A blockchain-enabled fabric that embeds artificial intelligence into data, making it agile, actionable, and inherently secure.  
+  `decentralized-ai` `data-fabric`
+- **[Vanna Labs](https://www.vannalabs.ai/)** — An Ethereum L2 rollup that supports native, seamless, and trustless AI/ML inferences on-chain to empower decentralized applications.  
+  `decentralized-ai` `ethereum` `layer-2` `on-chain-inference`
+
+### AI Algorithm Projects
+- **[Decentralized & Collaborative AI on Blockchain](https://github.com/microsoft/0xDeCA10B)** — A framework to host and train publicly available machine learning models in smart contracts with incentive mechanisms encouraging good-quality training data.  
+  ★ 607 · MIT · `decentralized-ai` `smart-contract` `collaborative-ml`
+- **[Danku](https://github.com/algorithmiaio/danku)** — A blockchain-based protocol for evaluating and purchasing ML models on a public blockchain such as Ethereum.  
+  ★ 147 · `decentralized-ai` `ethereum` `smart-contract`
+
+### Data Marketplaces
+- **[Ocean Protocol](https://oceanprotocol.com/)** — A decentralized data exchange protocol that lets people share and monetize data while guaranteeing control, auditability, transparency, and compliance.  
+  `decentralized-ai` `data-marketplace`
+
+### Decentralized Compute
+- **[DeepBrain Chain](https://www.deepbrainchain.org/)** — A decentralized AI computing platform that supplies processing power to companies developing AI technologies.  
+  `decentralized-compute` `decentralized-ai`
+- **[Nunet](https://www.nunet.io/)** — A globally decentralized computing framework combining latent computing power of independently owned devices into a dynamic marketplace of compute resources.  
+  `decentralized-compute` `compute-marketplace`
+- **[Phala Network](https://phala.network/)** — A decentralized off-chain compute infrastructure for Web3 development.  
+  `decentralized-compute` `web3`
+- **[TrueBit](https://truebit.io/)** — Gives Ethereum smart contracts a computational boost.  
+  `decentralized-compute` `ethereum`
+
+### Finance & Trading
+- **[Cindicator](https://cindicator.com/)** — A crowd-sourced prediction engine for financial and crypto indicators.  
+  `decentralized-ai` `finance` `prediction-market`
+- **[Erasure](https://erasure.xxx/)** — A decentralized protocol and data marketplace for financial predictions.  
+  `decentralized-ai` `finance` `data-marketplace`
+- **[Numerai](https://numer.ai/)** — A hedge fund powered by a network of anonymous data scientists who build machine learning models on encrypted data and stake cryptocurrency to express confidence in their models.  
+  `decentralized-ai` `finance` `machine-learning`
+
+### Healthcare & Medicine
+- **[BurstIQ](https://www.burstiq.com/)** — A healthcare data marketplace with granular ownership and consent of data; on-chain storage on a custom blockchain supports HIPAA, GDPR, and other regulations.  
+  `decentralized-ai` `healthcare` `hipaa` `gdpr`
+- **[doc.ai](https://doc.ai/about)** — Aims to decentralize precision medicine on the blockchain using AI.  
+  `decentralized-ai` `healthcare`
+
+### Autonomous Agents
+- **[AgentFund](https://github.com/RioBot-Grind/agentfund)** — A decentralized crowdfunding infrastructure for autonomous AI agents on Base blockchain, enabling milestone-based escrow funding for AI projects and collaborations.  
+  ★ 3 · MIT · `ai-agent` `crowdfunding` `base` `escrow`
+- **[Hashgraph Online (HOL)](https://hol.org/)** — Universal agentic registry built on Hedera Hashgraph, providing blockchain-based identity for AI agents via the ERC-8004 standard and HCS-14 Universal Agent IDs, enabling discovery, verification, and autonomous commerce via x402.  
+  `ai-agent` `hashgraph` `agent-identity` `x402`
+
+### Academic Research
+- **[A Mining Pool Solution for Novel Proof-of-Neural-Architecture Consensus](https://doi.org/10.1109/ICBC51069.2021.9461067)** — Li, B., Lu, Q., Jiang, W., Jung, T., & Shi, Y. (2021). IEEE ICBC 2021, pp. 1-3.  
+  `academic-paper` `proof-of-neural-architecture` `consensus`
+- **[Analysis of Models for Decentralized and Collaborative AI on Blockchain](https://doi.org/10.1007/978-3-030-59638-5_10)** — Harris, J. D. (2020). International Conference on Blockchain, pp. 142-153. Springer, Cham.  
+  `academic-paper` `collaborative-ml`
+- **[BlockML: A Useful Proof of Work System Based on Machine Learning Tasks](https://doi.org/10.1145/3366624.3368156)** — Merlina, A. (2019). Proceedings of the 20th International Middleware Conference Doctoral Symposium, pp. 6-8.  
+  `academic-paper` `proof-of-useful-work`
+- **[Coin.AI: A Proof-of-Useful-Work Scheme for Blockchain-based Distributed Deep Learning](https://doi.org/10.3390/e21080723)** — Baldominos, A., & Saez, Y. (2019). Entropy, 21(8), 723.  
+  `academic-paper` `proof-of-useful-work` `deep-learning`
+- **[Decentralized and Collaborative AI on Blockchain](https://doi.org/10.1109/Blockchain.2019.00057)** — Harris, J. D., & Waggoner, B. (2019). IEEE Blockchain 2019, pp. 368-375.  
+  `academic-paper` `collaborative-ml`
+- **[DLBC: A Deep Learning-Based Consensus in Blockchains for Deep Learning Services](https://arxiv.org/abs/1904.07349)** — Li, B., Chenli, C., Xu, X., Shi, Y., & Jung, T. (2019). arXiv:1904.07349.  
+  `academic-paper` `consensus` `deep-learning`
+- **[Energy-recycling Blockchain with Proof-of-Deep-Learning](https://doi.org/10.1109/BLOC.2019.8751419)** — Chenli, C., Li, B., Shi, Y., & Jung, T. (2019). IEEE ICBC 2019, pp. 19-23.  
+  `academic-paper` `proof-of-deep-learning` `consensus`
+- **[Hyperparameter Optimization Using Sustainable Proof of Work in Blockchain](https://doi.org/10.3389/fbloc.2020.00023)** — Mittal, A., & Aggarwal, S. (2020). Frontiers in Blockchain, 3, 23.  
+  `academic-paper` `hyperparameter-optimization` `proof-of-work`
+- **[On the Convergence of Artificial Intelligence and Distributed Ledger Technology: A Scoping Review and Future Research Agenda](https://doi.org/10.1109/ACCESS.2020.2981447)** — Pandl, K. D., Thiebes, S., Schmidt-Kraepelin, M., & Sunyaev, A. (2020). IEEE Access, 8, 57075-57095.  
+  `academic-paper` `scoping-review` `distributed-ledger`
+- **[Proof of Federated Learning: A Novel Energy-Recycling Consensus Algorithm](https://doi.org/10.1109/TPDS.2021.3056773)** — Qu, X., Wang, S., Hu, Q., & Cheng, X. (2021). IEEE Transactions on Parallel and Distributed Systems, 32(8), 2074-2085.  
+  `academic-paper` `federated-learning` `consensus`
+- **[Proof of Learning (PoLe): Empowering Machine Learning with Consensus Building on Blockchains](https://arxiv.org/abs/2007.15145)** — Lan, Y., Liu, Y., & Li, B. (2020). arXiv:2007.15145.  
+  `academic-paper` `proof-of-learning` `consensus`
+- **[WekaCoin: Proof-of-learning, a Blockchain Consensus Mechanism Based on Machine Learning Competitions](https://doi.org/10.1109/DAPPCON.2019.00023)** — Bravo-Marquez, F., Reeves, S., & Ugarte, M. (2019). IEEE DAPPCON 2019, pp. 119-124.  
+  `academic-paper` `proof-of-learning` `consensus`
 
 </details>
 
