@@ -113,6 +113,8 @@ export default function GraphCanvas({
   const [selectedTags, setSelectedTags] = useState<Set<string>>(new Set());
   const [tagQuery, setTagQuery] = useState("");
   const [tagPanelOpen, setTagPanelOpen] = useState(false);
+  const [selectedProviders, setSelectedProviders] = useState<Set<string>>(new Set());
+  const [providerPanelOpen, setProviderPanelOpen] = useState(false);
   const [failedIcons, setFailedIcons] = useState<Set<string>>(new Set());
 
   function markIconFailed(id: string) {
@@ -127,11 +129,15 @@ export default function GraphCanvas({
     null
   );
   const sizeRef = useRef({ width, height });
-  sizeRef.current = { width, height };
-
   const maxZoom = useMemo(() => computeMaxZoom(nodes), [nodes]);
   const maxZoomRef = useRef(maxZoom);
-  maxZoomRef.current = maxZoom;
+
+  // Refs read from event handlers (onWheel, pointer move) need the latest
+  // width/height/maxZoom, but must not be mutated during render itself.
+  useLayoutEffect(() => {
+    sizeRef.current = { width, height };
+    maxZoomRef.current = maxZoom;
+  });
 
   const sectors = useMemo(() => Array.from(new Set(nodes.map((n) => n.sector))), [nodes]);
   const nodeById = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
@@ -152,9 +158,20 @@ export default function GraphCanvas({
     return tagCounts.filter(([tag]) => tag.includes(query));
   }, [tagCounts, tagQuery]);
 
-  const isFiltering = selectedTags.size > 0;
+  const providerCounts = useMemo(() => {
+    const counts = new Map<string, number>();
+    for (const node of nodes) {
+      counts.set(node.provider, (counts.get(node.provider) ?? 0) + 1);
+    }
+    return Array.from(counts.entries()).sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+  }, [nodes]);
+
+  const isTagFiltering = selectedTags.size > 0;
+  const isProviderFiltering = selectedProviders.size > 0;
+  const isFiltering = isTagFiltering || isProviderFiltering;
   const matchesFilter = (node: LayoutNode) =>
-    !isFiltering || node.tags.some((tag) => selectedTags.has(tag));
+    (!isTagFiltering || node.tags.some((tag) => selectedTags.has(tag))) &&
+    (!isProviderFiltering || selectedProviders.has(node.provider));
 
   function toggleTag(tag: string) {
     setSelectedTags((prev) => {
@@ -167,6 +184,19 @@ export default function GraphCanvas({
 
   function clearTagFilter() {
     setSelectedTags(new Set());
+  }
+
+  function toggleProvider(provider: string) {
+    setSelectedProviders((prev) => {
+      const next = new Set(prev);
+      if (next.has(provider)) next.delete(provider);
+      else next.add(provider);
+      return next;
+    });
+  }
+
+  function clearProviderFilter() {
+    setSelectedProviders(new Set());
   }
 
   useLayoutEffect(() => {
@@ -413,66 +443,122 @@ export default function GraphCanvas({
         </g>
       </svg>
 
-      <div className="absolute top-4 left-4 w-64">
-        <button
-          onClick={() => setTagPanelOpen((v) => !v)}
-          className="flex items-center gap-2 rounded-lg bg-slate-900/80 px-3 py-1.5 text-xs text-slate-200 backdrop-blur hover:bg-slate-800/80"
-        >
-          Filter by tag
-          {isFiltering && (
-            <span className="rounded-full bg-sky-500/20 px-1.5 py-0.5 text-[10px] text-sky-300">
-              {selectedTags.size}
-            </span>
-          )}
-        </button>
+      <div className="absolute top-4 left-4 flex w-64 flex-col gap-2">
+        <div>
+          <button
+            onClick={() => setTagPanelOpen((v) => !v)}
+            className="flex items-center gap-2 rounded-lg bg-slate-900/80 px-3 py-1.5 text-xs text-slate-200 backdrop-blur hover:bg-slate-800/80"
+          >
+            Filter by tag
+            {isTagFiltering && (
+              <span className="rounded-full bg-sky-500/20 px-1.5 py-0.5 text-[10px] text-sky-300">
+                {selectedTags.size}
+              </span>
+            )}
+          </button>
 
-        {tagPanelOpen && (
-          <div className="mt-2 rounded-xl border border-slate-700 bg-slate-900/95 p-3 text-xs text-slate-200 shadow-xl backdrop-blur">
-            <div className="flex items-center gap-2">
-              <input
-                value={tagQuery}
-                onChange={(e) => setTagQuery(e.target.value)}
-                placeholder="Search tags…"
-                className="w-full rounded-md border border-slate-700 bg-slate-950 px-2 py-1 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
-              />
-              {isFiltering && (
-                <button
-                  onClick={clearTagFilter}
-                  className="shrink-0 text-slate-400 hover:text-slate-200"
-                >
-                  Clear
-                </button>
-              )}
-            </div>
-            <div className="mt-2 flex max-h-64 flex-wrap gap-1.5 overflow-y-auto">
-              {visibleTags.map(([tag, count]) => {
-                const active = selectedTags.has(tag);
-                const swatch = colorForTag(tag);
-                return (
+          {tagPanelOpen && (
+            <div className="mt-2 rounded-xl border border-slate-700 bg-slate-900/95 p-3 text-xs text-slate-200 shadow-xl backdrop-blur">
+              <div className="flex items-center gap-2">
+                <input
+                  value={tagQuery}
+                  onChange={(e) => setTagQuery(e.target.value)}
+                  placeholder="Search tags…"
+                  className="w-full rounded-md border border-slate-700 bg-slate-950 px-2 py-1 text-xs text-slate-100 placeholder:text-slate-500 focus:outline-none focus:ring-1 focus:ring-sky-500"
+                />
+                {isTagFiltering && (
                   <button
-                    key={tag}
-                    onClick={() => toggleTag(tag)}
-                    className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] transition-colors ${
-                      active
-                        ? "text-slate-950"
-                        : "bg-slate-800 text-slate-300 hover:bg-slate-700"
-                    }`}
-                    style={active ? { backgroundColor: swatch } : undefined}
+                    onClick={clearTagFilter}
+                    className="shrink-0 text-slate-400 hover:text-slate-200"
                   >
-                    <span
-                      className="h-2 w-2 rounded-full"
-                      style={{ backgroundColor: active ? "rgba(15,23,42,0.5)" : swatch }}
-                    />
-                    {tag} <span className="opacity-60">{count}</span>
+                    Clear
                   </button>
-                );
-              })}
-              {visibleTags.length === 0 && (
-                <span className="text-slate-500">No tags match &ldquo;{tagQuery}&rdquo;.</span>
-              )}
+                )}
+              </div>
+              <div className="mt-2 flex max-h-64 flex-wrap gap-1.5 overflow-y-auto">
+                {visibleTags.map(([tag, count]) => {
+                  const active = selectedTags.has(tag);
+                  const swatch = colorForTag(tag);
+                  return (
+                    <button
+                      key={tag}
+                      onClick={() => toggleTag(tag)}
+                      className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] transition-colors ${
+                        active
+                          ? "text-slate-950"
+                          : "bg-slate-800 text-slate-300 hover:bg-slate-700"
+                      }`}
+                      style={active ? { backgroundColor: swatch } : undefined}
+                    >
+                      <span
+                        className="h-2 w-2 rounded-full"
+                        style={{ backgroundColor: active ? "rgba(15,23,42,0.5)" : swatch }}
+                      />
+                      {tag} <span className="opacity-60">{count}</span>
+                    </button>
+                  );
+                })}
+                {visibleTags.length === 0 && (
+                  <span className="text-slate-500">No tags match &ldquo;{tagQuery}&rdquo;.</span>
+                )}
+              </div>
             </div>
-          </div>
-        )}
+          )}
+        </div>
+
+        <div>
+          <button
+            onClick={() => setProviderPanelOpen((v) => !v)}
+            className="flex items-center gap-2 rounded-lg bg-slate-900/80 px-3 py-1.5 text-xs text-slate-200 backdrop-blur hover:bg-slate-800/80"
+          >
+            Filter by domain
+            {isProviderFiltering && (
+              <span className="rounded-full bg-sky-500/20 px-1.5 py-0.5 text-[10px] text-sky-300">
+                {selectedProviders.size}
+              </span>
+            )}
+          </button>
+
+          {providerPanelOpen && (
+            <div className="mt-2 rounded-xl border border-slate-700 bg-slate-900/95 p-3 text-xs text-slate-200 shadow-xl backdrop-blur">
+              <div className="flex items-center justify-between gap-2">
+                <span className="text-slate-400">{providerCounts.length} domains</span>
+                {isProviderFiltering && (
+                  <button
+                    onClick={clearProviderFilter}
+                    className="shrink-0 text-slate-400 hover:text-slate-200"
+                  >
+                    Clear
+                  </button>
+                )}
+              </div>
+              <div className="mt-2 flex max-h-64 flex-wrap gap-1.5 overflow-y-auto">
+                {providerCounts.map(([provider, count]) => {
+                  const active = selectedProviders.has(provider);
+                  const swatch = colorForTag(provider);
+                  return (
+                    <button
+                      key={provider}
+                      onClick={() => toggleProvider(provider)}
+                      className={`flex items-center gap-1 rounded-full px-2 py-0.5 text-[11px] transition-colors ${
+                        active
+                          ? "text-slate-950"
+                          : "bg-slate-800 text-slate-300 hover:bg-slate-700"
+                      }`}
+                      style={active ? { backgroundColor: swatch } : undefined}
+                    >
+                      <span
+                        className="h-2 w-2 rounded-full"
+                        style={{ backgroundColor: active ? "rgba(15,23,42,0.5)" : swatch }}
+                      />
+                      {provider} <span className="opacity-60">{count}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          )}
+        </div>
       </div>
 
       <div className="pointer-events-none absolute bottom-4 left-4 flex flex-wrap gap-x-4 gap-y-1 rounded-lg bg-slate-950/70 px-3 py-2 text-xs text-slate-300 backdrop-blur">
@@ -517,9 +603,11 @@ export default function GraphCanvas({
               {activeNode.description}
             </p>
           )}
-          <div className="mt-3 text-xs text-slate-400">
-            ★ {activeNode.stars.toLocaleString()} stars
-          </div>
+          {activeNode.stars > 0 && (
+            <div className="mt-3 text-xs text-slate-400">
+              ★ {activeNode.stars.toLocaleString()} stars
+            </div>
+          )}
           {activeNode.tags.length > 0 && (
             <div className="mt-2 flex flex-wrap gap-1.5">
               {activeNode.tags.map((tag) => (
