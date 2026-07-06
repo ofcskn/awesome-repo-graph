@@ -405,7 +405,7 @@ const defaultConfig: CuratorConfig = {
   },
   output: {
     branchPrefix: "curator/auto",
-    commitMode: "pull-request",
+    commitMode: "commit",
     reportDir: "curator/reports",
     commitReports: true,
     attestation: {

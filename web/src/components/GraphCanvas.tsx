@@ -67,7 +67,22 @@ function iconUrlForNode(node: LayoutNode): string {
 }
 
 const MIN_ZOOM = 0.15;
-const MAX_ZOOM = 4;
+const FALLBACK_MAX_ZOOM = 4;
+// Smallest node should be able to grow to roughly this many px on screen at
+// max zoom, so dense clusters (dozens of overlapping same-size nodes) can
+// always be pulled apart visually, regardless of how tightly packed they are.
+const TARGET_MIN_NODE_PIXELS = 220;
+
+// A fixed zoom ceiling breaks down once a cluster gets crowded enough that
+// even 4x still overlaps nodes on top of each other. Deriving the cap from
+// the smallest node radius in the current graph means it keeps pace as the
+// catalog grows and packCluster() has to squeeze more nodes into a sector.
+function computeMaxZoom(nodes: LayoutNode[]): number {
+  if (nodes.length === 0) return FALLBACK_MAX_ZOOM;
+  const minRadius = Math.min(...nodes.map((n) => n.radius));
+  if (minRadius <= 0) return FALLBACK_MAX_ZOOM;
+  return Math.max(FALLBACK_MAX_ZOOM, TARGET_MIN_NODE_PIXELS / (2 * minRadius));
+}
 
 // GitHub's mark octicon (16x16 viewBox), used so every node reads as "this
 // is a GitHub repo" at a glance instead of relying on flat sector color.
@@ -113,6 +128,10 @@ export default function GraphCanvas({
   );
   const sizeRef = useRef({ width, height });
   sizeRef.current = { width, height };
+
+  const maxZoom = useMemo(() => computeMaxZoom(nodes), [nodes]);
+  const maxZoomRef = useRef(maxZoom);
+  maxZoomRef.current = maxZoom;
 
   const sectors = useMemo(() => Array.from(new Set(nodes.map((n) => n.sector))), [nodes]);
   const nodeById = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
@@ -188,7 +207,7 @@ export default function GraphCanvas({
   }
 
   function clampZoom(k: number) {
-    return Math.min(MAX_ZOOM, Math.max(MIN_ZOOM, k));
+    return Math.min(maxZoomRef.current, Math.max(MIN_ZOOM, k));
   }
 
   useLayoutEffect(() => {
