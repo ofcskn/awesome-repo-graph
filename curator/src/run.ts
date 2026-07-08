@@ -30,6 +30,7 @@ import {
   checkoutBranch,
   createOrUpdatePullRequest,
   dispatchWorkflow,
+  enableAutoMerge,
   ensureBranch,
   getCurrentBranch,
   getDefaultBranch,
@@ -525,6 +526,12 @@ export async function runPipeline(options: RunOptions): Promise<RunReport> {
               commitMessage,
               buildPullRequestBody(report),
             );
+            if (report.output.pullRequest.number !== null) {
+              const autoMerge = await enableAutoMerge(report.output.pullRequest.number);
+              if (!autoMerge.enabled) {
+                report.notes.push(`Auto-merge not enabled: ${autoMerge.error}`);
+              }
+            }
           } else {
             report.notes.push(`Push failed: ${pushResult.error}`);
           }
