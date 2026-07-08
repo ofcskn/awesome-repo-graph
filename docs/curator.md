@@ -389,7 +389,12 @@ Controlled by `config.output.commitMode`:
 - `"pull-request"` (default) — creates `curator/auto/<YYYY-MM-DD>` off the
   current branch, commits, pushes, and opens a PR. If a same-day
   automation PR is already open for that branch, it's updated in place
-  (`gh pr edit`) instead of opening a duplicate.
+  (`gh pr edit`) instead of opening a duplicate. GitHub's native auto-merge
+  is enabled on the PR (`gh pr merge --auto --squash`) so it merges itself
+  once the `approved-agent-gate` required status check passes, without
+  needing a human to click merge — required because this repo's branch
+  protection on `main` rejects direct pushes (`"commit"` mode below), so a
+  PR is the only way changes can land.
 
 No commit or PR is ever created when there were zero accepted sources —
 idempotent re-runs on an unchanged candidate set produce no git activity.

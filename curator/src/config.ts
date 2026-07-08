@@ -405,7 +405,13 @@ const defaultConfig: CuratorConfig = {
   },
   output: {
     branchPrefix: "curator/auto",
-    commitMode: "commit",
+    // "commit" (direct push to main) is incompatible with this repo's branch
+    // protection on main, which requires changes to go through a pull request
+    // and pass the "approved-agent-gate" status check — direct pushes are
+    // rejected with GH006. "pull-request" mode plus auto-merge (see
+    // createOrUpdatePullRequest's caller in run.ts) gets the same "no human
+    // has to click merge" outcome without fighting branch protection.
+    commitMode: "pull-request",
     reportDir: "curator/reports",
     commitReports: true,
     attestation: {
