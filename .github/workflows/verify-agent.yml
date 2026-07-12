@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: read
+  pull-requests: write
 
 concurrency:
   group: approved-agent-gate-${{ github.event.pull_request.number }}
@@ -47,3 +48,20 @@ jobs:
 
       - name: Run attestation unit tests
         run: node --test scripts/test/*.test.js
+
+      # Curator PRs carry a machine-verified attestation (checked above) and
+      # touch only the catalog + curator state, so once the gate passes there
+      # is nothing left for a human to review. Auto-merging them same-day
+      # also prevents the next scheduled run from re-proposing sources that
+      # are already sitting in an unmerged sibling PR.
+      - name: Auto-merge curator PR
+        if: >-
+          success() &&
+          github.event.pull_request.user.login == 'github-actions[bot]' &&
+          startsWith(github.head_ref, 'curator/auto/')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh pr merge "$PR_NUMBER" --repo "$REPO" --squash --auto --delete-branch
