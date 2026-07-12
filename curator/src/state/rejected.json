@@ -59,9 +59,9 @@
     {
       "canonicalUrl": "https://github.com/NousResearch/hermes-agent",
       "githubId": 1024554267,
-      "evaluatedAt": "2026-07-06T06:55:44.849Z",
+      "evaluatedAt": "2026-07-10T06:39:59.271Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_14dc6bd7",
+      "metadataFingerprint": "fp_bce0e536",
       "reconsiderAt": null
     },
     {
@@ -119,6 +119,14 @@
       "reasonCode": "provider-error",
       "metadataFingerprint": "fp_25a19df2",
       "reconsiderAt": "2026-07-19T15:06:43.470Z"
+    },
+    {
+      "canonicalUrl": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
+      "githubId": null,
+      "evaluatedAt": "2026-07-10T06:40:07.339Z",
+      "reasonCode": "too-young",
+      "metadataFingerprint": "fp_e1c1dd22",
+      "reconsiderAt": null
     }
   ]
 }
