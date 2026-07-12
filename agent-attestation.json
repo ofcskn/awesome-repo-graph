@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
   "agentId": "awesome-repo-graph-curator",
-  "producedAt": "2026-07-06T13:23:36.908Z",
+  "producedAt": "2026-07-12T13:02:46.936Z",
   "subject": {
-    "sources.json": "sha256:a2e388cde8e399580fcdb18e4efe45fdfa345071628f738048bbe2a15eea42f9",
-    "README.MD": "sha256:822d6033bf0e5b25d847c7571ff86d511226f2248c6e26ccfd4e9e9659028ac1"
+    "sources.json": "sha256:1491a75f0c8a12f1513d215ec075defe7da195c7c9a66f95408f2406c5eeee3c",
+    "README.MD": "sha256:6a27951fc6e4137af46a5681569388de8eb75280086dc2c8432a0b75a79850dd"
   },
   "mechanical": {
     "validated": true,
@@ -13,6 +13,6 @@
   "signature": {
     "algorithm": "ed25519",
     "keyId": "curator-2026",
-    "value": "RaD72OyG47/9fzEIdwHBm58YliLUDyI9AONshvOL39HYDhYmhjkfm7eBHql0PRjtJTNDMSwpMXR8jAziOP/6AA=="
+    "value": "MDsQ7uvGdT67HDeuJAoxVn0wmyOlPrswAMr81U8cC7kZE3GNFqU8VZbMXZMQOsBr2uosOedyWtmBLL5vnx5WCw=="
   }
 }
