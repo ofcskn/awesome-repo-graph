@@ -5,7 +5,14 @@ on:
     # Fires hourly; curator/src/scheduling.ts decides whether this hour
     # actually matches config.ts's configured local execution hour and
     # whether the minimum inter-run interval has elapsed. See docs/curator.md.
-    - cron: "0 * * * *"
+    #
+    # Deliberately offset from the top of the hour (:00): GitHub Actions'
+    # scheduled-workflow queue is most congested at :00 (every hourly/daily
+    # cron on GitHub fires there), which measurably delays or silently drops
+    # runs under load — most visibly at 00:00 UTC, the single most popular
+    # cron minute globally. A run dropped this way never appears in the
+    # workflow history at all, unlike a run that executes and is gated out.
+    - cron: "7 * * * *"
   workflow_dispatch:
     inputs:
       force:

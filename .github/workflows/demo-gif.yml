@@ -5,8 +5,13 @@ name: Refresh demo GIF
 # independently of, the Pages deploy (deploy-pages.yml).
 #
 # Anti-loop, three independent layers (any one suffices — defense in depth):
-#   1. The merge commit message carries [skip ci], so GitHub Actions skips
-#      every workflow for that push.
+#   1. The squash-merge commit into main carries [skip ci], so GitHub Actions
+#      skips every push-triggered workflow for that merge (this workflow,
+#      deploy-pages.yml, etc). The intermediate branch commit deliberately
+#      does NOT carry [skip ci] — it also skips pull_request-triggered runs,
+#      which would starve the PR's required "approved-agent-gate" check of
+#      the pull_request event it needs to ever report a status, deadlocking
+#      auto-merge (which waits on that check forever).
 #   2. paths-ignore below means a commit that only touches assets/demo.gif does
 #      not re-trigger this workflow.
 #   3. The commit is pushed with the default GITHUB_TOKEN, and pushes made with
@@ -89,7 +94,7 @@ jobs:
           branch="automation/demo-gif-refresh"
           git checkout -B "$branch"
           git add assets/demo.gif
-          git commit -m "Refresh demo GIF [skip ci]"
+          git commit -m "Refresh demo GIF"
           git push --force origin "$branch"
 
           pr_number=$(gh pr list --head "$branch" --base main --state open --json number --jq '.[0].number')
