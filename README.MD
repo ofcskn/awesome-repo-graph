@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-159-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-4290312-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-161-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-4295325-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -77,11 +77,11 @@ npm run capture:demo
 ## Sectors
 
 - **Frontend Engineering** — 12 sources
-- **AI Agent Tooling** — 33 sources
+- **AI Agent Tooling** — 34 sources
 - **DevOps & Infrastructure** — 1 source
 - **Game Development** — 21 sources
 - **Backend Engineering & APIs** — 24 sources
-- **Machine Learning & Data Science** — 21 sources
+- **Machine Learning & Data Science** — 22 sources
 - **Blockchain & Decentralized AI** — 46 sources
 - **Developer Productivity & CLI Tools** — 1 source
 
@@ -93,7 +93,7 @@ npm run capture:demo
 ### GSAP
 #### GSAP Website Examples
 - **[award-winning-website](https://github.com/adrianhajdin/award-winning-website)**  
-  ★ 1,021 · `gsap` `landing-page`
+  ★ 1,027 · `gsap` `landing-page`
 - **[jsm_gta_vi_landing](https://github.com/adrianhajdin/jsm_gta_vi_landing)**  
   ★ 196 · `gsap` `landing-page`
 - **[Truus.co-Awwward-Website](https://github.com/Thakuma07/Truus.co-Awwward-Website)** — Vanilla HTML/CSS/JS site built with GSAP, ScrollTrigger, and Lenis featuring experimental layout, cursor interaction, and dense motion design.  
@@ -120,17 +120,17 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>AI Agent Tooling</strong> — 33 sources</summary>
+<summary><strong>AI Agent Tooling</strong> — 34 sources</summary>
 
 ### Security & Pentesting
 - **[strix](https://github.com/usestrix/strix)** — Open-source AI-powered penetration testing agent that autonomously finds and fixes application vulnerabilities.  
-  ★ 39,715 · Apache-2.0 · `ai-agent` `penetration-testing` `security` `python`
+  ★ 41,510 · Apache-2.0 · `ai-agent` `penetration-testing` `security` `python`
 
 ### Browser & GUI Agents
 - **[chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)** — Official Chrome DevTools MCP server letting coding agents control and debug the browser directly.  
-  ★ 46,517 · Apache-2.0 · `mcp-server` `chrome-devtools` `debugging` `typescript`
+  ★ 46,929 · Apache-2.0 · `mcp-server` `chrome-devtools` `debugging` `typescript`
 - **[page-agent](https://github.com/alibaba/page-agent)** — In-browser GUI agent from Alibaba that controls web interfaces via natural language.  
-  ★ 25,579 · MIT · `ai-agent` `browser-automation` `gui-agent` `javascript`
+  ★ 26,612 · MIT · `ai-agent` `browser-automation` `gui-agent` `javascript`
 - **[smolagents/computer-agent](https://huggingface.co/spaces/smolagents/computer-agent)** — A Hugging Face Space for an AI agent designed to interact with a computer, featuring a web-based graphical user interface built with Gradio.  
   `ai-agent` `gui-agent` `automation` `gradio`
 
@@ -138,13 +138,15 @@ npm run capture:demo
 - **[gemini-cli](https://github.com/google-gemini/gemini-cli)** — An open-source AI agent that integrates Google Gemini capabilities into the command-line interface.  
   ★ 105,879 · Apache-2.0 · `ai-agent` `cli` `terminal` `mcp-server` `typescript` `gemini`
 - **[herdr](https://github.com/ogulcancelik/herdr)** — High-performance Rust-based terminal multiplexer for running multiple AI agents at once.  
-  ★ 14,900 · NOASSERTION · `terminal-multiplexer` `ai-agent` `rust`
+  ★ 16,476 · NOASSERTION · `terminal-multiplexer` `ai-agent` `rust`
 - **[agents-cli](https://github.com/google/agents-cli)** — Official Google CLI and skill pack specializing any coding assistant in building, evaluating, and deploying AI agents on Google Cloud.  
   ★ 4,958 · Apache-2.0 · `google-cloud` `agent-development-kit` `cli`
 
 ### MCP Servers
 - **[unity-mcp](https://github.com/CoplayDev/unity-mcp)** — Bridges AI assistants with the Unity Editor to automate scene control and asset management.  
-  ★ 12,287 · MIT · `mcp-server` `unity` `game-development`
+  ★ 12,478 · MIT · `mcp-server` `unity` `game-development`
+- **[gitlab-mcp](https://gitlab.com/fforster/gitlab-mcp)** — This repository provides a server implementation for the Model Context Protocol (MCP) specifically designed for integration with GitLab.  
+  `mcp-server` `ai-agent` `model-context-protocol` `gitlab`
 
 ### Local AI Tools
 - **[terax-ai](https://github.com/crynta/terax-ai)** — A 7MB terminal-first local AI development workspace.  
@@ -370,7 +372,7 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>Machine Learning & Data Science</strong> — 21 sources</summary>
+<summary><strong>Machine Learning & Data Science</strong> — 22 sources</summary>
 
 ### Machine Learning Frameworks
 - **[tensorflow](https://github.com/tensorflow/tensorflow)** — TensorFlow is an open-source machine learning framework designed for everyone, supporting deep learning and neural networks. It provides tools for building and deploying machine learning models, including capabilities for distributed computing.  
@@ -429,6 +431,10 @@ npm run capture:demo
   ★ 13,233 · BSD-3-Clause · `jupyter` `notebook` `interactive-computing` `python`
 
 ### Natural Language Processing
+#### Large Language Models
+- **[google/datagemma-rag-27b-it](https://huggingface.co/google/datagemma-rag-27b-it)** — A finetuned Gemma 2 27B large language model from Google, designed for text generation and conversational AI. It is optimized for Retrieval Augmented Generation (RAG) tasks.  
+  `transformers` `llm` `nlp` `pretrained-models` `rag` `artificial-intelligence`
+
 - **[spaCy](https://github.com/explosion/spaCy)** — An industrial-strength natural language processing library for Python featuring tokenization, tagging, parsing, and named entity recognition.  
   ★ 33,719 · MIT · `nlp` `python` `text-processing` `linguistics`
 
