@@ -20,7 +20,7 @@
       "license": null,
       "score": {
         "stars": 196,
-        "fetchedAt": "2026-07-10"
+        "fetchedAt": "2026-07-15"
       },
       "addedAt": "2026-07-05"
     },
@@ -43,8 +43,8 @@
       ],
       "license": null,
       "score": {
-        "stars": 1021,
-        "fetchedAt": "2026-07-10"
+        "stars": 1027,
+        "fetchedAt": "2026-07-15"
       },
       "addedAt": "2026-07-05"
     },
@@ -68,8 +68,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 39715,
-        "fetchedAt": "2026-07-10"
+        "stars": 41510,
+        "fetchedAt": "2026-07-15"
       },
       "addedAt": "2026-07-05"
     },
@@ -93,8 +93,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 25579,
-        "fetchedAt": "2026-07-10"
+        "stars": 26612,
+        "fetchedAt": "2026-07-15"
       },
       "addedAt": "2026-07-05"
     },
@@ -118,8 +118,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 46517,
-        "fetchedAt": "2026-07-10"
+        "stars": 46929,
+        "fetchedAt": "2026-07-15"
       },
       "addedAt": "2026-07-05"
     },
@@ -142,8 +142,8 @@
       ],
       "license": "NOASSERTION",
       "score": {
-        "stars": 14900,
-        "fetchedAt": "2026-07-10"
+        "stars": 16476,
+        "fetchedAt": "2026-07-15"
       },
       "addedAt": "2026-07-05"
     },
@@ -166,8 +166,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 12287,
-        "fetchedAt": "2026-07-10"
+        "stars": 12478,
+        "fetchedAt": "2026-07-15"
       },
       "addedAt": "2026-07-05"
     },
@@ -3914,6 +3914,59 @@
         "fetchedAt": null
       },
       "addedAt": "2026-07-10"
+    },
+    {
+      "id": "gitlab-com-fforster-gitlab-mcp",
+      "url": "https://gitlab.com/fforster/gitlab-mcp",
+      "provider": "gitlab.com",
+      "owner": null,
+      "repo": null,
+      "title": "gitlab-mcp",
+      "description": "This repository provides a server implementation for the Model Context Protocol (MCP) specifically designed for integration with GitLab.",
+      "path": [
+        "AI Agent Tooling",
+        "MCP Servers"
+      ],
+      "tags": [
+        "mcp-server",
+        "ai-agent",
+        "model-context-protocol",
+        "gitlab"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-15"
+    },
+    {
+      "id": "huggingface-co-google-datagemma-rag-27b-it",
+      "url": "https://huggingface.co/google/datagemma-rag-27b-it",
+      "provider": "huggingface.co",
+      "owner": null,
+      "repo": null,
+      "title": "google/datagemma-rag-27b-it",
+      "description": "A finetuned Gemma 2 27B large language model from Google, designed for text generation and conversational AI. It is optimized for Retrieval Augmented Generation (RAG) tasks.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Natural Language Processing",
+        "Large Language Models"
+      ],
+      "tags": [
+        "transformers",
+        "llm",
+        "nlp",
+        "pretrained-models",
+        "rag",
+        "artificial-intelligence"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-15"
     }
   ]
 }
