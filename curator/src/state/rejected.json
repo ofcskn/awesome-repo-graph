@@ -43,9 +43,9 @@
     {
       "canonicalUrl": "https://github.com/n8n-io/n8n",
       "githubId": 193215554,
-      "evaluatedAt": "2026-07-06T06:55:45.172Z",
+      "evaluatedAt": "2026-07-22T00:04:29.737Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_29ccc59",
+      "metadataFingerprint": "fp_e5859dae",
       "reconsiderAt": null
     },
     {
@@ -59,9 +59,9 @@
     {
       "canonicalUrl": "https://github.com/NousResearch/hermes-agent",
       "githubId": 1024554267,
-      "evaluatedAt": "2026-07-10T06:39:59.271Z",
+      "evaluatedAt": "2026-07-22T00:04:28.883Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_bce0e536",
+      "metadataFingerprint": "fp_3e76ff4e",
       "reconsiderAt": null
     },
     {
@@ -121,11 +121,27 @@
       "reconsiderAt": "2026-07-19T15:06:43.470Z"
     },
     {
+      "canonicalUrl": "https://gitlab.com/ntninja/user-agent-switcher",
+      "githubId": null,
+      "evaluatedAt": "2026-07-22T00:04:29.042Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_b29e407e",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://huggingface.co/spaces/smolagents/computer-agent",
+      "githubId": null,
+      "evaluatedAt": "2026-07-22T00:04:29.357Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_d62902ab",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
       "githubId": null,
-      "evaluatedAt": "2026-07-10T06:40:07.339Z",
-      "reasonCode": "too-young",
-      "metadataFingerprint": "fp_e1c1dd22",
+      "evaluatedAt": "2026-07-22T00:04:29.204Z",
+      "reasonCode": "recently-evaluated",
+      "metadataFingerprint": "fp_5f1e63c0",
       "reconsiderAt": null
     }
   ]
