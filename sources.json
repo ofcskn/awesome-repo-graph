@@ -19,8 +19,8 @@
       ],
       "license": null,
       "score": {
-        "stars": 196,
-        "fetchedAt": "2026-07-10"
+        "stars": 200,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -43,8 +43,8 @@
       ],
       "license": null,
       "score": {
-        "stars": 1021,
-        "fetchedAt": "2026-07-10"
+        "stars": 1035,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -68,8 +68,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 39715,
-        "fetchedAt": "2026-07-10"
+        "stars": 44050,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -93,8 +93,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 25579,
-        "fetchedAt": "2026-07-10"
+        "stars": 27749,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -118,8 +118,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 46517,
-        "fetchedAt": "2026-07-10"
+        "stars": 47558,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -140,10 +140,10 @@
         "ai-agent",
         "rust"
       ],
-      "license": "NOASSERTION",
+      "license": "Apache-2.0",
       "score": {
-        "stars": 14900,
-        "fetchedAt": "2026-07-10"
+        "stars": 20499,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -166,8 +166,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 12287,
-        "fetchedAt": "2026-07-10"
+        "stars": 12820,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -190,8 +190,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 8421,
-        "fetchedAt": "2026-07-10"
+        "stars": 8638,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -215,8 +215,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 87381,
-        "fetchedAt": "2026-07-10"
+        "stars": 92805,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -240,8 +240,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 27212,
-        "fetchedAt": "2026-07-10"
+        "stars": 29886,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -267,8 +267,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 227972,
-        "fetchedAt": "2026-07-10"
+        "stars": 232980,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -291,8 +291,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 16301,
-        "fetchedAt": "2026-07-10"
+        "stars": 17765,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -316,8 +316,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 59402,
-        "fetchedAt": "2026-07-10"
+        "stars": 61410,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -341,8 +341,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 129854,
-        "fetchedAt": "2026-07-10"
+        "stars": 136498,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -365,8 +365,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 251111,
-        "fetchedAt": "2026-07-10"
+        "stars": 260682,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -390,8 +390,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 14471,
-        "fetchedAt": "2026-07-10"
+        "stars": 29174,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -415,8 +415,8 @@
       ],
       "license": "NOASSERTION",
       "score": {
-        "stars": 9392,
-        "fetchedAt": "2026-07-10"
+        "stars": 10672,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -439,8 +439,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 4958,
-        "fetchedAt": "2026-07-10"
+        "stars": 5350,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -464,8 +464,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 12429,
-        "fetchedAt": "2026-07-10"
+        "stars": 13944,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -489,8 +489,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 54042,
-        "fetchedAt": "2026-07-10"
+        "stars": 60672,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -514,8 +514,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 25541,
-        "fetchedAt": "2026-07-10"
+        "stars": 26343,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -538,8 +538,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 1806,
-        "fetchedAt": "2026-07-10"
+        "stars": 2111,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -563,8 +563,8 @@
       ],
       "license": "NOASSERTION",
       "score": {
-        "stars": 74113,
-        "fetchedAt": "2026-07-10"
+        "stars": 75651,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -587,8 +587,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 5346,
-        "fetchedAt": "2026-07-10"
+        "stars": 6534,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -612,8 +612,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 8275,
-        "fetchedAt": "2026-07-10"
+        "stars": 8496,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -637,8 +637,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 27267,
-        "fetchedAt": "2026-07-10"
+        "stars": 30125,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -663,8 +663,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 47336,
-        "fetchedAt": "2026-07-10"
+        "stars": 48259,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -688,8 +688,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 3999,
-        "fetchedAt": "2026-07-10"
+        "stars": 4405,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -711,8 +711,8 @@
       ],
       "license": "NOASSERTION",
       "score": {
-        "stars": 382401,
-        "fetchedAt": "2026-07-10"
+        "stars": 384070,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -758,8 +758,8 @@
       ],
       "license": "NOASSERTION",
       "score": {
-        "stars": 1604,
-        "fetchedAt": "2026-07-10"
+        "stars": 1627,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -785,7 +785,7 @@
       "license": "MIT",
       "score": {
         "stars": 2,
-        "fetchedAt": "2026-07-10"
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -810,8 +810,8 @@
       ],
       "license": null,
       "score": {
-        "stars": 32,
-        "fetchedAt": "2026-07-10"
+        "stars": 34,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -835,8 +835,8 @@
       ],
       "license": null,
       "score": {
-        "stars": 18,
-        "fetchedAt": "2026-07-10"
+        "stars": 19,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -860,8 +860,8 @@
       ],
       "license": null,
       "score": {
-        "stars": 117,
-        "fetchedAt": "2026-07-10"
+        "stars": 138,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -886,8 +886,8 @@
       ],
       "license": null,
       "score": {
-        "stars": 109,
-        "fetchedAt": "2026-07-10"
+        "stars": 108,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -911,8 +911,8 @@
       ],
       "license": null,
       "score": {
-        "stars": 69,
-        "fetchedAt": "2026-07-10"
+        "stars": 75,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -936,8 +936,8 @@
       ],
       "license": null,
       "score": {
-        "stars": 38,
-        "fetchedAt": "2026-07-10"
+        "stars": 45,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -963,7 +963,7 @@
       "license": null,
       "score": {
         "stars": 36,
-        "fetchedAt": "2026-07-10"
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -988,7 +988,7 @@
       "license": null,
       "score": {
         "stars": 13,
-        "fetchedAt": "2026-07-10"
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -1014,7 +1014,7 @@
       "license": "MIT",
       "score": {
         "stars": 14,
-        "fetchedAt": "2026-07-10"
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -1038,8 +1038,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 12,
-        "fetchedAt": "2026-07-10"
+        "stars": 14,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -1063,8 +1063,8 @@
       ],
       "license": "NOASSERTION",
       "score": {
-        "stars": 195893,
-        "fetchedAt": "2026-07-10"
+        "stars": 197868,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -1088,8 +1088,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 212366,
-        "fetchedAt": "2026-07-10"
+        "stars": 220122,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -1115,8 +1115,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 105879,
-        "fetchedAt": "2026-07-10"
+        "stars": 106163,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -1142,8 +1142,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 79773,
-        "fetchedAt": "2026-07-10"
+        "stars": 79888,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-05"
     },
@@ -1169,8 +1169,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 196207,
-        "fetchedAt": "2026-07-10"
+        "stars": 196516,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -1196,8 +1196,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 101,
-        "fetchedAt": "2026-07-10"
+        "stars": 102,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -1700,7 +1700,7 @@
       "license": null,
       "score": {
         "stars": 147,
-        "fetchedAt": "2026-07-10"
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -1723,8 +1723,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 607,
-        "fetchedAt": "2026-07-10"
+        "stars": 608,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2009,7 +2009,7 @@
       "license": "MIT",
       "score": {
         "stars": 3,
-        "fetchedAt": "2026-07-10"
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2318,8 +2318,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 39936,
-        "fetchedAt": "2026-07-10"
+        "stars": 40013,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2343,8 +2343,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 76131,
-        "fetchedAt": "2026-07-10"
+        "stars": 76192,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2368,8 +2368,8 @@
       ],
       "license": "MPL-2.0",
       "score": {
-        "stars": 12132,
-        "fetchedAt": "2026-07-10"
+        "stars": 12180,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2394,8 +2394,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 48555,
-        "fetchedAt": "2026-07-10"
+        "stars": 48837,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2419,8 +2419,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 113866,
-        "fetchedAt": "2026-07-10"
+        "stars": 114591,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2469,8 +2469,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 47086,
-        "fetchedAt": "2026-07-10"
+        "stars": 47325,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2519,8 +2519,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 39927,
-        "fetchedAt": "2026-07-10"
+        "stars": 40016,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2568,8 +2568,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 25201,
-        "fetchedAt": "2026-07-06"
+        "stars": 25252,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2618,8 +2618,8 @@
       ],
       "license": "Zlib",
       "score": {
-        "stars": 33746,
-        "fetchedAt": "2026-07-06"
+        "stars": 34034,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2668,8 +2668,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 10662,
-        "fetchedAt": "2026-07-06"
+        "stars": 10695,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2717,8 +2717,8 @@
       ],
       "license": "BSD-2-Clause",
       "score": {
-        "stars": 2307,
-        "fetchedAt": "2026-07-06"
+        "stars": 2322,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2768,8 +2768,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 33122,
-        "fetchedAt": "2026-07-06"
+        "stars": 33326,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2818,8 +2818,8 @@
       ],
       "license": "BSD-3-Clause",
       "score": {
-        "stars": 49144,
-        "fetchedAt": "2026-07-06"
+        "stars": 49323,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2867,8 +2867,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 20154,
-        "fetchedAt": "2026-07-06"
+        "stars": 20315,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2916,8 +2916,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 16909,
-        "fetchedAt": "2026-07-06"
+        "stars": 16950,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -2966,8 +2966,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 5496,
-        "fetchedAt": "2026-07-06"
+        "stars": 5563,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3016,8 +3016,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 38934,
-        "fetchedAt": "2026-07-06"
+        "stars": 39098,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3066,8 +3066,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 18663,
-        "fetchedAt": "2026-07-06"
+        "stars": 18687,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3116,8 +3116,8 @@
       ],
       "license": "BSD-3-Clause",
       "score": {
-        "stars": 20409,
-        "fetchedAt": "2026-07-06"
+        "stars": 20419,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3167,8 +3167,8 @@
       ],
       "license": "BSD-3-Clause",
       "score": {
-        "stars": 66622,
-        "fetchedAt": "2026-07-06"
+        "stars": 66784,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3217,8 +3217,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 28535,
-        "fetchedAt": "2026-07-06"
+        "stars": 28598,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3267,8 +3267,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 32078,
-        "fetchedAt": "2026-07-06"
+        "stars": 32046,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3317,8 +3317,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 40406,
-        "fetchedAt": "2026-07-06"
+        "stars": 40461,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3367,8 +3367,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 17164,
-        "fetchedAt": "2026-07-06"
+        "stars": 17205,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3417,8 +3417,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 26895,
-        "fetchedAt": "2026-07-06"
+        "stars": 27201,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3466,8 +3466,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 12877,
-        "fetchedAt": "2026-07-06"
+        "stars": 12945,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3516,8 +3516,8 @@
       ],
       "license": "Apache-2.0",
       "score": {
-        "stars": 15723,
-        "fetchedAt": "2026-07-06"
+        "stars": 15772,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3565,8 +3565,8 @@
       ],
       "license": "GPL-3.0",
       "score": {
-        "stars": 17048,
-        "fetchedAt": "2026-07-06"
+        "stars": 17140,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3613,8 +3613,8 @@
       ],
       "license": "GPL-3.0",
       "score": {
-        "stars": 15923,
-        "fetchedAt": "2026-07-06"
+        "stars": 15989,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3662,8 +3662,8 @@
       ],
       "license": "MPL-2.0",
       "score": {
-        "stars": 10924,
-        "fetchedAt": "2026-07-06"
+        "stars": 11006,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3712,8 +3712,8 @@
       ],
       "license": "GPL-3.0",
       "score": {
-        "stars": 7388,
-        "fetchedAt": "2026-07-06"
+        "stars": 7430,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3761,8 +3761,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 18628,
-        "fetchedAt": "2026-07-06"
+        "stars": 18736,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3810,8 +3810,8 @@
       ],
       "license": "MIT",
       "score": {
-        "stars": 6241,
-        "fetchedAt": "2026-07-06"
+        "stars": 6260,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3859,8 +3859,8 @@
       ],
       "license": "Zlib",
       "score": {
-        "stars": 7793,
-        "fetchedAt": "2026-07-06"
+        "stars": 7833,
+        "fetchedAt": "2026-07-25"
       },
       "addedAt": "2026-07-06"
     },
@@ -3914,6 +3914,60 @@
         "fetchedAt": null
       },
       "addedAt": "2026-07-10"
+    },
+    {
+      "id": "gitlab-com-fforster-gitlab-mcp",
+      "url": "https://gitlab.com/fforster/gitlab-mcp",
+      "provider": "gitlab.com",
+      "owner": null,
+      "repo": null,
+      "title": "gitlab-mcp",
+      "description": "This repository provides a Model Context Protocol (MCP) server designed for integration with GitLab.",
+      "path": [
+        "AI Agent Tooling",
+        "MCP Servers"
+      ],
+      "tags": [
+        "ai-agent",
+        "mcp",
+        "mcp-server",
+        "protocol",
+        "gitlab"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-25"
+    },
+    {
+      "id": "huggingface-co-google-datagemma-rag-27b-it",
+      "url": "https://huggingface.co/google/datagemma-rag-27b-it",
+      "provider": "huggingface.co",
+      "owner": null,
+      "repo": null,
+      "title": "google/datagemma-rag-27b-it",
+      "description": "A finetuned Gemma 2 27B large language model from Google, designed for text generation and conversational AI. It is optimized for Retrieval Augmented Generation (RAG) tasks.",
+      "path": [
+        "Machine Learning & Data Science",
+        "Natural Language Processing",
+        "Large Language Models"
+      ],
+      "tags": [
+        "transformers",
+        "llm",
+        "nlp",
+        "pretrained-models",
+        "rag",
+        "artificial-intelligence"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-07-25"
     }
   ]
 }
