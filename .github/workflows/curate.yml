@@ -70,7 +70,8 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # Ed25519 private key (PEM) for the approved-agent gate. The curator
-          # signs each committed change so its PR passes verify-agent.yml. Unset
+          # signs each committed change; retained for provenance even though
+          # nothing in CI verifies it anymore. Unset
           # simply skips signing (the run still completes); the PR then won't
           # satisfy the gate until re-signed. See docs/agent-gateway.md.
           AGENT_SIGNING_KEY: ${{ secrets.CURATOR_SIGNING_KEY }}
