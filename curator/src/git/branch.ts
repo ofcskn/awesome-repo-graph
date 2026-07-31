@@ -178,15 +178,16 @@ export async function createOrUpdatePullRequest(
 }
 
 /**
- * Enables GitHub's native auto-merge on a PR so it merges itself once the
- * branch's required status checks (here, "approved-agent-gate") pass —
- * without this, pull-request mode would sit unmerged until a human clicks
- * merge, same as before PR #12 tried to route around it with direct pushes.
- * No-op if auto-merge is already enabled on the PR.
+ * Merges the PR immediately (no required status checks gate curator PRs
+ * anymore, so there is nothing to wait on). Previously this used
+ * `gh pr merge --auto`, which relied on the "approved-agent-gate" required
+ * check — but that check never ran for PRs opened with the workflow's own
+ * GITHUB_TOKEN (GitHub's loop guard blocks GITHUB_TOKEN-authored events from
+ * triggering other workflows), so PRs sat open indefinitely.
  */
 export async function enableAutoMerge(number: number): Promise<{ enabled: boolean; error: string | null }> {
   try {
-    await gh(["pr", "merge", String(number), "--auto", "--squash"]);
+    await gh(["pr", "merge", String(number), "--squash", "--delete-branch"]);
     return { enabled: true, error: null };
   } catch (error) {
     return { enabled: false, error: error instanceof Error ? error.message : String(error) };
