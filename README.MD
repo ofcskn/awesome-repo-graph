@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-161-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-4313872-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-316-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-5293549-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -77,7 +77,7 @@ npm run capture:demo
 ## Sectors
 
 - **Frontend Engineering** — 12 sources
-- **AI Agent Tooling** — 34 sources
+- **AI Agent Tooling** — 189 sources
 - **DevOps & Infrastructure** — 1 source
 - **Game Development** — 21 sources
 - **Backend Engineering & APIs** — 24 sources
@@ -120,7 +120,7 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>AI Agent Tooling</strong> — 34 sources</summary>
+<summary><strong>AI Agent Tooling</strong> — 189 sources</summary>
 
 ### Security & Pentesting
 - **[strix](https://github.com/usestrix/strix)** — Open-source AI-powered penetration testing agent that autonomously finds and fixes application vulnerabilities.  
@@ -223,6 +223,290 @@ npm run capture:demo
 ### Workflow Automation
 - **[n8n](https://github.com/n8n-io/n8n)** — Fair-code workflow automation platform with native AI capabilities, 400+ integrations, and self-hosting.  
   ★ 196,295 · NOASSERTION · `workflow-automation` `automation` `low-code` `self-hosted`
+
+### Agent Orchestration
+#### Terminal & TUI
+- **[cmux](https://github.com/manaflow-ai/cmux)** — Ghostty-based macOS terminal with vertical tabs and per-agent notifications, built for keeping many concurrent sessions legible.  
+  ★ 25,419 · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `swift`
+- **[claude-squad](https://github.com/smtg-ai/claude-squad)** — Runs each agent as a detached background session with its own worktree, so work continues after you close the pane. Claude Code, Codex, OpenCode, Amp.  
+  ★ 8,219 · AGPL-3.0 · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `go`
+- **[agent-of-empires](https://github.com/agent-of-empires/agent-of-empires)** — Pairs a TUI with a matching web view, so the same sessions stay reachable from a phone. Claude Code, Codex, OpenCode, Gemini, Mistral Vibe.  
+  ★ 2,918 · MIT · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `rust`
+- **[dmux](https://github.com/standardagents/dmux)** — Dev agent multiplexer pairing coding agents with git worktrees over tmux.  
+  ★ 1,720 · MIT · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `html`
+- **[agent-deck](https://github.com/asheshgoplani/agent-deck)** — One TUI covering sessions across Claude Code, Codex, Gemini, and OpenCode, with live status and resume for each.  
+  ★ 639 · MIT · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `go`
+- **[tmux-ide](https://github.com/wavyrai/tmux-ide)** — Turns any project into a tmux IDE from a checked-in `ide.yml`, including preset agent-team layouts.  
+  ★ 534 · MIT · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `typescript`
+- **[agterm](https://github.com/umputun/agterm)** — Native macOS terminal with named workspaces, a live dashboard, attention states, and a scriptable control API.  
+  ★ 388 · MIT · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `swift`
+- **[agentbox](https://github.com/madarco/agentbox)** — Gives each agent its own sandboxed VM — local Docker or cloud via Hetzner, Daytona, Vercel, or E2B — with sub-second checkpoint starts.  
+  ★ 329 · MIT · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `typescript`
+- **[amux](https://github.com/andyrewlee/amux)** — Minimal TUI for spawning parallel coding agents in git worktrees.  
+  ★ 142 · MIT · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `go`
+- **[openkanban](https://github.com/TechDufus/openkanban)** — Kanban board for orchestrating coding agents, rendered entirely in the terminal.  
+  ★ 129 · AGPL-3.0 · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `go`
+- **[thurbox](https://github.com/Thurbeen/thurbox)** — TUI orchestrator with remote SSH sessions, inter-session messaging, and a native code-review view. Works with any CLI agent you define.  
+  ★ 42 · MIT · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `rust`
+- **[agent-console](https://github.com/buhuipao/agent-console)** — Rust TUI that finds Codex and Claude Code sessions from the providers' own transcripts, including ones started elsewhere, and resumes their native UI rather than replacing it. No tmux or worktrees.  
+  ★ 10 · Apache-2.0 · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `rust`
+- **[repomon](https://github.com/AliHamzaAzam/repomon)** — Rust TUI that supervises a fleet across many repositories at once, in durable tmux sessions you can approve from your phone.  
+  ★ 9 · Apache-2.0 · `ai-agent` `agent-orchestrator` `terminal-multiplexer` `rust`
+
+#### Desktop & Web
+- **[orca](https://github.com/stablyai/orca)** — Agentic development environment for running a fleet on your own subscription, available on desktop and mobile.  
+  ★ 34,307 · MIT · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[t3code](https://github.com/pingdotgg/t3code)** — Harness control surface available as web, mobile, and desktop app. Claude Code, Codex, Cursor, Grok Build, OpenCode.  
+  ★ 15,991 · MIT · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[Aperant](https://github.com/AndyMik90/Aperant)** — Runs up to 12 agent terminals with a self-validating QA loop and automatic conflict resolution when merging back to main.  
+  ★ 14,496 · AGPL-3.0 · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[superset](https://github.com/superset-sh/superset)** — Code editor built around running many agents on your machine at once.  
+  ★ 12,712 · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[humanlayer](https://github.com/humanlayer/humanlayer)** — Human-in-the-loop control for coding agents on hard problems; the repo notes its code is now largely deprecated in favor of a rebuild.  
+  ★ 11,187 · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[agent-orchestrator](https://github.com/Untrivial-ai/agent-orchestrator)** — Agent IDE for fleets that plans the work, spawns the agents, then fixes CI failures and merge conflicts without being asked.  
+  ★ 8,715 · Apache-2.0 · `ai-agent` `agent-orchestrator` `agent-dashboard` `go`
+- **[emdash](https://github.com/generalaction/emdash)** — Agentic development environment running parallel agents against any model provider.  
+  ★ 5,306 · Apache-2.0 · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[automaker](https://github.com/AutoMaker-Org/automaker)** — Describe features on a Kanban board and agents implement them in isolated worktrees, running tests and committing as they go.  
+  ★ 3,209 · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[collab-public](https://github.com/collabs-inc/collab-public)** — Arranges terminals, editors, and files as tiles on an infinite pan-and-zoom canvas instead of tabs.  
+  ★ 2,843 · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[CodeNomad](https://github.com/NeuralNomadsAI/CodeNomad)** — Desktop and web workspace around the OpenCode CLI whose SideCars embed local tools like VS Code and terminals as tabs.  
+  ★ 2,420 · MIT · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[supacode](https://github.com/supabitapp/supacode)** — Native macOS command center for worktree-per-agent development.  
+  ★ 2,218 · `ai-agent` `agent-orchestrator` `agent-dashboard` `swift`
+- **[mux](https://github.com/coder/mux)** — Desktop app for isolated, parallel agentic development.  
+  ★ 1,948 · AGPL-3.0 · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[synara](https://github.com/Emanuele-web04/synara)** — GUI desktop workspace for running and managing agents across local projects.  
+  ★ 1,404 · MIT · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[nimbalyst](https://github.com/nimbalyst/nimbalyst)** — Visual workspace pairing parallel worktree sessions with kanban and direct visual editing. Claude Code, Codex, OpenCode.  
+  ★ 1,365 · MIT · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[jean](https://github.com/coollabsio/jean)** — Desktop and web app for orchestrating agents across multiple projects and their git worktrees. Claude, Codex, OpenCode.  
+  ★ 1,163 · Apache-2.0 · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[imcodes](https://github.com/im4codes/imcodes)** — Mobile and web control layer built for away-from-desk continuation, with terminal access, git views, localhost preview, and scheduled tasks. Claude Code, Codex, Gemini CLI.  
+  ★ 1,097 · MIT · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[takopi](https://github.com/banteg/takopi)** — Telegram bridge that puts Codex, Claude Code, OpenCode, and Pi sessions in a chat thread.  
+  ★ 1,035 · MIT · `ai-agent` `agent-orchestrator` `agent-dashboard` `python`
+- **[parallel-code](https://github.com/johannesjo/parallel-code)** — Desktop app running Claude Code, Codex, and Gemini CLI side by side in isolated worktrees, with a built-in diff viewer and one-click merge.  
+  ★ 907 · MIT · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[ai-maestro](https://github.com/23blocks-OS/ai-maestro)** — Dashboard spanning multiple machines, adding memory search, code-graph queries, and agent-to-agent messaging. Claude, Aider, Cursor.  
+  ★ 735 · MIT · `ai-agent` `agent-orchestrator` `agent-dashboard` `typescript`
+- **[kandev](https://github.com/kdlbs/kandev)** — Kanban workbench whose multi-step workflows assign a different agent per step behind human gates, running locally, in Docker, over SSH, or in cloud executors.  
+  ★ 518 · AGPL-3.0 · `ai-agent` `agent-orchestrator` `agent-dashboard` `go`
+- _+18 more in this category — see the [live graph](https://ofcskn.github.io/awesome-repo-graph/) or `sources.json`._
+
+#### Multi-Agent Swarms
+- **[paperclip](https://github.com/paperclipai/paperclip)** — Self-hosted platform where agents wake on heartbeats to claim tickets, governed by org charts, budgets, and approval gates.  
+  ★ 75,241 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
+- **[ruflo](https://github.com/ruvnet/ruflo)** — Meta-harness for deploying coordinated swarms and conversational multi-agent workflows. Formerly claude-flow.  
+  ★ 66,647 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
+- **[buzz](https://github.com/block/buzz)** — Agents are first-class members of shared channels on a Nostr relay you own, with their own keys and audit trails. Claude Code, Codex, Goose.  
+  ★ 18,939 · Apache-2.0 · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `rust`
+- **[gastown](https://github.com/gastownhall/gastown)** — Scales to 20-30 agents with a coordinator, git-backed issue tracking, health watchdogs, and a Bors-style merge queue.  
+  ★ 17,373 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `go`
+- **[ClawTeam](https://github.com/HKUDS/ClawTeam)** — Agents spawn and manage their own teammates from one command, coordinating through file-based or P2P inboxes across tmux worktrees.  
+  ★ 5,453 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `python`
+- **[claude_codex_bridge](https://github.com/SeemSeam/claude_codex_bridge)** — Workspace for mixing different vendors' CLI agents in one visible collaboration session.  
+  ★ 3,341 · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `python`
+- **[AgentsMesh](https://github.com/AgentsMesh/AgentsMesh)** — Remote AI workstations with PTY sandboxes and worktree isolation, coordinating across channels and pod bindings. Claude Code, Codex, Gemini CLI, Aider, OpenCode.  
+  ★ 2,303 · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `go`
+- **[agent-teams-ai](https://github.com/777genius/agent-teams-ai)** — Desktop app where teams take a high-level command and handle it themselves via inter-agent messaging, Kanban, and built-in code review.  
+  ★ 1,815 · AGPL-3.0 · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
+- **[scion](https://github.com/GoogleCloudPlatform/scion)** — Orchestration testbed running agents in parallel isolated containers with dynamic coordination and normalized telemetry.  
+  ★ 1,659 · Apache-2.0 · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `go`
+- **[multi-agent-shogun](https://github.com/yohey-w/multi-agent-shogun)** — Shogun to karo to ashigaru hierarchy running up to 10 agents over tmux with no coordination API cost.  
+  ★ 1,406 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `shell`
+- **[Fusion](https://github.com/Runfusion/Fusion)** — Multi-node orchestrator with a kanban board, plan-review-execute gates, per-task worktrees, and hierarchical missions.  
+  ★ 1,039 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
+- **[loki-mode](https://github.com/asklokesh/loki-mode)** — PRD-to-deployed-product SDLC with 41 agents in 8 swarms, nine quality gates, and blind three-reviewer code review. Source-available under BUSL-1.1.  
+  ★ 1,028 · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `shell`
+- **[Orkas](https://github.com/Orkas-AI/Orkas)** — A commander agent decomposes goals and dispatches specialists with isolated skills and memory. Claude Code, Codex, OpenCode, Cline.  
+  ★ 861 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
+- **[agent-kanban](https://github.com/saltbo/agent-kanban)** — Leader-worker task board with cryptographic agent identity. Claude Code, Codex, Gemini CLI.  
+  ★ 425 · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
+- **[hcom](https://github.com/aannoo/hcom)** — Lets agents message, watch, and spawn each other across terminals. Claude Code, Codex, Antigravity, Cursor, OpenCode, Kilo, and more.  
+  ★ 408 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `rust`
+- **[kodo](https://github.com/ikamensh/kodo)** — Directs agents through work cycles where a separate agent independently verifies each result. Claude Code, Codex, Gemini CLI.  
+  ★ 126 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `python`
+- **[ORCH](https://github.com/oxgeneral/ORCH)** — CLI runtime managing agents as typed teams with an explicit state machine and goals. Claude Code, Codex, Cursor.  
+  ★ 125 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
+- **[tutti](https://github.com/nutthouse/tutti)** — Config-driven workflows passing typed artifacts between agents, each in its own worktree.  
+  ★ 108 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `rust`
+- **[companyhelm](https://github.com/CompanyHelm/companyhelm)** — Distributed orchestrator with task management and direct agent-to-agent conversations.  
+  ★ 73 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
+- **[shire](https://github.com/victor36max/shire)** — Persistent team workspaces with inter-agent mailboxes and a shared drive. Claude Code, OpenCode, Pi.  
+  ★ 37 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
+- _+3 more in this category — see the [live graph](https://ofcskn.github.io/awesome-repo-graph/) or `sources.json`._
+
+#### Autonomous Loop Runners
+- **[ralph-claude-code](https://github.com/frankbria/ralph-claude-code)** — Development loop for Claude Code with exit detection that recognizes when the work is actually finished.  
+  ★ 9,569 · MIT · `ai-agent` `agent-orchestrator` `autonomous-loop` `shell`
+- **[ralph-orchestrator](https://github.com/mikeyobrien/ralph-orchestrator)** — Hat-based orchestration that keeps agents looping until done, as a fuller implementation of the Ralph Wiggum technique.  
+  ★ 3,080 · MIT · `ai-agent` `agent-orchestrator` `autonomous-loop` `rust`
+- **[ralph-tui](https://github.com/subsy/ralph-tui)** — Drives an agent through a task list autonomously, with a TUI for watching the loop.  
+  ★ 2,411 · MIT · `ai-agent` `agent-orchestrator` `autonomous-loop` `typescript`
+- **[ralphex](https://github.com/umputun/ralphex)** — Executes an implementation plan autonomously with a fresh session per task, plus validation, retries, multi-phase review, and automatic commits. Claude Code, Codex.  
+  ★ 1,405 · MIT · `ai-agent` `agent-orchestrator` `autonomous-loop` `go`
+- **[bernstein](https://github.com/sipyourdrink-ltd/bernstein)** — Keeps no model in the coordination loop, so orchestration costs zero tokens. Verifies with tests and auto-commits across 40+ CLI agents.  
+  ★ 755 · Apache-2.0 · `ai-agent` `agent-orchestrator` `autonomous-loop` `python`
+- **[fractal](https://github.com/plasma-ai/fractal)** — Loops that recursively delegate separable subtasks to child agents, bounded by configurable depth, cost, and time limits.  
+  ★ 649 · Apache-2.0 · `ai-agent` `agent-orchestrator` `autonomous-loop` `python`
+- **[LoopTroop](https://github.com/looptroop-ai/LoopTroop)** — An LLM council plans the work, then Ralph-style loops retry failed units with fresh context. Executes via OpenCode worktrees.  
+  ★ 105 · MIT · `ai-agent` `agent-orchestrator` `autonomous-loop` `typescript`
+- **[martin-loop](https://github.com/Keesan12/martin-loop)** — Caps spend, enforces policy, verifies output, and rolls back failures, leaving inspectable run receipts.  
+  ★ 41 · Apache-2.0 · `ai-agent` `agent-orchestrator` `autonomous-loop` `typescript`
+- **[dex](https://github.com/francescoalemanno/dex)** — Human-gated planning, multi-reviewer code review, and dead-end-aware research loops, shipped as cross-platform binaries for 7 CLI backends.  
+  ★ 20 · MIT · `ai-agent` `agent-orchestrator` `autonomous-loop` `rust`
+- **[toryo](https://github.com/JesseRWeigel/toryo)** — Trust-based delegation with quality ratcheting that commits improvements and reverts regressions. Chains Claude Code, Aider, Gemini CLI, Ollama.  
+  ★ 12 · MIT · `ai-agent` `agent-orchestrator` `autonomous-loop` `typescript`
+
+#### Autonomous Task Runners
+- **[OpenHands](https://github.com/OpenHands/OpenHands)** — Self-hostable control center running its own agent or driving Claude Code, Codex, and any Agent Client Protocol agent, on schedules or webhooks.  
+  ★ 82,667 · MIT · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `typescript`
+- **[multica](https://github.com/multica-ai/multica)** — Managed agents platform where you assign tasks, track progress, and let agents compound skills between runs.  
+  ★ 42,869 · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `go`
+- **[symphony](https://github.com/openai/symphony)** — Turns project work into isolated autonomous runs, so teams manage the work rather than supervise the agent.  
+  ★ 26,348 · Apache-2.0 · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `elixir`
+- **[open-swe](https://github.com/langchain-ai/open-swe)** — Invoked from Slack, Linear, or GitHub comments; each task runs in its own cloud sandbox and ends in a draft PR linked to the ticket.  
+  ★ 10,416 · MIT · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `python`
+- **[claude-code-action](https://github.com/anthropics/claude-code-action)** — Anthropic's official GitHub Action, detecting from context whether to answer, review, or implement. Auth via Anthropic API, Bedrock, Vertex, or Foundry.  
+  ★ 8,509 · MIT · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `typescript`
+- **[gh-aw](https://github.com/github/gh-aw)** — Compiles agentic workflows written in Markdown into GitHub Actions YAML. Read-only by default, with writes only through sanitized safe-outputs. Copilot, Claude, Codex, Gemini.  
+  ★ 4,839 · MIT · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `go`
+- **[background-agents](https://github.com/ColeMurray/background-agents)** — Sessions trigger from a web UI, Slack, GitHub, Linear, webhooks, or cron, run in Modal, Daytona, Vercel, E2B, or OpenComputer sandboxes, and open attributed PRs.  
+  ★ 2,593 · MIT · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `typescript`
+- **[run-gemini-cli](https://github.com/google-github-actions/run-gemini-cli)** — Google's official GitHub Action, running on event or schedule triggers or on demand via `@gemini-cli /review` and `/triage`.  
+  ★ 2,051 · Apache-2.0 · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `typescript`
+- **[codex-action](https://github.com/openai/codex-action)** — OpenAI's official GitHub Action, running Codex CLI headlessly under drop-sudo, unprivileged-user, or fully read-only sandboxes.  
+  ★ 1,151 · Apache-2.0 · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `typescript`
+- **[centaur](https://github.com/paradigmxyz/centaur)** — Multiplayer self-hosted agents with Slack-native conversations, Kubernetes sandboxes, shared tools, and durable workflows.  
+  ★ 952 · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `python`
+- **[cyrus](https://github.com/cyrusagents/cyrus)** — Watches Linear, GitHub, GitLab, and Slack issues assigned to it, spinning up an isolated worktree per issue. Claude Code, Codex, Cursor, Gemini.  
+  ★ 740 · Apache-2.0 · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `typescript`
+- **[aeon](https://github.com/aeonfun/aeon)** — Runs unattended on GitHub Actions with 90+ skills, quality scoring, self-healing, and reactive triggers.  
+  ★ 582 · MIT · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `typescript`
+- **[remote-swe-agents](https://github.com/aws-samples/remote-swe-agents)** — Serverless control plane on Lambda with a dedicated EC2 worker per session, triggered by issue comments, assignments, and PR reviews.  
+  ★ 240 · MIT-0 · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `typescript`
+- **[lalph](https://github.com/tim-smart/lalph)** — Orchestrator driven by whichever source of issues you point it at.  
+  ★ 130 · MIT · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `typescript`
+- **[sortie](https://github.com/sortie-ai/sortie)** — Turns tracker tickets into agent sessions. Agent-agnostic and tracker-agnostic, as a single Go binary with SQLite persistence.  
+  ★ 115 · Apache-2.0 · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `go`
+- **[factory](https://github.com/owainlewis/factory)** — Keeps coding agents working on a repository without making a human orchestrate every step from a terminal, pulling tasks from trusted ticket queues into isolated Codex workspaces.  
+  ★ 109 · MIT · `ai-agent` `agent-orchestrator` `autonomous-task-runner` `go`
+
+#### Infrastructure & Primitives
+- **[warp](https://github.com/warpdotdev/warp)** — AI-native terminal built around agentic coding workflows.  
+  ★ 63,816 · AGPL-3.0 · `ai-agent` `agent-orchestrator` `agent-infrastructure` `rust`
+- **[NemoClaw](https://github.com/NVIDIA/NemoClaw)** — Runs Hermes, LangChain Deep Agents, and OpenClaw inside NVIDIA OpenShell with managed inference.  
+  ★ 21,998 · Apache-2.0 · `ai-agent` `agent-orchestrator` `agent-infrastructure` `typescript`
+- **[openfang](https://github.com/RightNow-AI/openfang)** — Open-source agent operating system.  
+  ★ 18,072 · Apache-2.0 · `ai-agent` `agent-orchestrator` `agent-infrastructure` `rust`
+- **[omnigent](https://github.com/omnigent-ai/omnigent)** — Meta-harness running Claude Code, Codex, Cursor, OpenCode, Hermes, Pi, or custom YAML agents against swappable sandbox backends, with policy enforcement.  
+  ★ 7,960 · Apache-2.0 · `ai-agent` `agent-orchestrator` `agent-infrastructure` `python`
+- **[sandbox-agent](https://github.com/rivet-dev/sandbox-agent)** — Daemon, HTTP/SSE API, and TypeScript SDK for driving six coding agents inside E2B, Daytona, Modal, Cloudflare Containers, or Docker.  
+  ★ 1,511 · Apache-2.0 · `ai-agent` `agent-orchestrator` `agent-infrastructure` `typescript`
+- **[Agentlas-OS](https://github.com/agentlas-ai/Agentlas-OS)** — Keeps specialist agents in a hub and spins up a temporary orchestrator per task, with A2A routing and governed memory gates. Formerly Hephaestus.  
+  ★ 1,128 · Apache-2.0 · `ai-agent` `agent-orchestrator` `agent-infrastructure` `python`
+- **[claudexor](https://github.com/razzant/claudexor)** — Routes one coding thread across harnesses with quota-aware rotation between subscription profiles, Best-of-N runs, and cross-family review.  
+  ★ 349 · MIT · `ai-agent` `agent-orchestrator` `agent-infrastructure` `typescript`
+- **[guild](https://github.com/mathomhaus/guild)** — Shared context, memory, and task coordination as a single Go binary over local SQLite with hybrid keyword and semantic search.  
+  ★ 310 · Apache-2.0 · `ai-agent` `agent-orchestrator` `agent-infrastructure` `go`
+- **[agenttier](https://github.com/agenttier/agenttier)** — Kubernetes runtime giving each agent its own Pod and PVC sandbox behind a default-deny NetworkPolicy, with a streaming SSE invoke API.  
+  ★ 78 · Apache-2.0 · `ai-agent` `agent-orchestrator` `agent-infrastructure` `go`
+- **[handoff](https://github.com/dazuiba/handoff)** — Delegates a task to DeepSeek, Codex, or Claude from inside your current Claude Code or Codex session, returning the result automatically.  
+  ★ 77 · `ai-agent` `agent-orchestrator` `agent-infrastructure` `python`
+- **[sub-agents-skills](https://github.com/shinpr/sub-agents-skills)** — Portable Markdown definitions that route a task to a chosen backend, model, effort level, and permission set.  
+  ★ 72 · MIT · `ai-agent` `agent-orchestrator` `agent-infrastructure` `python`
+- **[neuralyzer](https://github.com/gintasz/neuralyzer)** — Lets an agent wipe its own session context and re-run the first message, making Ralph loops easier to engineer.  
+  ★ 38 · MIT · `ai-agent` `agent-orchestrator` `agent-infrastructure` `typescript`
+- **[agent-runbook](https://github.com/KnoxOps/agent-runbook)** — Compiles YAML runbooks with loops, branching, and parallelism into SKILL.md files for Claude Code and Codex.  
+  ★ 17 · Apache-2.0 · `ai-agent` `agent-orchestrator` `agent-infrastructure` `python`
+- **[lionclaw](https://github.com/moshthepitt/lionclaw)** — Local control plane running coding agents as durable, auditable workers with explicit state, skills, and checkpoints.  
+  ★ 13 · MIT · `ai-agent` `agent-orchestrator` `agent-infrastructure` `rust`
+- **[codecast](https://github.com/codecast-sh/codecast)** — Watches your real local sessions and surfaces them in a live triage inbox, keeping a searchable record with line-level agent attribution. Claude Code, Codex, Cursor, Gemini.  
+  ★ 12 · MIT · `ai-agent` `agent-orchestrator` `agent-infrastructure` `typescript`
+- **[skillfold](https://github.com/byronxlg/skillfold)** — Declares skills in YAML and pins exact revisions in a lockfile so installs are reproducible across Claude Code and Codex.  
+  ★ 11 · MIT · `ai-agent` `agent-orchestrator` `agent-infrastructure` `typescript`
+
+#### Personal Assistants
+- **[nanobot](https://github.com/HKUDS/nanobot)** — Ultra-lightweight self-hosted assistant in Python with WebUI, tools, memory, MCP, and multi-agent workflows.  
+  ★ 46,467 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `python`
+- **[zeroclaw](https://github.com/zeroclaw-labs/zeroclaw)** — Fast, small, fully autonomous assistant infrastructure in Rust, deployable anywhere.  
+  ★ 32,458 · Apache-2.0 · `ai-agent` `agent-orchestrator` `personal-assistant` `rust`
+- **[QwenPaw](https://github.com/agentscope-ai/QwenPaw)** — Personal assistant that deploys to your own machine or the cloud and plugs into multiple chat apps. Formerly CoPaw.  
+  ★ 31,325 · Apache-2.0 · `ai-agent` `agent-orchestrator` `personal-assistant` `python`
+- **[nanoclaw](https://github.com/nanocoai/nanoclaw)** — Lightweight OpenClaw alternative running in containers, connecting to WhatsApp, Telegram, Slack, Discord, and Gmail.  
+  ★ 30,401 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `typescript`
+- **[picoclaw](https://github.com/sipeed/picoclaw)** — Tiny and fast assistant deployable anywhere.  
+  ★ 29,787 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `go`
+- **[leon](https://github.com/leon-ai/leon)** — Long-running open-source personal assistant with voice and text interfaces.  
+  ★ 17,394 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `typescript`
+- **[rowboat](https://github.com/rowboatlabs/rowboat)** — Open-source AI coworker with memory.  
+  ★ 16,901 · Apache-2.0 · `ai-agent` `agent-orchestrator` `personal-assistant` `typescript`
+- **[ironclaw](https://github.com/nearai/ironclaw)** — Agent OS in Rust focused on privacy, security, and extensibility.  
+  ★ 12,581 · Apache-2.0 · `ai-agent` `agent-orchestrator` `personal-assistant` `rust`
+- **[coworker](https://github.com/accomplish-ai/coworker)** — Open source AI coworker that lives on your desktop. Formerly accomplish.  
+  ★ 10,931 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `typescript`
+- **[nullclaw](https://github.com/nullclaw/nullclaw)** — Fully autonomous assistant infrastructure written in Zig.  
+  ★ 7,975 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `zig`
+- **[LobsterAI](https://github.com/netease-youdao/LobsterAI)** — Desktop-grade agent for data analysis, slides, docs, and web research.  
+  ★ 5,735 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `typescript`
+- **[MetaClaw](https://github.com/aiming-lab/MetaClaw)** — Assistant that learns and evolves from conversation alone.  
+  ★ 3,501 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `python`
+- **[zclaw](https://github.com/tnm/zclaw)** — Complete personal assistant in 888 KiB, running on an ESP32 with GPIO, cron, and custom tools.  
+  ★ 2,199 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `c`
+- **[DenchClaw](https://github.com/DenchHQ/DenchClaw)** — Managed OpenClaw framework aimed at CRM, sales automation, and outreach.  
+  ★ 1,626 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `typescript`
+- **[rho](https://github.com/mikeyobrien/rho)** — Stays running, remembers across sessions, and checks in on its own. macOS, Linux, Android.  
+  ★ 369 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `typescript`
+- **[lemon](https://github.com/z80dev/lemon)** — Local-first assistant and coding agent runtime.  
+  ★ 129 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `elixir`
+- **[iva](https://github.com/smixs/iva)** — Telegram assistant that turns your messages, voice notes and photos into an Obsidian-compatible markdown vault it remembers across sessions. Crons, skills, MCP and Google Workspace from an in-chat menu. Self-hosted in one command, MIT.  
+  ★ 120 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `javascript`
+- **[automata](https://github.com/sentientwave/automata)** — Matrix-native workspace where Temporal-backed durable workflows survive restarts and keep long tasks moving.  
+  ★ 109 · `ai-agent` `agent-orchestrator` `personal-assistant` `elixir`
+- **[ghostclaw](https://github.com/b1rdmania/ghostclaw)** — An AI that lives on your computer and does things for you.  
+  ★ 90 · MIT · `ai-agent` `agent-orchestrator` `personal-assistant` `typescript`
+- **[assistant](https://github.com/kcosr/assistant)** — Panel-based assistant whose plugins share one workspace of notes, lists, and objects.  
+  ★ 88 · `ai-agent` `agent-orchestrator` `personal-assistant` `typescript`
+- _+2 more in this category — see the [live graph](https://ofcskn.github.io/awesome-repo-graph/) or `sources.json`._
+
+#### Inactive Watchlist
+- **[vibe-kanban](https://github.com/BloopAI/vibe-kanban)** — Kanban board for managing AI coding agents. _(last commit 2026-04)_  
+  ★ 27,598 · Apache-2.0 · `ai-agent` `agent-orchestrator` `inactive` `rust`
+- **[1code](https://github.com/21st-dev/1code)** — Orchestration layer for Claude Code and Codex. _(last commit 2026-03; archived)_  
+  ★ 5,630 · Apache-2.0 · `ai-agent` `agent-orchestrator` `inactive` `typescript` `archived`
+- **[CodexMonitor](https://github.com/Dimillian/CodexMonitor)** — Orchestrate multiple Codex agents across local workspaces. _(last commit 2026-03)_  
+  ★ 4,197 · MIT · `ai-agent` `agent-orchestrator` `inactive` `typescript`
+- **[ralphy](https://github.com/michaelshimeles/ralphy)** — Bash script that loops Claude Code, Codex, OpenCode, Cursor, Qwen, or Droid until the task is done. _(last commit 2026-02)_  
+  ★ 2,956 · `ai-agent` `agent-orchestrator` `inactive` `typescript`
+- **[antfarm](https://github.com/snarktank/antfarm)** — Build your agent team in OpenClaw with one command. _(last commit 2026-02)_  
+  ★ 2,494 · MIT · `ai-agent` `agent-orchestrator` `inactive` `typescript`
+- **[cashclaw](https://github.com/moltlaunch/cashclaw)** — An autonomous agent that takes work, does work, gets paid, and gets better at it. _(last commit 2026-03)_  
+  ★ 1,093 · MIT · `ai-agent` `agent-orchestrator` `inactive` `typescript`
+- **[clawe](https://github.com/getclawe/clawe)** — Multi-agent coordination system: think Trello for OpenClaw agents. _(last commit 2026-02)_  
+  ★ 747 · AGPL-3.0 · `ai-agent` `agent-orchestrator` `inactive` `typescript`
+- **[opengoat](https://github.com/marian2js/opengoat)** — Build organizations of OpenClaw agents coordinating across Codex, Claude Code, Cursor, and OpenCode. _(last commit 2026-04)_  
+  ★ 376 · MIT · `ai-agent` `agent-orchestrator` `inactive` `typescript`
+- **[ariana](https://github.com/ariana-dot-dev/ariana)** — The IDE of the future. _(last commit 2026-03)_  
+  ★ 342 · `ai-agent` `agent-orchestrator` `inactive` `typescript`
+- **[subtask](https://github.com/zippoxer/subtask)** — Claude Skill that runs your tasks through subagents in git worktrees. _(last commit 2026-04)_  
+  ★ 339 · MIT · `ai-agent` `agent-orchestrator` `inactive` `go`
+- **[lettabot](https://github.com/letta-ai/lettabot)** — Personal assistant that remembers everything. _(last commit 2026-05; archived, replaced by Letta Code)_  
+  ★ 327 · Apache-2.0 · `ai-agent` `agent-orchestrator` `inactive` `typescript` `archived`
+- **[mercury](https://github.com/Michaelliv/mercury)** — Personal AI assistant that lives where you chat. _(last commit 2026-03; archived)_  
+  ★ 145 · `ai-agent` `agent-orchestrator` `inactive` `typescript` `archived`
+- **[babyagi3](https://github.com/yoheinakajima/babyagi3)** — A minimal AI agent you configure once, then run through natural language. _(last commit 2026-03)_  
+  ★ 130 · MIT · `ai-agent` `agent-orchestrator` `inactive` `python`
+- **[wreckit](https://github.com/mikehostetler/wreckit)** — Run the Ralph Wiggum loop over your roadmap. _(last commit 2026-04)_  
+  ★ 130 · MIT · `ai-agent` `agent-orchestrator` `inactive` `elixir`
+- **[gnap](https://github.com/farol-team/gnap)** — Git-native agent protocol coordinating agents through a shared repo as a task board, with no orchestrator process. _(last commit 2026-03)_  
+  ★ 72 · MIT · `ai-agent` `agent-orchestrator` `inactive`
+- **[swarm-protocol](https://github.com/phuryn/swarm-protocol)** — Headless coordination over MCP: claim work, detect file conflicts, heartbeat, and hand off across sessions. _(last commit 2026-03)_  
+  ★ 49 · MIT · `ai-agent` `agent-orchestrator` `inactive` `typescript`
+- **[wit](https://github.com/amaar-mc/wit)** — Locks individual functions rather than files via Tree-sitter, warning agents of conflicts before they write. _(last commit 2026-03)_  
+  ★ 45 · MIT · `ai-agent` `agent-orchestrator` `inactive` `typescript`
 
 </details>
 
