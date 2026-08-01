@@ -43,9 +43,9 @@
     {
       "canonicalUrl": "https://github.com/n8n-io/n8n",
       "githubId": 193215554,
-      "evaluatedAt": "2026-07-13T18:50:34.213Z",
+      "evaluatedAt": "2026-08-01T06:40:13.656Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_8229ba69",
+      "metadataFingerprint": "fp_d32161",
       "reconsiderAt": null
     },
     {
@@ -59,9 +59,9 @@
     {
       "canonicalUrl": "https://github.com/NousResearch/hermes-agent",
       "githubId": 1024554267,
-      "evaluatedAt": "2026-07-13T18:50:33.031Z",
+      "evaluatedAt": "2026-08-01T06:40:12.766Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_8d8d2b4",
+      "metadataFingerprint": "fp_6d4af75",
       "reconsiderAt": null
     },
     {
@@ -121,17 +121,49 @@
       "reconsiderAt": "2026-07-19T15:06:43.470Z"
     },
     {
+      "canonicalUrl": "https://gitlab.com/fforster/gitlab-mcp",
+      "githubId": null,
+      "evaluatedAt": "2026-08-01T06:40:13.823Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_6579fc58",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://gitlab.com/ntninja/user-agent-switcher",
       "githubId": null,
-      "evaluatedAt": "2026-07-13T18:50:33.228Z",
+      "evaluatedAt": "2026-08-01T06:40:12.963Z",
       "reasonCode": "duplicate-of-existing",
       "metadataFingerprint": "fp_b29e407e",
       "reconsiderAt": null
     },
     {
+      "canonicalUrl": "https://gitlab.com/xxllnc/zaakgericht/zaken/start",
+      "githubId": null,
+      "evaluatedAt": "2026-08-01T06:40:24.109Z",
+      "reasonCode": "below-min-stars",
+      "metadataFingerprint": "fp_35032829",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://huggingface.co/google/datagemma-rag-27b-it",
+      "githubId": null,
+      "evaluatedAt": "2026-08-01T06:40:13.966Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_3f500f3a",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://huggingface.co/osmosis-ai/osmosis-mcp-4b",
+      "githubId": null,
+      "evaluatedAt": "2026-08-01T06:40:24.327Z",
+      "reasonCode": "below-min-stars",
+      "metadataFingerprint": "fp_b299c99a",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://huggingface.co/spaces/smolagents/computer-agent",
       "githubId": null,
-      "evaluatedAt": "2026-07-13T18:50:33.686Z",
+      "evaluatedAt": "2026-08-01T06:40:13.244Z",
       "reasonCode": "duplicate-of-existing",
       "metadataFingerprint": "fp_d62902ab",
       "reconsiderAt": null
@@ -139,9 +171,9 @@
     {
       "canonicalUrl": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
       "githubId": null,
-      "evaluatedAt": "2026-07-13T18:50:33.493Z",
+      "evaluatedAt": "2026-08-01T06:40:13.087Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_5b8e59c4",
+      "metadataFingerprint": "fp_316ae942",
       "reconsiderAt": null
     }
   ]
