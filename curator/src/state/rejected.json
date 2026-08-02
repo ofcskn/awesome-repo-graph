@@ -1,6 +1,14 @@
 {
   "rejections": [
     {
+      "canonicalUrl": "https://github.com/AVADSA25/codec",
+      "githubId": 1190801983,
+      "evaluatedAt": "2026-08-02T00:09:06.483Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_f1b4c1ee",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://github.com/CherryHQ/cherry-studio",
       "githubId": 805155266,
       "evaluatedAt": "2026-07-05T15:06:44.135Z",
@@ -11,9 +19,9 @@
     {
       "canonicalUrl": "https://github.com/f/prompts.chat",
       "githubId": 574523116,
-      "evaluatedAt": "2026-07-06T06:55:53.993Z",
-      "reasonCode": "license-denied",
-      "metadataFingerprint": "fp_5d728218",
+      "evaluatedAt": "2026-08-02T00:09:06.335Z",
+      "reasonCode": "recently-evaluated",
+      "metadataFingerprint": "fp_cad882af",
       "reconsiderAt": null
     },
     {
@@ -35,17 +43,17 @@
     {
       "canonicalUrl": "https://github.com/hoppscotch/hoppscotch",
       "githubId": 203587744,
-      "evaluatedAt": "2026-07-06T06:55:45.466Z",
+      "evaluatedAt": "2026-08-02T00:09:06.118Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_fbc6e3",
+      "metadataFingerprint": "fp_961c348",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/n8n-io/n8n",
       "githubId": 193215554,
-      "evaluatedAt": "2026-08-01T06:40:13.656Z",
+      "evaluatedAt": "2026-08-02T00:08:41.204Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_d32161",
+      "metadataFingerprint": "fp_37aecdea",
       "reconsiderAt": null
     },
     {
@@ -59,9 +67,9 @@
     {
       "canonicalUrl": "https://github.com/NousResearch/hermes-agent",
       "githubId": 1024554267,
-      "evaluatedAt": "2026-08-01T06:40:12.766Z",
+      "evaluatedAt": "2026-08-02T00:08:40.652Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_6d4af75",
+      "metadataFingerprint": "fp_febcc87f",
       "reconsiderAt": null
     },
     {
@@ -97,6 +105,14 @@
       "reconsiderAt": "2026-07-19T15:06:45.946Z"
     },
     {
+      "canonicalUrl": "https://github.com/tensorflow/tensorflow",
+      "githubId": 45717250,
+      "evaluatedAt": "2026-08-02T00:09:06.231Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_9d765390",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://github.com/thedaviddias/Front-End-Checklist",
       "githubId": 107111421,
       "evaluatedAt": "2026-07-06T06:55:45.011Z",
@@ -127,6 +143,14 @@
       "reasonCode": "duplicate-of-existing",
       "metadataFingerprint": "fp_6579fc58",
       "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://gitlab.com/gitlab-org/opstrace/opstrace",
+      "githubId": null,
+      "evaluatedAt": "2026-08-02T00:08:53.532Z",
+      "reasonCode": "low-quality-score",
+      "metadataFingerprint": "fp_12a4aaaf",
+      "reconsiderAt": "2026-08-16T00:08:53.532Z"
     },
     {
       "canonicalUrl": "https://gitlab.com/ntninja/user-agent-switcher",
@@ -161,6 +185,22 @@
       "reconsiderAt": null
     },
     {
+      "canonicalUrl": "https://huggingface.co/spaces/Agents-MCP-Hackathon/Graphify",
+      "githubId": null,
+      "evaluatedAt": "2026-08-02T00:08:41.889Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_2f5cc44a",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://huggingface.co/spaces/bishmoy/Arxiv-CS-RAG",
+      "githubId": null,
+      "evaluatedAt": "2026-08-02T00:08:41.506Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_610b5b34",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://huggingface.co/spaces/smolagents/computer-agent",
       "githubId": null,
       "evaluatedAt": "2026-08-01T06:40:13.244Z",
@@ -169,11 +209,19 @@
       "reconsiderAt": null
     },
     {
+      "canonicalUrl": "https://huggingface.co/text-generation-inference/Mixtral-8x7B-Instruct-v0.1-medusa",
+      "githubId": null,
+      "evaluatedAt": "2026-08-02T00:08:53.774Z",
+      "reasonCode": "below-min-stars",
+      "metadataFingerprint": "fp_e9cf627b",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
       "githubId": null,
-      "evaluatedAt": "2026-08-01T06:40:13.087Z",
+      "evaluatedAt": "2026-08-02T00:08:40.842Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_316ae942",
+      "metadataFingerprint": "fp_2d2bb61d",
       "reconsiderAt": null
     }
   ]
