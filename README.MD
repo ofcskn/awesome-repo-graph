@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-320-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-5469149-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-322-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-5680902-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -84,6 +84,8 @@ npm run capture:demo
 - **Machine Learning & Data Science** — 24 sources
 - **Blockchain & Decentralized AI** — 46 sources
 - **Developer Productivity & CLI Tools** — 1 source
+- **Cybersecurity & Privacy** — 1 source
+- **Mobile App Development** — 1 source
 
 ## Catalog
 
@@ -124,27 +126,27 @@ npm run capture:demo
 
 ### Security & Pentesting
 - **[strix](https://github.com/usestrix/strix)** — Open-source AI-powered penetration testing agent that autonomously finds and fixes application vulnerabilities.  
-  ★ 46,446 · Apache-2.0 · `ai-agent` `penetration-testing` `security` `python`
+  ★ 46,500 · Apache-2.0 · `ai-agent` `penetration-testing` `security` `python`
 
 ### Browser & GUI Agents
 - **[chrome-devtools-mcp](https://github.com/ChromeDevTools/chrome-devtools-mcp)** — Official Chrome DevTools MCP server letting coding agents control and debug the browser directly.  
-  ★ 48,338 · Apache-2.0 · `mcp-server` `chrome-devtools` `debugging` `typescript`
+  ★ 48,358 · Apache-2.0 · `mcp-server` `chrome-devtools` `debugging` `typescript`
 - **[page-agent](https://github.com/alibaba/page-agent)** — In-browser GUI agent from Alibaba that controls web interfaces via natural language.  
-  ★ 28,348 · MIT · `ai-agent` `browser-automation` `gui-agent` `javascript`
+  ★ 28,354 · MIT · `ai-agent` `browser-automation` `gui-agent` `javascript`
 - **[smolagents/computer-agent](https://huggingface.co/spaces/smolagents/computer-agent)** — A Hugging Face Space for an AI agent designed to interact with a computer, featuring a web-based graphical user interface built with Gradio.  
   `ai-agent` `gui-agent` `automation` `gradio`
 
 ### Terminal & CLI Agents
 - **[gemini-cli](https://github.com/google-gemini/gemini-cli)** — An open-source AI agent that integrates Google Gemini capabilities into the command-line interface.  
-  ★ 106,295 · Apache-2.0 · `ai-agent` `cli` `terminal` `mcp-server` `typescript` `gemini`
+  ★ 106,302 · Apache-2.0 · `ai-agent` `cli` `terminal` `mcp-server` `typescript` `gemini`
 - **[herdr](https://github.com/ogulcancelik/herdr)** — High-performance Rust-based terminal multiplexer for running multiple AI agents at once.  
-  ★ 23,360 · Apache-2.0 · `terminal-multiplexer` `ai-agent` `rust`
+  ★ 23,425 · Apache-2.0 · `terminal-multiplexer` `ai-agent` `rust`
 - **[agents-cli](https://github.com/google/agents-cli)** — Official Google CLI and skill pack specializing any coding assistant in building, evaluating, and deploying AI agents on Google Cloud.  
-  ★ 5,445 · Apache-2.0 · `google-cloud` `agent-development-kit` `cli`
+  ★ 5,449 · Apache-2.0 · `google-cloud` `agent-development-kit` `cli`
 
 ### MCP Servers
 - **[unity-mcp](https://github.com/CoplayDev/unity-mcp)** — Bridges AI assistants with the Unity Editor to automate scene control and asset management.  
-  ★ 13,047 · MIT · `mcp-server` `unity` `game-development`
+  ★ 13,052 · MIT · `mcp-server` `unity` `game-development`
 - **[gitlab-mcp](https://gitlab.com/fforster/gitlab-mcp)** — A server implementation for the Model Context Protocol (MCP) integrated with GitLab.  
   `mcp` `mcp-server` `ai-agent` `ai`
 - **[Graphify](https://huggingface.co/spaces/Agents-MCP-Hackathon/Graphify)** — A project from the Agents-MCP-Hackathon, identified as an MCP server, likely featuring a Gradio interface.  
@@ -152,73 +154,73 @@ npm run capture:demo
 
 ### Local AI Tools
 - **[terax-ai](https://github.com/crynta/terax-ai)** — A 7MB terminal-first local AI development workspace.  
-  ★ 8,782 · Apache-2.0 · `local-ai` `terminal` `lightweight`
+  ★ 8,783 · Apache-2.0 · `local-ai` `terminal` `lightweight`
 
 ### Claude Code Skills
 - **[caveman](https://github.com/JuliusBrussee/caveman)** — Claude Code skill that reduces token usage by up to 65% via compressed, cavemen-style context.  
-  ★ 95,101 · MIT · `claude-code` `skill` `token-optimization` `javascript`
+  ★ 95,138 · MIT · `claude-code` `skill` `token-optimization` `javascript`
 
 ### Claude Code Plugins
 - **[codex-plugin-cc](https://github.com/openai/codex-plugin-cc)** — Plugin that runs OpenAI Codex from within Claude Code, bridging two agent systems for delegation and review.  
-  ★ 30,863 · Apache-2.0 · `claude-code` `codex` `plugin` `agent-delegation`
+  ★ 30,886 · Apache-2.0 · `claude-code` `codex` `plugin` `agent-delegation`
 - **[harness](https://github.com/revfactory/harness)** — Meta-skill plugin for Claude Code that designs domain-specific agent teams by architecture pattern and generates the skills they use.  
-  ★ 8,577 · Apache-2.0 · `claude-code` `agent-teams` `skills` `meta-skill`
+  ★ 8,580 · Apache-2.0 · `claude-code` `agent-teams` `skills` `meta-skill`
 
 ### Agent Harness
 - **[ECC](https://github.com/affaan-m/ECC)** — Agent performance optimization system for Claude Code, Codex, and Cursor providing skills, instincts, and memory management.  
-  ★ 236,837 · MIT · `agent-harness` `skills` `memory` `claude-code` `codex` `cursor`
+  ★ 236,874 · MIT · `agent-harness` `skills` `memory` `claude-code` `codex` `cursor`
 
 ### Video
 - **[video-use](https://github.com/browser-use/video-use)** — Automates video editing workflows using browser-use-powered coding agents.  
-  ★ 18,254 · MIT · `video-editing` `browser-use` `automation`
+  ★ 18,261 · MIT · `video-editing` `browser-use` `automation`
 
 ### Agent Apps
 - **[anything-llm](https://github.com/Mintplex-Labs/anything-llm)** — AnythingLLM is a self-hosted, local-first platform for building and managing AI agents. It supports large language models, Retrieval Augmented Generation (RAG), multimodal capabilities, and integrates with vector databases.  
   ★ 64,209 · MIT · `ai-agent` `llm` `local-ai` `self-hosted` `rag` `javascript`
 - **[career-ops](https://github.com/santifer/career-ops)** — Go-based AI-powered job search system built on Claude Code with a dashboard and 14 skill modes.  
-  ★ 62,474 · MIT · `job-search` `dashboard` `go` `ai-agent`
+  ★ 62,490 · MIT · `job-search` `dashboard` `go` `ai-agent`
 - **[lenserfight](https://github.com/conectlens/lenserfight)** — Platform for parameterized prompts, AI-agent workflows, a community forum, and prompt battles.  
   ★ 15 · MIT · `ai-agent` `prompt-engineering` `workflow-automation` `automation`
 
 ### Agent Frameworks
 - **[openclaw](https://github.com/openclaw/openclaw)**  
-  ★ 384,846 · NOASSERTION · `ai-agent` `agent-framework`
+  ★ 384,868 · NOASSERTION · `ai-agent` `agent-framework`
 - **[superpowers](https://github.com/obra/superpowers)** — Agentic skill framework and software development methodology.  
-  ★ 264,794 · MIT · `agent-framework` `skills` `software-development-methodology`
+  ★ 264,868 · MIT · `agent-framework` `skills` `software-development-methodology`
 - **[hermes-agent](https://github.com/NousResearch/hermes-agent)** — Extensible AI agent with persistent memory designed to adapt to its user over time.  
-  ★ 223,834 · MIT · `ai-agent` `agent-framework` `llm` `memory`
+  ★ 223,940 · MIT · `ai-agent` `agent-framework` `llm` `memory`
 - **[agency-agents](https://github.com/msitarzewski/agency-agents)** — End-to-end AI agency framework composed of specialized expert agents (frontend, community management, etc.).  
-  ★ 138,049 · MIT · `agent-framework` `multi-agent` `frontend` `community-management`
+  ★ 138,089 · MIT · `agent-framework` `multi-agent` `frontend` `community-management`
 - **[ai-berkshire](https://github.com/xbtlin/ai-berkshire)** — Value-investing research framework for Claude Code and Codex combining multiple investor methodologies via a multi-agent architecture.  
-  ★ 14,856 · MIT · `claude-code` `codex` `value-investing` `multi-agent`
+  ★ 14,866 · MIT · `claude-code` `codex` `value-investing` `multi-agent`
 - **[codec](https://github.com/AVADSA25/codec)** — An open-source intelligent command layer and framework for building and running local AI agents, supporting voice interaction and self-hosted deployments.  
   ★ 102 · MIT · `ai-agent` `agent-framework` `local-ai` `self-hosted` `macos` `python`
 
 ### Agent Infrastructure
 - **[OmniRoute](https://github.com/diegosouzapw/OmniRoute)** — Free AI gateway for coding assistants routing 200+ LLM providers through one endpoint, with token compression and MCP/A2A support.  
-  ★ 37,055 · MIT · `llm-gateway` `mcp` `a2a` `token-compression`
+  ★ 37,233 · MIT · `llm-gateway` `mcp` `a2a` `token-compression`
 - **[CubeSandbox](https://github.com/TencentCloud/CubeSandbox)** — Tencent Cloud's open-source sandbox for running AI agents in concurrent, secure, isolated environments.  
-  ★ 10,814 · NOASSERTION · `sandbox` `agent-infrastructure` `tencent-cloud` `rust`
+  ★ 10,819 · NOASSERTION · `sandbox` `agent-infrastructure` `tencent-cloud` `rust`
 - **[agent-toolkit-for-aws](https://github.com/aws/agent-toolkit-for-aws)** — Officially supported MCP servers and plugin pack for AI coding agents to interact with AWS services.  
-  ★ 2,196 · Apache-2.0 · `aws` `mcp` `agent-toolkit`
+  ★ 2,200 · Apache-2.0 · `aws` `mcp` `agent-toolkit`
 
 ### Data Access & Research
 - **[Agent-Reach](https://github.com/Panniantong/Agent-Reach)** — Capability layer giving AI agents zero-fee read/search access to Twitter, Reddit, YouTube, GitHub, and more.  
-  ★ 63,979 · MIT · `ai-agent` `web-search` `social-media` `cli`
+  ★ 64,116 · MIT · `ai-agent` `web-search` `social-media` `cli`
 - **[hiring-agent](https://github.com/interviewstreet/hiring-agent)** — AI agent that autonomously reads, evaluates, and scores resumes for hiring workflows.  
-  ★ 6,682 · MIT · `hiring` `resume-parsing` `ai-agent`
+  ★ 6,683 · MIT · `hiring` `resume-parsing` `ai-agent`
 
 ### Design & UI Generation
 - **[ai-website-cloner-template](https://github.com/JCodesMore/ai-website-cloner-template)** — Template that uses AI coding agents to analyze and clone a website's design into a modern Next.js/Tailwind project.  
-  ★ 30,783 · MIT · `nextjs` `tailwind` `website-cloning` `coding-agent`
+  ★ 30,798 · MIT · `nextjs` `tailwind` `website-cloning` `coding-agent`
 - **[design.md](https://github.com/google-labs-code/design.md)** — Google Labs format for conveying design systems and visual identity to coding agents via combined YAML/Markdown files.  
-  ★ 26,846 · Apache-2.0 · `design-system` `yaml` `coding-agent` `ui-generation`
+  ★ 26,855 · Apache-2.0 · `design-system` `yaml` `coding-agent` `ui-generation`
 - **[openpencil](https://github.com/ZSeven-W/openpencil)** — Open-source AI vector design tool turning natural-language prompts into UI designs, with code output for React, Tailwind, Flutter, and SwiftUI.  
-  ★ 4,521 · MIT · `design-as-code` `vector-design` `ui-generation` `multi-agent`
+  ★ 4,528 · MIT · `design-as-code` `vector-design` `ui-generation` `multi-agent`
 
 ### Data & Document Processing
 - **[MinerU](https://github.com/opendatalab/MinerU)** — Document parsing engine converting PDF/DOCX/PPTX into Markdown/JSON for RAG and agent workflows, with VLM/OCR support.  
-  ★ 76,468 · NOASSERTION · `document-parsing` `rag` `ocr` `pdf`
+  ★ 76,490 · NOASSERTION · `document-parsing` `rag` `ocr` `pdf`
 
 ### Multi-Agent Research
 - **[awesome-multi-agent-papers](https://github.com/kyegomez/awesome-multi-agent-papers)** — A curated list of notable research papers on multi-agent LLM systems, maintained by kyegomez.  
@@ -226,7 +228,7 @@ npm run capture:demo
 
 ### Workflow Automation
 - **[n8n](https://github.com/n8n-io/n8n)** — Fair-code workflow automation platform with native AI capabilities, 400+ integrations, and self-hosting.  
-  ★ 198,984 · NOASSERTION · `workflow-automation` `automation` `low-code` `self-hosted`
+  ★ 199,007 · NOASSERTION · `workflow-automation` `automation` `low-code` `self-hosted`
 
 ### Agent Orchestration
 #### Terminal & TUI
@@ -519,7 +521,7 @@ npm run capture:demo
 
 ### Containers
 - **[container](https://github.com/apple/container)** — Apple's official open-source tool for creating and running Linux containers as lightweight VMs on macOS, optimized for Apple Silicon.  
-  ★ 48,528 · Apache-2.0 · `containers` `macos` `apple-silicon` `swift` `oci`
+  ★ 48,531 · Apache-2.0 · `containers` `macos` `apple-silicon` `swift` `oci`
 
 </details>
 
@@ -593,7 +595,7 @@ npm run capture:demo
 
 ### API Clients & Testing
 - **[hoppscotch](https://github.com/hoppscotch/hoppscotch)** — Hoppscotch is an open-source API development ecosystem providing tools for testing and developing APIs across web, desktop, and CLI environments. It serves as an alternative to proprietary API clients like Postman and Insomnia.  
-  ★ 79,940 · MIT · `cli` `typescript` `api` `api-client` `api-testing` `developer-tool`
+  ★ 79,941 · MIT · `cli` `typescript` `api` `api-client` `api-testing` `developer-tool`
 
 ### Web Frameworks
 - **[NestJS](https://github.com/nestjs/nest)** — Progressive Node.js framework for building efficient, scalable server-side applications with TypeScript.  
@@ -664,7 +666,7 @@ npm run capture:demo
 
 ### Machine Learning Frameworks
 - **[tensorflow](https://github.com/tensorflow/tensorflow)** — TensorFlow is an open-source machine learning framework designed for everyone, supporting deep learning and neural networks. It provides tools for building and deploying machine learning models, including capabilities for distributed computing.  
-  ★ 196,650 · Apache-2.0 · `python` `machine-learning` `deep-learning` `neural-network` `framework` `distributed-computing`
+  ★ 196,655 · Apache-2.0 · `python` `machine-learning` `deep-learning` `neural-network` `framework` `distributed-computing`
 
 ### Deep Learning Frameworks
 - **[Transformers](https://github.com/huggingface/transformers)** — A library of pretrained deep learning models and utilities for natural language processing, computer vision, and audio tasks.  
@@ -859,6 +861,25 @@ npm run capture:demo
 ### Browser Extensions
 - **[User-Agent Switcher](https://gitlab.com/ntninja/user-agent-switcher)** — A browser extension designed to easily override the browser's User-Agent string.  
   `javascript` `developer-tool` `browser-extension` `user-agent` `firefox`
+
+</details>
+
+<details>
+<summary><strong>Cybersecurity & Privacy</strong> — 1 source</summary>
+
+### Application Security
+#### Best Practices & Guidance
+- **[CheatSheetSeries](https://github.com/OWASP/CheatSheetSeries)** — The OWASP Cheat Sheet Series provides a concise collection of high-value information and best practices on specific application security topics.  
+  ★ 32,751 · CC-BY-SA-4.0 · `security` `application-security` `appsec` `best-practices` `cheatsheet` `owasp`
+
+</details>
+
+<details>
+<summary><strong>Mobile App Development</strong> — 1 source</summary>
+
+### Cross-Platform UI Frameworks
+- **[flutter](https://github.com/flutter/flutter)** — Flutter is an open-source UI toolkit for building natively compiled applications for mobile, web, and desktop from a single codebase.  
+  ★ 178,055 · BSD-3-Clause · `flutter` `cross-platform` `dart` `web` `mobile-development`
 
 </details>
 
