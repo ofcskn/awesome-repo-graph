@@ -19,9 +19,9 @@
     {
       "canonicalUrl": "https://github.com/f/prompts.chat",
       "githubId": 574523116,
-      "evaluatedAt": "2026-08-02T00:09:06.335Z",
+      "evaluatedAt": "2026-08-02T06:44:22.866Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_cad882af",
+      "metadataFingerprint": "fp_714c63f1",
       "reconsiderAt": null
     },
     {
@@ -43,17 +43,25 @@
     {
       "canonicalUrl": "https://github.com/hoppscotch/hoppscotch",
       "githubId": 203587744,
-      "evaluatedAt": "2026-08-02T00:09:06.118Z",
+      "evaluatedAt": "2026-08-02T06:44:22.551Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_961c348",
+      "metadataFingerprint": "fp_97ed4449",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://github.com/Mintplex-Labs/anything-llm",
+      "githubId": 649170660,
+      "evaluatedAt": "2026-08-02T06:44:23.089Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_5e4cebe4",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/n8n-io/n8n",
       "githubId": 193215554,
-      "evaluatedAt": "2026-08-02T00:08:41.204Z",
+      "evaluatedAt": "2026-08-02T06:44:21.658Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_37aecdea",
+      "metadataFingerprint": "fp_fcd2b087",
       "reconsiderAt": null
     },
     {
@@ -67,9 +75,9 @@
     {
       "canonicalUrl": "https://github.com/NousResearch/hermes-agent",
       "githubId": 1024554267,
-      "evaluatedAt": "2026-08-02T00:08:40.652Z",
+      "evaluatedAt": "2026-08-02T06:44:21.159Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_febcc87f",
+      "metadataFingerprint": "fp_e0c04217",
       "reconsiderAt": null
     },
     {
@@ -78,6 +86,14 @@
       "evaluatedAt": "2026-07-05T15:06:43.470Z",
       "reasonCode": "duplicate-of-existing",
       "metadataFingerprint": "fp_bfc867fa",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://github.com/remotemcu/remcu-chip-sdks",
+      "githubId": 664422694,
+      "evaluatedAt": "2026-08-02T06:44:33.977Z",
+      "reasonCode": "inactive",
+      "metadataFingerprint": "fp_4ec1ace5",
       "reconsiderAt": null
     },
     {
@@ -105,11 +121,19 @@
       "reconsiderAt": "2026-07-19T15:06:45.946Z"
     },
     {
+      "canonicalUrl": "https://github.com/sqlmapproject/sqlmap",
+      "githubId": 4793392,
+      "evaluatedAt": "2026-08-02T06:44:23.556Z",
+      "reasonCode": "license-denied",
+      "metadataFingerprint": "fp_273792d2",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://github.com/tensorflow/tensorflow",
       "githubId": 45717250,
-      "evaluatedAt": "2026-08-02T00:09:06.231Z",
+      "evaluatedAt": "2026-08-02T06:44:22.725Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_9d765390",
+      "metadataFingerprint": "fp_ee0104eb",
       "reconsiderAt": null
     },
     {
@@ -201,6 +225,14 @@
       "reconsiderAt": null
     },
     {
+      "canonicalUrl": "https://huggingface.co/spaces/haoheliu/audioldm-text-to-audio-generation",
+      "githubId": null,
+      "evaluatedAt": "2026-08-02T06:44:22.158Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_190f7e43",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://huggingface.co/spaces/smolagents/computer-agent",
       "githubId": null,
       "evaluatedAt": "2026-08-01T06:40:13.244Z",
@@ -219,9 +251,9 @@
     {
       "canonicalUrl": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
       "githubId": null,
-      "evaluatedAt": "2026-08-02T00:08:40.842Z",
+      "evaluatedAt": "2026-08-02T06:44:21.333Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_2d2bb61d",
+      "metadataFingerprint": "fp_2a9f643a",
       "reconsiderAt": null
     }
   ]
