@@ -1,11 +1,19 @@
 {
   "rejections": [
     {
+      "canonicalUrl": "https://github.com/anuraghazra/github-readme-stats",
+      "githubId": 278335273,
+      "evaluatedAt": "2026-08-03T12:36:36.482Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_11d7fecb",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://github.com/AVADSA25/codec",
       "githubId": 1190801983,
-      "evaluatedAt": "2026-08-03T00:10:07.475Z",
+      "evaluatedAt": "2026-08-03T12:36:35.950Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_11b55adf",
+      "metadataFingerprint": "fp_36093b81",
       "reconsiderAt": null
     },
     {
@@ -19,17 +27,17 @@
     {
       "canonicalUrl": "https://github.com/f/prompts.chat",
       "githubId": 574523116,
-      "evaluatedAt": "2026-08-03T00:10:07.239Z",
+      "evaluatedAt": "2026-08-03T12:36:35.787Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_2da9944e",
+      "metadataFingerprint": "fp_e2ac9286",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/flutter/flutter",
       "githubId": 31792824,
-      "evaluatedAt": "2026-08-03T00:10:08.212Z",
+      "evaluatedAt": "2026-08-03T12:36:36.389Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_fddb9507",
+      "metadataFingerprint": "fp_a1742aae",
       "reconsiderAt": null
     },
     {
@@ -51,25 +59,25 @@
     {
       "canonicalUrl": "https://github.com/hoppscotch/hoppscotch",
       "githubId": 203587744,
-      "evaluatedAt": "2026-08-03T00:10:06.780Z",
+      "evaluatedAt": "2026-08-03T12:36:35.481Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_ef324a4f",
+      "metadataFingerprint": "fp_14ffe76c",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/Mintplex-Labs/anything-llm",
       "githubId": 649170660,
-      "evaluatedAt": "2026-08-03T00:10:07.662Z",
+      "evaluatedAt": "2026-08-03T12:36:36.110Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_1e442e26",
+      "metadataFingerprint": "fp_4090d85",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/n8n-io/n8n",
       "githubId": 193215554,
-      "evaluatedAt": "2026-08-03T00:10:05.808Z",
+      "evaluatedAt": "2026-08-03T12:36:34.458Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_8482d1bd",
+      "metadataFingerprint": "fp_22bc7824",
       "reconsiderAt": null
     },
     {
@@ -83,17 +91,17 @@
     {
       "canonicalUrl": "https://github.com/NousResearch/hermes-agent",
       "githubId": 1024554267,
-      "evaluatedAt": "2026-08-03T00:10:04.931Z",
+      "evaluatedAt": "2026-08-03T12:36:33.939Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_4db10ff4",
+      "metadataFingerprint": "fp_154b648e",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/OWASP/CheatSheetSeries",
       "githubId": 162723104,
-      "evaluatedAt": "2026-08-03T00:10:08.083Z",
+      "evaluatedAt": "2026-08-03T12:36:36.297Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_3932f39e",
+      "metadataFingerprint": "fp_94d6d740",
       "reconsiderAt": null
     },
     {
@@ -139,17 +147,17 @@
     {
       "canonicalUrl": "https://github.com/sqlmapproject/sqlmap",
       "githubId": 4793392,
-      "evaluatedAt": "2026-08-03T00:10:07.906Z",
+      "evaluatedAt": "2026-08-03T12:36:36.210Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_f3d8c2ef",
+      "metadataFingerprint": "fp_d797b2f0",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/tensorflow/tensorflow",
       "githubId": 45717250,
-      "evaluatedAt": "2026-08-03T00:10:07.045Z",
+      "evaluatedAt": "2026-08-03T12:36:35.618Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_48be74cd",
+      "metadataFingerprint": "fp_5efbf5f",
       "reconsiderAt": null
     },
     {
@@ -158,6 +166,14 @@
       "evaluatedAt": "2026-07-06T06:55:45.011Z",
       "reasonCode": "recently-evaluated",
       "metadataFingerprint": "fp_ebb9fd7c",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://github.com/WerWolv/ImHex",
+      "githubId": 311683390,
+      "evaluatedAt": "2026-08-03T12:36:36.558Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_9ff7914",
       "reconsiderAt": null
     },
     {
@@ -179,9 +195,9 @@
     {
       "canonicalUrl": "https://gitlab.com/fforster/gitlab-mcp",
       "githubId": null,
-      "evaluatedAt": "2026-08-01T06:40:13.823Z",
+      "evaluatedAt": "2026-08-03T12:36:34.605Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_6579fc58",
+      "metadataFingerprint": "fp_d969ad38",
       "reconsiderAt": null
     },
     {
@@ -203,9 +219,9 @@
     {
       "canonicalUrl": "https://gitlab.com/xxllnc/zaakgericht/zaken/start",
       "githubId": null,
-      "evaluatedAt": "2026-08-01T06:40:24.109Z",
-      "reasonCode": "below-min-stars",
-      "metadataFingerprint": "fp_35032829",
+      "evaluatedAt": "2026-08-03T12:36:34.957Z",
+      "reasonCode": "recently-evaluated",
+      "metadataFingerprint": "fp_41774e48",
       "reconsiderAt": null
     },
     {
@@ -267,9 +283,9 @@
     {
       "canonicalUrl": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
       "githubId": null,
-      "evaluatedAt": "2026-08-03T00:10:05.359Z",
+      "evaluatedAt": "2026-08-03T12:36:34.094Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_15636481",
+      "metadataFingerprint": "fp_13b0833f",
       "reconsiderAt": null
     }
   ]
