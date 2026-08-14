@@ -3,17 +3,17 @@
     {
       "canonicalUrl": "https://github.com/anuraghazra/github-readme-stats",
       "githubId": 278335273,
-      "evaluatedAt": "2026-08-04T12:12:45.707Z",
+      "evaluatedAt": "2026-08-14T06:26:08.679Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_a0637fcc",
+      "metadataFingerprint": "fp_915bc08",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/AVADSA25/codec",
       "githubId": 1190801983,
-      "evaluatedAt": "2026-08-04T12:12:45.433Z",
+      "evaluatedAt": "2026-08-14T06:25:27.458Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_8d9e98a8",
+      "metadataFingerprint": "fp_ac7da0a3",
       "reconsiderAt": null
     },
     {
@@ -27,17 +27,25 @@
     {
       "canonicalUrl": "https://github.com/f/prompts.chat",
       "githubId": 574523116,
-      "evaluatedAt": "2026-08-04T12:12:45.208Z",
+      "evaluatedAt": "2026-08-14T06:25:27.346Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_5c9a330a",
+      "metadataFingerprint": "fp_2f96ccd",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/flutter/flutter",
       "githubId": 31792824,
-      "evaluatedAt": "2026-08-03T12:36:36.389Z",
+      "evaluatedAt": "2026-08-14T06:26:08.542Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_a1742aae",
+      "metadataFingerprint": "fp_a6f7ea8d",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://github.com/FuelLabs/fuel-core",
+      "githubId": 290882787,
+      "evaluatedAt": "2026-08-14T06:26:09.890Z",
+      "reasonCode": "license-denied",
+      "metadataFingerprint": "fp_d458f65f",
       "reconsiderAt": null
     },
     {
@@ -59,25 +67,33 @@
     {
       "canonicalUrl": "https://github.com/hoppscotch/hoppscotch",
       "githubId": 203587744,
-      "evaluatedAt": "2026-08-04T12:12:44.855Z",
+      "evaluatedAt": "2026-08-14T06:25:27.093Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_b89ab225",
+      "metadataFingerprint": "fp_b33a7762",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/Mintplex-Labs/anything-llm",
       "githubId": 649170660,
-      "evaluatedAt": "2026-08-04T12:12:45.593Z",
+      "evaluatedAt": "2026-08-14T06:25:27.700Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_5f328fd",
+      "metadataFingerprint": "fp_fe64efd3",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/n8n-io/n8n",
       "githubId": 193215554,
-      "evaluatedAt": "2026-08-04T12:12:43.850Z",
+      "evaluatedAt": "2026-08-14T06:25:24.809Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_44f53785",
+      "metadataFingerprint": "fp_670b375f",
+      "reconsiderAt": null
+    },
+    {
+      "canonicalUrl": "https://github.com/netdata/netdata",
+      "githubId": 10744183,
+      "evaluatedAt": "2026-08-14T06:26:09.045Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_8cf1df70",
       "reconsiderAt": null
     },
     {
@@ -91,9 +107,9 @@
     {
       "canonicalUrl": "https://github.com/NousResearch/hermes-agent",
       "githubId": 1024554267,
-      "evaluatedAt": "2026-08-04T12:12:43.285Z",
+      "evaluatedAt": "2026-08-14T06:25:23.673Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_1b24c472",
+      "metadataFingerprint": "fp_251c7371",
       "reconsiderAt": null
     },
     {
@@ -115,8 +131,8 @@
     {
       "canonicalUrl": "https://github.com/remotemcu/remcu-chip-sdks",
       "githubId": 664422694,
-      "evaluatedAt": "2026-08-02T06:44:33.977Z",
-      "reasonCode": "inactive",
+      "evaluatedAt": "2026-08-14T06:26:08.372Z",
+      "reasonCode": "recently-evaluated",
       "metadataFingerprint": "fp_4ec1ace5",
       "reconsiderAt": null
     },
@@ -147,17 +163,17 @@
     {
       "canonicalUrl": "https://github.com/sqlmapproject/sqlmap",
       "githubId": 4793392,
-      "evaluatedAt": "2026-08-03T12:36:36.210Z",
+      "evaluatedAt": "2026-08-14T06:26:08.232Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_d797b2f0",
+      "metadataFingerprint": "fp_8bc5f64a",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://github.com/tensorflow/tensorflow",
       "githubId": 45717250,
-      "evaluatedAt": "2026-08-04T12:12:45.039Z",
+      "evaluatedAt": "2026-08-14T06:25:27.217Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_5a4520a4",
+      "metadataFingerprint": "fp_ebd0d8f2",
       "reconsiderAt": null
     },
     {
@@ -169,11 +185,19 @@
       "reconsiderAt": null
     },
     {
+      "canonicalUrl": "https://github.com/unionlabs/union",
+      "githubId": 641656392,
+      "evaluatedAt": "2026-08-14T06:26:09.229Z",
+      "reasonCode": "duplicate-of-existing",
+      "metadataFingerprint": "fp_89279341",
+      "reconsiderAt": null
+    },
+    {
       "canonicalUrl": "https://github.com/WerWolv/ImHex",
       "githubId": 311683390,
-      "evaluatedAt": "2026-08-04T12:13:22.097Z",
+      "evaluatedAt": "2026-08-14T06:26:08.825Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_298f16db",
+      "metadataFingerprint": "fp_94b0d74d",
       "reconsiderAt": null
     },
     {
@@ -195,39 +219,39 @@
     {
       "canonicalUrl": "https://gitlab.com/fforster/gitlab-mcp",
       "githubId": null,
-      "evaluatedAt": "2026-08-03T12:36:34.605Z",
+      "evaluatedAt": "2026-08-14T06:25:25.020Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_d969ad38",
+      "metadataFingerprint": "fp_32ebc44f",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://gitlab.com/gitlab-org/opstrace/opstrace",
       "githubId": null,
-      "evaluatedAt": "2026-08-02T00:08:53.532Z",
-      "reasonCode": "low-quality-score",
+      "evaluatedAt": "2026-08-14T06:25:26.575Z",
+      "reasonCode": "recently-evaluated",
       "metadataFingerprint": "fp_12a4aaaf",
-      "reconsiderAt": "2026-08-16T00:08:53.532Z"
+      "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://gitlab.com/ntninja/user-agent-switcher",
       "githubId": null,
-      "evaluatedAt": "2026-08-01T06:40:12.963Z",
+      "evaluatedAt": "2026-08-14T06:25:23.864Z",
       "reasonCode": "duplicate-of-existing",
-      "metadataFingerprint": "fp_b29e407e",
+      "metadataFingerprint": "fp_ce9e654e",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://gitlab.com/xxllnc/zaakgericht/zaken/start",
       "githubId": null,
-      "evaluatedAt": "2026-08-04T12:12:44.237Z",
+      "evaluatedAt": "2026-08-14T06:25:25.844Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_5797147",
+      "metadataFingerprint": "fp_6c284965",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://huggingface.co/google/datagemma-rag-27b-it",
       "githubId": null,
-      "evaluatedAt": "2026-08-01T06:40:13.966Z",
+      "evaluatedAt": "2026-08-14T06:25:25.216Z",
       "reasonCode": "duplicate-of-existing",
       "metadataFingerprint": "fp_3f500f3a",
       "reconsiderAt": null
@@ -235,15 +259,15 @@
     {
       "canonicalUrl": "https://huggingface.co/osmosis-ai/osmosis-mcp-4b",
       "githubId": null,
-      "evaluatedAt": "2026-08-01T06:40:24.327Z",
-      "reasonCode": "below-min-stars",
+      "evaluatedAt": "2026-08-14T06:25:26.011Z",
+      "reasonCode": "recently-evaluated",
       "metadataFingerprint": "fp_b299c99a",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://huggingface.co/spaces/Agents-MCP-Hackathon/Graphify",
       "githubId": null,
-      "evaluatedAt": "2026-08-02T00:08:41.889Z",
+      "evaluatedAt": "2026-08-14T06:25:26.204Z",
       "reasonCode": "duplicate-of-existing",
       "metadataFingerprint": "fp_2f5cc44a",
       "reconsiderAt": null
@@ -251,7 +275,7 @@
     {
       "canonicalUrl": "https://huggingface.co/spaces/bishmoy/Arxiv-CS-RAG",
       "githubId": null,
-      "evaluatedAt": "2026-08-02T00:08:41.506Z",
+      "evaluatedAt": "2026-08-14T06:25:25.414Z",
       "reasonCode": "duplicate-of-existing",
       "metadataFingerprint": "fp_610b5b34",
       "reconsiderAt": null
@@ -259,7 +283,7 @@
     {
       "canonicalUrl": "https://huggingface.co/spaces/haoheliu/audioldm-text-to-audio-generation",
       "githubId": null,
-      "evaluatedAt": "2026-08-02T06:44:22.158Z",
+      "evaluatedAt": "2026-08-14T06:25:26.862Z",
       "reasonCode": "duplicate-of-existing",
       "metadataFingerprint": "fp_190f7e43",
       "reconsiderAt": null
@@ -267,7 +291,7 @@
     {
       "canonicalUrl": "https://huggingface.co/spaces/smolagents/computer-agent",
       "githubId": null,
-      "evaluatedAt": "2026-08-01T06:40:13.244Z",
+      "evaluatedAt": "2026-08-14T06:25:24.291Z",
       "reasonCode": "duplicate-of-existing",
       "metadataFingerprint": "fp_d62902ab",
       "reconsiderAt": null
@@ -275,17 +299,17 @@
     {
       "canonicalUrl": "https://huggingface.co/text-generation-inference/Mixtral-8x7B-Instruct-v0.1-medusa",
       "githubId": null,
-      "evaluatedAt": "2026-08-02T00:08:53.774Z",
-      "reasonCode": "below-min-stars",
+      "evaluatedAt": "2026-08-14T06:25:26.690Z",
+      "reasonCode": "recently-evaluated",
       "metadataFingerprint": "fp_e9cf627b",
       "reconsiderAt": null
     },
     {
       "canonicalUrl": "https://huggingface.co/yuxinlu1/gemma-4-12B-agentic-fable5-composer2.5-v2-3.5x-tau2-GGUF",
       "githubId": null,
-      "evaluatedAt": "2026-08-04T12:12:43.466Z",
+      "evaluatedAt": "2026-08-14T06:25:24.108Z",
       "reasonCode": "recently-evaluated",
-      "metadataFingerprint": "fp_104ac0bb",
+      "metadataFingerprint": "fp_35d463df",
       "reconsiderAt": null
     }
   ]
