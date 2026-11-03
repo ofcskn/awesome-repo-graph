@@ -8654,6 +8654,179 @@
         "fetchedAt": "2026-11-03"
       },
       "addedAt": "2026-11-03"
+    },
+    {
+      "id": "nieobie-game-icon-pack",
+      "url": "https://github.com/Nieobie/game-icon-pack",
+      "provider": "github.com",
+      "owner": "Nieobie",
+      "repo": "game-icon-pack",
+      "title": "game-icon-pack",
+      "description": "800+ rounded-style game icons released under CC0.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets",
+        "cc0",
+        "icons"
+      ],
+      "license": "CC0-1.0",
+      "score": {
+        "stars": 716,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "devanshutak25-3d-resources",
+      "url": "https://github.com/devanshutak25/3d-resources",
+      "provider": "github.com",
+      "owner": "devanshutak25",
+      "repo": "3d-resources",
+      "title": "3d-resources",
+      "description": "Curated CC0 reference hub of 3,400+ tools, assets, and resources for 3D, VFX, and game development.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets",
+        "cc0",
+        "3d",
+        "awesome-list"
+      ],
+      "license": "CC0-1.0",
+      "score": {
+        "stars": 1014,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "gdquest-demos-godot-shaders",
+      "url": "https://github.com/gdquest-demos/godot-shaders",
+      "provider": "github.com",
+      "owner": "gdquest-demos",
+      "repo": "godot-shaders",
+      "title": "godot-shaders",
+      "description": "Large library of free shaders for Godot; code is MIT, but bundled art assets are CC-BY-NC-SA 4.0 (non-commercial).",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "godot",
+        "shaders",
+        "open-source"
+      ],
+      "license": "NOASSERTION",
+      "score": {
+        "stars": 4197,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "calinou-awesome-gamedev",
+      "url": "https://github.com/Calinou/awesome-gamedev",
+      "provider": "github.com",
+      "owner": "Calinou",
+      "repo": "awesome-gamedev",
+      "title": "awesome-gamedev",
+      "description": "Collection of free software and free culture resources for game development, including art, audio, and tools.",
+      "path": [
+        "Game Development",
+        "Learning & Resource Lists"
+      ],
+      "tags": [
+        "game-development",
+        "awesome-list",
+        "open-source"
+      ],
+      "license": "CC-BY-SA-4.0",
+      "score": {
+        "stars": 3209,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "dawdle-deer-awesome-learn-gamedev",
+      "url": "https://github.com/dawdle-deer/awesome-learn-gamedev",
+      "provider": "github.com",
+      "owner": "dawdle-deer",
+      "repo": "awesome-learn-gamedev",
+      "title": "awesome-learn-gamedev",
+      "description": "Curated collection of game development learning resources.",
+      "path": [
+        "Game Development",
+        "Learning & Resource Lists"
+      ],
+      "tags": [
+        "game-development",
+        "awesome-list",
+        "learning"
+      ],
+      "license": "CC0-1.0",
+      "score": {
+        "stars": 3595,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "fronkongames-awesome-gamedev",
+      "url": "https://github.com/FronkonGames/Awesome-Gamedev",
+      "provider": "github.com",
+      "owner": "FronkonGames",
+      "repo": "Awesome-Gamedev",
+      "title": "Awesome-Gamedev",
+      "description": "Curated collection of resources for game development.",
+      "path": [
+        "Game Development",
+        "Learning & Resource Lists"
+      ],
+      "tags": [
+        "game-development",
+        "awesome-list"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 694,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "aseprite-aseprite",
+      "url": "https://github.com/aseprite/aseprite",
+      "provider": "github.com",
+      "owner": "aseprite",
+      "repo": "aseprite",
+      "title": "aseprite",
+      "description": "Animated sprite editor and pixel art tool; source-available under the Aseprite EULA (personal builds allowed, binaries sold commercially).",
+      "path": [
+        "Game Development",
+        "Game Tooling"
+      ],
+      "tags": [
+        "game-development",
+        "pixel-art",
+        "2d",
+        "sprite-editor",
+        "cpp"
+      ],
+      "license": null,
+      "score": {
+        "stars": 40595,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
     }
   ]
 }
