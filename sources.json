@@ -5743,7 +5743,7 @@
       "owner": "Orkas-AI",
       "repo": "Orkas",
       "title": "Orkas",
-      "description": "A commander agent decomposes goals and dispatches specialists with isolated skills and memory. Claude Code, Codex, OpenCode, Cline.",
+      "description": "A commander agent decomposes goals and dispatches specialists with isolated skills and memory. Claude Code, Codex, OpenCode, OpenClaw, Hermes-Agent.",
       "path": [
         "AI Agent Tooling",
         "Agent Orchestration",
