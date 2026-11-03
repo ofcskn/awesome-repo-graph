@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-341-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-6226098-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-348-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-6280118-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -79,7 +79,7 @@ npm run capture:demo
 - **Frontend Engineering** — 12 sources
 - **AI Agent Tooling** — 192 sources
 - **DevOps & Infrastructure** — 1 source
-- **Game Development** — 33 sources
+- **Game Development** — 40 sources
 - **Backend Engineering & APIs** — 24 sources
 - **Machine Learning & Data Science** — 24 sources
 - **Blockchain & Decentralized AI** — 46 sources
@@ -532,9 +532,15 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>Game Development</strong> — 33 sources</summary>
+<summary><strong>Game Development</strong> — 40 sources</summary>
 
 ### Free Asset Libraries
+- **[godot-shaders](https://github.com/gdquest-demos/godot-shaders)** — Large library of free shaders for Godot; code is MIT, but bundled art assets are CC-BY-NC-SA 4.0 (non-commercial).  
+  ★ 4,197 · NOASSERTION · `game-development` `godot` `shaders` `open-source`
+- **[3d-resources](https://github.com/devanshutak25/3d-resources)** — Curated CC0 reference hub of 3,400+ tools, assets, and resources for 3D, VFX, and game development.  
+  ★ 1,014 · CC0-1.0 · `game-development` `game-assets` `cc0` `3d` `awesome-list`
+- **[game-icon-pack](https://github.com/Nieobie/game-icon-pack)** — 800+ rounded-style game icons released under CC0.  
+  ★ 716 · CC0-1.0 · `game-development` `game-assets` `cc0` `icons`
 - **[awesome-cc0](https://github.com/madjin/awesome-cc0)** — Curated list of CC0 assets: 3D models, textures, audio, and other public-domain resources.  
   ★ 539 · CC0-1.0 · `game-development` `game-assets` `cc0` `awesome-list`
 - **[ambientCG](https://ambientcg.com)** — CC0 PBR materials, HDRIs, decals, and 3D assets; all assets free to use without attribution.  
@@ -609,6 +615,8 @@ npm run capture:demo
   ★ 6,241 · MIT · `unity` `netcode` `multiplayer`
 
 ### Game Tooling
+- **[aseprite](https://github.com/aseprite/aseprite)** — Animated sprite editor and pixel art tool; source-available under the Aseprite EULA (personal builds allowed, binaries sold commercially).  
+  ★ 40,595 · `game-development` `pixel-art` `2d` `sprite-editor` `cpp`
 - **[tiled](https://github.com/mapeditor/tiled)** — Flexible tile map editor for 2D levels with support for many engines and export formats.  
   ★ 13,024 · NOASSERTION · `game-development` `level-editor` `2d` `tilemap` `cpp`
 - **[LibreSprite](https://github.com/LibreSprite/LibreSprite)** — Free open-source sprite editor and animation tool, a fork of the last GPL version of Aseprite.  
@@ -617,6 +625,14 @@ npm run capture:demo
   ★ 7,793 · Zlib · `navmesh` `pathfinding` `cpp`
 - **[Lospec](https://lospec.com)** — Pixel art hub with a searchable palette list, browser tools (scaler, dither, palette quantizer), and a large tutorial collection.  
   `game-development` `pixel-art` `2d` `tutorial`
+
+### Learning & Resource Lists
+- **[awesome-learn-gamedev](https://github.com/dawdle-deer/awesome-learn-gamedev)** — Curated collection of game development learning resources.  
+  ★ 3,595 · CC0-1.0 · `game-development` `awesome-list` `learning`
+- **[awesome-gamedev](https://github.com/Calinou/awesome-gamedev)** — Collection of free software and free culture resources for game development, including art, audio, and tools.  
+  ★ 3,209 · CC-BY-SA-4.0 · `game-development` `awesome-list` `open-source`
+- **[Awesome-Gamedev](https://github.com/FronkonGames/Awesome-Gamedev)** — Curated collection of resources for game development.  
+  ★ 694 · MIT · `game-development` `awesome-list`
 
 </details>
 
