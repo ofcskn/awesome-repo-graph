@@ -333,7 +333,7 @@ npm run capture:demo
   ★ 1,039 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
 - **[loki-mode](https://github.com/asklokesh/loki-mode)** — PRD-to-deployed-product SDLC with 41 agents in 8 swarms, nine quality gates, and blind three-reviewer code review. Source-available under BUSL-1.1.  
   ★ 1,028 · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `shell`
-- **[Orkas](https://github.com/Orkas-AI/Orkas)** — A commander agent decomposes goals and dispatches specialists with isolated skills and memory. Claude Code, Codex, OpenCode, Cline.  
+- **[Orkas](https://github.com/Orkas-AI/Orkas)** — A commander agent decomposes goals and dispatches specialists with isolated skills and memory. Claude Code, Codex, OpenCode, OpenClaw, Hermes-Agent.  
   ★ 861 · MIT · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
 - **[agent-kanban](https://github.com/saltbo/agent-kanban)** — Leader-worker task board with cryptographic agent identity. Claude Code, Codex, Gemini CLI.  
   ★ 425 · `ai-agent` `agent-orchestrator` `multi-agent-swarm` `typescript`
