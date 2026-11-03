@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-329-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-6203820-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-335-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-6204359-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -79,7 +79,7 @@ npm run capture:demo
 - **Frontend Engineering** — 12 sources
 - **AI Agent Tooling** — 192 sources
 - **DevOps & Infrastructure** — 1 source
-- **Game Development** — 21 sources
+- **Game Development** — 27 sources
 - **Backend Engineering & APIs** — 24 sources
 - **Machine Learning & Data Science** — 24 sources
 - **Blockchain & Decentralized AI** — 46 sources
@@ -532,11 +532,23 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>Game Development</strong> — 21 sources</summary>
+<summary><strong>Game Development</strong> — 27 sources</summary>
 
 ### Free Asset Libraries
+- **[awesome-cc0](https://github.com/madjin/awesome-cc0)** — Curated list of CC0 assets: 3D models, textures, audio, and other public-domain resources.  
+  ★ 539 · CC0-1.0 · `game-development` `game-assets` `cc0` `awesome-list`
+- **[ambientCG](https://ambientcg.com)** — CC0 PBR materials, HDRIs, decals, and 3D assets; all assets free to use without attribution.  
+  `game-development` `game-assets` `cc0` `textures`
+- **[Freesound](https://freesound.org)** — Collaborative database of sound effects and samples under CC0, CC-BY, or CC-BY-NC; filter by license before shipping.  
+  `game-development` `game-assets` `audio`
 - **[Kenney](https://www.kenney.nl/)** — Free game asset packs (sprites, 3D models, UI kits, audio) and starter tools for game developers.  
   `game-development` `game-assets`
+- **[OpenGameArt](https://opengameart.org)** — Community library of 2D art, 3D models, music, and sound effects under open licenses (CC0, CC-BY, GPL); check each asset's license.  
+  `game-development` `game-assets` `2d` `3d` `audio`
+- **[Poly Haven](https://polyhaven.com)** — CC0 HDRIs, PBR textures, and 3D models; every asset is public domain with no attribution required.  
+  `game-development` `game-assets` `cc0` `3d` `textures`
+- **[Quaternius](https://quaternius.com)** — Free low-poly 3D packs (characters, environments, props, vehicles) usable in commercial games without attribution; redistribution as assets is not allowed.  
+  `game-development` `game-assets` `3d` `low-poly`
 
 ### Game Engines
 - **[Godot](https://github.com/godotengine/godot)** — Full-featured cross-platform game engine supporting 2D and 3D development with its own scripting language and editor.  

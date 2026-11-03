@@ -8350,6 +8350,157 @@
         "fetchedAt": "2026-08-14"
       },
       "addedAt": "2026-08-14"
+    },
+    {
+      "id": "polyhaven-com",
+      "url": "https://polyhaven.com",
+      "provider": "polyhaven.com",
+      "owner": null,
+      "repo": null,
+      "title": "Poly Haven",
+      "description": "CC0 HDRIs, PBR textures, and 3D models; every asset is public domain with no attribution required.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets",
+        "cc0",
+        "3d",
+        "textures"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "ambientcg-com",
+      "url": "https://ambientcg.com",
+      "provider": "ambientcg.com",
+      "owner": null,
+      "repo": null,
+      "title": "ambientCG",
+      "description": "CC0 PBR materials, HDRIs, decals, and 3D assets; all assets free to use without attribution.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets",
+        "cc0",
+        "textures"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "quaternius-com",
+      "url": "https://quaternius.com",
+      "provider": "quaternius.com",
+      "owner": null,
+      "repo": null,
+      "title": "Quaternius",
+      "description": "Free low-poly 3D packs (characters, environments, props, vehicles) usable in commercial games without attribution; redistribution as assets is not allowed.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets",
+        "3d",
+        "low-poly"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "opengameart-org",
+      "url": "https://opengameart.org",
+      "provider": "opengameart.org",
+      "owner": null,
+      "repo": null,
+      "title": "OpenGameArt",
+      "description": "Community library of 2D art, 3D models, music, and sound effects under open licenses (CC0, CC-BY, GPL); check each asset's license.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets",
+        "2d",
+        "3d",
+        "audio"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "freesound-org",
+      "url": "https://freesound.org",
+      "provider": "freesound.org",
+      "owner": null,
+      "repo": null,
+      "title": "Freesound",
+      "description": "Collaborative database of sound effects and samples under CC0, CC-BY, or CC-BY-NC; filter by license before shipping.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets",
+        "audio"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "madjin-awesome-cc0",
+      "url": "https://github.com/madjin/awesome-cc0",
+      "provider": "github.com",
+      "owner": "madjin",
+      "repo": "awesome-cc0",
+      "title": "awesome-cc0",
+      "description": "Curated list of CC0 assets: 3D models, textures, audio, and other public-domain resources.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets",
+        "cc0",
+        "awesome-list"
+      ],
+      "license": "CC0-1.0",
+      "score": {
+        "stars": 539,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
     }
   ]
 }
