@@ -38,6 +38,25 @@ project linked under a different URL shape) by scanning `sources.json`, or
 better, `node scripts/filter-sources.js --query "<name>"` (see
 "Inspecting sources without loading the whole file" below).
 
+## Correcting an existing source
+
+To fix the title, description, taxonomy path, or tags of an entry that is
+already tracked, use the CLI script — never edit `sources.json` by hand and
+never re-add the URL:
+
+```
+node scripts/update-source.js \
+  --id orkas-ai-orkas \
+  --description "Corrected description."
+```
+
+Only `--title`, `--description`, `--path`, and `--tags` are editable. The
+`id`, `url`, `provider`, `owner`, `repo`, `license`, `score`, and `addedAt`
+fields are immutable here (identity fields are the dedup keys; `score` and
+`license` are owned by `refresh-scores.js`). The script refuses unknown ids and
+empty values, and regenerates `README.MD`. Verify the claim against the
+upstream project before correcting a description.
+
 ## Duplication ruleset (non-negotiable)
 
 `sources.json` must never contain two entries for the same project. This is
