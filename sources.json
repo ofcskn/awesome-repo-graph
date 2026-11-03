@@ -8827,6 +8827,620 @@
         "fetchedAt": "2026-11-03"
       },
       "addedAt": "2026-11-03"
+    },
+    {
+      "id": "kubernetes-kubernetes",
+      "url": "https://github.com/kubernetes/kubernetes",
+      "provider": "github.com",
+      "owner": "kubernetes",
+      "repo": "kubernetes",
+      "title": "kubernetes",
+      "description": "Production-grade container orchestration for automating deployment, scaling, and management of containerized applications.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Orchestration"
+      ],
+      "tags": [
+        "devops",
+        "kubernetes",
+        "containers",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 128625,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "helm-helm",
+      "url": "https://github.com/helm/helm",
+      "provider": "github.com",
+      "owner": "helm",
+      "repo": "helm",
+      "title": "helm",
+      "description": "The package manager for Kubernetes: define, install, and upgrade applications with charts.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Orchestration"
+      ],
+      "tags": [
+        "devops",
+        "kubernetes",
+        "package-manager",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 30386,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "k3s-io-k3s",
+      "url": "https://github.com/k3s-io/k3s",
+      "provider": "github.com",
+      "owner": "k3s-io",
+      "repo": "k3s",
+      "title": "k3s",
+      "description": "Lightweight, certified Kubernetes distribution packaged as a single binary for edge and resource-constrained environments.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Orchestration"
+      ],
+      "tags": [
+        "devops",
+        "kubernetes",
+        "lightweight",
+        "edge",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 34321,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "moby-moby",
+      "url": "https://github.com/moby/moby",
+      "provider": "github.com",
+      "owner": "moby",
+      "repo": "moby",
+      "title": "moby",
+      "description": "Open framework behind Docker Engine for assembling container-based systems.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Containers"
+      ],
+      "tags": [
+        "devops",
+        "containers",
+        "docker",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 72237,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "containerd-containerd",
+      "url": "https://github.com/containerd/containerd",
+      "provider": "github.com",
+      "owner": "containerd",
+      "repo": "containerd",
+      "title": "containerd",
+      "description": "Industry-standard container runtime focused on simplicity, robustness, and portability.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Containers"
+      ],
+      "tags": [
+        "devops",
+        "containers",
+        "oci",
+        "runtime",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 21452,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "opentofu-opentofu",
+      "url": "https://github.com/opentofu/opentofu",
+      "provider": "github.com",
+      "owner": "opentofu",
+      "repo": "opentofu",
+      "title": "opentofu",
+      "description": "Community-driven, MPL-licensed infrastructure-as-code tool; open-source fork of Terraform.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Infrastructure as Code"
+      ],
+      "tags": [
+        "devops",
+        "iac",
+        "terraform",
+        "go"
+      ],
+      "license": "MPL-2.0",
+      "score": {
+        "stars": 30707,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "hashicorp-terraform",
+      "url": "https://github.com/hashicorp/terraform",
+      "provider": "github.com",
+      "owner": "hashicorp",
+      "repo": "terraform",
+      "title": "terraform",
+      "description": "Declarative infrastructure-as-code tool for provisioning and versioning cloud resources; source-available under the Business Source License.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Infrastructure as Code"
+      ],
+      "tags": [
+        "devops",
+        "iac",
+        "terraform",
+        "go"
+      ],
+      "license": "NOASSERTION",
+      "score": {
+        "stars": 50118,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "pulumi-pulumi",
+      "url": "https://github.com/pulumi/pulumi",
+      "provider": "github.com",
+      "owner": "pulumi",
+      "repo": "pulumi",
+      "title": "pulumi",
+      "description": "Infrastructure as code in TypeScript, Python, Go, C#, and Java for any cloud.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Infrastructure as Code"
+      ],
+      "tags": [
+        "devops",
+        "iac",
+        "multi-language",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 25838,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "ansible-ansible",
+      "url": "https://github.com/ansible/ansible",
+      "provider": "github.com",
+      "owner": "ansible",
+      "repo": "ansible",
+      "title": "ansible",
+      "description": "Agentless IT automation platform for configuration management, deployment, and orchestration.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Infrastructure as Code"
+      ],
+      "tags": [
+        "devops",
+        "configuration-management",
+        "automation",
+        "python"
+      ],
+      "license": "GPL-3.0",
+      "score": {
+        "stars": 71221,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "crossplane-crossplane",
+      "url": "https://github.com/crossplane/crossplane",
+      "provider": "github.com",
+      "owner": "crossplane",
+      "repo": "crossplane",
+      "title": "crossplane",
+      "description": "Kubernetes-native control plane framework for composing cloud infrastructure and platform APIs.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Infrastructure as Code"
+      ],
+      "tags": [
+        "devops",
+        "iac",
+        "kubernetes",
+        "control-plane",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 12222,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "argoproj-argo-cd",
+      "url": "https://github.com/argoproj/argo-cd",
+      "provider": "github.com",
+      "owner": "argoproj",
+      "repo": "argo-cd",
+      "title": "argo-cd",
+      "description": "Declarative GitOps continuous delivery tool for Kubernetes.",
+      "path": [
+        "DevOps & Infrastructure",
+        "CI/CD & GitOps"
+      ],
+      "tags": [
+        "devops",
+        "gitops",
+        "kubernetes",
+        "ci-cd",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 24516,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "fluxcd-flux2",
+      "url": "https://github.com/fluxcd/flux2",
+      "provider": "github.com",
+      "owner": "fluxcd",
+      "repo": "flux2",
+      "title": "flux2",
+      "description": "Open and extensible continuous delivery solution for Kubernetes powered by GitOps Toolkit.",
+      "path": [
+        "DevOps & Infrastructure",
+        "CI/CD & GitOps"
+      ],
+      "tags": [
+        "devops",
+        "gitops",
+        "kubernetes",
+        "ci-cd",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 8489,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "dagger-dagger",
+      "url": "https://github.com/dagger/dagger",
+      "provider": "github.com",
+      "owner": "dagger",
+      "repo": "dagger",
+      "title": "dagger",
+      "description": "Programmable CI/CD engine that runs pipelines in containers, portable across local and CI environments.",
+      "path": [
+        "DevOps & Infrastructure",
+        "CI/CD & GitOps"
+      ],
+      "tags": [
+        "devops",
+        "ci-cd",
+        "pipelines",
+        "containers",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 16573,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "nektos-act",
+      "url": "https://github.com/nektos/act",
+      "provider": "github.com",
+      "owner": "nektos",
+      "repo": "act",
+      "title": "act",
+      "description": "Run GitHub Actions workflows locally for fast feedback and testing.",
+      "path": [
+        "DevOps & Infrastructure",
+        "CI/CD & GitOps"
+      ],
+      "tags": [
+        "devops",
+        "ci-cd",
+        "github-actions",
+        "local-testing",
+        "go"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 72522,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "jenkinsci-jenkins",
+      "url": "https://github.com/jenkinsci/jenkins",
+      "provider": "github.com",
+      "owner": "jenkinsci",
+      "repo": "jenkins",
+      "title": "jenkins",
+      "description": "Extensible open-source automation server for building, testing, and deploying software.",
+      "path": [
+        "DevOps & Infrastructure",
+        "CI/CD & GitOps"
+      ],
+      "tags": [
+        "devops",
+        "ci-cd",
+        "automation-server",
+        "java"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 26719,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "tektoncd-pipeline",
+      "url": "https://github.com/tektoncd/pipeline",
+      "provider": "github.com",
+      "owner": "tektoncd",
+      "repo": "pipeline",
+      "title": "pipeline",
+      "description": "Kubernetes-native framework for building CI/CD pipelines.",
+      "path": [
+        "DevOps & Infrastructure",
+        "CI/CD & GitOps"
+      ],
+      "tags": [
+        "devops",
+        "ci-cd",
+        "kubernetes",
+        "pipelines",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 9092,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "traefik-traefik",
+      "url": "https://github.com/traefik/traefik",
+      "provider": "github.com",
+      "owner": "traefik",
+      "repo": "traefik",
+      "title": "traefik",
+      "description": "Cloud-native application proxy and ingress controller with automatic service discovery.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Networking & Service Mesh"
+      ],
+      "tags": [
+        "devops",
+        "reverse-proxy",
+        "load-balancer",
+        "kubernetes",
+        "go"
+      ],
+      "license": "MIT",
+      "score": {
+        "stars": 65445,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "istio-istio",
+      "url": "https://github.com/istio/istio",
+      "provider": "github.com",
+      "owner": "istio",
+      "repo": "istio",
+      "title": "istio",
+      "description": "Open-source service mesh for traffic management, security, and observability across microservices.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Networking & Service Mesh"
+      ],
+      "tags": [
+        "devops",
+        "service-mesh",
+        "kubernetes",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 38484,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "cilium-cilium",
+      "url": "https://github.com/cilium/cilium",
+      "provider": "github.com",
+      "owner": "cilium",
+      "repo": "cilium",
+      "title": "cilium",
+      "description": "eBPF-based networking, observability, and security for Kubernetes workloads.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Networking & Service Mesh"
+      ],
+      "tags": [
+        "devops",
+        "networking",
+        "ebpf",
+        "kubernetes",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 25760,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "prometheus-prometheus",
+      "url": "https://github.com/prometheus/prometheus",
+      "provider": "github.com",
+      "owner": "prometheus",
+      "repo": "prometheus",
+      "title": "prometheus",
+      "description": "Monitoring system and time series database with a powerful query language and alerting.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Observability"
+      ],
+      "tags": [
+        "devops",
+        "monitoring",
+        "observability",
+        "metrics",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 66914,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "grafana-grafana",
+      "url": "https://github.com/grafana/grafana",
+      "provider": "github.com",
+      "owner": "grafana",
+      "repo": "grafana",
+      "title": "grafana",
+      "description": "Open and composable observability and data visualization platform; licensed AGPL-3.0.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Observability"
+      ],
+      "tags": [
+        "devops",
+        "observability",
+        "dashboards",
+        "visualization",
+        "go"
+      ],
+      "license": "AGPL-3.0",
+      "score": {
+        "stars": 77648,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "jaegertracing-jaeger",
+      "url": "https://github.com/jaegertracing/jaeger",
+      "provider": "github.com",
+      "owner": "jaegertracing",
+      "repo": "jaeger",
+      "title": "jaeger",
+      "description": "Distributed tracing platform for monitoring and troubleshooting microservice architectures.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Observability"
+      ],
+      "tags": [
+        "devops",
+        "observability",
+        "tracing",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 23364,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "open-telemetry-opentelemetry-collector",
+      "url": "https://github.com/open-telemetry/opentelemetry-collector",
+      "provider": "github.com",
+      "owner": "open-telemetry",
+      "repo": "opentelemetry-collector",
+      "title": "opentelemetry-collector",
+      "description": "Vendor-agnostic implementation for receiving, processing, and exporting telemetry data.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Observability"
+      ],
+      "tags": [
+        "devops",
+        "observability",
+        "telemetry",
+        "opentelemetry",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 7728,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "aquasecurity-trivy",
+      "url": "https://github.com/aquasecurity/trivy",
+      "provider": "github.com",
+      "owner": "aquasecurity",
+      "repo": "trivy",
+      "title": "trivy",
+      "description": "Scanner for vulnerabilities, misconfigurations, secrets, and SBOMs in containers, IaC, and repositories.",
+      "path": [
+        "DevOps & Infrastructure",
+        "Security & Scanning"
+      ],
+      "tags": [
+        "devops",
+        "security",
+        "vulnerability-scanner",
+        "iac",
+        "go"
+      ],
+      "license": "Apache-2.0",
+      "score": {
+        "stars": 38918,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
     }
   ]
 }

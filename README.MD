@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-348-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-6280118-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-372-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-7259417-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -78,7 +78,7 @@ npm run capture:demo
 
 - **Frontend Engineering** — 12 sources
 - **AI Agent Tooling** — 192 sources
-- **DevOps & Infrastructure** — 1 source
+- **DevOps & Infrastructure** — 25 sources
 - **Game Development** — 40 sources
 - **Backend Engineering & APIs** — 24 sources
 - **Machine Learning & Data Science** — 24 sources
@@ -523,11 +523,71 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>DevOps & Infrastructure</strong> — 1 source</summary>
+<summary><strong>DevOps & Infrastructure</strong> — 25 sources</summary>
 
 ### Containers
+- **[moby](https://github.com/moby/moby)** — Open framework behind Docker Engine for assembling container-based systems.  
+  ★ 72,237 · Apache-2.0 · `devops` `containers` `docker` `go`
 - **[container](https://github.com/apple/container)** — Apple's official open-source tool for creating and running Linux containers as lightweight VMs on macOS, optimized for Apple Silicon.  
   ★ 48,937 · Apache-2.0 · `containers` `macos` `apple-silicon` `swift` `oci`
+- **[containerd](https://github.com/containerd/containerd)** — Industry-standard container runtime focused on simplicity, robustness, and portability.  
+  ★ 21,452 · Apache-2.0 · `devops` `containers` `oci` `runtime` `go`
+
+### Orchestration
+- **[kubernetes](https://github.com/kubernetes/kubernetes)** — Production-grade container orchestration for automating deployment, scaling, and management of containerized applications.  
+  ★ 128,625 · Apache-2.0 · `devops` `kubernetes` `containers` `go`
+- **[k3s](https://github.com/k3s-io/k3s)** — Lightweight, certified Kubernetes distribution packaged as a single binary for edge and resource-constrained environments.  
+  ★ 34,321 · Apache-2.0 · `devops` `kubernetes` `lightweight` `edge` `go`
+- **[helm](https://github.com/helm/helm)** — The package manager for Kubernetes: define, install, and upgrade applications with charts.  
+  ★ 30,386 · Apache-2.0 · `devops` `kubernetes` `package-manager` `go`
+
+### Infrastructure as Code
+- **[ansible](https://github.com/ansible/ansible)** — Agentless IT automation platform for configuration management, deployment, and orchestration.  
+  ★ 71,221 · GPL-3.0 · `devops` `configuration-management` `automation` `python`
+- **[terraform](https://github.com/hashicorp/terraform)** — Declarative infrastructure-as-code tool for provisioning and versioning cloud resources; source-available under the Business Source License.  
+  ★ 50,118 · NOASSERTION · `devops` `iac` `terraform` `go`
+- **[opentofu](https://github.com/opentofu/opentofu)** — Community-driven, MPL-licensed infrastructure-as-code tool; open-source fork of Terraform.  
+  ★ 30,707 · MPL-2.0 · `devops` `iac` `terraform` `go`
+- **[pulumi](https://github.com/pulumi/pulumi)** — Infrastructure as code in TypeScript, Python, Go, C#, and Java for any cloud.  
+  ★ 25,838 · Apache-2.0 · `devops` `iac` `multi-language` `go`
+- **[crossplane](https://github.com/crossplane/crossplane)** — Kubernetes-native control plane framework for composing cloud infrastructure and platform APIs.  
+  ★ 12,222 · Apache-2.0 · `devops` `iac` `kubernetes` `control-plane` `go`
+
+### CI/CD & GitOps
+- **[act](https://github.com/nektos/act)** — Run GitHub Actions workflows locally for fast feedback and testing.  
+  ★ 72,522 · MIT · `devops` `ci-cd` `github-actions` `local-testing` `go`
+- **[jenkins](https://github.com/jenkinsci/jenkins)** — Extensible open-source automation server for building, testing, and deploying software.  
+  ★ 26,719 · MIT · `devops` `ci-cd` `automation-server` `java`
+- **[argo-cd](https://github.com/argoproj/argo-cd)** — Declarative GitOps continuous delivery tool for Kubernetes.  
+  ★ 24,516 · Apache-2.0 · `devops` `gitops` `kubernetes` `ci-cd` `go`
+- **[dagger](https://github.com/dagger/dagger)** — Programmable CI/CD engine that runs pipelines in containers, portable across local and CI environments.  
+  ★ 16,573 · Apache-2.0 · `devops` `ci-cd` `pipelines` `containers` `go`
+- **[pipeline](https://github.com/tektoncd/pipeline)** — Kubernetes-native framework for building CI/CD pipelines.  
+  ★ 9,092 · Apache-2.0 · `devops` `ci-cd` `kubernetes` `pipelines` `go`
+- **[flux2](https://github.com/fluxcd/flux2)** — Open and extensible continuous delivery solution for Kubernetes powered by GitOps Toolkit.  
+  ★ 8,489 · Apache-2.0 · `devops` `gitops` `kubernetes` `ci-cd` `go`
+
+### Networking & Service Mesh
+- **[traefik](https://github.com/traefik/traefik)** — Cloud-native application proxy and ingress controller with automatic service discovery.  
+  ★ 65,445 · MIT · `devops` `reverse-proxy` `load-balancer` `kubernetes` `go`
+- **[istio](https://github.com/istio/istio)** — Open-source service mesh for traffic management, security, and observability across microservices.  
+  ★ 38,484 · Apache-2.0 · `devops` `service-mesh` `kubernetes` `go`
+- **[cilium](https://github.com/cilium/cilium)** — eBPF-based networking, observability, and security for Kubernetes workloads.  
+  ★ 25,760 · Apache-2.0 · `devops` `networking` `ebpf` `kubernetes` `go`
+
+### Observability
+- **[grafana](https://github.com/grafana/grafana)** — Open and composable observability and data visualization platform; licensed AGPL-3.0.  
+  ★ 77,648 · AGPL-3.0 · `devops` `observability` `dashboards` `visualization` `go`
+- **[prometheus](https://github.com/prometheus/prometheus)** — Monitoring system and time series database with a powerful query language and alerting.  
+  ★ 66,914 · Apache-2.0 · `devops` `monitoring` `observability` `metrics` `go`
+- **[jaeger](https://github.com/jaegertracing/jaeger)** — Distributed tracing platform for monitoring and troubleshooting microservice architectures.  
+  ★ 23,364 · Apache-2.0 · `devops` `observability` `tracing` `go`
+- **[opentelemetry-collector](https://github.com/open-telemetry/opentelemetry-collector)** — Vendor-agnostic implementation for receiving, processing, and exporting telemetry data.  
+  ★ 7,728 · Apache-2.0 · `devops` `observability` `telemetry` `opentelemetry` `go`
+
+### Security & Scanning
+- **[trivy](https://github.com/aquasecurity/trivy)** — Scanner for vulnerabilities, misconfigurations, secrets, and SBOMs in containers, IaC, and repositories.  
+  ★ 38,918 · Apache-2.0 · `devops` `security` `vulnerability-scanner` `iac` `go`
 
 </details>
 
