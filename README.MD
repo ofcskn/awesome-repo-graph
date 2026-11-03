@@ -1,6 +1,6 @@
 # awesome-repo-graph
 
-![Sources](https://img.shields.io/badge/sources-335-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-6204359-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
+![Sources](https://img.shields.io/badge/sources-341-blue) ![Stars Tracked](https://img.shields.io/badge/stars_tracked-6226098-yellow) ![License](https://img.shields.io/badge/license-MIT-green)
 
 A curated, structured collection of open-source repositories, grouped by sector and category, cross-linked by shared tags. `sources.json` is the single source of truth; this file and the graph visualization are both generated from it.
 
@@ -79,7 +79,7 @@ npm run capture:demo
 - **Frontend Engineering** — 12 sources
 - **AI Agent Tooling** — 192 sources
 - **DevOps & Infrastructure** — 1 source
-- **Game Development** — 27 sources
+- **Game Development** — 33 sources
 - **Backend Engineering & APIs** — 24 sources
 - **Machine Learning & Data Science** — 24 sources
 - **Blockchain & Decentralized AI** — 46 sources
@@ -532,7 +532,7 @@ npm run capture:demo
 </details>
 
 <details>
-<summary><strong>Game Development</strong> — 27 sources</summary>
+<summary><strong>Game Development</strong> — 33 sources</summary>
 
 ### Free Asset Libraries
 - **[awesome-cc0](https://github.com/madjin/awesome-cc0)** — Curated list of CC0 assets: 3D models, textures, audio, and other public-domain resources.  
@@ -541,6 +541,12 @@ npm run capture:demo
   `game-development` `game-assets` `cc0` `textures`
 - **[Freesound](https://freesound.org)** — Collaborative database of sound effects and samples under CC0, CC-BY, or CC-BY-NC; filter by license before shipping.  
   `game-development` `game-assets` `audio`
+- **[Game-icons.net](https://game-icons.net)** — Thousands of recolorable SVG game icons in a consistent style, licensed CC BY 3.0; credit to the original authors is required.  
+  `game-development` `game-assets` `icons` `svg`
+- **[Incompetech](https://incompetech.com)** — Royalty-free music library by Kevin MacLeod under CC BY 4.0; attribution is required.  
+  `game-development` `game-assets` `audio` `music`
+- **[itch.io Free Game Assets](https://itch.io/game-assets/free)** — Large marketplace section of free sprites, 3D models, audio, and UI packs; licenses are set by each creator, so check every pack.  
+  `game-development` `game-assets` `2d` `3d` `audio`
 - **[Kenney](https://www.kenney.nl/)** — Free game asset packs (sprites, 3D models, UI kits, audio) and starter tools for game developers.  
   `game-development` `game-assets`
 - **[OpenGameArt](https://opengameart.org)** — Community library of 2D art, 3D models, music, and sound effects under open licenses (CC0, CC-BY, GPL); check each asset's license.  
@@ -603,8 +609,14 @@ npm run capture:demo
   ★ 6,241 · MIT · `unity` `netcode` `multiplayer`
 
 ### Game Tooling
+- **[tiled](https://github.com/mapeditor/tiled)** — Flexible tile map editor for 2D levels with support for many engines and export formats.  
+  ★ 13,024 · NOASSERTION · `game-development` `level-editor` `2d` `tilemap` `cpp`
+- **[LibreSprite](https://github.com/LibreSprite/LibreSprite)** — Free open-source sprite editor and animation tool, a fork of the last GPL version of Aseprite.  
+  ★ 8,715 · GPL-2.0 · `game-development` `pixel-art` `2d` `sprite-editor` `cpp`
 - **[Recast & Detour](https://github.com/recastnavigation/recastnavigation)** — Navigation mesh generation and pathfinding toolkit widely used for game AI movement.  
   ★ 7,793 · Zlib · `navmesh` `pathfinding` `cpp`
+- **[Lospec](https://lospec.com)** — Pixel art hub with a searchable palette list, browser tools (scaler, dither, palette quantizer), and a large tutorial collection.  
+  `game-development` `pixel-art` `2d` `tutorial`
 
 </details>
 

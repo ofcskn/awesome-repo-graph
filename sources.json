@@ -8501,6 +8501,159 @@
         "fetchedAt": "2026-11-03"
       },
       "addedAt": "2026-11-03"
+    },
+    {
+      "id": "game-icons-net",
+      "url": "https://game-icons.net",
+      "provider": "game-icons.net",
+      "owner": null,
+      "repo": null,
+      "title": "Game-icons.net",
+      "description": "Thousands of recolorable SVG game icons in a consistent style, licensed CC BY 3.0; credit to the original authors is required.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets",
+        "icons",
+        "svg"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "incompetech-com",
+      "url": "https://incompetech.com",
+      "provider": "incompetech.com",
+      "owner": null,
+      "repo": null,
+      "title": "Incompetech",
+      "description": "Royalty-free music library by Kevin MacLeod under CC BY 4.0; attribution is required.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets",
+        "audio",
+        "music"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "itch-io-game-assets-free",
+      "url": "https://itch.io/game-assets/free",
+      "provider": "itch.io",
+      "owner": null,
+      "repo": null,
+      "title": "itch.io Free Game Assets",
+      "description": "Large marketplace section of free sprites, 3D models, audio, and UI packs; licenses are set by each creator, so check every pack.",
+      "path": [
+        "Game Development",
+        "Free Asset Libraries"
+      ],
+      "tags": [
+        "game-development",
+        "game-assets",
+        "2d",
+        "3d",
+        "audio"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "lospec-com",
+      "url": "https://lospec.com",
+      "provider": "lospec.com",
+      "owner": null,
+      "repo": null,
+      "title": "Lospec",
+      "description": "Pixel art hub with a searchable palette list, browser tools (scaler, dither, palette quantizer), and a large tutorial collection.",
+      "path": [
+        "Game Development",
+        "Game Tooling"
+      ],
+      "tags": [
+        "game-development",
+        "pixel-art",
+        "2d",
+        "tutorial"
+      ],
+      "license": null,
+      "score": {
+        "stars": null,
+        "fetchedAt": null
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "mapeditor-tiled",
+      "url": "https://github.com/mapeditor/tiled",
+      "provider": "github.com",
+      "owner": "mapeditor",
+      "repo": "tiled",
+      "title": "tiled",
+      "description": "Flexible tile map editor for 2D levels with support for many engines and export formats.",
+      "path": [
+        "Game Development",
+        "Game Tooling"
+      ],
+      "tags": [
+        "game-development",
+        "level-editor",
+        "2d",
+        "tilemap",
+        "cpp"
+      ],
+      "license": "NOASSERTION",
+      "score": {
+        "stars": 13024,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
+    },
+    {
+      "id": "libresprite-libresprite",
+      "url": "https://github.com/LibreSprite/LibreSprite",
+      "provider": "github.com",
+      "owner": "LibreSprite",
+      "repo": "LibreSprite",
+      "title": "LibreSprite",
+      "description": "Free open-source sprite editor and animation tool, a fork of the last GPL version of Aseprite.",
+      "path": [
+        "Game Development",
+        "Game Tooling"
+      ],
+      "tags": [
+        "game-development",
+        "pixel-art",
+        "2d",
+        "sprite-editor",
+        "cpp"
+      ],
+      "license": "GPL-2.0",
+      "score": {
+        "stars": 8715,
+        "fetchedAt": "2026-11-03"
+      },
+      "addedAt": "2026-11-03"
     }
   ]
 }
